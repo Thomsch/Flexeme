@@ -12,12 +12,12 @@ Flexeme repository.
 
 ## Installation
 1. Install Graphviz https://graphviz.org/.
-2. Create a virtual environment `python3 -m venv .venv`.
-3. Activate the virtual environment `source .venv/bin/activate`.
+2. Create a virtual environment: `rm -rf .venv && python3 -m venv .venv`
+3. Activate the virtual environment: `source .venv/bin/activate`
 4. Install Flexeme `pip install -e .`
-   - If the dependency `pygraphviz` fails to install. Visit https://pygraphviz.github.io/documentation/stable/install.html and follow the instructions for your OS.
-5. Run `cp .env-template .env` and fill in the environment variables in `.env`:
-    - `JAVA_11`: Location of the **Java 11** executable to run the PDG extractor. Requires Java 11. (e.g., `"$HOME/.sdkman/candidates/java/11.0.18-amzn/bin/java`")
+   - If the dependency `pygraphviz` fails to install, visit https://pygraphviz.github.io/documentation/stable/install.html and follow the instructions for your OS.
+5. Run `cp .env-template .env` then fill in the environment variables in `.env`:
+    - `JAVA_11`: Location of the **Java 11** executable to run the PDG extractor. Requires Java 11. (e.g., `$HOME/.sdkman/candidates/java/11.0.18-amzn/bin/java`)
 
 ## Synthetic Benchmark
 Run Flexeme on the synthetic benchmark.
@@ -41,14 +41,11 @@ Steps:
 
 ### Running the benchmark
 
-1. Checkout Defects4J repository `git clone $D4J_HOME/project_repos/commons-lang.git 
-   /private/tmp/commons-lang`.
-2. Creating synthetic commits `python3 flexeme/tangle_concerns/tangle_by_file.py /private/tmp/commons-lang 
-   /private/tmp/ .`.
-3. Generate ∂PDGs and evaluate: `python3 
-   flexeme/tangle_concerns/generate_corpus.py 
-   out/storm/storm_history_filtered_flat.json /private/tmp/commons-lang .tmp/storm`.
-4. Results are saved in `out/commons-lang/`. 
+1. `mkdir -p /tmp/${USER}`
+2. Checkout Defects4J repository: `git clone $D4J_HOME/project_repos/commons-lang.git /tmp/${USER}/commons-lang`
+3. Create synthetic commits~ `python flexeme/tangle_concerns/tangle_by_file.py /tmp/${USER}/commons-lang /tmp/${USER} .`
+4. Generate ∂PDGs and evaluate: `python flexeme/tangle_concerns/generate_corpus.py out/storm/storm_history_filtered_flat.json /tmp/${USER}/commons-lang .tmp/storm`
+5. Results are saved in `out/commons-lang/`.
 
 ### Layout changes
 The file `defects4j/layout_changes.json` contains the changes in repository layouts for sourcepath for Defects4J 
@@ -66,9 +63,7 @@ new project in `defects4j/layout_changes.json`, verify which order is used in `d
 
 ## Untangle Commits
 Run Flexeme to untangle a commit in a local repository.
-1. Clone this repository locally.
-2. Install Flexeme `pip install -e path/to/flexeme/clone`
-3. Run `flexeme <repository> <commit> <sourcepath> <classpath> <output_file>`.
+1. Run: `flexeme <repository> <commit> <sourcepath> <classpath> <output_file>`
     - `repository`: Path to the repository.
     - `commit`: Commit to untangle.
     - `sourcepath`: Java sourcepath to compile the files of `commit`.
