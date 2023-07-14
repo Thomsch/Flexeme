@@ -2,13 +2,13 @@
 
 Java implementation of Flexeme based on the original implementation of Flexeme.
 
-Please see [ORIGINAL_INSTRUCTIONS](./ORIGINAL_INSTRUCTIONS.md) document for the documentation of the original 
+Please see [ORIGINAL_INSTRUCTIONS.md](./ORIGINAL_INSTRUCTIONS.md) document for the documentation of the original 
 Flexeme repository.
 
 ## Requirements
-- **Requires python 3.8.**
+- **Requires Python 3.8.**
 - Requires Java 8 on the path
-- Requires Java 11 in `FLEXEME_JAVA` environment variable
+- Requires Java 11 in `JAVA11_HOME` environment variable
 
 ## Installation
 1. Install Graphviz https://graphviz.org/.
@@ -23,7 +23,7 @@ pip install -e .
 If the dependency `pygraphviz` fails to install, visit https://pygraphviz.github.io/documentation/stable/install.html and follow the instructions for your OS.
 
 3. Run `cp .env-template .env` then fill in the environment variables in `.env`:
-    - `JAVA_11`: Location of the **Java 11** executable to run the PDG extractor.  (e.g., `$HOME/.sdkman/candidates/java/11.0.18-amzn/bin/java`)
+    - `JAVA11_HOME`: Location of the **Java 11** executable to run the PDG extractor.  (e.g., `$HOME/.sdkman/candidates/java/11.0.18-amzn/bin/java`)
 
 ## Synthetic Benchmark
 Run Flexeme on the synthetic benchmark.
