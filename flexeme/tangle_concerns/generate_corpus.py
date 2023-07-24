@@ -264,13 +264,13 @@ if __name__ == '__main__':
     if len(sys.argv) != 4:
         print('To use this script please run as `[python] generate_corpus.py '
               '<synthetic commits file> <repository path> <work directory>')
-        exit(1)
+        sys.exit(1)
     json_location = sys.argv[1]
     subject_location = os.path.abspath(sys.argv[2])
     temp_loc = os.path.abspath(sys.argv[3])
     id_ = 1  # int(sys.argv[4])
     n_workers = 1  # int(sys.argv[5])
-    extractor_location = 'extractors/codechanges-checker-0.1-all.jar'
+    extractor_location = 'extractors/codechanges-checker-0.1.2-all.jar'
 
     if not os.path.exists(subject_location):
         print(f"Subject location {subject_location} does not exists")
