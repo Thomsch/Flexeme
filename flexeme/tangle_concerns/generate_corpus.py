@@ -261,13 +261,13 @@ if __name__ == '__main__':
     Run the synthetic benchmark.
     """
 
-    if len(sys.argv) != 4:
+    if len(sys.argv) != 3:
         print('To use this script please run as `[python] generate_corpus.py '
               '<synthetic commits file> <repository path> <work directory>')
         sys.exit(1)
-    json_location = sys.argv[1]
-    subject_location = os.path.abspath(sys.argv[2])
-    temp_loc = os.path.abspath(sys.argv[3])
+    json_location = sys.argv[0]
+    subject_location = os.path.abspath(sys.argv[1])
+    temp_loc = os.path.abspath(sys.argv[2])
     id_ = 1  # int(sys.argv[4])
     n_workers = 6  # int(sys.argv[5])
     extractor_location = 'extractors/codechanges-checker-0.1.2-all.jar'
