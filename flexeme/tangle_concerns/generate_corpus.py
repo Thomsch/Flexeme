@@ -269,7 +269,7 @@ if __name__ == '__main__':
     subject_location = os.path.abspath(sys.argv[2])
     temp_loc = os.path.abspath(sys.argv[3])
     id_ = 1  # int(sys.argv[4])
-    n_workers = 1  # int(sys.argv[5])
+    n_workers = 6  # int(sys.argv[5])
     extractor_location = 'extractors/codechanges-checker-0.1.2-all.jar'
 
     if not os.path.exists(subject_location):
@@ -294,7 +294,7 @@ if __name__ == '__main__':
 
     repository_name_to_d4j_name = {
         'commons-math': 'Math',
-        'commons-lang': 'Lang',
+        'commons-csv': 'Csv',
         'joda-time': 'Time',
         'closure-compiler': 'Closure'
     }
