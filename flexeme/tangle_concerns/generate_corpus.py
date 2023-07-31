@@ -261,7 +261,7 @@ if __name__ == '__main__':
     Run the synthetic benchmark.
     """
 
-    if len(sys.argv) != 3:
+    if len(sys.argv) != 4:
         print('To use this script please run as `[python] generate_corpus.py '
               '<synthetic commits file> <repository path> <work directory>')
         sys.exit(1)
