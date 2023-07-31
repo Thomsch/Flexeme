@@ -250,7 +250,7 @@ def worker(work, subject_location, id_, temp_loc, extractor_location, layout: Pr
                             validate([clean_path], 1, 1, repository_name)  # Flexeme's paper uses 1-hop clustering
                     except Exception as e:
                         logging.error("Error while processing synthetic commit %s_%s:" % (from_, to_))
-                        logging.error(e)
+                        logging.exception(e)
             except Exception as e:
                 logging.error("Error in chain %s:" % str(chain))
                 logging.error(e)
@@ -261,15 +261,15 @@ if __name__ == '__main__':
     Run the synthetic benchmark.
     """
 
-    if len(sys.argv) != 3:
+    if len(sys.argv) != 4:
         print('To use this script please run as `[python] generate_corpus.py '
               '<synthetic commits file> <repository path> <work directory>')
         sys.exit(1)
-    json_location = sys.argv[0]
-    subject_location = os.path.abspath(sys.argv[1])
-    temp_loc = os.path.abspath(sys.argv[2])
+    json_location = sys.argv[1]
+    subject_location = os.path.abspath(sys.argv[2])
+    temp_loc = os.path.abspath(sys.argv[3])
     id_ = 1  # int(sys.argv[4])
-    n_workers = 6  # int(sys.argv[5])
+    n_workers = 1  # int(sys.argv[5])
     extractor_location = 'extractors/codechanges-checker-0.1.2-all.jar'
 
     if not os.path.exists(subject_location):
@@ -294,7 +294,7 @@ if __name__ == '__main__':
 
     repository_name_to_d4j_name = {
         'commons-math': 'Math',
-        'commons-csv': 'Csv',
+        'commons-lang': 'Lang',
         'joda-time': 'Time',
         'closure-compiler': 'Closure'
     }
