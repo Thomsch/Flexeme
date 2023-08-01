@@ -296,7 +296,8 @@ if __name__ == '__main__':
         'commons-math': 'Math',
         'commons-lang': 'Lang',
         'joda-time': 'Time',
-        'closure-compiler': 'Closure'
+        'closure-compiler': 'Closure',
+        'commons-csv': 'Csv'
     }
 
     project_name = repository_name_to_d4j_name[os.path.basename(subject_location)]
