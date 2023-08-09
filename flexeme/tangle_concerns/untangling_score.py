@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-'''
+"""
 Calculate line-based Rand Index score for the parsed Flexeme clustering of the synthetic benchmark. The ground truth is considered
 the original atomic commit that a line belongs to before the commit was tangled.
 - First, the script parses the graph into a readable CSV file: each line will have a group assigned by Flexeme (tool_group) and a group assigned by 
@@ -12,7 +12,7 @@ Command Line Args: Find all validated Flexeme PDF graphs (.dot files) in /data/c
 Returns:
     A CSV file of line-based RandIndex scores for all the synthetic commits {commit_path, score}
     {file, score}
-'''
+"""
 
 import os
 import sys
@@ -21,18 +21,19 @@ from parse_flexeme_results import translate_PDG_to_CSV
 from sklearn.metrics import rand_score
 from io import StringIO
 
+
 def main():
     args = sys.argv[1:]
 
     if len(args) != 1:
-        print(
-            "usage: untangling_score.py <path/to/flexeme/graphs>"
-        )
+        print("usage: untangling_score.py <path/to/flexeme/graphs>")
         sys.exit(1)
 
     directory = args[0]
     graphname = "merged_output_wl_1.dot"
-    synthetic_benchmark_scores = os.path.join(directory, "synthetic_benchmark_scores.csv")
+    synthetic_benchmark_scores = os.path.join(
+        directory, "synthetic_benchmark_scores.csv"
+    )
     synthetic_benchmark_scores_str = ""
 
     # Grab all result file by walking the data/corpora_clean directory
@@ -47,9 +48,9 @@ def main():
 
                 # Calculate the Rand Index score
                 df = pd.read_csv(CSV_path)
-                RI_score = rand_score(df['truth_group'],df['tool_group'])
+                RI_score = rand_score(df["truth_group"], df["tool_group"])
                 synthetic_benchmark_scores_str += f"{PDG_path},{RI_score}\n"
-                
+
     df = pd.read_csv(
         StringIO(synthetic_benchmark_scores_str),
         names=["file", "score"],
@@ -58,6 +59,7 @@ def main():
     df = df.convert_dtypes()  # Forces pandas to use floats as scores.
     df = df.drop_duplicates()
     df.to_csv(synthetic_benchmark_scores, index=False)
+
 
 if __name__ == "__main__":
     main()
