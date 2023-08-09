@@ -6,7 +6,6 @@ to the line level.
 
 Each line is labelled by collecting all of its nodes' groups (it is possible for one line
 to have multiple groups).
-# TODO: Explain how we come down to only 1 group.
 
 Command Line Args:
     - result_dir: Directory to flexeme.dot results in decomposition/flexeme
@@ -32,25 +31,12 @@ UPDATE_ADD = "add"
 UPDATE_REMOVE = "remove"
 
 
-def main():
+def translate_PDG_to_CSV(graphname, CSV_filepath):
     """
     Implement the logic of the script. See the module docstring.
     """
-
-    args = sys.argv[1:]
-
-    if len(args) != 2:
-        print(
-            "usage: parse_flexeme_results.py <path/to/root/results> <path/to/out/file>"
-        )
-        sys.exit(1)
-
-    result_file = args[0]
-    output_path = args[1]
-    # Grab all result file by walking the data/corpora_clean directory
-    # Find all files that has the name /merged_output_wl_1.dot
     try:
-        graph = nx.nx_pydot.read_dot(result_file)
+        graph = nx.nx_pydot.read_dot(graphname)
     except FileNotFoundError:
         # Flexeme doesn't generate a PDG if it doesn't detect multiple groups.
         # In this case, we do not create a CSV file. The untangling score will be
@@ -71,9 +57,9 @@ def main():
         if "label" not in data.keys():
             logging.error(f"Attribute 'label' not found in node {node}")
             continue
-        if 'community' not in data.keys():
+        if "community" not in data.keys():
             continue
-        truth = int(data['community'])
+        truth = int(data["community"])
         group = get_node_label(data)
         span_start, span_end = get_span(data)
         update_type = get_update_type(data)
@@ -86,7 +72,7 @@ def main():
         )
         for line in range(span_start, span_end + 1):
             if update_type == UPDATE_REMOVE:
-                result += f"{file};{line};;{group};{truth}\n"   # We separate the fileds by semicolon as the filepath may contain commas
+                result += f"{file};{line};;{group};{truth}\n"  # We separate the fileds by semicolon as the filepath may contain commas
             elif update_type == UPDATE_ADD:
                 result += f"{file};;{line};{group};{truth}\n"
             else:
@@ -95,8 +81,8 @@ def main():
 
         # Merge results per line. Might not need to merge results per line
         #  since the data is calculated using a left join on the truth.
-    export_csv(output_path, result)
-    print(result)
+    export_csv(CSV_filepath, result)
+
 
 def export_tool_decomposition_as_csv(df, output_path):
     """
@@ -108,11 +94,11 @@ def export_tool_decomposition_as_csv(df, output_path):
     """
     if len(df) == 0:
         print(
-            "No results generated. Verify decomposition results and paths.",
+            f"No results generated for {output_path}. Verify decomposition results and paths.",
             file=sys.stderr,
         )
-        sys.exit(1)
     df.to_csv(output_path, index=False)
+
 
 def export_csv(output_path, result):
     """
@@ -124,9 +110,9 @@ def export_csv(output_path, result):
     """
     df = pd.read_csv(
         StringIO(result),
-        names=["file", "source", "target", "group","truth"],
+        names=["file", "source", "target", "tool_group", "truth_group"],
         delimiter=";",
-        na_values="None"
+        na_values="None",
     )
     df = df.convert_dtypes()  # Forces pandas to use ints in source and target columns.
     df = df.drop_duplicates()
@@ -185,4 +171,12 @@ def get_node_label(data):
 
 
 if __name__ == "__main__":
-    main()
+    args = sys.argv[1:]
+
+    if len(args) != 2:
+        print(
+            "usage: parse_flexeme_results.py <path/to/root/results> <path/to/out/file>"
+        )
+        sys.exit(1)
+
+    translate_PDG_to_CSV(args[0], args[1])
