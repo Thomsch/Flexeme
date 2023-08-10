@@ -44,11 +44,13 @@ def main():
                 # Translates a PDG into CSV to also export a column with the true label (the 'community' attribute of the node)
                 PDG_path = os.path.join(root, file)
                 CSV_path = os.path.join(root, "flexeme.csv")
+                if os.path.exists(CSV_path):
+                    continue
                 translate_PDG_to_CSV(PDG_path, CSV_path)
-
                 # Calculate the Rand Index score
                 df = pd.read_csv(CSV_path)
                 RI_score = rand_score(df["truth_group"], df["tool_group"])
+                print(PDG_path)
                 synthetic_benchmark_scores_str += f"{PDG_path},{RI_score}\n"
 
     df = pd.read_csv(
