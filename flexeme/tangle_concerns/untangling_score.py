@@ -25,14 +25,15 @@ from io import StringIO
 def main():
     args = sys.argv[1:]
 
-    if len(args) != 1:
+    if len(args) != 2:
         print("usage: untangling_score.py <path/to/flexeme/graphs>")
         sys.exit(1)
 
     directory = args[0]
+    output_scores_filename = args[1]
     graphname = "merged_output_wl_1.dot"
     synthetic_benchmark_scores = os.path.join(
-        directory, "synthetic_benchmark_scores.csv"
+        directory, output_scores_filename
     )
     synthetic_benchmark_scores_str = ""
 
