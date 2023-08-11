@@ -1,0 +1,31 @@
+digraph  {
+d5 [cluster="Humanizer.Localisation.RussianFormatter.GetResourceKey(string, int)", color=green, community=0, label="0: return resourceKey + SingularPostfix;", span="15-15"];
+d0 [cluster="Humanizer.Localisation.RussianFormatter.GetResourceKey(string, int)", label="Entry Humanizer.Localisation.RussianFormatter.GetResourceKey(string, int)", span="7-7"];
+d4 [cluster="Humanizer.Localisation.RussianFormatter.GetResourceKey(string, int)", color=green, community=0, label="1: mod10 == 1", span="14-14"];
+d9 [cluster="Humanizer.Localisation.RussianFormatter.GetResourceKey(string, int)", label="Exit Humanizer.Localisation.RussianFormatter.GetResourceKey(string, int)", span="7-7"];
+d7 [cluster="Humanizer.Localisation.RussianFormatter.GetResourceKey(string, int)", color=green, community=0, label="0: return resourceKey + PaucalPostfix;", span="18-18"];
+d6 [cluster="Humanizer.Localisation.RussianFormatter.GetResourceKey(string, int)", color=green, community=0, label="1: mod10 > 1 && mod10 < 5", span="17-17"];
+d8 [cluster="Humanizer.Localisation.RussianFormatter.GetResourceKey(string, int)", color=green, community=0, label="0: return resourceKey;", span="21-21"];
+d2 [cluster="Humanizer.Localisation.RussianFormatter.GetResourceKey(string, int)", label="mod100/10 != 1", span="10-10"];
+d3 [cluster="Humanizer.Localisation.RussianFormatter.GetResourceKey(string, int)", label="var mod10 = number%10", span="12-12"];
+d1 [cluster="Humanizer.Localisation.RussianFormatter.GetResourceKey(string, int)", label="var mod100 = number%100", span="9-9"];
+d5 -> d9  [color=green, key=0, style=solid];
+d0 -> d5  [color=green, key=1, label=string, style=dashed];
+d0 -> d7  [color=green, key=1, label=string, style=dashed];
+d0 -> d8  [color=green, key=1, label=string, style=dashed];
+d0 -> d0  [color=darkorchid, key=3, label="method methodReturn string GetResourceKey", style=bold];
+d0 -> d1  [key=0, style=solid];
+d0 -> d3  [color=darkseagreen4, key=1, label=int, style=dashed];
+d4 -> d5  [color=green, key=0, style=solid];
+d4 -> d6  [color=green, key=0, style=solid];
+d9 -> d0  [color=blue, key=0, style=bold];
+d7 -> d9  [color=green, key=0, style=solid];
+d6 -> d7  [color=green, key=0, style=solid];
+d6 -> d8  [color=green, key=0, style=solid];
+d8 -> d9  [color=green, key=0, style=solid];
+d2 -> d8  [color=green, key=0, style=solid];
+d2 -> d3  [key=0, style=solid];
+d3 -> d4  [color=green, key=0, style=solid];
+d3 -> d6  [color=green, key=1, label=mod10, style=dashed];
+d1 -> d2  [key=0, style=solid];
+}

@@ -1,0 +1,35 @@
+digraph  {
+m0_3 [label="Entry CommandLine.ValueListAttribute.ValueListAttribute(System.Type)", span="57-57", cluster="CommandLine.ValueListAttribute.ValueListAttribute(System.Type)", file="StringExtensions.cs"];
+m0_8 [label="_concreteType = concreteType", span="65-65", cluster="CommandLine.ValueListAttribute.ValueListAttribute(System.Type)", file="StringExtensions.cs"];
+m0_6 [label="!typeof(IList<string>).IsAssignableFrom(concreteType)", span="61-61", cluster="CommandLine.ValueListAttribute.ValueListAttribute(System.Type)", file="StringExtensions.cs"];
+m0_4 [label="concreteType == null", span="60-60", cluster="CommandLine.ValueListAttribute.ValueListAttribute(System.Type)", file="StringExtensions.cs"];
+m0_7 [label="throw new CommandLineParserException(''The types are incompatible.'');", span="63-63", cluster="CommandLine.ValueListAttribute.ValueListAttribute(System.Type)", file="StringExtensions.cs"];
+m0_5 [label="throw new ArgumentNullException(''concreteType'');", span="60-60", cluster="CommandLine.ValueListAttribute.ValueListAttribute(System.Type)", file="StringExtensions.cs"];
+m0_9 [label="Exit CommandLine.ValueListAttribute.ValueListAttribute(System.Type)", span="57-57", cluster="CommandLine.ValueListAttribute.ValueListAttribute(System.Type)", file="StringExtensions.cs"];
+m0_0 [label="Entry CommandLine.ValueListAttribute.ValueListAttribute()", span="47-47", cluster="CommandLine.ValueListAttribute.ValueListAttribute()", file="StringExtensions.cs"];
+m0_1 [label="MaximumElements = -1", span="49-49", cluster="CommandLine.ValueListAttribute.ValueListAttribute()", color=green, community=0, file="StringExtensions.cs"];
+m0_2 [label="Exit CommandLine.ValueListAttribute.ValueListAttribute()", span="47-47", cluster="CommandLine.ValueListAttribute.ValueListAttribute()", file="StringExtensions.cs"];
+m0_10 [label="Entry System.ArgumentNullException.ArgumentNullException(string)", span="0-0", cluster="System.ArgumentNullException.ArgumentNullException(string)", file="StringExtensions.cs"];
+m0_11 [label="Entry System.Type.IsAssignableFrom(System.Type)", span="0-0", cluster="System.Type.IsAssignableFrom(System.Type)", file="StringExtensions.cs"];
+m0_12 [label="Entry CommandLine.CommandLineParserException.CommandLineParserException(string)", span="52-52", cluster="CommandLine.CommandLineParserException.CommandLineParserException(string)", file="StringExtensions.cs"];
+m0_46 [label="CommandLine.ValueListAttribute", span="", file="StringExtensions.cs"];
+m0_3 -> m0_8  [key=1, style=dashed, color=darkseagreen4, label="System.Type"];
+m0_3 -> m0_4  [key=0, style=solid];
+m0_3 -> m0_6  [key=1, style=dashed, color=darkseagreen4, label="System.Type"];
+m0_8 -> m0_9  [key=0, style=solid];
+m0_6 -> m0_8  [key=0, style=solid];
+m0_6 -> m0_7  [key=0, style=solid];
+m0_6 -> m0_11  [key=2, style=dotted];
+m0_4 -> m0_6  [key=0, style=solid];
+m0_4 -> m0_5  [key=0, style=solid];
+m0_7 -> m0_9  [key=0, style=solid];
+m0_7 -> m0_12  [key=2, style=dotted];
+m0_5 -> m0_9  [key=0, style=solid];
+m0_5 -> m0_10  [key=2, style=dotted];
+m0_9 -> m0_3  [key=0, style=bold, color=blue];
+m0_0 -> m0_1  [key=0, style=solid, color=green];
+m0_1 -> m0_2  [key=0, style=solid, color=green];
+m0_2 -> m0_0  [key=0, style=bold, color=blue];
+m0_46 -> m0_1  [key=1, style=dashed, color=green, label="CommandLine.ValueListAttribute"];
+m0_46 -> m0_8  [key=1, style=dashed, color=darkseagreen4, label="CommandLine.ValueListAttribute"];
+}

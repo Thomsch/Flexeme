@@ -1,0 +1,35 @@
+digraph  {
+n3 [label="CommandLine.Tests.Mocks.SimpleOptionsWithEnum", span=""];
+n0 [label="Entry CommandLine.Tests.Mocks.SimpleOptionsWithEnum.SimpleOptionsWithEnum()", span="38-38", cluster="CommandLine.Tests.Mocks.SimpleOptionsWithEnum.SimpleOptionsWithEnum()"];
+n1 [label="FileAccess = FileAccess.Read", span="40-40", cluster="CommandLine.Tests.Mocks.SimpleOptionsWithEnum.SimpleOptionsWithEnum()"];
+n2 [label="Exit CommandLine.Tests.Mocks.SimpleOptionsWithEnum.SimpleOptionsWithEnum()", span="38-38", cluster="CommandLine.Tests.Mocks.SimpleOptionsWithEnum.SimpleOptionsWithEnum()"];
+m0_6 [label="Entry int.ToString(System.IFormatProvider)", span="0-0", cluster="int.ToString(System.IFormatProvider)", file="TimeSpanHumanizeTests.cs"];
+m0_0 [label="Entry Humanizer.Localisation.NumberToWords.DefaultNumberToWordsConverter.DefaultNumberToWordsConverter(System.Globalization.CultureInfo)", span="12-12", cluster="Humanizer.Localisation.NumberToWords.DefaultNumberToWordsConverter.DefaultNumberToWordsConverter(System.Globalization.CultureInfo)", file="TimeSpanHumanizeTests.cs"];
+m0_1 [label="_culture = culture", span="14-14", cluster="Humanizer.Localisation.NumberToWords.DefaultNumberToWordsConverter.DefaultNumberToWordsConverter(System.Globalization.CultureInfo)", color=green, community=0, file="TimeSpanHumanizeTests.cs"];
+m0_2 [label="Exit Humanizer.Localisation.NumberToWords.DefaultNumberToWordsConverter.DefaultNumberToWordsConverter(System.Globalization.CultureInfo)", span="12-12", cluster="Humanizer.Localisation.NumberToWords.DefaultNumberToWordsConverter.DefaultNumberToWordsConverter(System.Globalization.CultureInfo)", file="TimeSpanHumanizeTests.cs"];
+m0_3 [label="Entry Humanizer.Localisation.NumberToWords.DefaultNumberToWordsConverter.Convert(int)", span="22-22", cluster="Humanizer.Localisation.NumberToWords.DefaultNumberToWordsConverter.Convert(int)", file="TimeSpanHumanizeTests.cs"];
+m0_4 [label="return number.ToString(_culture);", span="24-24", cluster="Humanizer.Localisation.NumberToWords.DefaultNumberToWordsConverter.Convert(int)", color=green, community=0, file="TimeSpanHumanizeTests.cs"];
+m0_5 [label="Exit Humanizer.Localisation.NumberToWords.DefaultNumberToWordsConverter.Convert(int)", span="22-22", cluster="Humanizer.Localisation.NumberToWords.DefaultNumberToWordsConverter.Convert(int)", file="TimeSpanHumanizeTests.cs"];
+m0_7 [label="Entry Humanizer.Localisation.NumberToWords.DefaultNumberToWordsConverter.ConvertToOrdinal(int)", span="32-32", cluster="Humanizer.Localisation.NumberToWords.DefaultNumberToWordsConverter.ConvertToOrdinal(int)", file="TimeSpanHumanizeTests.cs"];
+m0_8 [label="return number.ToString(_culture);", span="34-34", cluster="Humanizer.Localisation.NumberToWords.DefaultNumberToWordsConverter.ConvertToOrdinal(int)", color=green, community=0, file="TimeSpanHumanizeTests.cs"];
+m0_9 [label="Exit Humanizer.Localisation.NumberToWords.DefaultNumberToWordsConverter.ConvertToOrdinal(int)", span="32-32", cluster="Humanizer.Localisation.NumberToWords.DefaultNumberToWordsConverter.ConvertToOrdinal(int)", file="TimeSpanHumanizeTests.cs"];
+m0_10 [label="Humanizer.Localisation.NumberToWords.DefaultNumberToWordsConverter", span="", file="TimeSpanHumanizeTests.cs"];
+n3 -> n1  [key=1, style=dashed, color=darkseagreen4, label="CommandLine.Tests.Mocks.SimpleOptionsWithEnum"];
+n0 -> n1  [key=0, style=solid];
+n1 -> n2  [key=0, style=solid];
+n2 -> n0  [key=0, style=bold, color=blue];
+m0_0 -> m0_1  [key=0, style=solid, color=green];
+m0_1 -> m0_2  [key=0, style=solid, color=green];
+m0_2 -> m0_0  [key=0, style=bold, color=blue];
+m0_3 -> m0_4  [key=0, style=solid, color=green];
+m0_4 -> m0_5  [key=0, style=solid, color=green];
+m0_4 -> m0_6  [key=2, style=dotted, color=green];
+m0_5 -> m0_3  [key=0, style=bold, color=blue];
+m0_7 -> m0_8  [key=0, style=solid, color=green];
+m0_8 -> m0_9  [key=0, style=solid, color=green];
+m0_8 -> m0_6  [key=2, style=dotted, color=green];
+m0_9 -> m0_7  [key=0, style=bold, color=blue];
+m0_10 -> m0_1  [key=1, style=dashed, color=green, label="Humanizer.Localisation.NumberToWords.DefaultNumberToWordsConverter"];
+m0_10 -> m0_4  [key=1, style=dashed, color=green, label="Humanizer.Localisation.NumberToWords.DefaultNumberToWordsConverter"];
+m0_10 -> m0_8  [key=1, style=dashed, color=green, label="Humanizer.Localisation.NumberToWords.DefaultNumberToWordsConverter"];
+}

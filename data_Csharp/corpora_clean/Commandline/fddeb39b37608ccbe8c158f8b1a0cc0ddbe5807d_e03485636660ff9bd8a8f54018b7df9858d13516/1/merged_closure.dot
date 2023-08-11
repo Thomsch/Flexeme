@@ -1,0 +1,33 @@
+digraph  {
+d1 [cluster="CommandLine.BaseOptionAttribute.BaseOptionAttribute(char, string)", color=green, community=0, label="_shortName = shortName", prediction=0, span="51-51"];
+d25 [label="CommandLine.BaseOptionAttribute", span=""];
+d0 [cluster="CommandLine.BaseOptionAttribute.BaseOptionAttribute(char, string)", label="Entry CommandLine.BaseOptionAttribute.BaseOptionAttribute(char, string)", span="49-49"];
+d2 [cluster="CommandLine.BaseOptionAttribute.BaseOptionAttribute(char, string)", color=green, community=0, label="_shortName.Value.IsWhiteSpace() || _shortName.Value.IsLineTerminator()", prediction=1, span="52-52"];
+d4 [cluster="CommandLine.BaseOptionAttribute.BaseOptionAttribute(char, string)", color=green, community=0, label="UniqueName = new string(shortName, 1)", prediction=2, span="56-56"];
+d5 [cluster="CommandLine.BaseOptionAttribute.BaseOptionAttribute(char, string)", color=green, community=0, label="LongName = longName", prediction=3, span="57-57"];
+d10 [cluster="string.String(char, int)", label="Entry string.String(char, int)", span="0-0"];
+d6 [cluster="CommandLine.BaseOptionAttribute.BaseOptionAttribute(char, string)", label="Exit CommandLine.BaseOptionAttribute.BaseOptionAttribute(char, string)", span="49-49"];
+d3 [cluster="CommandLine.BaseOptionAttribute.BaseOptionAttribute(char, string)", color=green, community=0, label="throw new ArgumentException(SR.ArgumentException_NoWhiteSpaceOrLineTerminatorInShortName, ''shortName'');", prediction=4, span="54-54"];
+d7 [cluster="char.IsWhiteSpace()", label="Entry char.IsWhiteSpace()", span="60-60"];
+d8 [cluster="char.IsLineTerminator()", label="Entry char.IsLineTerminator()", span="77-77"];
+d9 [cluster="System.ArgumentException.ArgumentException(string, string)", label="Entry System.ArgumentException.ArgumentException(string, string)", span="0-0"];
+d12 [cluster="CommandLine.BaseOptionAttribute.BaseOptionAttribute(char?, string)", label="_shortName = shortName", span="68-68"];
+d13 [cluster="CommandLine.BaseOptionAttribute.BaseOptionAttribute(char?, string)", label="_shortName != null", span="69-69"];
+d14 [cluster="CommandLine.BaseOptionAttribute.BaseOptionAttribute(char?, string)", label="_shortName.Value.IsWhiteSpace() || _shortName.Value.IsLineTerminator()", span="71-71"];
+d16 [cluster="CommandLine.BaseOptionAttribute.BaseOptionAttribute(char?, string)", label="UniqueName = new string(_shortName.Value, 1)", span="75-75"];
+d17 [cluster="CommandLine.BaseOptionAttribute.BaseOptionAttribute(char?, string)", label="LongName = longName", span="77-77"];
+d18 [cluster="CommandLine.BaseOptionAttribute.BaseOptionAttribute(char?, string)", label="UniqueName != null", span="78-78"];
+d20 [cluster="CommandLine.BaseOptionAttribute.BaseOptionAttribute(char?, string)", label="LongName == null", span="82-82"];
+d22 [cluster="CommandLine.BaseOptionAttribute.BaseOptionAttribute(char?, string)", label="UniqueName = LongName", span="86-86"];
+d15 [cluster="CommandLine.BaseOptionAttribute.BaseOptionAttribute(char?, string)", label="throw new ArgumentException(SR.ArgumentException_NoWhiteSpaceOrLineTerminatorInShortName, ''shortName'');", span="73-73"];
+d11 [cluster="CommandLine.BaseOptionAttribute.BaseOptionAttribute(char?, string)", label="Entry CommandLine.BaseOptionAttribute.BaseOptionAttribute(char?, string)", span="66-66"];
+d19 [cluster="CommandLine.BaseOptionAttribute.BaseOptionAttribute(char?, string)", label="return;", span="80-80"];
+d21 [cluster="CommandLine.BaseOptionAttribute.BaseOptionAttribute(char?, string)", label="throw new ArgumentNullException(''longName'', SR.ArgumentNullException_LongNameCannotBeNullWhenShortNameIsUndefined);", span="84-84"];
+d23 [cluster="CommandLine.BaseOptionAttribute.BaseOptionAttribute(char?, string)", label="Exit CommandLine.BaseOptionAttribute.BaseOptionAttribute(char?, string)", span="66-66"];
+d24 [cluster="System.ArgumentNullException.ArgumentNullException(string, string)", label="Entry System.ArgumentNullException.ArgumentNullException(string, string)", span="0-0"];
+d25 -> d2  [color=green, key=1, label="CommandLine.BaseOptionAttribute", style=dashed];
+d25 -> d13  [color=darkseagreen4, key=1, label="CommandLine.BaseOptionAttribute", style=dashed];
+d25 -> d14  [color=darkseagreen4, key=1, label="CommandLine.BaseOptionAttribute", style=dashed];
+d25 -> d18  [color=darkseagreen4, key=1, label="CommandLine.BaseOptionAttribute", style=dashed];
+d25 -> d20  [color=darkseagreen4, key=1, label="CommandLine.BaseOptionAttribute", style=dashed];
+}

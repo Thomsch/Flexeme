@@ -1,0 +1,20 @@
+digraph  {
+n0 [cluster="CommandLine.OptionArrayAttribute.OptionArrayAttribute(char)", label="Entry CommandLine.OptionArrayAttribute.OptionArrayAttribute(char)", span="39-39"];
+n1 [cluster="CommandLine.OptionArrayAttribute.OptionArrayAttribute(char)", label="Exit CommandLine.OptionArrayAttribute.OptionArrayAttribute(char)", span="39-39"];
+n2 [cluster="CommandLine.OptionArrayAttribute.OptionArrayAttribute(string)", label="Entry CommandLine.OptionArrayAttribute.OptionArrayAttribute(string)", span="48-48"];
+n3 [cluster="CommandLine.OptionArrayAttribute.OptionArrayAttribute(string)", label="Exit CommandLine.OptionArrayAttribute.OptionArrayAttribute(string)", span="48-48"];
+n4 [cluster="CommandLine.OptionArrayAttribute.OptionArrayAttribute(char, string)", label="Entry CommandLine.OptionArrayAttribute.OptionArrayAttribute(char, string)", span="58-58"];
+n5 [cluster="CommandLine.OptionArrayAttribute.OptionArrayAttribute(char, string)", label="Exit CommandLine.OptionArrayAttribute.OptionArrayAttribute(char, string)", span="58-58"];
+m1_0 [cluster="CommandLine.OptionListAttribute.OptionListAttribute(char)", file="OptionListAttribute.cs", label="Entry CommandLine.OptionListAttribute.OptionListAttribute(char)", span="42-42"];
+m1_1 [cluster="CommandLine.OptionListAttribute.OptionListAttribute(char)", color=green, community=0, file="OptionListAttribute.cs", label="Exit CommandLine.OptionListAttribute.OptionListAttribute(char)", prediction=0, span="42-42"];
+m1_2 [cluster="CommandLine.OptionListAttribute.OptionListAttribute(string)", color=green, community=0, file="OptionListAttribute.cs", label="Entry CommandLine.OptionListAttribute.OptionListAttribute(string)", prediction=0, span="51-51"];
+m1_3 [cluster="CommandLine.OptionListAttribute.OptionListAttribute(string)", file="OptionListAttribute.cs", label="Exit CommandLine.OptionListAttribute.OptionListAttribute(string)", span="51-51"];
+m1_7 [cluster="CommandLine.OptionListAttribute.OptionListAttribute(char, string, char)", file="OptionListAttribute.cs", label="Entry CommandLine.OptionListAttribute.OptionListAttribute(char, string, char)", span="73-73"];
+m1_8 [cluster="CommandLine.OptionListAttribute.OptionListAttribute(char, string, char)", file="OptionListAttribute.cs", label="Separator = separator", span="76-76"];
+m1_9 [cluster="CommandLine.OptionListAttribute.OptionListAttribute(char, string)", color=green, community=0, file="OptionListAttribute.cs", label="Separator = DefaultSeparator", prediction=2, span="77-77"];
+m1_4 [cluster="CommandLine.OptionListAttribute.OptionListAttribute(char, string)", file="OptionListAttribute.cs", label="Entry CommandLine.OptionListAttribute.OptionListAttribute(char, string)", span="61-61"];
+m1_6 [cluster="CommandLine.OptionListAttribute.OptionListAttribute(char, string)", file="OptionListAttribute.cs", label="Exit CommandLine.OptionListAttribute.OptionListAttribute(char, string)", span="61-61"];
+m1_10 [file="OptionListAttribute.cs", label="CommandLine.OptionListAttribute", span=""];
+m1_10 -> m1_1  [color=green, key=1, label="CommandLine.OptionListAttribute", style=dashed];
+m1_10 -> m1_2  [color=green, key=1, label="CommandLine.OptionListAttribute", style=dashed];
+}

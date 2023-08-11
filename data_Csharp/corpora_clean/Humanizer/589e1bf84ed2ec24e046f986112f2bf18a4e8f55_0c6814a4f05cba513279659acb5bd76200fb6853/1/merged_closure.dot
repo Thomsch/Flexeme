@@ -1,0 +1,16 @@
+digraph  {
+m0_7 [cluster="Humanizer.NumberToTimeSpanExtensions.Hours(int)", file="NumberToTimeSpanExtensions.cs", label="Entry Humanizer.NumberToTimeSpanExtensions.Hours(int)", span="30-30"];
+m0_9 [cluster="Humanizer.NumberToTimeSpanExtensions.Hours(int)", file="NumberToTimeSpanExtensions.cs", label="Exit Humanizer.NumberToTimeSpanExtensions.Hours(int)", span="30-30"];
+m0_13 [cluster="Humanizer.NumberToTimeSpanExtensions.Seconds(int)", file="NumberToTimeSpanExtensions.cs", label="Entry Humanizer.NumberToTimeSpanExtensions.Seconds(int)", span="50-50"];
+m0_15 [cluster="Humanizer.NumberToTimeSpanExtensions.Seconds(int)", file="NumberToTimeSpanExtensions.cs", label="Exit Humanizer.NumberToTimeSpanExtensions.Seconds(int)", span="50-50"];
+m0_4 [cluster="Humanizer.NumberToTimeSpanExtensions.Days(int)", file="NumberToTimeSpanExtensions.cs", label="Entry Humanizer.NumberToTimeSpanExtensions.Days(int)", span="20-20"];
+m0_6 [cluster="Humanizer.NumberToTimeSpanExtensions.Days(int)", file="NumberToTimeSpanExtensions.cs", label="Exit Humanizer.NumberToTimeSpanExtensions.Days(int)", span="20-20"];
+m0_10 [cluster="Humanizer.NumberToTimeSpanExtensions.Minutes(int)", file="NumberToTimeSpanExtensions.cs", label="Entry Humanizer.NumberToTimeSpanExtensions.Minutes(int)", span="40-40"];
+m0_12 [cluster="Humanizer.NumberToTimeSpanExtensions.Minutes(int)", file="NumberToTimeSpanExtensions.cs", label="Exit Humanizer.NumberToTimeSpanExtensions.Minutes(int)", span="40-40"];
+m0_16 [cluster="Humanizer.NumberToTimeSpanExtensions.Milliseconds(int)", file="NumberToTimeSpanExtensions.cs", label="Entry Humanizer.NumberToTimeSpanExtensions.Milliseconds(int)", span="60-60"];
+m0_18 [cluster="Humanizer.NumberToTimeSpanExtensions.Milliseconds(int)", file="NumberToTimeSpanExtensions.cs", label="Exit Humanizer.NumberToTimeSpanExtensions.Milliseconds(int)", span="60-60"];
+m0_19 [cluster="System.TimeSpan.TimeSpan(int, int, int, int, int)", file="NumberToTimeSpanExtensions.cs", label="Entry System.TimeSpan.TimeSpan(int, int, int, int, int)", span="0-0"];
+m0_3 [cluster="System.TimeSpan.TimeSpan(int, int, int, int)", file="NumberToTimeSpanExtensions.cs", label="Entry System.TimeSpan.TimeSpan(int, int, int, int)", span="0-0"];
+m0_0 [cluster="Humanizer.NumberToTimeSpanExtensions.Weeks(int)", file="NumberToTimeSpanExtensions.cs", label="Entry Humanizer.NumberToTimeSpanExtensions.Weeks(int)", span="10-10"];
+m0_2 [cluster="Humanizer.NumberToTimeSpanExtensions.Weeks(int)", file="NumberToTimeSpanExtensions.cs", label="Exit Humanizer.NumberToTimeSpanExtensions.Weeks(int)", span="10-10"];
+}

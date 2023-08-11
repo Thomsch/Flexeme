@@ -1,0 +1,27 @@
+digraph  {
+m0_5 [label="Entry Humanizer.Tests.AmbientCulture.AmbientCulture(string)", span="17-17", cluster="Humanizer.Tests.AmbientCulture.AmbientCulture(string)", file="SpecificationPropertyRules.cs"];
+m0_6 [label="Exit Humanizer.Tests.AmbientCulture.AmbientCulture(string)", span="17-17", cluster="Humanizer.Tests.AmbientCulture.AmbientCulture(string)", file="SpecificationPropertyRules.cs"];
+m0_7 [label="Entry Humanizer.Tests.AmbientCulture.Dispose()", span="22-22", cluster="Humanizer.Tests.AmbientCulture.Dispose()", file="SpecificationPropertyRules.cs"];
+m0_8 [label="Thread.CurrentThread.CurrentUICulture = _culture", span="24-24", cluster="Humanizer.Tests.AmbientCulture.Dispose()", color=red, community=0, file="SpecificationPropertyRules.cs"];
+m0_9 [label="Exit Humanizer.Tests.AmbientCulture.Dispose()", span="22-22", cluster="Humanizer.Tests.AmbientCulture.Dispose()", file="SpecificationPropertyRules.cs"];
+m0_0 [label="Entry Humanizer.Tests.AmbientCulture.AmbientCulture(System.Globalization.CultureInfo)", span="10-10", cluster="Humanizer.Tests.AmbientCulture.AmbientCulture(System.Globalization.CultureInfo)", file="SpecificationPropertyRules.cs"];
+m0_1 [label="_culture = Thread.CurrentThread.CurrentUICulture", span="12-12", cluster="Humanizer.Tests.AmbientCulture.AmbientCulture(System.Globalization.CultureInfo)", file="SpecificationPropertyRules.cs"];
+m0_2 [label="Thread.CurrentThread.CurrentCulture = culture", span="13-13", cluster="Humanizer.Tests.AmbientCulture.AmbientCulture(System.Globalization.CultureInfo)", file="SpecificationPropertyRules.cs"];
+m0_3 [label="Thread.CurrentThread.CurrentUICulture = culture", span="14-14", cluster="Humanizer.Tests.AmbientCulture.AmbientCulture(System.Globalization.CultureInfo)", file="SpecificationPropertyRules.cs"];
+m0_4 [label="Exit Humanizer.Tests.AmbientCulture.AmbientCulture(System.Globalization.CultureInfo)", span="10-10", cluster="Humanizer.Tests.AmbientCulture.AmbientCulture(System.Globalization.CultureInfo)", file="SpecificationPropertyRules.cs"];
+m0_10 [label="Humanizer.Tests.AmbientCulture", span="", file="SpecificationPropertyRules.cs"];
+m0_5 -> m0_6  [key=0, style=solid];
+m0_6 -> m0_5  [key=0, style=bold, color=blue];
+m0_7 -> m0_8  [key=0, style=solid, color=red];
+m0_8 -> m0_9  [key=0, style=solid, color=red];
+m0_9 -> m0_7  [key=0, style=bold, color=blue];
+m0_0 -> m0_1  [key=0, style=solid];
+m0_0 -> m0_2  [key=1, style=dashed, color=darkseagreen4, label="System.Globalization.CultureInfo"];
+m0_0 -> m0_3  [key=1, style=dashed, color=darkseagreen4, label="System.Globalization.CultureInfo"];
+m0_1 -> m0_2  [key=0, style=solid];
+m0_2 -> m0_3  [key=0, style=solid];
+m0_3 -> m0_4  [key=0, style=solid];
+m0_4 -> m0_0  [key=0, style=bold, color=blue];
+m0_10 -> m0_1  [key=1, style=dashed, color=darkseagreen4, label="Humanizer.Tests.AmbientCulture"];
+m0_10 -> m0_8  [key=1, style=dashed, color=red, label="Humanizer.Tests.AmbientCulture"];
+}

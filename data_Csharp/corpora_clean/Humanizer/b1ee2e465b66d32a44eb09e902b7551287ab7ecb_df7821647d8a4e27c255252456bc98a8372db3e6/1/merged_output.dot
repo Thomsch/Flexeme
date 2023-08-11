@@ -1,0 +1,36 @@
+digraph  {
+d1 [cluster="Humanizer.Localisation.NumberToWords.DefaultNumberToWordsConverter.Convert(int, Humanizer.GrammaticalGender)", color=green, community=0, label="5: return Convert(number);", span="6-6"];
+d10 [label="Humanizer.Localisation.NumberToWords.DefaultNumberToWordsConverter", span=""];
+d0 [cluster="Humanizer.Localisation.NumberToWords.DefaultNumberToWordsConverter.Convert(int, Humanizer.GrammaticalGender)", label="Entry Humanizer.Localisation.NumberToWords.DefaultNumberToWordsConverter.Convert(int, Humanizer.GrammaticalGender)", span="4-4"];
+d2 [cluster="Humanizer.Localisation.NumberToWords.DefaultNumberToWordsConverter.Convert(int, Humanizer.GrammaticalGender)", label="Exit Humanizer.Localisation.NumberToWords.DefaultNumberToWordsConverter.Convert(int, Humanizer.GrammaticalGender)", span="4-4"];
+d3 [cluster="Humanizer.Localisation.NumberToWords.DefaultNumberToWordsConverter.Convert(int)", label="Entry Humanizer.Localisation.NumberToWords.DefaultNumberToWordsConverter.Convert(int)", span="9-9"];
+d4 [cluster="Humanizer.Localisation.NumberToWords.DefaultNumberToWordsConverter.Convert(int)", color=green, community=0, label="4: return number.ToString();", span="11-11"];
+d5 [cluster="Humanizer.Localisation.NumberToWords.DefaultNumberToWordsConverter.Convert(int)", label="Exit Humanizer.Localisation.NumberToWords.DefaultNumberToWordsConverter.Convert(int)", span="9-9"];
+d6 [cluster="int.ToString()", label="Entry int.ToString()", span="0-0"];
+d8 [cluster="Humanizer.Localisation.NumberToWords.DefaultNumberToWordsConverter.ConvertToOrdinal(int)", color=green, community=0, label="2: return number.ToString();", span="16-16"];
+d7 [cluster="Humanizer.Localisation.NumberToWords.DefaultNumberToWordsConverter.ConvertToOrdinal(int)", label="Entry Humanizer.Localisation.NumberToWords.DefaultNumberToWordsConverter.ConvertToOrdinal(int)", span="14-14"];
+d9 [cluster="Humanizer.Localisation.NumberToWords.DefaultNumberToWordsConverter.ConvertToOrdinal(int)", label="Exit Humanizer.Localisation.NumberToWords.DefaultNumberToWordsConverter.ConvertToOrdinal(int)", span="14-14"];
+m0_6 [cluster="Unk.Equal", file="TimeSpanHumanizeTests.cs", label="Entry Unk.Equal", span=""];
+m0_2 [cluster="Humanizer.Tests.NumberToOrdinalWordsTests.ToOrdinalWords(int, string)", file="TimeSpanHumanizeTests.cs", label="Entry Humanizer.Tests.NumberToOrdinalWordsTests.ToOrdinalWords(int, string)", span="52-52"];
+m0_3 [cluster="Humanizer.Tests.NumberToOrdinalWordsTests.ToOrdinalWords(int, string)", color=green, community=0, file="TimeSpanHumanizeTests.cs", label="7: Assert.Equal(words, number.ToOrdinalWords())", span="54-54"];
+m0_4 [cluster="Humanizer.Tests.NumberToOrdinalWordsTests.ToOrdinalWords(int, string)", file="TimeSpanHumanizeTests.cs", label="Exit Humanizer.Tests.NumberToOrdinalWordsTests.ToOrdinalWords(int, string)", span="52-52"];
+m0_5 [cluster="int.ToOrdinalWords()", file="TimeSpanHumanizeTests.cs", label="Entry int.ToOrdinalWords()", span="52-52"];
+d1 -> d2  [color=green, key=0, style=solid];
+d1 -> d3  [color=green, key=2, style=dotted];
+d10 -> d1  [color=green, key=1, label="Humanizer.Localisation.NumberToWords.DefaultNumberToWordsConverter", style=dashed];
+d0 -> d1  [color=green, key=0, style=solid];
+d2 -> d0  [color=blue, key=0, style=bold];
+d3 -> d4  [color=green, key=0, style=solid];
+d4 -> d5  [color=green, key=0, style=solid];
+d4 -> d6  [color=green, key=2, style=dotted];
+d5 -> d3  [color=blue, key=0, style=bold];
+d8 -> d9  [color=green, key=0, style=solid];
+d8 -> d6  [color=green, key=2, style=dotted];
+d7 -> d8  [color=green, key=0, style=solid];
+d9 -> d7  [color=blue, key=0, style=bold];
+m0_2 -> m0_3  [color=green, key=0, style=solid];
+m0_3 -> m0_4  [color=green, key=0, style=solid];
+m0_3 -> m0_5  [color=green, key=2, style=dotted];
+m0_3 -> m0_6  [color=green, key=2, style=dotted];
+m0_4 -> m0_2  [color=blue, key=0, style=bold];
+}

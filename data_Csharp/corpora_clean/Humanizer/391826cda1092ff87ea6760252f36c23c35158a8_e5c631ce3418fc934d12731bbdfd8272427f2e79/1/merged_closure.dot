@@ -1,0 +1,38 @@
+digraph  {
+m2_8 [cluster="int.ToString(System.IFormatProvider)", file="OrdinalizeExtensions.cs", label="Entry int.ToString(System.IFormatProvider)", span="0-0"];
+m2_5 [cluster="Humanizer.OrdinalizeExtensions.Ordinalize(int)", file="OrdinalizeExtensions.cs", label="Entry Humanizer.OrdinalizeExtensions.Ordinalize(int)", span="25-25"];
+m2_6 [cluster="Humanizer.OrdinalizeExtensions.Ordinalize(int)", color=green, community=0, file="OrdinalizeExtensions.cs", label="return Ordinalize(number, number.ToString(CultureInfo.InvariantCulture));", prediction=0, span="27-27"];
+m2_7 [cluster="Humanizer.OrdinalizeExtensions.Ordinalize(int)", file="OrdinalizeExtensions.cs", label="Exit Humanizer.OrdinalizeExtensions.Ordinalize(int)", span="25-25"];
+m2_4 [cluster="Humanizer.OrdinalizeExtensions.Ordinalize(int, string)", file="OrdinalizeExtensions.cs", label="Entry Humanizer.OrdinalizeExtensions.Ordinalize(int, string)", span="30-30"];
+m2_9 [cluster="Humanizer.OrdinalizeExtensions.Ordinalize(int, string)", color=green, community=0, file="OrdinalizeExtensions.cs", label="int nMod100 = number % 100", prediction=1, span="32-32"];
+m2_11 [cluster="Humanizer.OrdinalizeExtensions.Ordinalize(int, string)", color=green, community=0, file="OrdinalizeExtensions.cs", label="return numberString + ''th'';", prediction=2, span="36-36"];
+m2_12 [cluster="Humanizer.OrdinalizeExtensions.Ordinalize(int, string)", color=green, community=0, file="OrdinalizeExtensions.cs", label="number % 10", prediction=2, span="39-39"];
+m2_10 [cluster="Humanizer.OrdinalizeExtensions.Ordinalize(int, string)", color=green, community=0, file="OrdinalizeExtensions.cs", label="nMod100 >= 11 && nMod100 <= 13", prediction=4, span="34-34"];
+m2_13 [cluster="Humanizer.OrdinalizeExtensions.Ordinalize(int, string)", color=green, community=0, file="OrdinalizeExtensions.cs", label=1, prediction=5, span="41-41"];
+m2_20 [cluster="Humanizer.OrdinalizeExtensions.Ordinalize(int, string)", file="OrdinalizeExtensions.cs", label="Exit Humanizer.OrdinalizeExtensions.Ordinalize(int, string)", span="30-30"];
+m2_0 [cluster="Humanizer.OrdinalizeExtensions.Ordinalize(string)", file="OrdinalizeExtensions.cs", label="Entry Humanizer.OrdinalizeExtensions.Ordinalize(string)", span="15-15"];
+m2_1 [cluster="Humanizer.OrdinalizeExtensions.Ordinalize(string)", color=green, community=0, file="OrdinalizeExtensions.cs", label="return Ordinalize(int.Parse(numberString), numberString);", prediction=6, span="17-17"];
+m2_2 [cluster="Humanizer.OrdinalizeExtensions.Ordinalize(string)", file="OrdinalizeExtensions.cs", label="Exit Humanizer.OrdinalizeExtensions.Ordinalize(string)", span="15-15"];
+m2_3 [cluster="int.Parse(string)", file="OrdinalizeExtensions.cs", label="Entry int.Parse(string)", span="0-0"];
+m3_0 [cluster="Humanizer.ToQuantityExtensions.ToQuantity(string, int, Humanizer.ShowQuantityAs)", file="OrdinalizeTests.cs", label="Entry Humanizer.ToQuantityExtensions.ToQuantity(string, int, Humanizer.ShowQuantityAs)", span="45-45"];
+m3_1 [cluster="Humanizer.ToQuantityExtensions.ToQuantity(string, int, Humanizer.ShowQuantityAs)", file="OrdinalizeTests.cs", label="var transformedInput = quantity == 1\r\n                ? input.Singularize(Plurality.CouldBeEither)\r\n                : input.Pluralize(Plurality.CouldBeEither)", span="47-49"];
+m3_2 [cluster="Humanizer.ToQuantityExtensions.ToQuantity(string, int, Humanizer.ShowQuantityAs)", file="OrdinalizeTests.cs", label="showQuantityAs == ShowQuantityAs.None", span="51-51"];
+m3_4 [cluster="Humanizer.ToQuantityExtensions.ToQuantity(string, int, Humanizer.ShowQuantityAs)", file="OrdinalizeTests.cs", label="showQuantityAs == ShowQuantityAs.Numeric", span="54-54"];
+m3_5 [cluster="Humanizer.ToQuantityExtensions.ToQuantity(string, int, Humanizer.ShowQuantityAs)", file="OrdinalizeTests.cs", label="return string.Format(''{0} {1}'', quantity, transformedInput);", span="55-55"];
+m3_6 [cluster="Humanizer.ToQuantityExtensions.ToQuantity(string, int, Humanizer.ShowQuantityAs)", file="OrdinalizeTests.cs", label="return string.Format(''{0} {1}'', quantity.ToWords(), transformedInput);", span="57-57"];
+m3_3 [cluster="Humanizer.ToQuantityExtensions.ToQuantity(string, int, Humanizer.ShowQuantityAs)", file="OrdinalizeTests.cs", label="return transformedInput;", span="52-52"];
+m3_7 [cluster="Humanizer.ToQuantityExtensions.ToQuantity(string, int, Humanizer.ShowQuantityAs)", file="OrdinalizeTests.cs", label="Exit Humanizer.ToQuantityExtensions.ToQuantity(string, int, Humanizer.ShowQuantityAs)", span="45-45"];
+m3_10 [cluster="string.Format(string, object, object)", file="OrdinalizeTests.cs", label="Entry string.Format(string, object, object)", span="0-0"];
+m3_9 [cluster="string.Pluralize(Humanizer.Plurality)", file="OrdinalizeTests.cs", label="Entry string.Pluralize(Humanizer.Plurality)", span="170-170"];
+m3_11 [cluster="int.ToWords()", file="OrdinalizeTests.cs", label="Entry int.ToWords()", span="32-32"];
+m3_8 [cluster="string.Singularize(Humanizer.Plurality)", file="OrdinalizeTests.cs", label="Entry string.Singularize(Humanizer.Plurality)", span="194-194"];
+m2_4 -> m2_11  [color=green, key=1, label=string, style=dashed];
+m2_4 -> m2_12  [color=green, key=1, label=int, style=dashed];
+m3_0 -> m3_2  [color=darkseagreen4, key=1, label="Humanizer.ShowQuantityAs", style=dashed];
+m3_0 -> m3_4  [color=darkseagreen4, key=1, label="Humanizer.ShowQuantityAs", style=dashed];
+m3_0 -> m3_5  [color=darkseagreen4, key=1, label=int, style=dashed];
+m3_0 -> m3_6  [color=darkseagreen4, key=1, label=int, style=dashed];
+m3_1 -> m3_3  [color=darkseagreen4, key=1, label=transformedInput, style=dashed];
+m3_1 -> m3_5  [color=darkseagreen4, key=1, label=transformedInput, style=dashed];
+m3_1 -> m3_6  [color=darkseagreen4, key=1, label=transformedInput, style=dashed];
+}

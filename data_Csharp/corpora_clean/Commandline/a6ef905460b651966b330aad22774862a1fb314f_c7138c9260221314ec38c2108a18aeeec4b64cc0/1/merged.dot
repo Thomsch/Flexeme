@@ -1,0 +1,20 @@
+digraph  {
+m0_4 [label="Exit CommandLine.ValueAttribute.ValueAttribute(int)", span="21-21", cluster="CommandLine.ValueAttribute.ValueAttribute(int)", file="UnParserExtensionsTests.cs"];
+m0_0 [label="Entry CommandLine.Tests.Unit.UnParserExtensionsTests.UnParsing_instance_returns_command_line(CommandLine.Tests.Fakes.FakeOptions, string)", span="21-21", cluster="CommandLine.Tests.Unit.UnParserExtensionsTests.UnParsing_instance_returns_command_line(CommandLine.Tests.Fakes.FakeOptions, string)", file="UnParserExtensionsTests.cs"];
+m0_1 [label="new Parser()\r                .FormatCommandLine(options)\r                .ShouldBeEquivalentTo(result)", span="23-25", cluster="CommandLine.Tests.Unit.UnParserExtensionsTests.UnParsing_instance_returns_command_line(CommandLine.Tests.Fakes.FakeOptions, string)", file="UnParserExtensionsTests.cs", color=green, community=0];
+m0_2 [label="Exit CommandLine.Tests.Unit.UnParserExtensionsTests.UnParsing_instance_returns_command_line(CommandLine.Tests.Fakes.FakeOptions, string)", span="21-21", cluster="CommandLine.Tests.Unit.UnParserExtensionsTests.UnParsing_instance_returns_command_line(CommandLine.Tests.Fakes.FakeOptions, string)", file="UnParserExtensionsTests.cs"];
+m0_3 [label="Entry CommandLine.Parser.Parser()", span="26-26", cluster="CommandLine.Parser.Parser()", file="UnParserExtensionsTests.cs"];
+m0_5 [label="CommandLine.ValueAttribute", span="", cluster="Unk.ShouldBeEquivalentTo", file="UnParserExtensionsTests.cs"];
+m0_4 -> m0_0  [key=0, style=bold, color=blue];
+m0_0 -> m0_1  [key=0, style=solid, color=green];
+m0_1 -> m0_2  [key=0, style=solid, color=green];
+m0_1 -> m0_3  [key=2, style=dotted, color=green];
+m0_1 -> m0_4  [key=2, style=dotted, color=green];
+m0_1 -> m0_5  [key=2, style=dotted, color=green];
+m0_2 -> m0_3  [key=0, style=solid];
+m0_2 -> m0_0  [key=0, style=bold, color=blue];
+m0_3 -> m0_4  [key=0, style=solid];
+m0_5 -> m0_1  [key=1, style=dashed, color=darkseagreen4, label="CommandLine.ValueAttribute"];
+m0_5 -> m0_2  [key=1, style=dashed, color=darkseagreen4, label="CommandLine.ValueAttribute"];
+m0_5 -> m0_3  [key=1, style=dashed, color=darkseagreen4, label="CommandLine.ValueAttribute"];
+}

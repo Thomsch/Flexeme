@@ -1,0 +1,21 @@
+digraph  {
+n0 [label="Entry Humanizer.Tests.RomanNumeralTests.CanRomanize(int, string)", span="23-23", cluster="Humanizer.Tests.RomanNumeralTests.CanRomanize(int, string)"];
+n1 [label="Assert.Equal(expected, input.ToRoman())", span="25-25", cluster="Humanizer.Tests.RomanNumeralTests.CanRomanize(int, string)", color=red, community=0];
+n2 [label="Exit Humanizer.Tests.RomanNumeralTests.CanRomanize(int, string)", span="23-23", cluster="Humanizer.Tests.RomanNumeralTests.CanRomanize(int, string)"];
+n3 [label="Entry int.ToRoman()", span="75-75", cluster="int.ToRoman()"];
+n4 [label="Entry Unk.Equal", span="", cluster="Unk.Equal"];
+n5 [label="Entry Humanizer.Tests.RomanNumeralTests.CanUnromanize(int, string)", span="43-43", cluster="Humanizer.Tests.RomanNumeralTests.CanUnromanize(int, string)"];
+n6 [label="Assert.Equal(expected, input.FromRoman())", span="45-45", cluster="Humanizer.Tests.RomanNumeralTests.CanUnromanize(int, string)"];
+n7 [label="Exit Humanizer.Tests.RomanNumeralTests.CanUnromanize(int, string)", span="43-43", cluster="Humanizer.Tests.RomanNumeralTests.CanUnromanize(int, string)"];
+n8 [label="Entry string.FromRoman()", span="35-35", cluster="string.FromRoman()"];
+n0 -> n1  [key=0, style=solid, color=red];
+n1 -> n2  [key=0, style=solid, color=red];
+n1 -> n3  [key=2, style=dotted, color=red];
+n1 -> n4  [key=2, style=dotted, color=red];
+n2 -> n0  [key=0, style=bold, color=blue];
+n5 -> n6  [key=0, style=solid];
+n6 -> n7  [key=0, style=solid];
+n6 -> n8  [key=2, style=dotted];
+n6 -> n4  [key=2, style=dotted];
+n7 -> n5  [key=0, style=bold, color=blue];
+}

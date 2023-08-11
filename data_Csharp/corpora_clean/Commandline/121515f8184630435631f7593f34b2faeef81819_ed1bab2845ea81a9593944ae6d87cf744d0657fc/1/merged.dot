@@ -1,0 +1,36 @@
+digraph  {
+m0_11 [label="Entry CommandLine.Text.StringBuilderExtensions.SafeLength(System.Text.StringBuilder)", span="26-26", cluster="CommandLine.Text.StringBuilderExtensions.SafeLength(System.Text.StringBuilder)", file="StringBuilderExtensions.cs"];
+m0_12 [label="return builder == null ? 0 : builder.Length;", span="28-28", cluster="CommandLine.Text.StringBuilderExtensions.SafeLength(System.Text.StringBuilder)", file="StringBuilderExtensions.cs"];
+m0_13 [label="Exit CommandLine.Text.StringBuilderExtensions.SafeLength(System.Text.StringBuilder)", span="26-26", cluster="CommandLine.Text.StringBuilderExtensions.SafeLength(System.Text.StringBuilder)", file="StringBuilderExtensions.cs"];
+m0_0 [label="Entry CommandLine.Text.StringBuilderExtensions.AppendWhen(System.Text.StringBuilder, bool, params string[])", span="9-9", cluster="CommandLine.Text.StringBuilderExtensions.AppendWhen(System.Text.StringBuilder, bool, params string[])", file="StringBuilderExtensions.cs"];
+m0_1 [label=condition, span="11-11", cluster="CommandLine.Text.StringBuilderExtensions.AppendWhen(System.Text.StringBuilder, bool, params string[])", file="StringBuilderExtensions.cs", color=green, community=0];
+m0_2 [label=values, span="13-13", cluster="CommandLine.Text.StringBuilderExtensions.AppendWhen(System.Text.StringBuilder, bool, params string[])", file="StringBuilderExtensions.cs", color=green, community=0];
+m0_3 [label="builder.Append(value)", span="15-15", cluster="CommandLine.Text.StringBuilderExtensions.AppendWhen(System.Text.StringBuilder, bool, params string[])", file="StringBuilderExtensions.cs", color=green, community=0];
+m0_4 [label="return builder;", span="18-18", cluster="CommandLine.Text.StringBuilderExtensions.AppendWhen(System.Text.StringBuilder, bool, params string[])", file="StringBuilderExtensions.cs", color=green, community=0];
+m0_5 [label="Exit CommandLine.Text.StringBuilderExtensions.AppendWhen(System.Text.StringBuilder, bool, params string[])", span="9-9", cluster="CommandLine.Text.StringBuilderExtensions.AppendWhen(System.Text.StringBuilder, bool, params string[])", file="StringBuilderExtensions.cs"];
+m0_10 [label="Entry System.Text.StringBuilder.ToString()", span="0-0", cluster="System.Text.StringBuilder.ToString()", file="StringBuilderExtensions.cs"];
+m0_6 [label="Entry System.Text.StringBuilder.Append(string)", span="0-0", cluster="System.Text.StringBuilder.Append(string)", file="StringBuilderExtensions.cs"];
+m0_7 [label="Entry CommandLine.Text.StringBuilderExtensions.SafeToString(System.Text.StringBuilder)", span="21-21", cluster="CommandLine.Text.StringBuilderExtensions.SafeToString(System.Text.StringBuilder)", file="StringBuilderExtensions.cs"];
+m0_8 [label="return builder == null ? string.Empty : builder.ToString();", span="23-23", cluster="CommandLine.Text.StringBuilderExtensions.SafeToString(System.Text.StringBuilder)", file="StringBuilderExtensions.cs"];
+m0_9 [label="Exit CommandLine.Text.StringBuilderExtensions.SafeToString(System.Text.StringBuilder)", span="21-21", cluster="CommandLine.Text.StringBuilderExtensions.SafeToString(System.Text.StringBuilder)", file="StringBuilderExtensions.cs"];
+m0_11 -> m0_12  [key=0, style=solid];
+m0_12 -> m0_13  [key=0, style=solid];
+m0_13 -> m0_11  [key=0, style=bold, color=blue];
+m0_0 -> m0_1  [key=0, style=solid, color=green];
+m0_0 -> m0_2  [key=1, style=dashed, color=green, label="params string[]"];
+m0_0 -> m0_3  [key=1, style=dashed, color=green, label="System.Text.StringBuilder"];
+m0_0 -> m0_4  [key=1, style=dashed, color=green, label="System.Text.StringBuilder"];
+m0_0 -> m0_0  [key=3, color=darkorchid, style=bold, label="method methodReturn System.Text.StringBuilder AppendWhen"];
+m0_1 -> m0_2  [key=0, style=solid, color=green];
+m0_1 -> m0_4  [key=0, style=solid, color=green];
+m0_2 -> m0_3  [key=0, style=solid, color=green];
+m0_2 -> m0_4  [key=0, style=solid, color=green];
+m0_3 -> m0_2  [key=0, style=solid, color=green];
+m0_3 -> m0_6  [key=2, style=dotted, color=green];
+m0_4 -> m0_5  [key=0, style=solid, color=green];
+m0_5 -> m0_0  [key=0, style=bold, color=blue];
+m0_7 -> m0_8  [key=0, style=solid];
+m0_8 -> m0_9  [key=0, style=solid];
+m0_8 -> m0_10  [key=2, style=dotted];
+m0_9 -> m0_7  [key=0, style=bold, color=blue];
+}

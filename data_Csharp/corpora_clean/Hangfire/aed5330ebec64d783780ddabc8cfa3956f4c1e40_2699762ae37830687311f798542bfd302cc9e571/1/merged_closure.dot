@@ -1,0 +1,10 @@
+digraph  {
+d3 [cluster="HangFire.Dashboard.DashboardMiddleware.Invoke(IOwinContext)", color=green, community=0, label="throw new NotImplementedException();", prediction=0, span="14-14"];
+d2 [cluster="HangFire.Dashboard.DashboardMiddleware.Invoke(IOwinContext)", label="Entry HangFire.Dashboard.DashboardMiddleware.Invoke(IOwinContext)", span="12-12"];
+d4 [cluster="HangFire.Dashboard.DashboardMiddleware.Invoke(IOwinContext)", label="Exit HangFire.Dashboard.DashboardMiddleware.Invoke(IOwinContext)", span="12-12"];
+d5 [cluster="System.NotImplementedException.NotImplementedException()", label="Entry System.NotImplementedException.NotImplementedException()", span="0-0"];
+m0_3 [cluster="Unk.MapSignalR", file="Startup.cs", label="Entry Unk.MapSignalR", span=""];
+m0_0 [cluster="HangFire.Sample.Highlighter.Startup.Configuration(IAppBuilder)", file="Startup.cs", label="Entry HangFire.Sample.Highlighter.Startup.Configuration(IAppBuilder)", span="10-10"];
+m0_1 [cluster="HangFire.Sample.Highlighter.Startup.Configuration(IAppBuilder)", file="Startup.cs", label="app.MapSignalR()", span="12-12"];
+m0_2 [cluster="HangFire.Sample.Highlighter.Startup.Configuration(IAppBuilder)", file="Startup.cs", label="Exit HangFire.Sample.Highlighter.Startup.Configuration(IAppBuilder)", span="10-10"];
+}

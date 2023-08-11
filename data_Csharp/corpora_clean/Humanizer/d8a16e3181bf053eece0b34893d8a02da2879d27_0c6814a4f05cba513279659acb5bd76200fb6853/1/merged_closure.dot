@@ -1,0 +1,27 @@
+digraph  {
+n0 [cluster="Humanizer.NumberToTimeSpanExtensions.Weeks(int)", label="Entry Humanizer.NumberToTimeSpanExtensions.Weeks(int)", span="10-10"];
+n2 [cluster="Humanizer.NumberToTimeSpanExtensions.Weeks(int)", label="Exit Humanizer.NumberToTimeSpanExtensions.Weeks(int)", span="10-10"];
+n3 [cluster="System.TimeSpan.TimeSpan(int, int, int, int)", label="Entry System.TimeSpan.TimeSpan(int, int, int, int)", span="0-0"];
+n4 [cluster="Humanizer.NumberToTimeSpanExtensions.Days(int)", label="Entry Humanizer.NumberToTimeSpanExtensions.Days(int)", span="20-20"];
+n6 [cluster="Humanizer.NumberToTimeSpanExtensions.Days(int)", label="Exit Humanizer.NumberToTimeSpanExtensions.Days(int)", span="20-20"];
+n7 [cluster="Humanizer.NumberToTimeSpanExtensions.Hours(int)", label="Entry Humanizer.NumberToTimeSpanExtensions.Hours(int)", span="30-30"];
+n9 [cluster="Humanizer.NumberToTimeSpanExtensions.Hours(int)", label="Exit Humanizer.NumberToTimeSpanExtensions.Hours(int)", span="30-30"];
+n10 [cluster="Humanizer.NumberToTimeSpanExtensions.Minutes(int)", label="Entry Humanizer.NumberToTimeSpanExtensions.Minutes(int)", span="40-40"];
+n12 [cluster="Humanizer.NumberToTimeSpanExtensions.Minutes(int)", label="Exit Humanizer.NumberToTimeSpanExtensions.Minutes(int)", span="40-40"];
+n13 [cluster="Humanizer.NumberToTimeSpanExtensions.Seconds(int)", label="Entry Humanizer.NumberToTimeSpanExtensions.Seconds(int)", span="50-50"];
+n15 [cluster="Humanizer.NumberToTimeSpanExtensions.Seconds(int)", label="Exit Humanizer.NumberToTimeSpanExtensions.Seconds(int)", span="50-50"];
+n16 [cluster="Humanizer.NumberToTimeSpanExtensions.Milliseconds(int)", label="Entry Humanizer.NumberToTimeSpanExtensions.Milliseconds(int)", span="60-60"];
+n18 [cluster="Humanizer.NumberToTimeSpanExtensions.Milliseconds(int)", label="Exit Humanizer.NumberToTimeSpanExtensions.Milliseconds(int)", span="60-60"];
+n19 [cluster="System.TimeSpan.TimeSpan(int, int, int, int, int)", label="Entry System.TimeSpan.TimeSpan(int, int, int, int, int)", span="0-0"];
+d1 [cluster="Humanizer.NumberToTimeSpanExtensions.Weeks(int)", color=green, community=0, label="return Days(7*input);", prediction=0, span="15-15"];
+d4 [cluster="Humanizer.NumberToTimeSpanExtensions.Days(int)", color=green, community=0, label="return TimeSpan.FromDays(days);", prediction=1, span="25-25"];
+d6 [cluster="System.TimeSpan.FromDays(double)", label="Entry System.TimeSpan.FromDays(double)", span="0-0"];
+d8 [cluster="Humanizer.NumberToTimeSpanExtensions.Hours(int)", color=green, community=0, label="return TimeSpan.FromHours(hours);", prediction=2, span="35-35"];
+d10 [cluster="System.TimeSpan.FromHours(double)", label="Entry System.TimeSpan.FromHours(double)", span="0-0"];
+d12 [cluster="Humanizer.NumberToTimeSpanExtensions.Minutes(int)", color=green, community=0, label="return TimeSpan.FromMinutes(minutes);", prediction=3, span="45-45"];
+d14 [cluster="System.TimeSpan.FromMinutes(double)", label="Entry System.TimeSpan.FromMinutes(double)", span="0-0"];
+d16 [cluster="Humanizer.NumberToTimeSpanExtensions.Seconds(int)", color=green, community=0, label="return TimeSpan.FromSeconds(seconds);", prediction=4, span="55-55"];
+d18 [cluster="System.TimeSpan.FromSeconds(double)", label="Entry System.TimeSpan.FromSeconds(double)", span="0-0"];
+d20 [cluster="Humanizer.NumberToTimeSpanExtensions.Milliseconds(int)", color=green, community=0, label="return TimeSpan.FromMilliseconds(ms);", prediction=5, span="65-65"];
+d22 [cluster="System.TimeSpan.FromMilliseconds(double)", label="Entry System.TimeSpan.FromMilliseconds(double)", span="0-0"];
+}

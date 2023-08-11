@@ -1,0 +1,27 @@
+digraph  {
+n37 [label="Humanizer.Localisation.NumberToWords.BrazilianPortugueseNumberToWordsConverter", span=""];
+n0 [cluster="Humanizer.Localisation.NumberToWords.BrazilianPortugueseNumberToWordsConverter.Convert(int)", label="Entry Humanizer.Localisation.NumberToWords.BrazilianPortugueseNumberToWordsConverter.Convert(int)", span="11-11"];
+n33 [cluster="System.Collections.Generic.List<T>.List()", label="Entry System.Collections.Generic.List<T>.List()", span="0-0"];
+n32 [cluster="string.Format(string, object)", label="Entry string.Format(string, object)", span="0-0"];
+n34 [cluster="System.Collections.Generic.List<T>.Add(T)", label="Entry System.Collections.Generic.List<T>.Add(T)", span="0-0"];
+n30 [cluster="Humanizer.Localisation.NumberToWords.BrazilianPortugueseNumberToWordsConverter.Convert(int)", label="Exit Humanizer.Localisation.NumberToWords.BrazilianPortugueseNumberToWordsConverter.Convert(int)", span="11-11"];
+n31 [cluster="System.Math.Abs(int)", label="Entry System.Math.Abs(int)", span="0-0"];
+n35 [cluster="System.Collections.Generic.List<T>.ToArray()", label="Entry System.Collections.Generic.List<T>.ToArray()", span="0-0"];
+n36 [cluster="string.Join(string, params string[])", label="Entry string.Join(string, params string[])", span="0-0"];
+m2_6 [cluster="Unk.Equal", file="NumberToWordsTests.cs", label="Entry Unk.Equal", span=""];
+m2_0 [cluster="Humanizer.Tests.Localisation.ptBR.NumberToWordsTests.NumberToWordsTests()", file="NumberToWordsTests.cs", label="Entry Humanizer.Tests.Localisation.ptBR.NumberToWordsTests.NumberToWordsTests()", span="7-7"];
+m2_1 [cluster="Humanizer.Tests.Localisation.ptBR.NumberToWordsTests.NumberToWordsTests()", file="NumberToWordsTests.cs", label="Exit Humanizer.Tests.Localisation.ptBR.NumberToWordsTests.NumberToWordsTests()", span="7-7"];
+m2_2 [cluster="Humanizer.Tests.Localisation.ptBR.NumberToWordsTests.ToWords(int, string)", file="NumberToWordsTests.cs", label="Entry Humanizer.Tests.Localisation.ptBR.NumberToWordsTests.ToWords(int, string)", span="41-41"];
+m2_4 [cluster="Humanizer.Tests.Localisation.ptBR.NumberToWordsTests.ToWords(int, string)", file="NumberToWordsTests.cs", label="Exit Humanizer.Tests.Localisation.ptBR.NumberToWordsTests.ToWords(int, string)", span="41-41"];
+m2_5 [cluster="int.ToWords()", file="NumberToWordsTests.cs", label="Entry int.ToWords()", span="28-28"];
+m3_5 [cluster="Humanizer.Localisation.GrammaticalNumber.RussianGrammaticalNumberDetector.Detect(int)", file="RussianFormatter.cs", label="Entry Humanizer.Localisation.GrammaticalNumber.RussianGrammaticalNumberDetector.Detect(int)", span="4-4"];
+m3_0 [cluster="Humanizer.Localisation.Formatters.RussianFormatter.GetResourceKey(string, int)", file="RussianFormatter.cs", label="Entry Humanizer.Localisation.Formatters.RussianFormatter.GetResourceKey(string, int)", span="8-8"];
+m3_1 [cluster="Humanizer.Localisation.Formatters.RussianFormatter.GetResourceKey(string, int)", color=green, community=0, file="RussianFormatter.cs", label="var grammaticalNumber = RussianGrammaticalNumberDetector.Detect(number)", prediction=0, span="10-10"];
+m3_3 [cluster="Humanizer.Localisation.Formatters.RussianFormatter.GetResourceKey(string, int)", color=green, community=0, file="RussianFormatter.cs", label="return resourceKey + suffix;", prediction=1, span="12-12"];
+m3_2 [cluster="Humanizer.Localisation.Formatters.RussianFormatter.GetResourceKey(string, int)", color=green, community=0, file="RussianFormatter.cs", label="var suffix = _map[(int) grammaticalNumber]", prediction=2, span="11-11"];
+m3_4 [cluster="Humanizer.Localisation.Formatters.RussianFormatter.GetResourceKey(string, int)", file="RussianFormatter.cs", label="Exit Humanizer.Localisation.Formatters.RussianFormatter.GetResourceKey(string, int)", span="8-8"];
+m3_6 [file="RussianFormatter.cs", label="Humanizer.Localisation.Formatters.RussianFormatter", span=""];
+m5_0 [cluster="Humanizer.Localisation.GrammaticalNumber.RussianGrammaticalNumberDetector.Detect(int)", file="RussianGrammaticalNumberDetector.cs", label="Entry Humanizer.Localisation.GrammaticalNumber.RussianGrammaticalNumberDetector.Detect(int)", span="4-4"];
+m5_9 [cluster="Humanizer.Localisation.GrammaticalNumber.RussianGrammaticalNumberDetector.Detect(int)", file="RussianGrammaticalNumberDetector.cs", label="Exit Humanizer.Localisation.GrammaticalNumber.RussianGrammaticalNumberDetector.Detect(int)", span="4-4"];
+m3_0 -> m3_3  [color=green, key=1, label=string, style=dashed];
+}

@@ -1,0 +1,7 @@
+digraph  {
+d2 [cluster="Humanizer.Localisation.ResourceKeys.ValidateRange(int)", color=green, community=0, label="throw new ArgumentOutOfRangeException(''count'');", prediction=0, span="12-12"];
+d1 [cluster="Humanizer.Localisation.ResourceKeys.ValidateRange(int)", label="count < 0", span="11-11"];
+d3 [cluster="Humanizer.Localisation.ResourceKeys.ValidateRange(int)", label="Exit Humanizer.Localisation.ResourceKeys.ValidateRange(int)", span="9-9"];
+d4 [cluster="System.ArgumentOutOfRangeException.ArgumentOutOfRangeException(string)", label="Entry System.ArgumentOutOfRangeException.ArgumentOutOfRangeException(string)", span="0-0"];
+d0 [cluster="Humanizer.Localisation.ResourceKeys.ValidateRange(int)", label="Entry Humanizer.Localisation.ResourceKeys.ValidateRange(int)", span="9-9"];
+}

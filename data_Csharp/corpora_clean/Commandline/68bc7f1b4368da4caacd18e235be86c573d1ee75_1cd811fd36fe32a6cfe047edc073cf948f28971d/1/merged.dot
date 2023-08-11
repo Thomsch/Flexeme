@@ -1,0 +1,18 @@
+digraph  {
+m0_5 [label="Entry CommandLine.Infrastructure.ReflectionHelper.IsFSharpOptionType(System.Type)", span="32-32", cluster="CommandLine.Infrastructure.ReflectionHelper.IsFSharpOptionType(System.Type)", file="FSharpOptionHelperTests.cs"];
+m0_7 [label="Entry Unk.BeTrue", span="", cluster="Unk.BeTrue", file="FSharpOptionHelperTests.cs"];
+m0_4 [label="Entry Unk.GetProperty", span="", cluster="Unk.GetProperty", file="FSharpOptionHelperTests.cs"];
+m0_0 [label="Entry CommandLine.Tests.Unit.Infrastructure.FSharpOptionHelperTests.FSharpCore_loaded_when_present()", span="11-11", cluster="CommandLine.Tests.Unit.Infrastructure.FSharpOptionHelperTests.FSharpCore_loaded_when_present()", file="FSharpOptionHelperTests.cs"];
+m0_1 [label="var prop = typeof(FakeOptionsWithFSharpOption).GetProperty(''FileName'', BindingFlags.Public | BindingFlags.Instance)", span="13-13", cluster="CommandLine.Tests.Unit.Infrastructure.FSharpOptionHelperTests.FSharpCore_loaded_when_present()", color=green, community=0, file="FSharpOptionHelperTests.cs"];
+m0_2 [label="ReflectionHelper.IsFSharpOptionType(prop.PropertyType).Should().BeTrue()", span="15-15", cluster="CommandLine.Tests.Unit.Infrastructure.FSharpOptionHelperTests.FSharpCore_loaded_when_present()", color=green, community=0, file="FSharpOptionHelperTests.cs"];
+m0_3 [label="Exit CommandLine.Tests.Unit.Infrastructure.FSharpOptionHelperTests.FSharpCore_loaded_when_present()", span="11-11", cluster="CommandLine.Tests.Unit.Infrastructure.FSharpOptionHelperTests.FSharpCore_loaded_when_present()", file="FSharpOptionHelperTests.cs"];
+m0_6 [label="Entry Unk.Should", span="", cluster="Unk.Should", file="FSharpOptionHelperTests.cs"];
+m0_0 -> m0_1  [key=0, style=solid, color=green];
+m0_1 -> m0_2  [key=0, style=solid, color=green];
+m0_1 -> m0_4  [key=2, style=dotted, color=green];
+m0_2 -> m0_3  [key=0, style=solid, color=green];
+m0_2 -> m0_5  [key=2, style=dotted, color=green];
+m0_2 -> m0_6  [key=2, style=dotted, color=green];
+m0_2 -> m0_7  [key=2, style=dotted, color=green];
+m0_3 -> m0_0  [key=0, style=bold, color=blue];
+}

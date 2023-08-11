@@ -1,0 +1,16 @@
+digraph  {
+d7 [cluster="Humanizer.Localisation.RussianFormatter.GetResourceKey(string, int)", color=green, community=0, label="return resourceKey + PaucalPostfix;", prediction=0, span="18-18"];
+d0 [cluster="Humanizer.Localisation.RussianFormatter.GetResourceKey(string, int)", label="Entry Humanizer.Localisation.RussianFormatter.GetResourceKey(string, int)", span="7-7"];
+d6 [cluster="Humanizer.Localisation.RussianFormatter.GetResourceKey(string, int)", label="mod10 > 1 && mod10 < 5", span="17-17"];
+d9 [cluster="Humanizer.Localisation.RussianFormatter.GetResourceKey(string, int)", label="Exit Humanizer.Localisation.RussianFormatter.GetResourceKey(string, int)", span="7-7"];
+d1 [cluster="Humanizer.Localisation.RussianFormatter.GetResourceKey(string, int)", label="var mod100 = number%100", span="9-9"];
+d3 [cluster="Humanizer.Localisation.RussianFormatter.GetResourceKey(string, int)", label="var mod10 = number%10", span="12-12"];
+d5 [cluster="Humanizer.Localisation.RussianFormatter.GetResourceKey(string, int)", label="return resourceKey + SingularPostfix;", span="15-15"];
+d8 [cluster="Humanizer.Localisation.RussianFormatter.GetResourceKey(string, int)", label="return resourceKey;", span="21-21"];
+d4 [cluster="Humanizer.Localisation.RussianFormatter.GetResourceKey(string, int)", label="mod10 == 1", span="14-14"];
+d2 [cluster="Humanizer.Localisation.RussianFormatter.GetResourceKey(string, int)", label="mod100/10 != 1", span="10-10"];
+d0 -> d7  [color=green, key=1, label=string, style=dashed];
+d0 -> d5  [color=darkseagreen4, key=1, label=string, style=dashed];
+d0 -> d8  [color=darkseagreen4, key=1, label=string, style=dashed];
+d3 -> d6  [color=darkseagreen4, key=1, label=mod10, style=dashed];
+}

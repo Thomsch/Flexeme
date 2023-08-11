@@ -1,0 +1,35 @@
+digraph  {
+m4_11 [cluster="Humanizer.Tests.TransformersTests.TransformToUpperCase(string, string)", file="EnumExtensions.cs", label="Entry Humanizer.Tests.TransformersTests.TransformToUpperCase(string, string)", span="42-42"];
+m4_12 [cluster="Humanizer.Tests.TransformersTests.TransformToUpperCase(string, string)", file="EnumExtensions.cs", label="Assert.Equal(expectedOutput, input.Transform(To.UpperCase))", span="44-44"];
+m4_13 [cluster="Humanizer.Tests.TransformersTests.TransformToUpperCase(string, string)", file="EnumExtensions.cs", label="Exit Humanizer.Tests.TransformersTests.TransformToUpperCase(string, string)", span="42-42"];
+m4_4 [cluster="Unk.Equal", file="EnumExtensions.cs", label="Entry Unk.Equal", span=""];
+m4_3 [cluster="string.Transform(params Humanizer.IStringTransformer[])", file="EnumExtensions.cs", label="Entry string.Transform(params Humanizer.IStringTransformer[])", span="15-15"];
+m4_5 [cluster="Humanizer.Tests.TransformersTests.TransformToLowerCase(string, string)", file="EnumExtensions.cs", label="Entry Humanizer.Tests.TransformersTests.TransformToLowerCase(string, string)", span="24-24"];
+m4_6 [cluster="Humanizer.Tests.TransformersTests.TransformToLowerCase(string, string)", file="EnumExtensions.cs", label="Assert.Equal(expectedOutput, input.Transform(To.LowerCase))", span="26-26"];
+m4_7 [cluster="Humanizer.Tests.TransformersTests.TransformToLowerCase(string, string)", file="EnumExtensions.cs", label="Exit Humanizer.Tests.TransformersTests.TransformToLowerCase(string, string)", span="24-24"];
+m4_0 [cluster="Humanizer.Tests.TransformersTests.TransformToTitleCase(string, string)", file="EnumExtensions.cs", label="Entry Humanizer.Tests.TransformersTests.TransformToTitleCase(string, string)", span="14-14"];
+m4_1 [cluster="Humanizer.Tests.TransformersTests.TransformToTitleCase(string, string)", file="EnumExtensions.cs", label="Assert.Equal(expectedOutput, input.Transform(To.TitleCase))", span="16-16"];
+m4_2 [cluster="Humanizer.Tests.TransformersTests.TransformToTitleCase(string, string)", file="EnumExtensions.cs", label="Exit Humanizer.Tests.TransformersTests.TransformToTitleCase(string, string)", span="14-14"];
+m4_8 [cluster="Humanizer.Tests.TransformersTests.TransformToSentenceCase(string, string)", file="EnumExtensions.cs", label="Entry Humanizer.Tests.TransformersTests.TransformToSentenceCase(string, string)", span="33-33"];
+m4_9 [cluster="Humanizer.Tests.TransformersTests.TransformToSentenceCase(string, string)", file="EnumExtensions.cs", label="Assert.Equal(expectedOutput, input.Transform(To.SentenceCase))", span="35-35"];
+m4_10 [cluster="Humanizer.Tests.TransformersTests.TransformToSentenceCase(string, string)", file="EnumExtensions.cs", label="Exit Humanizer.Tests.TransformersTests.TransformToSentenceCase(string, string)", span="33-33"];
+m5_8 [cluster="Humanizer.Tests.Extensions.EnumExtensionsTests.CanApplyTitleCasingOnEnumHumanization()", file="EnumExtensionsTests.cs", label="Entry Humanizer.Tests.Extensions.EnumExtensionsTests.CanApplyTitleCasingOnEnumHumanization()", span="30-30"];
+m5_10 [cluster="Humanizer.Tests.Extensions.EnumExtensionsTests.CanApplyTitleCasingOnEnumHumanization()", file="EnumExtensionsTests.cs", label="Exit Humanizer.Tests.Extensions.EnumExtensionsTests.CanApplyTitleCasingOnEnumHumanization()", span="30-30"];
+m5_0 [cluster="Humanizer.Tests.Extensions.EnumExtensionsTests.HonorsDescriptionAttribute()", file="EnumExtensionsTests.cs", label="Entry Humanizer.Tests.Extensions.EnumExtensionsTests.HonorsDescriptionAttribute()", span="18-18"];
+m5_2 [cluster="Humanizer.Tests.Extensions.EnumExtensionsTests.HonorsDescriptionAttribute()", file="EnumExtensionsTests.cs", label="Exit Humanizer.Tests.Extensions.EnumExtensionsTests.HonorsDescriptionAttribute()", span="18-18"];
+m5_18 [cluster="System.Enum.ToString()", file="EnumExtensionsTests.cs", label="Entry System.Enum.ToString()", span="0-0"];
+m5_5 [cluster="Humanizer.Tests.Extensions.EnumExtensionsTests.CanHumanizeMembersWithoutDescriptionAttribute()", file="EnumExtensionsTests.cs", label="Entry Humanizer.Tests.Extensions.EnumExtensionsTests.CanHumanizeMembersWithoutDescriptionAttribute()", span="24-24"];
+m5_7 [cluster="Humanizer.Tests.Extensions.EnumExtensionsTests.CanHumanizeMembersWithoutDescriptionAttribute()", file="EnumExtensionsTests.cs", label="Exit Humanizer.Tests.Extensions.EnumExtensionsTests.CanHumanizeMembersWithoutDescriptionAttribute()", span="24-24"];
+m5_15 [cluster="Humanizer.Tests.Extensions.EnumExtensionsTests.AllCapitalMembersAreReturnedAsIs()", file="EnumExtensionsTests.cs", label="Entry Humanizer.Tests.Extensions.EnumExtensionsTests.AllCapitalMembersAreReturnedAsIs()", span="46-46"];
+m5_16 [cluster="Humanizer.Tests.Extensions.EnumExtensionsTests.AllCapitalMembersAreReturnedAsIs()", file="EnumExtensionsTests.cs", label="Assert.Equal(EnumUnderTest.ALLCAPITALS.ToString(), EnumUnderTest.ALLCAPITALS.Humanize())", span="48-48"];
+m5_17 [cluster="Humanizer.Tests.Extensions.EnumExtensionsTests.AllCapitalMembersAreReturnedAsIs()", file="EnumExtensionsTests.cs", label="Exit Humanizer.Tests.Extensions.EnumExtensionsTests.AllCapitalMembersAreReturnedAsIs()", span="46-46"];
+m5_4 [cluster="Unk.Equal", file="EnumExtensionsTests.cs", label="Entry Unk.Equal", span=""];
+m5_3 [cluster="System.Enum.Humanize()", file="EnumExtensionsTests.cs", label="Entry System.Enum.Humanize()", span="8-8"];
+m5_11 [cluster="System.Enum.Humanize(Humanizer.LetterCasing)", file="EnumExtensionsTests.cs", label="Entry System.Enum.Humanize(Humanizer.LetterCasing)", span="26-26"];
+m5_12 [cluster="Humanizer.Tests.Extensions.EnumExtensionsTests.CanApplyLowerCaseCasingOnEnumHumanization()", file="EnumExtensionsTests.cs", label="Entry Humanizer.Tests.Extensions.EnumExtensionsTests.CanApplyLowerCaseCasingOnEnumHumanization()", span="38-38"];
+m5_14 [cluster="Humanizer.Tests.Extensions.EnumExtensionsTests.CanApplyLowerCaseCasingOnEnumHumanization()", file="EnumExtensionsTests.cs", label="Exit Humanizer.Tests.Extensions.EnumExtensionsTests.CanApplyLowerCaseCasingOnEnumHumanization()", span="38-38"];
+m10_0 [cluster="Humanizer.StringExentions.FormatWith(string, params object[])", file="StringExtensions.cs", label="Entry Humanizer.StringExentions.FormatWith(string, params object[])", span="15-15"];
+m10_1 [cluster="Humanizer.StringExentions.FormatWith(string, params object[])", file="StringExtensions.cs", label="return String.Format(format, args);", span="17-17"];
+m10_2 [cluster="Humanizer.StringExentions.FormatWith(string, params object[])", file="StringExtensions.cs", label="Exit Humanizer.StringExentions.FormatWith(string, params object[])", span="15-15"];
+m10_3 [cluster="string.Format(string, params object[])", file="StringExtensions.cs", label="Entry string.Format(string, params object[])", span="0-0"];
+}

@@ -1,0 +1,11 @@
+digraph  {
+m0_0 [label="Entry Humanizer.Tests.RunnableInDebugOnlyAttribute.RunnableInDebugOnlyAttribute()", span="7-7", cluster="Humanizer.Tests.RunnableInDebugOnlyAttribute.RunnableInDebugOnlyAttribute()", file="RunnableInDebugModeOnlyAttribute.cs"];
+m0_1 [label="!Debugger.IsAttached", span="9-9", cluster="Humanizer.Tests.RunnableInDebugOnlyAttribute.RunnableInDebugOnlyAttribute()", color=red, community=0, file="RunnableInDebugModeOnlyAttribute.cs"];
+m0_2 [label="Skip = ''Only running in interactive mode.''", span="11-11", cluster="Humanizer.Tests.RunnableInDebugOnlyAttribute.RunnableInDebugOnlyAttribute()", color=red, community=0, file="RunnableInDebugModeOnlyAttribute.cs"];
+m0_3 [label="Exit Humanizer.Tests.RunnableInDebugOnlyAttribute.RunnableInDebugOnlyAttribute()", span="7-7", cluster="Humanizer.Tests.RunnableInDebugOnlyAttribute.RunnableInDebugOnlyAttribute()", file="RunnableInDebugModeOnlyAttribute.cs"];
+m0_0 -> m0_1  [key=0, style=solid, color=red];
+m0_1 -> m0_2  [key=0, style=solid, color=red];
+m0_1 -> m0_3  [key=0, style=solid, color=red];
+m0_2 -> m0_3  [key=0, style=solid, color=red];
+m0_3 -> m0_0  [key=0, style=bold, color=blue];
+}

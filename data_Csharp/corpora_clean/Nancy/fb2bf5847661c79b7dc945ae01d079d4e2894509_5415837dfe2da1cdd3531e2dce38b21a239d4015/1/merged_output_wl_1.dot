@@ -1,0 +1,29 @@
+digraph  {
+d1 [cluster="Nancy.Bootstrapper.InstanceRegistration.InstanceRegistration(System.Type, object)", color=green, community=0, label="0: registrationType == null", span="16-16"];
+d0 [cluster="Nancy.Bootstrapper.InstanceRegistration.InstanceRegistration(System.Type, object)", label="Entry Nancy.Bootstrapper.InstanceRegistration.InstanceRegistration(System.Type, object)", span="14-14"];
+d2 [cluster="Nancy.Bootstrapper.InstanceRegistration.InstanceRegistration(System.Type, object)", color=green, community=0, label="0: throw new ArgumentNullException(''registrationType'');", span="18-18"];
+d3 [cluster="Nancy.Bootstrapper.InstanceRegistration.InstanceRegistration(System.Type, object)", color=green, community=0, label="0: implementation == null", span="21-21"];
+d4 [cluster="Nancy.Bootstrapper.InstanceRegistration.InstanceRegistration(System.Type, object)", color=green, community=0, label="0: throw new ArgumentNullException(''implementation'');", span="23-23"];
+d5 [cluster="Nancy.Bootstrapper.InstanceRegistration.InstanceRegistration(System.Type, object)", color=green, community=0, label="0: this.RegistrationType = registrationType", span="26-26"];
+d9 [label="Nancy.Bootstrapper.InstanceRegistration", span=""];
+d6 [cluster="Nancy.Bootstrapper.InstanceRegistration.InstanceRegistration(System.Type, object)", color=green, community=0, label="0: this.Implementation = implementation", span="27-27"];
+d7 [cluster="Nancy.Bootstrapper.InstanceRegistration.InstanceRegistration(System.Type, object)", label="Exit Nancy.Bootstrapper.InstanceRegistration.InstanceRegistration(System.Type, object)", span="14-14"];
+d8 [cluster="System.ArgumentNullException.ArgumentNullException(string)", label="Entry System.ArgumentNullException.ArgumentNullException(string)", span="0-0"];
+d1 -> d2  [color=green, key=0, style=solid];
+d1 -> d3  [color=green, key=0, style=solid];
+d0 -> d1  [color=green, key=0, style=solid];
+d0 -> d3  [color=green, key=1, label=object, style=dashed];
+d0 -> d5  [color=green, key=1, label="System.Type", style=dashed];
+d0 -> d6  [color=green, key=1, label=object, style=dashed];
+d2 -> d7  [color=green, key=0, style=solid];
+d2 -> d8  [color=green, key=2, style=dotted];
+d3 -> d4  [color=green, key=0, style=solid];
+d3 -> d5  [color=green, key=0, style=solid];
+d4 -> d7  [color=green, key=0, style=solid];
+d4 -> d8  [color=green, key=2, style=dotted];
+d5 -> d6  [color=green, key=0, style=solid];
+d9 -> d5  [color=green, key=1, label="Nancy.Bootstrapper.InstanceRegistration", style=dashed];
+d9 -> d6  [color=green, key=1, label="Nancy.Bootstrapper.InstanceRegistration", style=dashed];
+d6 -> d7  [color=green, key=0, style=solid];
+d7 -> d0  [color=blue, key=0, style=bold];
+}

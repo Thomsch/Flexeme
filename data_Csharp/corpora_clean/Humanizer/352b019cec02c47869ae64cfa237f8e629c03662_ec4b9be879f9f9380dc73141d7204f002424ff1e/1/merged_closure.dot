@@ -1,0 +1,10 @@
+digraph  {
+n0 [cluster="Humanizer.Tests.RomanNumeralTests.CanRomanize(int, string)", label="Entry Humanizer.Tests.RomanNumeralTests.CanRomanize(int, string)", span="23-23"];
+n2 [cluster="Humanizer.Tests.RomanNumeralTests.CanRomanize(int, string)", label="Exit Humanizer.Tests.RomanNumeralTests.CanRomanize(int, string)", span="23-23"];
+n3 [cluster="int.ToRoman()", label="Entry int.ToRoman()", span="75-75"];
+n4 [cluster="Unk.Equal", label="Entry Unk.Equal", span=""];
+n5 [cluster="Humanizer.Tests.RomanNumeralTests.CanUnromanize(int, string)", label="Entry Humanizer.Tests.RomanNumeralTests.CanUnromanize(int, string)", span="43-43"];
+n6 [cluster="Humanizer.Tests.RomanNumeralTests.CanUnromanize(int, string)", label="Assert.Equal(expected, input.FromRoman())", span="45-45"];
+n7 [cluster="Humanizer.Tests.RomanNumeralTests.CanUnromanize(int, string)", label="Exit Humanizer.Tests.RomanNumeralTests.CanUnromanize(int, string)", span="43-43"];
+n8 [cluster="string.FromRoman()", label="Entry string.FromRoman()", span="35-35"];
+}

@@ -1,0 +1,38 @@
+digraph  {
+m1_0 [cluster="Humanizer.Tests.HeadingTests.ToHeadingAbbreviated(double, string)", file="HeadingTests.cs", label="Entry Humanizer.Tests.HeadingTests.ToHeadingAbbreviated(double, string)", span="57-57"];
+m1_1 [cluster="Humanizer.Tests.HeadingTests.ToHeadingAbbreviated(double, string)", color=green, community=0, file="HeadingTests.cs", label="4: Assert.Equal(expected, heading.ToHeading())", span="59-59"];
+m1_2 [cluster="Humanizer.Tests.HeadingTests.ToHeadingAbbreviated(double, string)", file="HeadingTests.cs", label="Exit Humanizer.Tests.HeadingTests.ToHeadingAbbreviated(double, string)", span="57-57"];
+m1_11 [cluster="string.FromAbbreviatedHeading()", file="HeadingTests.cs", label="Entry string.FromAbbreviatedHeading()", span="68-68"];
+m1_4 [cluster="Unk.Equal", file="HeadingTests.cs", label="Entry Unk.Equal", span=""];
+m1_3 [cluster="double.ToHeading(Humanizer.HeadingStyle, System.Globalization.CultureInfo)", file="HeadingTests.cs", label="Entry double.ToHeading(Humanizer.HeadingStyle, System.Globalization.CultureInfo)", span="40-40"];
+m1_8 [cluster="Humanizer.Tests.HeadingTests.FromShortHeading(string, double)", file="HeadingTests.cs", label="Entry Humanizer.Tests.HeadingTests.FromShortHeading(string, double)", span="102-102"];
+m1_9 [cluster="Humanizer.Tests.HeadingTests.FromShortHeading(string, double)", color=green, community=0, file="HeadingTests.cs", label="5: Assert.Equal(expected, heading.FromAbbreviatedHeading())", span="104-104"];
+m1_10 [cluster="Humanizer.Tests.HeadingTests.FromShortHeading(string, double)", file="HeadingTests.cs", label="Exit Humanizer.Tests.HeadingTests.FromShortHeading(string, double)", span="102-102"];
+m1_12 [cluster="Humanizer.Tests.HeadingTests.ToHeadignArrow(double, char)", file="HeadingTests.cs", label="Entry Humanizer.Tests.HeadingTests.ToHeadignArrow(double, char)", span="156-156"];
+m1_13 [cluster="Humanizer.Tests.HeadingTests.ToHeadignArrow(double, char)", color=green, community=0, file="HeadingTests.cs", label="3: Assert.Equal(expected, heading.ToHeadingArrow())", span="158-158"];
+m1_14 [cluster="Humanizer.Tests.HeadingTests.ToHeadignArrow(double, char)", file="HeadingTests.cs", label="Exit Humanizer.Tests.HeadingTests.ToHeadignArrow(double, char)", span="156-156"];
+m1_5 [cluster="Humanizer.Tests.HeadingTests.ToHeading(double, string)", file="HeadingTests.cs", label="Entry Humanizer.Tests.HeadingTests.ToHeading(double, string)", span="80-80"];
+m1_6 [cluster="Humanizer.Tests.HeadingTests.ToHeading(double, string)", color=green, community=0, file="HeadingTests.cs", label="7: Assert.Equal(expected, heading.ToHeading(HeadingStyle.Full))", span="82-82"];
+m1_7 [cluster="Humanizer.Tests.HeadingTests.ToHeading(double, string)", file="HeadingTests.cs", label="Exit Humanizer.Tests.HeadingTests.ToHeading(double, string)", span="80-80"];
+m1_15 [cluster="double.ToHeadingArrow()", file="HeadingTests.cs", label="Entry double.ToHeadingArrow()", span="58-58"];
+m1_0 -> m1_1  [color=green, key=0, style=solid];
+m1_1 -> m1_2  [color=green, key=0, style=solid];
+m1_1 -> m1_3  [color=green, key=2, style=dotted];
+m1_1 -> m1_4  [color=green, key=2, style=dotted];
+m1_2 -> m1_0  [color=blue, key=0, style=bold];
+m1_8 -> m1_9  [color=green, key=0, style=solid];
+m1_9 -> m1_10  [color=green, key=0, style=solid];
+m1_9 -> m1_11  [color=green, key=2, style=dotted];
+m1_9 -> m1_4  [color=green, key=2, style=dotted];
+m1_10 -> m1_8  [color=blue, key=0, style=bold];
+m1_12 -> m1_13  [color=green, key=0, style=solid];
+m1_13 -> m1_14  [color=green, key=0, style=solid];
+m1_13 -> m1_15  [color=green, key=2, style=dotted];
+m1_13 -> m1_4  [color=green, key=2, style=dotted];
+m1_14 -> m1_12  [color=blue, key=0, style=bold];
+m1_5 -> m1_6  [color=green, key=0, style=solid];
+m1_6 -> m1_7  [color=green, key=0, style=solid];
+m1_6 -> m1_3  [color=green, key=2, style=dotted];
+m1_6 -> m1_4  [color=green, key=2, style=dotted];
+m1_7 -> m1_5  [color=blue, key=0, style=bold];
+}

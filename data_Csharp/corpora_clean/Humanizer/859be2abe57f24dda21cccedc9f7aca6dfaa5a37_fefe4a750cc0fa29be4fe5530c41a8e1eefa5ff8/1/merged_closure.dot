@@ -1,0 +1,30 @@
+digraph  {
+d1 [cluster="Humanizer.Tests.ResourceKeyTests.DateHumanizeKeysGeneration(string, string)", color=green, community=0, label="Assert.Equal(expected, actual)", prediction=0, span="13-13"];
+d0 [cluster="Humanizer.Tests.ResourceKeyTests.DateHumanizeKeysGeneration(string, string)", label="Entry Humanizer.Tests.ResourceKeyTests.DateHumanizeKeysGeneration(string, string)", span="11-11"];
+d2 [cluster="Humanizer.Tests.ResourceKeyTests.DateHumanizeKeysGeneration(string, string)", label="Exit Humanizer.Tests.ResourceKeyTests.DateHumanizeKeysGeneration(string, string)", span="11-11"];
+d3 [cluster="Unk.Equal", label="Entry Unk.Equal", span=""];
+d8 [cluster="Humanizer.Tests.ResourceKeyTests.DateHumanizeKeysExistence(string, string)", color=green, community=0, label="Assert.NotNull(Resources.GetResource(generatedResourceKey))", prediction=1, span="27-27"];
+d7 [cluster="Humanizer.Tests.ResourceKeyTests.DateHumanizeKeysExistence(string, string)", label="Entry Humanizer.Tests.ResourceKeyTests.DateHumanizeKeysExistence(string, string)", span="25-25"];
+d9 [cluster="Humanizer.Tests.ResourceKeyTests.DateHumanizeKeysExistence(string, string)", label="Exit Humanizer.Tests.ResourceKeyTests.DateHumanizeKeysExistence(string, string)", span="25-25"];
+d10 [cluster="Humanizer.Localisation.Resources.GetResource(string, System.Globalization.CultureInfo)", label="Entry Humanizer.Localisation.Resources.GetResource(string, System.Globalization.CultureInfo)", span="18-18"];
+d11 [cluster="Unk.NotNull", label="Entry Unk.NotNull", span=""];
+d5 [cluster="Humanizer.Tests.ResourceKeyTests.TimeSpanHumanizeKeysGeneration(string, string)", label="Assert.Equal(expected, actual)", span="20-20"];
+d13 [cluster="Humanizer.Tests.ResourceKeyTests.TimeSpanHumanizeKeysExistence(string, string)", label="Assert.NotNull(Resources.GetResource(generatedResourceKey))", span="34-34"];
+d4 [cluster="Humanizer.Tests.ResourceKeyTests.TimeSpanHumanizeKeysGeneration(string, string)", label="Entry Humanizer.Tests.ResourceKeyTests.TimeSpanHumanizeKeysGeneration(string, string)", span="18-18"];
+d6 [cluster="Humanizer.Tests.ResourceKeyTests.TimeSpanHumanizeKeysGeneration(string, string)", label="Exit Humanizer.Tests.ResourceKeyTests.TimeSpanHumanizeKeysGeneration(string, string)", span="18-18"];
+d12 [cluster="Humanizer.Tests.ResourceKeyTests.TimeSpanHumanizeKeysExistence(string, string)", label="Entry Humanizer.Tests.ResourceKeyTests.TimeSpanHumanizeKeysExistence(string, string)", span="32-32"];
+d14 [cluster="Humanizer.Tests.ResourceKeyTests.TimeSpanHumanizeKeysExistence(string, string)", label="Exit Humanizer.Tests.ResourceKeyTests.TimeSpanHumanizeKeysExistence(string, string)", span="32-32"];
+m1_7 [cluster="Humanizer.Tests.Localisation.invariant.ToQuantityTests.ToQuantityWithNoQuantity(string, int, string)", file="DefaultNumberToWordsConverter.cs", label="Entry Humanizer.Tests.Localisation.invariant.ToQuantityTests.ToQuantityWithNoQuantity(string, int, string)", span="39-39"];
+m1_8 [cluster="Humanizer.Tests.Localisation.invariant.ToQuantityTests.ToQuantityWithNoQuantity(string, int, string)", color=green, community=0, file="DefaultNumberToWordsConverter.cs", label="Assert.Equal(expected, word.ToQuantity(quatity, ShowQuantityAs.None))", prediction=2, span="41-41"];
+m1_9 [cluster="Humanizer.Tests.Localisation.invariant.ToQuantityTests.ToQuantityWithNoQuantity(string, int, string)", file="DefaultNumberToWordsConverter.cs", label="Exit Humanizer.Tests.Localisation.invariant.ToQuantityTests.ToQuantityWithNoQuantity(string, int, string)", span="39-39"];
+m1_5 [cluster="string.ToQuantity(int, Humanizer.ShowQuantityAs)", file="DefaultNumberToWordsConverter.cs", label="Entry string.ToQuantity(int, Humanizer.ShowQuantityAs)", span="25-25"];
+m1_10 [cluster="Humanizer.Tests.Localisation.invariant.ToQuantityTests.ToQuantityNumeric(string, int, string)", file="DefaultNumberToWordsConverter.cs", label="Entry Humanizer.Tests.Localisation.invariant.ToQuantityTests.ToQuantityNumeric(string, int, string)", span="56-56"];
+m1_11 [cluster="Humanizer.Tests.Localisation.invariant.ToQuantityTests.ToQuantityNumeric(string, int, string)", file="DefaultNumberToWordsConverter.cs", label="Assert.Equal(expected, word.ToQuantity(quatity, ShowQuantityAs.Numeric))", span="59-59"];
+m1_12 [cluster="Humanizer.Tests.Localisation.invariant.ToQuantityTests.ToQuantityNumeric(string, int, string)", file="DefaultNumberToWordsConverter.cs", label="Exit Humanizer.Tests.Localisation.invariant.ToQuantityTests.ToQuantityNumeric(string, int, string)", span="56-56"];
+m1_2 [cluster="Humanizer.Tests.Localisation.invariant.ToQuantityTests.ToQuantity(string, int, string)", file="DefaultNumberToWordsConverter.cs", label="Entry Humanizer.Tests.Localisation.invariant.ToQuantityTests.ToQuantity(string, int, string)", span="22-22"];
+m1_3 [cluster="Humanizer.Tests.Localisation.invariant.ToQuantityTests.ToQuantity(string, int, string)", file="DefaultNumberToWordsConverter.cs", label="Assert.Equal(expected, word.ToQuantity(quatity))", span="24-24"];
+m1_4 [cluster="Humanizer.Tests.Localisation.invariant.ToQuantityTests.ToQuantity(string, int, string)", file="DefaultNumberToWordsConverter.cs", label="Exit Humanizer.Tests.Localisation.invariant.ToQuantityTests.ToQuantity(string, int, string)", span="22-22"];
+m1_13 [cluster="Humanizer.Tests.Localisation.invariant.ToQuantityTests.ToQuantityWords(string, int, string)", file="DefaultNumberToWordsConverter.cs", label="Entry Humanizer.Tests.Localisation.invariant.ToQuantityTests.ToQuantityWords(string, int, string)", span="75-75"];
+m1_14 [cluster="Humanizer.Tests.Localisation.invariant.ToQuantityTests.ToQuantityWords(string, int, string)", file="DefaultNumberToWordsConverter.cs", label="Assert.Equal(expected, word.ToQuantity(quatity, ShowQuantityAs.Words))", span="77-77"];
+m1_15 [cluster="Humanizer.Tests.Localisation.invariant.ToQuantityTests.ToQuantityWords(string, int, string)", file="DefaultNumberToWordsConverter.cs", label="Exit Humanizer.Tests.Localisation.invariant.ToQuantityTests.ToQuantityWords(string, int, string)", span="75-75"];
+}

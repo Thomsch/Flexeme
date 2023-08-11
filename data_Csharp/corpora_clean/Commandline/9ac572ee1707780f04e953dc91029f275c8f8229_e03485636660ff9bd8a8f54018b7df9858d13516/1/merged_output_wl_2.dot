@@ -1,0 +1,27 @@
+digraph  {
+m1_8 [cluster="CommandLine.Infrastructure.Maybe.Nothing<T>()", file="ParserResultExtensionsTests.cs", label="Entry CommandLine.Infrastructure.Maybe.Nothing<T>()", span="63-63"];
+m1_6 [cluster="CommandLine.Infrastructure.Maybe.Just<T>(T)", file="ParserResultExtensionsTests.cs", label="Entry CommandLine.Infrastructure.Maybe.Just<T>(T)", span="68-68"];
+m1_7 [cluster="OptionSpecification.cstr", file="ParserResultExtensionsTests.cs", label="Entry OptionSpecification.cstr", span=""];
+m1_0 [cluster="CommandLine.Tests.Unit.Core.NameLookupTests.Lookup_name_of_sequence_option_with_separator()", file="ParserResultExtensionsTests.cs", label="Entry CommandLine.Tests.Unit.Core.NameLookupTests.Lookup_name_of_sequence_option_with_separator()", span="14-14"];
+m1_1 [cluster="CommandLine.Tests.Unit.Core.NameLookupTests.Lookup_name_of_sequence_option_with_separator()", color=green, community=0, file="ParserResultExtensionsTests.cs", label="0: var expected = Maybe.Just(''.'')", span="17-17"];
+m1_2 [cluster="CommandLine.Tests.Unit.Core.NameLookupTests.Lookup_name_of_sequence_option_with_separator()", color=green, community=0, file="ParserResultExtensionsTests.cs", label="0: var specs = new[] { new OptionSpecification(string.Empty, ''string-seq'',\r\n                false, string.Empty, Maybe.Nothing<int>(), Maybe.Nothing<int>(), '.', null, string.Empty, string.Empty, new List<string>(), typeof(IEnumerable<string>), TargetType.Sequence)}", span="18-19"];
+m1_4 [cluster="CommandLine.Tests.Unit.Core.NameLookupTests.Lookup_name_of_sequence_option_with_separator()", color=green, community=0, file="ParserResultExtensionsTests.cs", label="0: expected.ShouldBeEquivalentTo(result)", span="25-25"];
+m1_3 [cluster="CommandLine.Tests.Unit.Core.NameLookupTests.Lookup_name_of_sequence_option_with_separator()", color=green, community=0, file="ParserResultExtensionsTests.cs", label="0: var result = NameLookup.HavingSeparator(''string-seq'', specs, StringComparer.InvariantCulture)", span="22-22"];
+m1_5 [cluster="CommandLine.Tests.Unit.Core.NameLookupTests.Lookup_name_of_sequence_option_with_separator()", file="ParserResultExtensionsTests.cs", label="Exit CommandLine.Tests.Unit.Core.NameLookupTests.Lookup_name_of_sequence_option_with_separator()", span="14-14"];
+m1_10 [cluster="CommandLine.Core.NameLookup.HavingSeparator(string, System.Collections.Generic.IEnumerable<CommandLine.Core.OptionSpecification>, System.StringComparer)", file="ParserResultExtensionsTests.cs", label="Entry CommandLine.Core.NameLookup.HavingSeparator(string, System.Collections.Generic.IEnumerable<CommandLine.Core.OptionSpecification>, System.StringComparer)", span="16-16"];
+m1_11 [cluster="Unk.ShouldBeEquivalentTo", file="ParserResultExtensionsTests.cs", label="Entry Unk.ShouldBeEquivalentTo", span=""];
+m1_9 [cluster="System.Collections.Generic.List<T>.List()", file="ParserResultExtensionsTests.cs", label="Entry System.Collections.Generic.List<T>.List()", span="0-0"];
+m1_0 -> m1_1  [color=green, key=0, style=solid];
+m1_1 -> m1_2  [color=green, key=0, style=solid];
+m1_1 -> m1_6  [color=green, key=2, style=dotted];
+m1_1 -> m1_4  [color=green, key=1, label=expected, style=dashed];
+m1_2 -> m1_3  [color=green, key=0, style=solid];
+m1_2 -> m1_7  [color=green, key=2, style=dotted];
+m1_2 -> m1_8  [color=green, key=2, style=dotted];
+m1_2 -> m1_9  [color=green, key=2, style=dotted];
+m1_4 -> m1_5  [color=green, key=0, style=solid];
+m1_4 -> m1_11  [color=green, key=2, style=dotted];
+m1_3 -> m1_4  [color=green, key=0, style=solid];
+m1_3 -> m1_10  [color=green, key=2, style=dotted];
+m1_5 -> m1_0  [color=blue, key=0, style=bold];
+}

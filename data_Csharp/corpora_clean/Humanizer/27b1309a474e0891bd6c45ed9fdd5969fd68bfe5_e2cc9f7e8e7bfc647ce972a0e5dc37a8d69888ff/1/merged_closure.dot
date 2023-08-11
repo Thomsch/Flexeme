@@ -1,0 +1,16 @@
+digraph  {
+n0 [cluster="Humanizer.Tests.Localisation.bnBD.NumberToWordsTests.NumberToWordsTests()", label="Entry Humanizer.Tests.Localisation.bnBD.NumberToWordsTests.NumberToWordsTests()", span="7-7"];
+n1 [cluster="Humanizer.Tests.Localisation.bnBD.NumberToWordsTests.NumberToWordsTests()", label="Exit Humanizer.Tests.Localisation.bnBD.NumberToWordsTests.NumberToWordsTests()", span="7-7"];
+n2 [cluster="Humanizer.Tests.Localisation.bnBD.NumberToWordsTests.ToWords(int, string)", label="Entry Humanizer.Tests.Localisation.bnBD.NumberToWordsTests.ToWords(int, string)", span="40-40"];
+n4 [cluster="Humanizer.Tests.Localisation.bnBD.NumberToWordsTests.ToWords(int, string)", label="Exit Humanizer.Tests.Localisation.bnBD.NumberToWordsTests.ToWords(int, string)", span="40-40"];
+n5 [cluster="int.ToWords(System.Globalization.CultureInfo)", label="Entry int.ToWords(System.Globalization.CultureInfo)", span="16-16"];
+n6 [cluster="Unk.Equal", label="Entry Unk.Equal", span=""];
+n7 [cluster="Humanizer.Tests.Localisation.bnBD.NumberToWordsTests.ToOrdinalWords(int, string)", label="Entry Humanizer.Tests.Localisation.bnBD.NumberToWordsTests.ToOrdinalWords(int, string)", span="82-82"];
+n9 [cluster="Humanizer.Tests.Localisation.bnBD.NumberToWordsTests.ToOrdinalWords(int, string)", label="Exit Humanizer.Tests.Localisation.bnBD.NumberToWordsTests.ToOrdinalWords(int, string)", span="82-82"];
+n10 [cluster="int.ToOrdinalWords(System.Globalization.CultureInfo)", label="Entry int.ToOrdinalWords(System.Globalization.CultureInfo)", span="52-52"];
+n11 [cluster="<invalid-global-code>.NumberToWordsTests()", label="Entry <invalid-global-code>.NumberToWordsTests()", span="88-88"];
+n12 [cluster="<invalid-global-code>.NumberToWordsTests()", label="Exit <invalid-global-code>.NumberToWordsTests()", span="88-88"];
+n13 [cluster="<invalid-global-code>.ToWordsFarsi(int, string)", label="Entry <invalid-global-code>.ToWordsFarsi(int, string)", span="118-118"];
+n15 [cluster="<invalid-global-code>.ToWordsFarsi(int, string)", label="Exit <invalid-global-code>.ToWordsFarsi(int, string)", span="118-118"];
+n16 [cluster="Unk.ToWords", label="Entry Unk.ToWords", span=""];
+}

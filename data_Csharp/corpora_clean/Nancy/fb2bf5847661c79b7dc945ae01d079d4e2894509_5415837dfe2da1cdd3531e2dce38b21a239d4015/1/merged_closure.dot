@@ -1,0 +1,13 @@
+digraph  {
+d1 [cluster="Nancy.Bootstrapper.InstanceRegistration.InstanceRegistration(System.Type, object)", color=green, community=0, label="registrationType == null", prediction=0, span="16-16"];
+d0 [cluster="Nancy.Bootstrapper.InstanceRegistration.InstanceRegistration(System.Type, object)", label="Entry Nancy.Bootstrapper.InstanceRegistration.InstanceRegistration(System.Type, object)", span="14-14"];
+d2 [cluster="Nancy.Bootstrapper.InstanceRegistration.InstanceRegistration(System.Type, object)", color=green, community=0, label="throw new ArgumentNullException(''registrationType'');", prediction=1, span="18-18"];
+d3 [cluster="Nancy.Bootstrapper.InstanceRegistration.InstanceRegistration(System.Type, object)", color=green, community=0, label="implementation == null", prediction=2, span="21-21"];
+d4 [cluster="Nancy.Bootstrapper.InstanceRegistration.InstanceRegistration(System.Type, object)", color=green, community=0, label="throw new ArgumentNullException(''implementation'');", prediction=3, span="23-23"];
+d5 [cluster="Nancy.Bootstrapper.InstanceRegistration.InstanceRegistration(System.Type, object)", color=green, community=0, label="this.RegistrationType = registrationType", prediction=4, span="26-26"];
+d9 [label="Nancy.Bootstrapper.InstanceRegistration", span=""];
+d6 [cluster="Nancy.Bootstrapper.InstanceRegistration.InstanceRegistration(System.Type, object)", color=green, community=0, label="this.Implementation = implementation", prediction=5, span="27-27"];
+d7 [cluster="Nancy.Bootstrapper.InstanceRegistration.InstanceRegistration(System.Type, object)", label="Exit Nancy.Bootstrapper.InstanceRegistration.InstanceRegistration(System.Type, object)", span="14-14"];
+d8 [cluster="System.ArgumentNullException.ArgumentNullException(string)", label="Entry System.ArgumentNullException.ArgumentNullException(string)", span="0-0"];
+d0 -> d3  [color=green, key=1, label=object, style=dashed];
+}

@@ -1,0 +1,18 @@
+digraph  {
+m0_2 [cluster="CommonMark.Syntax.Reference.Reference(string, string, string)", file="Reference.cs", label="Entry CommonMark.Syntax.Reference.Reference(string, string, string)", span="21-21"];
+m0_3 [cluster="CommonMark.Syntax.Reference.Reference(string, string, string)", color=green, community=0, file="Reference.cs", label="0: this.Label = label", span="23-23"];
+m0_4 [cluster="CommonMark.Syntax.Reference.Reference(string, string, string)", color=green, community=0, file="Reference.cs", label="0: this.Url = url", span="24-24"];
+m0_5 [cluster="CommonMark.Syntax.Reference.Reference(string, string, string)", color=green, community=0, file="Reference.cs", label="1: this.Title = title", span="25-25"];
+m0_6 [cluster="CommonMark.Syntax.Reference.Reference(string, string, string)", file="Reference.cs", label="Exit CommonMark.Syntax.Reference.Reference(string, string, string)", span="21-21"];
+m0_7 [file="Reference.cs", label="CommonMark.Syntax.Reference", span=""];
+m0_2 -> m0_3  [color=green, key=0, style=solid];
+m0_2 -> m0_4  [color=green, key=1, label=string, style=dashed];
+m0_2 -> m0_5  [color=green, key=1, label=string, style=dashed];
+m0_3 -> m0_4  [color=green, key=0, style=solid];
+m0_4 -> m0_5  [color=green, key=0, style=solid];
+m0_5 -> m0_6  [color=green, key=0, style=solid];
+m0_6 -> m0_2  [color=blue, key=0, style=bold];
+m0_7 -> m0_3  [color=green, key=1, label="CommonMark.Syntax.Reference", style=dashed];
+m0_7 -> m0_4  [color=green, key=1, label="CommonMark.Syntax.Reference", style=dashed];
+m0_7 -> m0_5  [color=green, key=1, label="CommonMark.Syntax.Reference", style=dashed];
+}

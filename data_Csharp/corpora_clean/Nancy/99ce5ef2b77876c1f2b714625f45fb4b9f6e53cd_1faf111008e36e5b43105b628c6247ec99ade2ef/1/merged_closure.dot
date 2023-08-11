@@ -1,0 +1,25 @@
+digraph  {
+n22 [label="Nancy.ModelBinding.DynamicModelBinderAdapter", span=""];
+n0 [cluster="Nancy.ModelBinding.DynamicModelBinderAdapter.DynamicModelBinderAdapter(Nancy.ModelBinding.IModelBinderLocator, Nancy.NancyContext, object, params string[])", label="Entry Nancy.ModelBinding.DynamicModelBinderAdapter.DynamicModelBinderAdapter(Nancy.ModelBinding.IModelBinderLocator, Nancy.NancyContext, object, params string[])", span="36-36"];
+n1 [cluster="Nancy.ModelBinding.DynamicModelBinderAdapter.DynamicModelBinderAdapter(Nancy.ModelBinding.IModelBinderLocator, Nancy.NancyContext, object, params string[])", label="locator == null", span="38-38"];
+n3 [cluster="Nancy.ModelBinding.DynamicModelBinderAdapter.DynamicModelBinderAdapter(Nancy.ModelBinding.IModelBinderLocator, Nancy.NancyContext, object, params string[])", label="context == null", span="43-43"];
+n5 [cluster="Nancy.ModelBinding.DynamicModelBinderAdapter.DynamicModelBinderAdapter(Nancy.ModelBinding.IModelBinderLocator, Nancy.NancyContext, object, params string[])", label="this.locator = locator", span="48-48"];
+n6 [cluster="Nancy.ModelBinding.DynamicModelBinderAdapter.DynamicModelBinderAdapter(Nancy.ModelBinding.IModelBinderLocator, Nancy.NancyContext, object, params string[])", label="this.context = context", span="49-49"];
+n7 [cluster="Nancy.ModelBinding.DynamicModelBinderAdapter.DynamicModelBinderAdapter(Nancy.ModelBinding.IModelBinderLocator, Nancy.NancyContext, object, params string[])", label="this.instance = instance", span="50-50"];
+n8 [cluster="Nancy.ModelBinding.DynamicModelBinderAdapter.DynamicModelBinderAdapter(Nancy.ModelBinding.IModelBinderLocator, Nancy.NancyContext, object, params string[])", label="this.blacklistedProperties = blacklistedProperties", span="51-51"];
+n2 [cluster="Nancy.ModelBinding.DynamicModelBinderAdapter.DynamicModelBinderAdapter(Nancy.ModelBinding.IModelBinderLocator, Nancy.NancyContext, object, params string[])", label="throw new ArgumentNullException(''locator'');", span="40-40"];
+n4 [cluster="Nancy.ModelBinding.DynamicModelBinderAdapter.DynamicModelBinderAdapter(Nancy.ModelBinding.IModelBinderLocator, Nancy.NancyContext, object, params string[])", label="throw new ArgumentNullException(''context'');", span="45-45"];
+n9 [cluster="Nancy.ModelBinding.DynamicModelBinderAdapter.DynamicModelBinderAdapter(Nancy.ModelBinding.IModelBinderLocator, Nancy.NancyContext, object, params string[])", label="Exit Nancy.ModelBinding.DynamicModelBinderAdapter.DynamicModelBinderAdapter(Nancy.ModelBinding.IModelBinderLocator, Nancy.NancyContext, object, params string[])", span="36-36"];
+n10 [cluster="System.ArgumentNullException.ArgumentNullException(string)", label="Entry System.ArgumentNullException.ArgumentNullException(string)", span="0-0"];
+n11 [cluster="Nancy.ModelBinding.DynamicModelBinderAdapter.TryConvert(System.Dynamic.ConvertBinder, out object)", label="Entry Nancy.ModelBinding.DynamicModelBinderAdapter.TryConvert(System.Dynamic.ConvertBinder, out object)", span="61-61"];
+n16 [cluster="Nancy.ModelBinding.DynamicModelBinderAdapter.TryConvert(System.Dynamic.ConvertBinder, out object)", label="return result != null || base.TryConvert(binder, out result);", span="72-72"];
+n18 [cluster="Nancy.ModelBinding.IModelBinderLocator.GetBinderForType(System.Type, Nancy.NancyContext)", label="Entry Nancy.ModelBinding.IModelBinderLocator.GetBinderForType(System.Type, Nancy.NancyContext)", span="15-15"];
+n20 [cluster="Nancy.ModelBinding.IBinder.Bind(Nancy.NancyContext, System.Type, object, params string[])", label="Entry Nancy.ModelBinding.IBinder.Bind(Nancy.NancyContext, System.Type, object, params string[])", span="17-17"];
+n17 [cluster="Nancy.ModelBinding.DynamicModelBinderAdapter.TryConvert(System.Dynamic.ConvertBinder, out object)", label="Exit Nancy.ModelBinding.DynamicModelBinderAdapter.TryConvert(System.Dynamic.ConvertBinder, out object)", span="61-61"];
+n21 [cluster="System.Dynamic.DynamicObject.TryConvert(System.Dynamic.ConvertBinder, out object)", label="Entry System.Dynamic.DynamicObject.TryConvert(System.Dynamic.ConvertBinder, out object)", span="0-0"];
+n19 [cluster="Nancy.ModelBinding.ModelBindingException.ModelBindingException(System.Type, string, System.Exception)", label="Entry Nancy.ModelBinding.ModelBindingException.ModelBindingException(System.Type, string, System.Exception)", span="46-46"];
+n22 -> n16  [color=darkseagreen4, key=1, label="Nancy.ModelBinding.DynamicModelBinderAdapter", style=dashed];
+n0 -> n3  [color=darkseagreen4, key=1, label="Nancy.NancyContext", style=dashed];
+n11 -> n16  [color=darkseagreen4, key=1, label="System.Dynamic.ConvertBinder", style=dashed];
+n16 -> n16  [color=darkseagreen4, key=1, label="out object", style=dashed];
+}

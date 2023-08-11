@@ -1,0 +1,16 @@
+digraph  {
+n0 [cluster="CommandLine.Tests.Properties.ParserProperties.Parsing_a_string_returns_original_string()", label="Entry CommandLine.Tests.Properties.ParserProperties.Parsing_a_string_returns_original_string()", span="17-17"];
+n2 [cluster="CommandLine.Tests.Properties.ParserProperties.Parsing_a_string_returns_original_string()", label="Exit CommandLine.Tests.Properties.ParserProperties.Parsing_a_string_returns_original_string()", span="17-17"];
+n3 [cluster="Unk.>", label="Entry Unk.>", span=""];
+n4 [cluster="Unk.QuickCheckThrowOnFailure", label="Entry Unk.QuickCheckThrowOnFailure", span=""];
+n5 [cluster="lambda expression", label="Entry lambda expression", span="20-24"];
+n9 [cluster="CommandLine.Parser.ParseArguments<T>(System.Collections.Generic.IEnumerable<string>)", label="Entry CommandLine.Parser.ParseArguments<T>(System.Collections.Generic.IEnumerable<string>)", span="85-85"];
+n8 [cluster="lambda expression", label="Exit lambda expression", span="20-24"];
+n10 [cluster="Unk.ShouldBeEquivalentTo", label="Entry Unk.ShouldBeEquivalentTo", span=""];
+d1 [cluster="CommandLine.Tests.Properties.ParserProperties.Parsing_a_string_returns_original_string()", color=green, community=0, label="Prop.ForAll<string>(\r\n                x =>\r\n                {\r\n                    var value = x.As<string>();\r\n                    var result = Sut.ParseArguments<Scalar_String_Mutable>(new[] { ''--stringvalue'', value });\r\n                    ((Parsed<Scalar_String_Mutable>)result).Value.StringValue.ShouldBeEquivalentTo(value);\r\n                }).QuickCheckThrowOnFailure()", prediction=0, span="19-25"];
+d6 [cluster="lambda expression", color=green, community=0, label="var value = x.As<string>()", prediction=1, span="22-22"];
+d7 [cluster="lambda expression", color=green, community=0, label="var result = Sut.ParseArguments<Scalar_String_Mutable>(new[] { ''--stringvalue'', value })", prediction=2, span="23-23"];
+d8 [cluster="lambda expression", color=green, community=0, label="((Parsed<Scalar_String_Mutable>)result).Value.StringValue.ShouldBeEquivalentTo(value)", prediction=1, span="24-24"];
+d1 -> n5  [color=green, key=1, label="lambda expression", style=dashed];
+d6 -> d8  [color=green, key=1, label=value, style=dashed];
+}

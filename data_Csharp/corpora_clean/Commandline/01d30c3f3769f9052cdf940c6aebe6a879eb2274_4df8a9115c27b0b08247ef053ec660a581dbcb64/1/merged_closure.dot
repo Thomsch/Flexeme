@@ -1,0 +1,17 @@
+digraph  {
+m0_3 [cluster="CommandLine.ValueListAttribute.ValueListAttribute(System.Type)", file="StringExtensions.cs", label="Entry CommandLine.ValueListAttribute.ValueListAttribute(System.Type)", span="57-57"];
+m0_8 [cluster="CommandLine.ValueListAttribute.ValueListAttribute(System.Type)", file="StringExtensions.cs", label="_concreteType = concreteType", span="65-65"];
+m0_6 [cluster="CommandLine.ValueListAttribute.ValueListAttribute(System.Type)", file="StringExtensions.cs", label="!typeof(IList<string>).IsAssignableFrom(concreteType)", span="61-61"];
+m0_4 [cluster="CommandLine.ValueListAttribute.ValueListAttribute(System.Type)", file="StringExtensions.cs", label="concreteType == null", span="60-60"];
+m0_7 [cluster="CommandLine.ValueListAttribute.ValueListAttribute(System.Type)", file="StringExtensions.cs", label="throw new CommandLineParserException(''The types are incompatible.'');", span="63-63"];
+m0_5 [cluster="CommandLine.ValueListAttribute.ValueListAttribute(System.Type)", file="StringExtensions.cs", label="throw new ArgumentNullException(''concreteType'');", span="60-60"];
+m0_9 [cluster="CommandLine.ValueListAttribute.ValueListAttribute(System.Type)", file="StringExtensions.cs", label="Exit CommandLine.ValueListAttribute.ValueListAttribute(System.Type)", span="57-57"];
+m0_0 [cluster="CommandLine.ValueListAttribute.ValueListAttribute()", file="StringExtensions.cs", label="Entry CommandLine.ValueListAttribute.ValueListAttribute()", span="47-47"];
+m0_1 [cluster="CommandLine.ValueListAttribute.ValueListAttribute()", color=green, community=0, file="StringExtensions.cs", label="MaximumElements = -1", prediction=0, span="49-49"];
+m0_2 [cluster="CommandLine.ValueListAttribute.ValueListAttribute()", file="StringExtensions.cs", label="Exit CommandLine.ValueListAttribute.ValueListAttribute()", span="47-47"];
+m0_10 [cluster="System.ArgumentNullException.ArgumentNullException(string)", file="StringExtensions.cs", label="Entry System.ArgumentNullException.ArgumentNullException(string)", span="0-0"];
+m0_11 [cluster="System.Type.IsAssignableFrom(System.Type)", file="StringExtensions.cs", label="Entry System.Type.IsAssignableFrom(System.Type)", span="0-0"];
+m0_12 [cluster="CommandLine.CommandLineParserException.CommandLineParserException(string)", file="StringExtensions.cs", label="Entry CommandLine.CommandLineParserException.CommandLineParserException(string)", span="52-52"];
+m0_46 [file="StringExtensions.cs", label="CommandLine.ValueListAttribute", span=""];
+m0_3 -> m0_6  [color=darkseagreen4, key=1, label="System.Type", style=dashed];
+}

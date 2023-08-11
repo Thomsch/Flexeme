@@ -1,0 +1,35 @@
+digraph  {
+m1_12 [cluster="System.ComponentModel.Design.CommandID.CommandID(System.Guid, int)", file="SendForBacktestingcs.cs", label="Entry System.ComponentModel.Design.CommandID.CommandID(System.Guid, int)", span="0-0"];
+m1_15 [cluster="Unk.AddCommand", file="SendForBacktestingcs.cs", label="Entry Unk.AddCommand", span=""];
+m1_14 [cluster="EventHandler.cstr", file="SendForBacktestingcs.cs", label="Entry EventHandler.cstr", span=""];
+m1_19 [cluster="QuantConnect.VisualStudioPlugin.SendForBacktestingcs.MenuItemCallback(object, System.EventArgs)", file="SendForBacktestingcs.cs", label="Entry QuantConnect.VisualStudioPlugin.SendForBacktestingcs.MenuItemCallback(object, System.EventArgs)", span="96-96"];
+m1_20 [cluster="QuantConnect.VisualStudioPlugin.SendForBacktestingcs.MenuItemCallback(object, System.EventArgs)", file="SendForBacktestingcs.cs", label="string message = string.Format(CultureInfo.CurrentCulture, ''Inside {0}.MenuItemCallback()'', this.GetType().FullName)", span="98-98"];
+m1_22 [cluster="QuantConnect.VisualStudioPlugin.SendForBacktestingcs.MenuItemCallback(object, System.EventArgs)", file="SendForBacktestingcs.cs", label="VsShellUtilities.ShowMessageBox(\r\n                this.ServiceProvider,\r\n                message,\r\n                title,\r\n                OLEMSGICON.OLEMSGICON_INFO,\r\n                OLEMSGBUTTON.OLEMSGBUTTON_OK,\r\n                OLEMSGDEFBUTTON.OLEMSGDEFBUTTON_FIRST)", span="102-108"];
+m1_23 [cluster="QuantConnect.VisualStudioPlugin.SendForBacktestingcs.MenuItemCallback(object, System.EventArgs)", file="SendForBacktestingcs.cs", label="Exit QuantConnect.VisualStudioPlugin.SendForBacktestingcs.MenuItemCallback(object, System.EventArgs)", span="96-96"];
+m1_26 [cluster="Unk.ShowMessageBox", file="SendForBacktestingcs.cs", label="Entry Unk.ShowMessageBox", span=""];
+m1_10 [cluster="System.ArgumentNullException.ArgumentNullException(string)", file="SendForBacktestingcs.cs", label="Entry System.ArgumentNullException.ArgumentNullException(string)", span="0-0"];
+m1_0 [cluster="QuantConnect.VisualStudioPlugin.SendForBacktestingcs.SendForBacktestingcs(Package)", file="SendForBacktestingcs.cs", label="Entry QuantConnect.VisualStudioPlugin.SendForBacktestingcs.SendForBacktestingcs(Package)", span="39-39"];
+m1_1 [cluster="QuantConnect.VisualStudioPlugin.SendForBacktestingcs.SendForBacktestingcs(Package)", file="SendForBacktestingcs.cs", label="package == null", span="41-41"];
+m1_3 [cluster="QuantConnect.VisualStudioPlugin.SendForBacktestingcs.SendForBacktestingcs(Package)", file="SendForBacktestingcs.cs", label="this.package = package", span="46-46"];
+m1_2 [cluster="QuantConnect.VisualStudioPlugin.SendForBacktestingcs.SendForBacktestingcs(Package)", file="SendForBacktestingcs.cs", label="throw new ArgumentNullException(''package'');", span="43-43"];
+m1_4 [cluster="QuantConnect.VisualStudioPlugin.SendForBacktestingcs.SendForBacktestingcs(Package)", file="SendForBacktestingcs.cs", label="OleMenuCommandService commandService = this.ServiceProvider.GetService(typeof(IMenuCommandService)) as OleMenuCommandService", span="48-48"];
+m1_5 [cluster="QuantConnect.VisualStudioPlugin.SendForBacktestingcs.SendForBacktestingcs(Package)", file="SendForBacktestingcs.cs", label="commandService != null", span="49-49"];
+m1_9 [cluster="QuantConnect.VisualStudioPlugin.SendForBacktestingcs.SendForBacktestingcs(Package)", file="SendForBacktestingcs.cs", label="Exit QuantConnect.VisualStudioPlugin.SendForBacktestingcs.SendForBacktestingcs(Package)", span="39-39"];
+m1_24 [cluster="object.GetType()", file="SendForBacktestingcs.cs", label="Entry object.GetType()", span="0-0"];
+m1_25 [cluster="string.Format(System.IFormatProvider, string, object)", file="SendForBacktestingcs.cs", label="Entry string.Format(System.IFormatProvider, string, object)", span="0-0"];
+m1_13 [cluster="OleMenuCommand.cstr", file="SendForBacktestingcs.cs", label="Entry OleMenuCommand.cstr", span=""];
+m1_16 [cluster="QuantConnect.VisualStudioPlugin.SendForBacktestingcs.Initialize(Package)", file="SendForBacktestingcs.cs", label="Entry QuantConnect.VisualStudioPlugin.SendForBacktestingcs.Initialize(Package)", span="84-84"];
+m1_18 [cluster="QuantConnect.VisualStudioPlugin.SendForBacktestingcs.Initialize(Package)", file="SendForBacktestingcs.cs", label="Exit QuantConnect.VisualStudioPlugin.SendForBacktestingcs.Initialize(Package)", span="84-84"];
+m1_11 [cluster="System.IServiceProvider.GetService(System.Type)", file="SendForBacktestingcs.cs", label="Entry System.IServiceProvider.GetService(System.Type)", span="0-0"];
+m1_27 [file="SendForBacktestingcs.cs", label="QuantConnect.VisualStudioPlugin.SendForBacktestingcs", span=""];
+m2_2 [cluster="QuantConnect.VisualStudioPlugin.SendForBacktestingcsPackage.Initialize()", file="SendForBacktestingcsPackage.cs", label="Entry QuantConnect.VisualStudioPlugin.SendForBacktestingcsPackage.Initialize()", span="66-66"];
+m2_4 [cluster="QuantConnect.VisualStudioPlugin.SendForBacktestingcsPackage.Initialize()", file="SendForBacktestingcsPackage.cs", label="base.Initialize()", span="69-69"];
+m2_5 [cluster="QuantConnect.VisualStudioPlugin.SendForBacktestingcsPackage.Initialize()", file="SendForBacktestingcsPackage.cs", label="Exit QuantConnect.VisualStudioPlugin.SendForBacktestingcsPackage.Initialize()", span="66-66"];
+m2_6 [cluster="Unk.Initialize", file="SendForBacktestingcsPackage.cs", label="Entry Unk.Initialize", span=""];
+m2_0 [cluster="QuantConnect.VisualStudioPlugin.SendForBacktestingcsPackage.SendForBacktestingcsPackage()", file="SendForBacktestingcsPackage.cs", label="Entry QuantConnect.VisualStudioPlugin.SendForBacktestingcsPackage.SendForBacktestingcsPackage()", span="52-52"];
+m2_1 [cluster="QuantConnect.VisualStudioPlugin.SendForBacktestingcsPackage.SendForBacktestingcsPackage()", file="SendForBacktestingcsPackage.cs", label="Exit QuantConnect.VisualStudioPlugin.SendForBacktestingcsPackage.SendForBacktestingcsPackage()", span="52-52"];
+m2_7 [file="SendForBacktestingcsPackage.cs", label="QuantConnect.VisualStudioPlugin.SendForBacktestingcsPackage", span=""];
+m1_20 -> m1_22  [color=darkseagreen4, key=1, label=message, style=dashed];
+m1_27 -> m1_22  [color=darkseagreen4, key=1, label="QuantConnect.VisualStudioPlugin.SendForBacktestingcs", style=dashed];
+m2_7 -> m2_4  [color=darkseagreen4, key=1, label="QuantConnect.VisualStudioPlugin.SendForBacktestingcsPackage", style=dashed];
+}

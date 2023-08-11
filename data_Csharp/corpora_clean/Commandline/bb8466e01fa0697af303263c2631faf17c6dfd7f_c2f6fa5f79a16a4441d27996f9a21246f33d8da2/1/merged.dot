@@ -1,0 +1,25 @@
+digraph  {
+d1 [label="source == null", span="26-26", cluster="CommandLine.Infrastructure.EnumerableExtensions.Pairwise<TSource, TResult>(System.Collections.Generic.IEnumerable<TSource>, System.Func<TSource, TSource, TResult>)", color=green, community=0];
+d0 [label="Entry CommandLine.Infrastructure.EnumerableExtensions.Pairwise<TSource, TResult>(System.Collections.Generic.IEnumerable<TSource>, System.Func<TSource, TSource, TResult>)", span="24-24", cluster="CommandLine.Infrastructure.EnumerableExtensions.Pairwise<TSource, TResult>(System.Collections.Generic.IEnumerable<TSource>, System.Func<TSource, TSource, TResult>)"];
+d2 [label="throw new ArgumentNullException(''source'');", span="26-26", cluster="CommandLine.Infrastructure.EnumerableExtensions.Pairwise<TSource, TResult>(System.Collections.Generic.IEnumerable<TSource>, System.Func<TSource, TSource, TResult>)", color=green, community=0];
+d3 [label="selector == null", span="27-27", cluster="CommandLine.Infrastructure.EnumerableExtensions.Pairwise<TSource, TResult>(System.Collections.Generic.IEnumerable<TSource>, System.Func<TSource, TSource, TResult>)"];
+d6 [label="Exit CommandLine.Infrastructure.EnumerableExtensions.Pairwise<TSource, TResult>(System.Collections.Generic.IEnumerable<TSource>, System.Func<TSource, TSource, TResult>)", span="24-24", cluster="CommandLine.Infrastructure.EnumerableExtensions.Pairwise<TSource, TResult>(System.Collections.Generic.IEnumerable<TSource>, System.Func<TSource, TSource, TResult>)"];
+d7 [label="Entry System.ArgumentNullException.ArgumentNullException(string)", span="0-0", cluster="System.ArgumentNullException.ArgumentNullException(string)"];
+d5 [label="return source.PairwiseImpl(selector);", span="29-29", cluster="CommandLine.Infrastructure.EnumerableExtensions.Pairwise<TSource, TResult>(System.Collections.Generic.IEnumerable<TSource>, System.Func<TSource, TSource, TResult>)"];
+d4 [label="throw new ArgumentNullException(''selector'');", span="27-27", cluster="CommandLine.Infrastructure.EnumerableExtensions.Pairwise<TSource, TResult>(System.Collections.Generic.IEnumerable<TSource>, System.Func<TSource, TSource, TResult>)"];
+d8 [label="Entry System.Collections.Generic.IEnumerable<TSource>.PairwiseImpl<TSource, TResult>(System.Func<TSource, TSource, TResult>)", span="32-32", cluster="System.Collections.Generic.IEnumerable<TSource>.PairwiseImpl<TSource, TResult>(System.Func<TSource, TSource, TResult>)"];
+d1 -> d2  [key=0, style=solid, color=green];
+d1 -> d3  [key=0, style=solid, color=green];
+d0 -> d1  [key=0, style=solid, color=green];
+d0 -> d3  [key=1, style=dashed, color=darkseagreen4, label="System.Func<TSource, TSource, TResult>"];
+d0 -> d5  [key=1, style=dashed, color=darkseagreen4, label="System.Collections.Generic.IEnumerable<TSource>"];
+d2 -> d6  [key=0, style=solid, color=green];
+d2 -> d7  [key=2, style=dotted, color=green];
+d3 -> d4  [key=0, style=solid];
+d3 -> d5  [key=0, style=solid];
+d6 -> d0  [key=0, style=bold, color=blue];
+d5 -> d6  [key=0, style=solid];
+d5 -> d8  [key=2, style=dotted];
+d4 -> d6  [key=0, style=solid];
+d4 -> d7  [key=2, style=dotted];
+}

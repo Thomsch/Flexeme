@@ -1,0 +1,16 @@
+digraph  {
+n0 [cluster="RestSharp.Extensions.ResponseStatusExtensions.ToWebException(RestSharp.ResponseStatus)", label="Entry RestSharp.Extensions.ResponseStatusExtensions.ToWebException(RestSharp.ResponseStatus)", span="13-13"];
+n1 [cluster="RestSharp.Extensions.ResponseStatusExtensions.ToWebException(RestSharp.ResponseStatus)", label=responseStatus, span="15-15"];
+n2 [cluster="RestSharp.Extensions.ResponseStatusExtensions.ToWebException(RestSharp.ResponseStatus)", label="ResponseStatus.None", span="17-17"];
+n4 [cluster="RestSharp.Extensions.ResponseStatusExtensions.ToWebException(RestSharp.ResponseStatus)", label="ResponseStatus.Error", span="19-19"];
+n6 [cluster="RestSharp.Extensions.ResponseStatusExtensions.ToWebException(RestSharp.ResponseStatus)", label="ResponseStatus.TimedOut", span="21-21"];
+n8 [cluster="RestSharp.Extensions.ResponseStatusExtensions.ToWebException(RestSharp.ResponseStatus)", label="ResponseStatus.Aborted", span="23-23"];
+n10 [cluster="RestSharp.Extensions.ResponseStatusExtensions.ToWebException(RestSharp.ResponseStatus)", label="throw new ArgumentOutOfRangeException(''responseStatus'');", span="26-26"];
+n3 [cluster="RestSharp.Extensions.ResponseStatusExtensions.ToWebException(RestSharp.ResponseStatus)", label="return new WebException(''The request could not be processed.'', WebExceptionStatus.ServerProtocolViolation);", span="18-18"];
+n11 [cluster="RestSharp.Extensions.ResponseStatusExtensions.ToWebException(RestSharp.ResponseStatus)", label="Exit RestSharp.Extensions.ResponseStatusExtensions.ToWebException(RestSharp.ResponseStatus)", span="13-13"];
+n12 [cluster="System.Net.WebException.WebException(string, System.Net.WebExceptionStatus)", label="Entry System.Net.WebException.WebException(string, System.Net.WebExceptionStatus)", span="0-0"];
+d5 [cluster="RestSharp.Extensions.ResponseStatusExtensions.ToWebException(RestSharp.ResponseStatus)", color=green, community=0, label="return new WebException(''An error occurred while processing the request.'', WebExceptionStatus.ServerProtocolViolation);", prediction=0, span="20-20"];
+n7 [cluster="RestSharp.Extensions.ResponseStatusExtensions.ToWebException(RestSharp.ResponseStatus)", label="return new WebException(''The request timed-out.'', WebExceptionStatus.Timeout);", span="22-22"];
+n9 [cluster="RestSharp.Extensions.ResponseStatusExtensions.ToWebException(RestSharp.ResponseStatus)", label="return new WebException(''The request was aborted.'', WebExceptionStatus.Timeout);", span="24-24"];
+n13 [cluster="System.ArgumentOutOfRangeException.ArgumentOutOfRangeException(string)", label="Entry System.ArgumentOutOfRangeException.ArgumentOutOfRangeException(string)", span="0-0"];
+}

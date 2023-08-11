@@ -1,0 +1,10 @@
+digraph  {
+m0_0 [label="Entry CommandLine.Tests.Mocks.SimpleOptions.SimpleOptions()", span="35-35", cluster="CommandLine.Tests.Mocks.SimpleOptions.SimpleOptions()", file="SimpleOptions.cs"];
+m0_1 [label="IntegerValue = 0", span="37-37", cluster="CommandLine.Tests.Mocks.SimpleOptions.SimpleOptions()", color=green, community=0, file="SimpleOptions.cs"];
+m0_2 [label="Exit CommandLine.Tests.Mocks.SimpleOptions.SimpleOptions()", span="35-35", cluster="CommandLine.Tests.Mocks.SimpleOptions.SimpleOptions()", file="SimpleOptions.cs"];
+m0_3 [label="CommandLine.Tests.Mocks.SimpleOptions", span="", file="SimpleOptions.cs"];
+m0_0 -> m0_1  [key=0, style=solid, color=green];
+m0_1 -> m0_2  [key=0, style=solid, color=green];
+m0_2 -> m0_0  [key=0, style=bold, color=blue];
+m0_3 -> m0_1  [key=1, style=dashed, color=green, label="CommandLine.Tests.Mocks.SimpleOptions"];
+}

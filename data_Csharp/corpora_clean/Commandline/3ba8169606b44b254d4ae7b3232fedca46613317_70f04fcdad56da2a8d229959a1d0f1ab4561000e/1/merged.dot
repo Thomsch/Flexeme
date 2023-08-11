@@ -1,0 +1,31 @@
+digraph  {
+m0_0 [label="Entry Humanizer.Localisation.Formatters.RussianFormatter.GetResourceKey(string, int)", span="7-7", cluster="Humanizer.Localisation.Formatters.RussianFormatter.GetResourceKey(string, int)", file="Sequence.cs"];
+m0_5 [label="return resourceKey + SingularPostfix;", span="15-15", cluster="Humanizer.Localisation.Formatters.RussianFormatter.GetResourceKey(string, int)", color=green, community=0, file="Sequence.cs"];
+m0_4 [label="mod10 == 1", span="14-14", cluster="Humanizer.Localisation.Formatters.RussianFormatter.GetResourceKey(string, int)", file="Sequence.cs"];
+m0_7 [label="return resourceKey + PaucalPostfix;", span="18-18", cluster="Humanizer.Localisation.Formatters.RussianFormatter.GetResourceKey(string, int)", color=green, community=0, file="Sequence.cs"];
+m0_6 [label="mod10 > 1 && mod10 < 5", span="17-17", cluster="Humanizer.Localisation.Formatters.RussianFormatter.GetResourceKey(string, int)", color=green, community=0, file="Sequence.cs"];
+m0_8 [label="return resourceKey;", span="21-21", cluster="Humanizer.Localisation.Formatters.RussianFormatter.GetResourceKey(string, int)", color=green, community=0, file="Sequence.cs"];
+m0_2 [label="mod100/10 != 1", span="10-10", cluster="Humanizer.Localisation.Formatters.RussianFormatter.GetResourceKey(string, int)", file="Sequence.cs"];
+m0_3 [label="var mod10 = number%10", span="12-12", cluster="Humanizer.Localisation.Formatters.RussianFormatter.GetResourceKey(string, int)", file="Sequence.cs"];
+m0_1 [label="var mod100 = number%100", span="9-9", cluster="Humanizer.Localisation.Formatters.RussianFormatter.GetResourceKey(string, int)", file="Sequence.cs"];
+m0_9 [label="Exit Humanizer.Localisation.Formatters.RussianFormatter.GetResourceKey(string, int)", span="7-7", cluster="Humanizer.Localisation.Formatters.RussianFormatter.GetResourceKey(string, int)", file="Sequence.cs"];
+m0_0 -> m0_5  [key=1, style=dashed, color=green, label=string];
+m0_0 -> m0_7  [key=1, style=dashed, color=green, label=string];
+m0_0 -> m0_8  [key=1, style=dashed, color=green, label=string];
+m0_0 -> m0_0  [key=3, color=darkorchid, style=bold, label="method methodReturn string GetResourceKey"];
+m0_0 -> m0_1  [key=0, style=solid];
+m0_0 -> m0_3  [key=1, style=dashed, color=darkseagreen4, label=int];
+m0_5 -> m0_9  [key=0, style=solid, color=green];
+m0_4 -> m0_5  [key=0, style=solid, color=green];
+m0_4 -> m0_6  [key=0, style=solid, color=green];
+m0_7 -> m0_9  [key=0, style=solid, color=green];
+m0_6 -> m0_7  [key=0, style=solid, color=green];
+m0_6 -> m0_8  [key=0, style=solid, color=green];
+m0_8 -> m0_9  [key=0, style=solid, color=green];
+m0_2 -> m0_8  [key=0, style=solid, color=green];
+m0_2 -> m0_3  [key=0, style=solid];
+m0_3 -> m0_6  [key=1, style=dashed, color=green, label=mod10];
+m0_3 -> m0_4  [key=0, style=solid];
+m0_1 -> m0_2  [key=0, style=solid];
+m0_9 -> m0_0  [key=0, style=bold, color=blue];
+}

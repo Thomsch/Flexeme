@@ -1,0 +1,25 @@
+digraph  {
+n0 [cluster="Humanizer.Localisation.NumberToWords.DefaultNumberToWordsConverter.Convert(int)", label="Entry Humanizer.Localisation.NumberToWords.DefaultNumberToWordsConverter.Convert(int)", span="4-4"];
+n2 [cluster="Humanizer.Localisation.NumberToWords.DefaultNumberToWordsConverter.Convert(int)", label="Exit Humanizer.Localisation.NumberToWords.DefaultNumberToWordsConverter.Convert(int)", span="4-4"];
+n3 [cluster="int.ToString()", label="Entry int.ToString()", span="0-0"];
+n4 [cluster="Humanizer.Localisation.NumberToWords.DefaultNumberToWordsConverter.ConvertToOrdinal(int)", label="Entry Humanizer.Localisation.NumberToWords.DefaultNumberToWordsConverter.ConvertToOrdinal(int)", span="9-9"];
+n5 [cluster="Humanizer.Localisation.NumberToWords.DefaultNumberToWordsConverter.ConvertToOrdinal(int)", label="return number.ToString();", span="11-11"];
+n6 [cluster="Humanizer.Localisation.NumberToWords.DefaultNumberToWordsConverter.ConvertToOrdinal(int)", label="Exit Humanizer.Localisation.NumberToWords.DefaultNumberToWordsConverter.ConvertToOrdinal(int)", span="9-9"];
+m0_0 [cluster="Humanizer.Localisation.ArabicFormatter.GetResourceKey(string, int)", file="DefaultFormatter.cs", label="Entry Humanizer.Localisation.ArabicFormatter.GetResourceKey(string, int)", span="7-7"];
+m0_1 [cluster="Humanizer.Localisation.ArabicFormatter.GetResourceKey(string, int)", file="DefaultFormatter.cs", label="number == 2", span="10-10"];
+m0_3 [cluster="Humanizer.Localisation.ArabicFormatter.GetResourceKey(string, int)", file="DefaultFormatter.cs", label="number >= 3 && number <= 10", span="14-14"];
+m0_4 [cluster="Humanizer.Localisation.ArabicFormatter.GetResourceKey(string, int)", file="DefaultFormatter.cs", label="return resourceKey + PluralPostfix;", span="15-15"];
+m0_5 [cluster="Humanizer.Localisation.ArabicFormatter.GetResourceKey(string, int)", file="DefaultFormatter.cs", label="return resourceKey;", span="17-17"];
+m0_6 [cluster="Humanizer.Localisation.ArabicFormatter.GetResourceKey(string, int)", file="DefaultFormatter.cs", label="Exit Humanizer.Localisation.ArabicFormatter.GetResourceKey(string, int)", span="7-7"];
+m1_0 [cluster="Humanizer.Localisation.NumberToWords.INumberToWordsConverter.Convert(int)", file="RomanianFormatter.cs", label="Entry Humanizer.Localisation.NumberToWords.INumberToWordsConverter.Convert(int)", span="12-12"];
+m1_1 [cluster="Humanizer.Localisation.NumberToWords.INumberToWordsConverter.Convert(int)", color=green, community=0, file="RomanianFormatter.cs", label="Exit Humanizer.Localisation.NumberToWords.INumberToWordsConverter.Convert(int)", prediction=0, span="12-12"];
+m1_2 [cluster="Humanizer.Localisation.NumberToWords.INumberToWordsConverter.ConvertToOrdinal(int)", color=green, community=0, file="RomanianFormatter.cs", label="Entry Humanizer.Localisation.NumberToWords.INumberToWordsConverter.ConvertToOrdinal(int)", prediction=1, span="19-19"];
+m1_3 [cluster="Humanizer.Localisation.NumberToWords.INumberToWordsConverter.ConvertToOrdinal(int)", color=green, community=0, file="RomanianFormatter.cs", label="Exit Humanizer.Localisation.NumberToWords.INumberToWordsConverter.ConvertToOrdinal(int)", prediction=2, span="19-19"];
+m1_4 [cluster="Humanizer.Localisation.RomanianFormatter.GetResourceKey(string, int)", color=green, community=0, file="RomanianFormatter.cs", label="return resourceKey + Above20PostFix;", prediction=2, span="15-15"];
+m1_5 [cluster="Humanizer.Localisation.RomanianFormatter.GetResourceKey(string, int)", file="RomanianFormatter.cs", label="Exit Humanizer.Localisation.RomanianFormatter.GetResourceKey(string, int)", span="6-6"];
+m0_0 -> m0_3  [color=darkseagreen4, key=1, label=int, style=dashed];
+m0_0 -> m0_4  [color=darkseagreen4, key=1, label=string, style=dashed];
+m0_0 -> m0_5  [color=darkseagreen4, key=1, label=string, style=dashed];
+m1_0 -> m1_3  [color=green, key=1, label=string, style=dashed];
+m1_0 -> m1_4  [color=green, key=1, label=string, style=dashed];
+}

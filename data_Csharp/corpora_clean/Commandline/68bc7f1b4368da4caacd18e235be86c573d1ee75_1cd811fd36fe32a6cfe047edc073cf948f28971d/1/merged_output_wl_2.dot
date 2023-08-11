@@ -1,0 +1,18 @@
+digraph  {
+m0_5 [cluster="CommandLine.Infrastructure.ReflectionHelper.IsFSharpOptionType(System.Type)", file="FSharpOptionHelperTests.cs", label="Entry CommandLine.Infrastructure.ReflectionHelper.IsFSharpOptionType(System.Type)", span="32-32"];
+m0_7 [cluster="Unk.BeTrue", file="FSharpOptionHelperTests.cs", label="Entry Unk.BeTrue", span=""];
+m0_4 [cluster="Unk.GetProperty", file="FSharpOptionHelperTests.cs", label="Entry Unk.GetProperty", span=""];
+m0_0 [cluster="CommandLine.Tests.Unit.Infrastructure.FSharpOptionHelperTests.FSharpCore_loaded_when_present()", file="FSharpOptionHelperTests.cs", label="Entry CommandLine.Tests.Unit.Infrastructure.FSharpOptionHelperTests.FSharpCore_loaded_when_present()", span="11-11"];
+m0_1 [cluster="CommandLine.Tests.Unit.Infrastructure.FSharpOptionHelperTests.FSharpCore_loaded_when_present()", color=green, community=0, file="FSharpOptionHelperTests.cs", label="0: var prop = typeof(FakeOptionsWithFSharpOption).GetProperty(''FileName'', BindingFlags.Public | BindingFlags.Instance)", span="13-13"];
+m0_2 [cluster="CommandLine.Tests.Unit.Infrastructure.FSharpOptionHelperTests.FSharpCore_loaded_when_present()", color=green, community=0, file="FSharpOptionHelperTests.cs", label="0: ReflectionHelper.IsFSharpOptionType(prop.PropertyType).Should().BeTrue()", span="15-15"];
+m0_3 [cluster="CommandLine.Tests.Unit.Infrastructure.FSharpOptionHelperTests.FSharpCore_loaded_when_present()", file="FSharpOptionHelperTests.cs", label="Exit CommandLine.Tests.Unit.Infrastructure.FSharpOptionHelperTests.FSharpCore_loaded_when_present()", span="11-11"];
+m0_6 [cluster="Unk.Should", file="FSharpOptionHelperTests.cs", label="Entry Unk.Should", span=""];
+m0_0 -> m0_1  [color=green, key=0, style=solid];
+m0_1 -> m0_2  [color=green, key=0, style=solid];
+m0_1 -> m0_4  [color=green, key=2, style=dotted];
+m0_2 -> m0_3  [color=green, key=0, style=solid];
+m0_2 -> m0_5  [color=green, key=2, style=dotted];
+m0_2 -> m0_6  [color=green, key=2, style=dotted];
+m0_2 -> m0_7  [color=green, key=2, style=dotted];
+m0_3 -> m0_0  [color=blue, key=0, style=bold];
+}

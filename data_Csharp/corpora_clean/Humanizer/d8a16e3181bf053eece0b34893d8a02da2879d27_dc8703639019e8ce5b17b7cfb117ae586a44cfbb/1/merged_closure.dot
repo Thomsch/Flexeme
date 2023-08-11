@@ -1,0 +1,24 @@
+digraph  {
+n0 [cluster="CommandLine.Core.SpecificationGuards.GuardAgainstScalarWithRange()", label="Entry CommandLine.Core.SpecificationGuards.GuardAgainstScalarWithRange()", span="16-16"];
+n1 [cluster="CommandLine.Core.SpecificationGuards.GuardAgainstScalarWithRange()", label="return spec => spec.ConversionType.ToDescriptorKind() == TypeDescriptorKind.Scalar && (spec.Min > 0 || spec.Max > 0);", span="18-18"];
+n2 [cluster="CommandLine.Core.SpecificationGuards.GuardAgainstScalarWithRange()", label="Exit CommandLine.Core.SpecificationGuards.GuardAgainstScalarWithRange()", span="16-16"];
+n4 [cluster="lambda expression", label="spec.ConversionType.ToDescriptorKind() == TypeDescriptorKind.Scalar && (spec.Min > 0 || spec.Max > 0)", span="18-18"];
+n3 [cluster="lambda expression", label="Entry lambda expression", span="18-18"];
+n5 [cluster="lambda expression", label="Exit lambda expression", span="18-18"];
+n6 [cluster="System.Type.ToDescriptorKind()", label="Entry System.Type.ToDescriptorKind()", span="22-22"];
+n7 [cluster="CommandLine.Core.SpecificationGuards.GuardAgainstSequenceWithWrongRange()", label="Entry CommandLine.Core.SpecificationGuards.GuardAgainstSequenceWithWrongRange()", span="21-21"];
+n8 [cluster="CommandLine.Core.SpecificationGuards.GuardAgainstSequenceWithWrongRange()", label="return spec => spec.ConversionType.ToDescriptorKind() == TypeDescriptorKind.Sequence\r\n                && !spec.IsMinNotSpecified() && !spec.IsMaxNotSpecified() && spec.Min > spec.Max;", span="23-24"];
+n9 [cluster="CommandLine.Core.SpecificationGuards.GuardAgainstSequenceWithWrongRange()", label="Exit CommandLine.Core.SpecificationGuards.GuardAgainstSequenceWithWrongRange()", span="21-21"];
+n11 [cluster="lambda expression", label="spec.ConversionType.ToDescriptorKind() == TypeDescriptorKind.Sequence\r\n                && !spec.IsMinNotSpecified() && !spec.IsMaxNotSpecified() && spec.Min > spec.Max", span="23-24"];
+n10 [cluster="lambda expression", label="Entry lambda expression", span="23-24"];
+n12 [cluster="lambda expression", label="Exit lambda expression", span="23-24"];
+n13 [cluster="CommandLine.Core.Specification.IsMinNotSpecified()", label="Entry CommandLine.Core.Specification.IsMinNotSpecified()", span="70-70"];
+n14 [cluster="CommandLine.Core.Specification.IsMaxNotSpecified()", label="Entry CommandLine.Core.Specification.IsMaxNotSpecified()", span="75-75"];
+n15 [cluster="CommandLine.Core.SpecificationGuards.GuardAgainstOneCharLongName()", label="Entry CommandLine.Core.SpecificationGuards.GuardAgainstOneCharLongName()", span="27-27"];
+n17 [cluster="CommandLine.Core.SpecificationGuards.GuardAgainstOneCharLongName()", label="Exit CommandLine.Core.SpecificationGuards.GuardAgainstOneCharLongName()", span="27-27"];
+n18 [cluster="lambda expression", label="Entry lambda expression", span="29-29"];
+n20 [cluster="lambda expression", label="Exit lambda expression", span="29-29"];
+n21 [cluster="CommandLine.Core.Specification.IsOption()", label="Entry CommandLine.Core.Specification.IsOption()", span="11-11"];
+n1 -> n4  [color=darkseagreen4, key=1, label="CommandLine.Core.Specification", style=dashed];
+n8 -> n11  [color=darkseagreen4, key=1, label="CommandLine.Core.Specification", style=dashed];
+}

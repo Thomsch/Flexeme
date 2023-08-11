@@ -1,0 +1,24 @@
+digraph  {
+n0 [cluster="QuantConnect.Lean.Engine.DataFeeds.Enumerators.Factories.BaseDataCollectionSubscripionEnumeratorFactory.CreateEnumerator(QuantConnect.Data.UniverseSelection.SubscriptionRequest)", label="Entry QuantConnect.Lean.Engine.DataFeeds.Enumerators.Factories.BaseDataCollectionSubscripionEnumeratorFactory.CreateEnumerator(QuantConnect.Data.UniverseSelection.SubscriptionRequest)", span="36-36"];
+n1 [cluster="QuantConnect.Lean.Engine.DataFeeds.Enumerators.Factories.BaseDataCollectionSubscripionEnumeratorFactory.CreateEnumerator(QuantConnect.Data.UniverseSelection.SubscriptionRequest)", label="var configuration = request.Configuration", span="38-38"];
+n2 [cluster="QuantConnect.Lean.Engine.DataFeeds.Enumerators.Factories.BaseDataCollectionSubscripionEnumeratorFactory.CreateEnumerator(QuantConnect.Data.UniverseSelection.SubscriptionRequest)", label="var sourceFactory = (BaseData) Activator.CreateInstance(request.Configuration.Type)", span="39-39"];
+n5 [cluster="System.Activator.CreateInstance(System.Type)", label="Entry System.Activator.CreateInstance(System.Type)", span="0-0"];
+n4 [cluster="QuantConnect.Lean.Engine.DataFeeds.Enumerators.Factories.BaseDataCollectionSubscripionEnumeratorFactory.CreateEnumerator(QuantConnect.Data.UniverseSelection.SubscriptionRequest)", label="Exit QuantConnect.Lean.Engine.DataFeeds.Enumerators.Factories.BaseDataCollectionSubscripionEnumeratorFactory.CreateEnumerator(QuantConnect.Data.UniverseSelection.SubscriptionRequest)", span="36-36"];
+n6 [cluster="QuantConnect.Data.BaseData.GetSource(QuantConnect.Data.SubscriptionDataConfig, System.DateTime, bool)", label="Entry QuantConnect.Data.BaseData.GetSource(QuantConnect.Data.SubscriptionDataConfig, System.DateTime, bool)", span="157-157"];
+n7 [cluster="Unk.ForSource", label="Entry Unk.ForSource", span=""];
+n8 [cluster="Unk.Read", label="Entry Unk.Read", span=""];
+n9 [cluster="BaseDataCollection.cstr", label="Entry BaseDataCollection.cstr", span=""];
+n10 [cluster="Unk.AddDays", label="Entry Unk.AddDays", span=""];
+n11 [cluster="Unk.GetEnumerator", label="Entry Unk.GetEnumerator", span=""];
+d4 [cluster="QuantConnect.Securities.Equity.Equity.Equity(string, QuantConnect.Resolution, bool, decimal, bool, bool)", color=green, community=0, label="Model = new EquityTransactionModel()", prediction=0, span="51-51"];
+d10 [label="QuantConnect.Securities.Equity.Equity", span=""];
+d3 [cluster="QuantConnect.Securities.Equity.Equity.Equity(string, QuantConnect.Resolution, bool, decimal, bool, bool)", label="Exchange = new EquityExchange()", span="48-48"];
+d5 [cluster="QuantConnect.Securities.Equity.Equity.Equity(string, QuantConnect.Resolution, bool, decimal, bool, bool)", label="Exit QuantConnect.Securities.Equity.Equity.Equity(string, QuantConnect.Resolution, bool, decimal, bool, bool)", span="42-42"];
+d9 [cluster="QuantConnect.Securities.Equity.EquityTransactionModel.EquityTransactionModel()", label="Entry QuantConnect.Securities.Equity.EquityTransactionModel.EquityTransactionModel()", span="51-51"];
+d1 [cluster="QuantConnect.Securities.Equity.Equity.Equity(string, QuantConnect.Resolution, bool, decimal, bool, bool)", label="Cache = new EquityCache()", span="46-46"];
+d2 [cluster="QuantConnect.Securities.Equity.Equity.Equity(string, QuantConnect.Resolution, bool, decimal, bool, bool)", label="Holdings = new EquityHolding(symbol, this.Model)", span="47-47"];
+d8 [cluster="QuantConnect.Securities.Equity.EquityExchange.EquityExchange()", label="Entry QuantConnect.Securities.Equity.EquityExchange.EquityExchange()", span="44-44"];
+d0 [cluster="QuantConnect.Securities.Equity.Equity.Equity(string, QuantConnect.Resolution, bool, decimal, bool, bool)", label="Entry QuantConnect.Securities.Equity.Equity.Equity(string, QuantConnect.Resolution, bool, decimal, bool, bool)", span="42-42"];
+d6 [cluster="QuantConnect.Securities.Equity.EquityCache.EquityCache()", label="Entry QuantConnect.Securities.Equity.EquityCache.EquityCache()", span="40-40"];
+d7 [cluster="QuantConnect.Securities.Equity.EquityHolding.EquityHolding(string, QuantConnect.Securities.Interfaces.ISecurityTransactionModel)", label="Entry QuantConnect.Securities.Equity.EquityHolding.EquityHolding(string, QuantConnect.Securities.Interfaces.ISecurityTransactionModel)", span="43-43"];
+}

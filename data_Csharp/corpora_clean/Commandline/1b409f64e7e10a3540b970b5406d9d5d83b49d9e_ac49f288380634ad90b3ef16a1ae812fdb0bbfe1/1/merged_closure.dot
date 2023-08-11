@@ -1,0 +1,6 @@
+digraph  {
+m0_0 [cluster="CommandLine.Text.UsageAttribute.UsageAttribute(System.Collections.Generic.IDictionary<string, string>)", file="UsageAttribute.cs", label="Entry CommandLine.Text.UsageAttribute.UsageAttribute(System.Collections.Generic.IDictionary<string, string>)", span="12-12"];
+m0_1 [cluster="CommandLine.Text.UsageAttribute.UsageAttribute(System.Collections.Generic.IDictionary<string, string>)", color=green, community=0, file="UsageAttribute.cs", label="this.groups = groups", prediction=0, span="14-14"];
+m0_2 [cluster="CommandLine.Text.UsageAttribute.UsageAttribute(System.Collections.Generic.IDictionary<string, string>)", file="UsageAttribute.cs", label="Exit CommandLine.Text.UsageAttribute.UsageAttribute(System.Collections.Generic.IDictionary<string, string>)", span="12-12"];
+m0_5 [file="UsageAttribute.cs", label="CommandLine.Text.UsageAttribute", span=""];
+}

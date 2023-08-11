@@ -1,0 +1,25 @@
+digraph  {
+m0_0 [cluster="CommandLine.OptionListAttribute.OptionListAttribute(char)", file="Program.cs", label="Entry CommandLine.OptionListAttribute.OptionListAttribute(char)", span="42-42"];
+m0_1 [cluster="CommandLine.OptionListAttribute.OptionListAttribute(char)", file="Program.cs", label="Exit CommandLine.OptionListAttribute.OptionListAttribute(char)", span="42-42"];
+m0_7 [cluster="CommandLine.OptionListAttribute.OptionListAttribute(char, string, char)", file="Program.cs", label="Entry CommandLine.OptionListAttribute.OptionListAttribute(char, string, char)", span="67-67"];
+m0_8 [cluster="CommandLine.OptionListAttribute.OptionListAttribute(char, string, char)", color=red, community=0, file="Program.cs", label="0: Separator = separator", span="70-70"];
+m0_9 [cluster="CommandLine.OptionListAttribute.OptionListAttribute(char, string, char)", file="Program.cs", label="Exit CommandLine.OptionListAttribute.OptionListAttribute(char, string, char)", span="67-67"];
+m0_2 [cluster="CommandLine.OptionListAttribute.OptionListAttribute(string)", file="Program.cs", label="Entry CommandLine.OptionListAttribute.OptionListAttribute(string)", span="48-48"];
+m0_3 [cluster="CommandLine.OptionListAttribute.OptionListAttribute(string)", file="Program.cs", label="Exit CommandLine.OptionListAttribute.OptionListAttribute(string)", span="48-48"];
+m0_4 [cluster="CommandLine.OptionListAttribute.OptionListAttribute(char, string)", file="Program.cs", label="Entry CommandLine.OptionListAttribute.OptionListAttribute(char, string)", span="55-55"];
+m0_5 [cluster="CommandLine.OptionListAttribute.OptionListAttribute(char, string)", color=red, community=0, file="Program.cs", label="3: Separator = ':'", span="58-58"];
+m0_6 [cluster="CommandLine.OptionListAttribute.OptionListAttribute(char, string)", file="Program.cs", label="Exit CommandLine.OptionListAttribute.OptionListAttribute(char, string)", span="55-55"];
+m0_10 [file="Program.cs", label="CommandLine.OptionListAttribute", span=""];
+m0_0 -> m0_1  [key=0, style=solid];
+m0_1 -> m0_0  [color=blue, key=0, style=bold];
+m0_7 -> m0_8  [color=red, key=0, style=solid];
+m0_8 -> m0_9  [color=red, key=0, style=solid];
+m0_9 -> m0_7  [color=blue, key=0, style=bold];
+m0_2 -> m0_3  [key=0, style=solid];
+m0_3 -> m0_2  [color=blue, key=0, style=bold];
+m0_4 -> m0_5  [color=red, key=0, style=solid];
+m0_5 -> m0_6  [color=red, key=0, style=solid];
+m0_6 -> m0_4  [color=blue, key=0, style=bold];
+m0_10 -> m0_5  [color=red, key=1, label="CommandLine.OptionListAttribute", style=dashed];
+m0_10 -> m0_8  [color=red, key=1, label="CommandLine.OptionListAttribute", style=dashed];
+}

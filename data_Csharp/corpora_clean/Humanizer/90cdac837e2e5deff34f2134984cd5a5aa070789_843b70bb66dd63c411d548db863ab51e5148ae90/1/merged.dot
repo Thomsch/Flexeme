@@ -1,0 +1,24 @@
+digraph  {
+n0 [label="Entry Humanizer.ToQuantityExtensions.ToQuantity(string, int)", span="17-17", cluster="Humanizer.ToQuantityExtensions.ToQuantity(string, int)"];
+n1 [label="return string.Format(''{0} {1}'', quantity, quantity == 1 ? input.Singularize(Plurality.CouldBeEither) : input.Pluralize(Plurality.CouldBeEither));", span="19-19", cluster="Humanizer.ToQuantityExtensions.ToQuantity(string, int)", color=red, community=0];
+n2 [label="Exit Humanizer.ToQuantityExtensions.ToQuantity(string, int)", span="17-17", cluster="Humanizer.ToQuantityExtensions.ToQuantity(string, int)"];
+n3 [label="Entry string.Singularize(Humanizer.Plurality)", span="171-171", cluster="string.Singularize(Humanizer.Plurality)"];
+n4 [label="Entry string.Pluralize(Humanizer.Plurality)", span="147-147", cluster="string.Pluralize(Humanizer.Plurality)"];
+n5 [label="Entry string.Format(string, object, object)", span="0-0", cluster="string.Format(string, object, object)"];
+m0_4 [label="Entry Unk.Equal", span="", cluster="Unk.Equal", file="ToQuantityTests.cs"];
+m0_3 [label="Entry string.ToQuantity(int)", span="17-17", cluster="string.ToQuantity(int)", file="ToQuantityTests.cs"];
+m0_0 [label="Entry Humanizer.Tests.ToQuantityTests.ToQuantity(string, int, string)", span="19-19", cluster="Humanizer.Tests.ToQuantityTests.ToQuantity(string, int, string)", file="ToQuantityTests.cs"];
+m0_1 [label="Assert.Equal(expected, word.ToQuantity(quatity))", span="21-21", cluster="Humanizer.Tests.ToQuantityTests.ToQuantity(string, int, string)", file="ToQuantityTests.cs"];
+m0_2 [label="Exit Humanizer.Tests.ToQuantityTests.ToQuantity(string, int, string)", span="19-19", cluster="Humanizer.Tests.ToQuantityTests.ToQuantity(string, int, string)", file="ToQuantityTests.cs"];
+n0 -> n1  [key=0, style=solid, color=red];
+n1 -> n2  [key=0, style=solid, color=red];
+n1 -> n3  [key=2, style=dotted, color=red];
+n1 -> n4  [key=2, style=dotted, color=red];
+n1 -> n5  [key=2, style=dotted, color=red];
+n2 -> n0  [key=0, style=bold, color=blue];
+m0_0 -> m0_1  [key=0, style=solid];
+m0_1 -> m0_2  [key=0, style=solid];
+m0_1 -> m0_3  [key=2, style=dotted];
+m0_1 -> m0_4  [key=2, style=dotted];
+m0_2 -> m0_0  [key=0, style=bold, color=blue];
+}
