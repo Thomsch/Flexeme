@@ -12,17 +12,18 @@ Command Line Args:
     - output_path: Directory to store returned CSV file in evaluation/flexeme.csv
 Returns:
     A flexeme.csv file in the respective /evaluation/<D4J bug> subfolder.
-    CSV header: {file, source, target, group=0,1,2,etc.}
+    CSV header: {file, source, target, tool_group=0,1,2,etc., truth_group=0,1,2,etc.}
         - file: The relative file path from the project root for a change
         - source: The line number of the change if the change is a deletion
         - target: The line number of the change if the change is an addition
-        - group: The group number of the change determined by Flexeme.
+        - tool_group: The group number of the change for the synthetic commit determined by Flexeme.
+        - truth_group: The true group number of the changed for the synthetic commit determined before being tangled.
 """
 
 import logging
 import sys
 from io import StringIO
-
+import os
 import networkx as nx
 import pandas as pd
 
@@ -31,57 +32,56 @@ UPDATE_ADD = "add"
 UPDATE_REMOVE = "remove"
 
 
-def translate_PDG_to_CSV(graphname, CSV_filepath):
+def translate_PDG_to_CSV(PDG_path):
     """
     Implement the logic of the script. See the module docstring.
     """
     try:
-        graph = nx.nx_pydot.read_dot(graphname)
+        graph = nx.nx_pydot.read_dot(PDG_path)
     except FileNotFoundError:
         # Flexeme doesn't generate a PDG if it doesn't detect multiple groups.
         # In this case, we do not create a CSV file. The untangling score will be
         # calculated as if Flexeme grouped all changes in one group in `untangling_score.py`.
         print("PDG not found, skipping creation of CSV file", file=sys.stderr)
         sys.exit(1)
-
+    root = os.path.dirname(PDG_path)
+    CSV_path = os.path.join(root, "flexeme.csv")
     result = ""
-    for node, data in graph.nodes(data=True):
-        # Changed nodes are the only nodes with a color attribute.
-        if "color" not in data.keys():
-            continue
-
-        if data["color"] not in ["green", "red"]:
-            logging.error(f"Color {data['color']} not supported")
-            continue
-
-        if "label" not in data.keys():
-            logging.error(f"Attribute 'label' not found in node {node}")
-            continue
-        if "community" not in data.keys():
-            continue
-        truth = int(data["community"])
-        group = get_node_label(data)
-        span_start, span_end = get_span(data)
-        update_type = get_update_type(data)
-
-        file = (
-            data["filepath"].replace('"', "")
-            if "filepath" in data.keys()
-            # then do nothing
-            else data["cluster"].replace('"', "")
-        )
-        for line in range(span_start, span_end + 1):
-            if update_type == UPDATE_REMOVE:
-                result += f"{file};{line};;{group};{truth}\n"  # We separate the fileds by semicolon as the filepath may contain commas
-            elif update_type == UPDATE_ADD:
-                result += f"{file};;{line};{group};{truth}\n"
-            else:
-                logging.error(f"Update {update_type} unsupported")
+    if not os.path.exists(CSV_path):
+        for node, data in graph.nodes(data=True):
+            # Changed nodes are the only nodes with a color attribute.
+            if "color" not in data.keys():
                 continue
 
-        # Merge results per line. Might not need to merge results per line
-        #  since the data is calculated using a left join on the truth.
-    export_csv(CSV_filepath, result)
+            if data["color"] not in ["green", "red"]:
+                logging.error(f"Color {data['color']} not supported")
+                continue
+
+            if "label" not in data.keys():
+                logging.error(f"Attribute 'label' not found in node {node}")
+                continue
+            if "community" not in data.keys():
+                continue
+            truth = int(data["community"])
+            group = get_node_label(data)
+            span_start, span_end = get_span(data)
+            update_type = get_update_type(data)
+
+            file = (
+                data["filepath"].replace('"', "")
+                if "filepath" in data.keys()
+                # then do nothing
+                else data["cluster"].replace('"', "")
+            )
+            for line in range(span_start, span_end + 1):
+                if update_type == UPDATE_REMOVE:
+                    result += f"'{file}','{line}',,'{group}','{truth}'\n"  # We separate the fileds by semicolon as the filepath may contain commas
+                elif update_type == UPDATE_ADD:
+                    result += f"'{file}',,'{line}','{group}','{truth}'\n"
+                else:
+                    logging.error(f"Update {update_type} unsupported")
+                    continue
+        export_csv(CSV_path, result)
 
 
 def export_tool_decomposition_as_csv(df, output_path):
@@ -111,8 +111,9 @@ def export_csv(output_path, result):
     df = pd.read_csv(
         StringIO(result),
         names=["file", "source", "target", "tool_group", "truth_group"],
-        delimiter=";",
+        delimiter=",",
         na_values="None",
+        quotechar="'",
     )
     df = df.convert_dtypes()  # Forces pandas to use ints in source and target columns.
     df = df.drop_duplicates()
@@ -173,10 +174,8 @@ def get_node_label(data):
 if __name__ == "__main__":
     args = sys.argv[1:]
 
-    if len(args) != 2:
-        print(
-            "usage: parse_flexeme_results.py <path/to/root/results> <path/to/out/file>"
-        )
+    if len(args) != 1:
+        print("usage: parse_flexeme_results.py <path/to/root/results>")
         sys.exit(1)
 
-    translate_PDG_to_CSV(args[0], args[1])
+    translate_PDG_to_CSV(args[0])
