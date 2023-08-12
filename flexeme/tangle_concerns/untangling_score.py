@@ -52,7 +52,6 @@ def main():
 
     RI_df = pd.read_csv(
         StringIO(synthetic_benchmark_scores_str),
-        names=["file", "score"],
         na_values="None",
     )
     RI_df.to_csv(synthetic_benchmark_scores_file, index=False)
