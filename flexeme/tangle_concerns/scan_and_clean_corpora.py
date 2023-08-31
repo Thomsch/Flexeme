@@ -26,7 +26,7 @@ def clean_graph(graph_location, corpus_name):
             communities.add(data['community'])
         if 'color' in data.keys() and 'community' not in data.keys():
             communities.add('0')
-            graph.node[node]['community'] = '0'
+            graph.nodes[node]['community'] = '0'
     communities = sorted(list(communities))
     nr_concepts = str(len(communities))
 
@@ -34,7 +34,7 @@ def clean_graph(graph_location, corpus_name):
         # Normalise labels
         for node, data in list(graph.nodes(data=True)):
             if 'community' in data.keys():
-                graph.node[node]['community'] = communities.index(data['community'])
+                graph.nodes[node]['community'] = communities.index(data['community'])
 
         output_path = os.path.join('.', 'data', 'corpora_clean',
                                    corpus_name, data_point_name, nr_concepts, 'merged.dot')

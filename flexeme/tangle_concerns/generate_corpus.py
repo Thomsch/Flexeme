@@ -58,7 +58,7 @@ def mark_originating_commit(dpdg, marked_diff, filename):
                              if label in line and (start <= after_coord <= end or start <= before_coord <= end)],
                             default=0)
 
-            dpdg.node[node]['community'] = community
+            dpdg.nodes[node]['community'] = community
 
     return dpdg
 

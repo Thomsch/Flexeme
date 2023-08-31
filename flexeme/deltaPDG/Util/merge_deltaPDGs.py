@@ -71,15 +71,15 @@ def merge_deltas_for_a_commit(graph_locations):
                            if n[0] not in [other_entry, other_exit] and 'cluster' in n[1].keys()
                            and n[1]['cluster'] == context]
             if current_entry is None and other_entry is not None:
-                other_nodes.append((other_entry, next_graph.node[other_entry]))
+                other_nodes.append((other_entry, next_graph.nodes[other_entry]))
             if current_exit is None and other_exit is not None:
-                other_nodes.append((other_exit, next_graph.node[other_exit]))
+                other_nodes.append((other_exit, next_graph.nodes[other_exit]))
 
             if len(other_nodes) > 0:
-                if current_entry is not None and 'file' not in graph.node[current_entry].keys():
-                    graph.node[current_entry]['file'] = os.path.basename(graph_location[:-len('.dot')])
-                if current_exit is not None and 'file' not in graph.node[current_exit]:
-                    graph.node[current_exit]['file'] = os.path.basename(graph_location[:-len('.dot')])
+                if current_entry is not None and 'file' not in graph.nodes[current_entry].keys():
+                    graph.nodes[current_entry]['file'] = os.path.basename(graph_location[:-len('.dot')])
+                if current_exit is not None and 'file' not in graph.nodes[current_exit]:
+                    graph.nodes[current_exit]['file'] = os.path.basename(graph_location[:-len('.dot')])
 
             for copy_node, data in other_nodes:
                 data['file'] = os.path.basename(graph_location[:-len('.dot')])
@@ -94,9 +94,9 @@ def merge_deltas_for_a_commit(graph_locations):
                            and n[1]['cluster'] == other_context]
             # For aesthetic reasons make sure to copy entry first and exit last
             if other_entry is not None:
-                other_nodes = [(other_entry, next_graph.node[other_entry])] + other_nodes
+                other_nodes = [(other_entry, next_graph.nodes[other_entry])] + other_nodes
             if other_exit is not None:
-                other_nodes.append((other_exit, next_graph.node[other_exit]))
+                other_nodes.append((other_exit, next_graph.nodes[other_exit]))
             for copy_node, data in other_nodes:
                 data['file'] = os.path.basename(graph_location[:-len('.dot')])
                 output.add_node('m%d_' % i + copy_node[1:], **data)
@@ -121,7 +121,7 @@ def merge_deltas_for_a_commit(graph_locations):
 
     # And finally we mark the original file nodes
     for node, _ in [n for n in output.nodes(data=True) if 'file' not in n[1].keys()]:
-        graph.node[node]['file'] = original_file
+        graph.nodes[node]['file'] = original_file
 
     return output
 
