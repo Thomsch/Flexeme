@@ -1,0 +1,26 @@
+digraph  {
+n0 [cluster="Nancy.Json.JavaScriptPrimitiveConverter.Deserialize(object, System.Type, Nancy.Json.JavaScriptSerializer)", label="Entry Nancy.Json.JavaScriptPrimitiveConverter.Deserialize(object, System.Type, Nancy.Json.JavaScriptSerializer)", span="11-11"];
+n1 [cluster="Nancy.Json.JavaScriptPrimitiveConverter.Deserialize(object, System.Type, Nancy.Json.JavaScriptSerializer)", label="Exit Nancy.Json.JavaScriptPrimitiveConverter.Deserialize(object, System.Type, Nancy.Json.JavaScriptSerializer)", span="11-11"];
+n2 [cluster="Nancy.Json.JavaScriptPrimitiveConverter.Serialize(object, Nancy.Json.JavaScriptSerializer)", label="Entry Nancy.Json.JavaScriptPrimitiveConverter.Serialize(object, Nancy.Json.JavaScriptSerializer)", span="12-12"];
+n3 [cluster="Nancy.Json.JavaScriptPrimitiveConverter.Serialize(object, Nancy.Json.JavaScriptSerializer)", label="Exit Nancy.Json.JavaScriptPrimitiveConverter.Serialize(object, Nancy.Json.JavaScriptSerializer)", span="12-12"];
+m0_5 [cluster="System.Uri.Uri(string)", file="RootPathProvider.cs", label="Entry System.Uri.Uri(string)", span="0-0"];
+m0_4 [cluster="System.IO.Path.GetDirectoryName(string)", file="RootPathProvider.cs", label="Entry System.IO.Path.GetDirectoryName(string)", span="0-0"];
+m0_0 [cluster="Nancy.ViewEngines.DotLiquid.Tests.Functional.RootPathProvider.GetRootPath()", file="RootPathProvider.cs", label="Entry Nancy.ViewEngines.DotLiquid.Tests.Functional.RootPathProvider.GetRootPath()", span="10-10"];
+m0_1 [cluster="Nancy.ViewEngines.DotLiquid.Tests.Functional.RootPathProvider.GetRootPath()", color=green, community=0, file="RootPathProvider.cs", label="1: var assemblyFilePath =\r\n                new Uri(typeof (RootPathProvider).Assembly.CodeBase).LocalPath", span="13-14"];
+m0_2 [cluster="Nancy.ViewEngines.DotLiquid.Tests.Functional.RootPathProvider.GetRootPath()", color=green, community=0, file="RootPathProvider.cs", label="3: var assemblyPath =\r\n                System.IO.Path.GetDirectoryName(assemblyFilePath)", span="16-17"];
+m0_3 [cluster="Nancy.ViewEngines.DotLiquid.Tests.Functional.RootPathProvider.GetRootPath()", file="RootPathProvider.cs", label="Exit Nancy.ViewEngines.DotLiquid.Tests.Functional.RootPathProvider.GetRootPath()", span="10-10"];
+m0_6 [cluster="Nancy.Testing.PathHelper.GetParent(string, int)", file="RootPathProvider.cs", label="Entry Nancy.Testing.PathHelper.GetParent(string, int)", span="14-14"];
+n0 -> n1  [key=0, style=solid];
+n1 -> n0  [color=blue, key=0, style=bold];
+n2 -> n3  [key=0, style=solid];
+n3 -> n2  [color=blue, key=0, style=bold];
+m0_0 -> m0_1  [color=green, key=0, style=solid];
+m0_1 -> m0_2  [color=green, key=0, style=solid];
+m0_1 -> m0_4  [color=red, key=2, style=dotted];
+m0_1 -> m0_5  [color=green, key=2, style=dotted];
+m0_2 -> m0_3  [key=0, style=solid];
+m0_2 -> m0_6  [key=2, style=dotted];
+m0_2 -> m0_2  [color=green, key=0, style=solid];
+m0_2 -> m0_4  [color=green, key=2, style=dotted];
+m0_3 -> m0_0  [color=blue, key=0, style=bold];
+}

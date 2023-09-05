@@ -1,0 +1,36 @@
+digraph  {
+m1_3 [cluster="int.ToString()", file="DefaultNumberToWordsConverter.cs", label="Entry int.ToString()", span="0-0"];
+m1_0 [cluster="Humanizer.Localisation.NumberToWords.DefaultNumberToWordsConverter.Convert(int)", file="DefaultNumberToWordsConverter.cs", label="Entry Humanizer.Localisation.NumberToWords.DefaultNumberToWordsConverter.Convert(int)", span="4-4"];
+m1_1 [cluster="Humanizer.Localisation.NumberToWords.DefaultNumberToWordsConverter.Convert(int)", color=green, community=0, file="DefaultNumberToWordsConverter.cs", label="return number.ToString();", prediction=0, span="6-6"];
+m1_2 [cluster="Humanizer.Localisation.NumberToWords.DefaultNumberToWordsConverter.Convert(int)", file="DefaultNumberToWordsConverter.cs", label="Exit Humanizer.Localisation.NumberToWords.DefaultNumberToWordsConverter.Convert(int)", span="4-4"];
+m1_4 [cluster="Humanizer.Localisation.NumberToWords.DefaultNumberToWordsConverter.ConvertToOrdinal(int)", file="DefaultNumberToWordsConverter.cs", label="Entry Humanizer.Localisation.NumberToWords.DefaultNumberToWordsConverter.ConvertToOrdinal(int)", span="9-9"];
+m1_5 [cluster="Humanizer.Localisation.NumberToWords.DefaultNumberToWordsConverter.ConvertToOrdinal(int)", file="DefaultNumberToWordsConverter.cs", label="return number.ToString();", span="11-11"];
+m1_6 [cluster="Humanizer.Localisation.NumberToWords.DefaultNumberToWordsConverter.ConvertToOrdinal(int)", file="DefaultNumberToWordsConverter.cs", label="Exit Humanizer.Localisation.NumberToWords.DefaultNumberToWordsConverter.ConvertToOrdinal(int)", span="9-9"];
+m6_2 [cluster="Humanizer.Localisation.NumberToWords.INumberToWordsConverter.ConvertToOrdinal(int)", file="INumberToWordsConverter.cs", label="Entry Humanizer.Localisation.NumberToWords.INumberToWordsConverter.ConvertToOrdinal(int)", span="19-19"];
+m6_3 [cluster="Humanizer.Localisation.NumberToWords.INumberToWordsConverter.ConvertToOrdinal(int)", file="INumberToWordsConverter.cs", label="Exit Humanizer.Localisation.NumberToWords.INumberToWordsConverter.ConvertToOrdinal(int)", span="19-19"];
+m6_0 [cluster="Humanizer.Localisation.NumberToWords.INumberToWordsConverter.Convert(int)", file="INumberToWordsConverter.cs", label="Entry Humanizer.Localisation.NumberToWords.INumberToWordsConverter.Convert(int)", span="12-12"];
+m6_1 [cluster="Humanizer.Localisation.NumberToWords.INumberToWordsConverter.Convert(int)", file="INumberToWordsConverter.cs", label="Exit Humanizer.Localisation.NumberToWords.INumberToWordsConverter.Convert(int)", span="12-12"];
+m7_4 [cluster="Unk.Equal", file="NumberToOrdinalWordsTests.cs", label="Entry Unk.Equal", span=""];
+m7_0 [cluster="Humanizer.Tests.NumberToOrdinalWordsTests.ToOrdinalWords(int, string)", file="NumberToOrdinalWordsTests.cs", label="Entry Humanizer.Tests.NumberToOrdinalWordsTests.ToOrdinalWords(int, string)", span="50-50"];
+m7_1 [cluster="Humanizer.Tests.NumberToOrdinalWordsTests.ToOrdinalWords(int, string)", file="NumberToOrdinalWordsTests.cs", label="Assert.Equal(words, number.ToOrdinalWords())", span="52-52"];
+m7_2 [cluster="Humanizer.Tests.NumberToOrdinalWordsTests.ToOrdinalWords(int, string)", file="NumberToOrdinalWordsTests.cs", label="Exit Humanizer.Tests.NumberToOrdinalWordsTests.ToOrdinalWords(int, string)", span="50-50"];
+m7_3 [cluster="int.ToOrdinalWords()", file="NumberToOrdinalWordsTests.cs", label="Entry int.ToOrdinalWords()", span="35-35"];
+m8_0 [cluster="Humanizer.Configuration.Configurator.CurrentLanguageIs(string)", file="NumberToWordsExtension.cs", label="Entry Humanizer.Configuration.Configurator.CurrentLanguageIs(string)", span="34-34"];
+m8_1 [cluster="Humanizer.Configuration.Configurator.CurrentLanguageIs(string)", color=green, community=0, file="NumberToWordsExtension.cs", label="return string.Equals(CultureInfo.CurrentUICulture.TwoLetterISOLanguageName, twoLetterCode, StringComparison.OrdinalIgnoreCase);", prediction=1, span="36-36"];
+m8_2 [cluster="Humanizer.Configuration.Configurator.CurrentLanguageIs(string)", file="NumberToWordsExtension.cs", label="Exit Humanizer.Configuration.Configurator.CurrentLanguageIs(string)", span="34-34"];
+m8_3 [cluster="string.Equals(string, string, System.StringComparison)", file="NumberToWordsExtension.cs", label="Entry string.Equals(string, string, System.StringComparison)", span="0-0"];
+m10_0 [cluster="Humanizer.Localisation.Formatters.RussianFormatter.GetResourceKey(string, int)", file="RussianFormatter.cs", label="Entry Humanizer.Localisation.Formatters.RussianFormatter.GetResourceKey(string, int)", span="7-7"];
+m10_1 [cluster="Humanizer.Localisation.Formatters.RussianFormatter.GetResourceKey(string, int)", color=green, community=0, file="RussianFormatter.cs", label="var mod100 = number%100", prediction=2, span="9-9"];
+m10_2 [cluster="Humanizer.Localisation.Formatters.RussianFormatter.GetResourceKey(string, int)", color=green, community=0, file="RussianFormatter.cs", label="mod100/10 != 1", prediction=3, span="10-10"];
+m10_7 [cluster="Humanizer.Localisation.Formatters.RussianFormatter.GetResourceKey(string, int)", color=green, community=0, file="RussianFormatter.cs", label="return resourceKey + PaucalPostfix;", prediction=4, span="18-18"];
+m10_4 [cluster="Humanizer.Localisation.Formatters.RussianFormatter.GetResourceKey(string, int)", color=green, community=0, file="RussianFormatter.cs", label="mod10 == 1", prediction=5, span="14-14"];
+m10_5 [cluster="Humanizer.Localisation.Formatters.RussianFormatter.GetResourceKey(string, int)", color=green, community=0, file="RussianFormatter.cs", label="return resourceKey + SingularPostfix;", prediction=4, span="15-15"];
+m10_6 [cluster="Humanizer.Localisation.Formatters.RussianFormatter.GetResourceKey(string, int)", color=green, community=0, file="RussianFormatter.cs", label="mod10 > 1 && mod10 < 5", prediction=7, span="17-17"];
+m10_3 [cluster="Humanizer.Localisation.Formatters.RussianFormatter.GetResourceKey(string, int)", file="RussianFormatter.cs", label="var mod10 = number%10", span="12-12"];
+m10_8 [cluster="Humanizer.Localisation.Formatters.RussianFormatter.GetResourceKey(string, int)", file="RussianFormatter.cs", label="return resourceKey;", span="21-21"];
+m10_9 [cluster="Humanizer.Localisation.Formatters.RussianFormatter.GetResourceKey(string, int)", file="RussianFormatter.cs", label="Exit Humanizer.Localisation.Formatters.RussianFormatter.GetResourceKey(string, int)", span="7-7"];
+m10_0 -> m10_5  [color=green, key=1, label=string, style=dashed];
+m10_0 -> m10_7  [color=green, key=1, label=string, style=dashed];
+m10_0 -> m10_8  [color=darkseagreen4, key=1, label=string, style=dashed];
+m10_3 -> m10_6  [color=green, key=1, label=mod10, style=dashed];
+}

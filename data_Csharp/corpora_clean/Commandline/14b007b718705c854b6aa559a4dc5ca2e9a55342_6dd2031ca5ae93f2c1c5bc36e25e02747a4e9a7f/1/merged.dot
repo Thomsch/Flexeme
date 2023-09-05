@@ -1,0 +1,10 @@
+digraph  {
+m0_0 [label="Entry CommandLine.Text.UsageAttribute.UsageAttribute(System.Collections.Generic.IDictionary<string, string>)", span="12-12", cluster="CommandLine.Text.UsageAttribute.UsageAttribute(System.Collections.Generic.IDictionary<string, string>)", file="ParserResultExtensions.cs"];
+m0_1 [label="this.groups = groups", span="14-14", cluster="CommandLine.Text.UsageAttribute.UsageAttribute(System.Collections.Generic.IDictionary<string, string>)", color=green, community=0, file="ParserResultExtensions.cs"];
+m0_2 [label="Exit CommandLine.Text.UsageAttribute.UsageAttribute(System.Collections.Generic.IDictionary<string, string>)", span="12-12", cluster="CommandLine.Text.UsageAttribute.UsageAttribute(System.Collections.Generic.IDictionary<string, string>)", file="ParserResultExtensions.cs"];
+m0_5 [label="CommandLine.Text.UsageAttribute", span="", file="ParserResultExtensions.cs"];
+m0_0 -> m0_1  [key=0, style=solid, color=green];
+m0_1 -> m0_2  [key=0, style=solid, color=green];
+m0_2 -> m0_0  [key=0, style=bold, color=blue];
+m0_5 -> m0_1  [key=1, style=dashed, color=green, label="CommandLine.Text.UsageAttribute"];
+}

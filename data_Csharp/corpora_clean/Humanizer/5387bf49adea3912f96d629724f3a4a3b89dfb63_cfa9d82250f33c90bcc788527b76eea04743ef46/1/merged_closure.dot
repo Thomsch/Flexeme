@@ -1,0 +1,24 @@
+digraph  {
+m0_11 [cluster="Humanizer.Localisation.ArabicFormatter.ArabicFormatter()", file="TimeSpanHumanizeTests.cs", label="Entry Humanizer.Localisation.ArabicFormatter.ArabicFormatter()", span="2-2"];
+m0_3 [cluster="Humanizer.Localisation.RomanianFormatter.RomanianFormatter()", file="TimeSpanHumanizeTests.cs", label="Entry Humanizer.Localisation.RomanianFormatter.RomanianFormatter()", span="2-2"];
+m0_7 [cluster="Humanizer.Localisation.RussianFormatter.RussianFormatter()", file="TimeSpanHumanizeTests.cs", label="Entry Humanizer.Localisation.RussianFormatter.RussianFormatter()", span="2-2"];
+m0_19 [cluster="lambda expression", file="TimeSpanHumanizeTests.cs", label="Entry lambda expression", span="20-20"];
+m0_1 [cluster="lambda expression", color=green, community=0, file="TimeSpanHumanizeTests.cs", label="new RomanianFormatter()", prediction=0, span="15-15"];
+m0_0 [cluster="lambda expression", file="TimeSpanHumanizeTests.cs", label="Entry lambda expression", span="15-15"];
+m0_2 [cluster="lambda expression", file="TimeSpanHumanizeTests.cs", label="Exit lambda expression", span="15-15"];
+m0_5 [cluster="lambda expression", color=green, community=0, file="TimeSpanHumanizeTests.cs", label="new RussianFormatter()", prediction=1, span="16-16"];
+m0_4 [cluster="lambda expression", file="TimeSpanHumanizeTests.cs", label="Entry lambda expression", span="16-16"];
+m0_6 [cluster="lambda expression", file="TimeSpanHumanizeTests.cs", label="Exit lambda expression", span="16-16"];
+m0_9 [cluster="lambda expression", color=green, community=0, file="TimeSpanHumanizeTests.cs", label="new ArabicFormatter()", prediction=2, span="17-17"];
+m0_8 [cluster="lambda expression", file="TimeSpanHumanizeTests.cs", label="Entry lambda expression", span="17-17"];
+m0_10 [cluster="lambda expression", file="TimeSpanHumanizeTests.cs", label="Exit lambda expression", span="17-17"];
+m0_13 [cluster="lambda expression", color=green, community=0, file="TimeSpanHumanizeTests.cs", label="new CzechSlovakPolishFormatter()", prediction=3, span="18-18"];
+m0_12 [cluster="lambda expression", file="TimeSpanHumanizeTests.cs", label="Entry lambda expression", span="18-18"];
+m0_14 [cluster="lambda expression", file="TimeSpanHumanizeTests.cs", label="Exit lambda expression", span="18-18"];
+m0_17 [cluster="lambda expression", color=green, community=0, file="TimeSpanHumanizeTests.cs", label="new CzechSlovakPolishFormatter()", prediction=4, span="19-19"];
+m0_16 [cluster="lambda expression", file="TimeSpanHumanizeTests.cs", label="Entry lambda expression", span="19-19"];
+m0_18 [cluster="lambda expression", file="TimeSpanHumanizeTests.cs", label="Exit lambda expression", span="19-19"];
+m0_20 [cluster="lambda expression", color=green, community=0, file="TimeSpanHumanizeTests.cs", label="new CzechSlovakPolishFormatter()", prediction=5, span="20-20"];
+m0_21 [cluster="lambda expression", file="TimeSpanHumanizeTests.cs", label="Exit lambda expression", span="20-20"];
+m0_15 [cluster="Humanizer.Localisation.CzechSlovakPolishFormatter.CzechSlovakPolishFormatter()", file="TimeSpanHumanizeTests.cs", label="Entry Humanizer.Localisation.CzechSlovakPolishFormatter.CzechSlovakPolishFormatter()", span="2-2"];
+}

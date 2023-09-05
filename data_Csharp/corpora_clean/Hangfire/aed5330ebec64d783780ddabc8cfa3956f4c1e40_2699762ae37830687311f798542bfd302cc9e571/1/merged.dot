@@ -1,0 +1,18 @@
+digraph  {
+d3 [label="throw new NotImplementedException();", span="14-14", cluster="HangFire.Dashboard.DashboardMiddleware.Invoke(IOwinContext)", color=green, community=0];
+d2 [label="Entry HangFire.Dashboard.DashboardMiddleware.Invoke(IOwinContext)", span="12-12", cluster="HangFire.Dashboard.DashboardMiddleware.Invoke(IOwinContext)"];
+d4 [label="Exit HangFire.Dashboard.DashboardMiddleware.Invoke(IOwinContext)", span="12-12", cluster="HangFire.Dashboard.DashboardMiddleware.Invoke(IOwinContext)"];
+d5 [label="Entry System.NotImplementedException.NotImplementedException()", span="0-0", cluster="System.NotImplementedException.NotImplementedException()"];
+m0_3 [label="Entry Unk.MapSignalR", span="", cluster="Unk.MapSignalR", file="Startup.cs"];
+m0_0 [label="Entry HangFire.Sample.Highlighter.Startup.Configuration(IAppBuilder)", span="10-10", cluster="HangFire.Sample.Highlighter.Startup.Configuration(IAppBuilder)", file="Startup.cs"];
+m0_1 [label="app.MapSignalR()", span="12-12", cluster="HangFire.Sample.Highlighter.Startup.Configuration(IAppBuilder)", file="Startup.cs"];
+m0_2 [label="Exit HangFire.Sample.Highlighter.Startup.Configuration(IAppBuilder)", span="10-10", cluster="HangFire.Sample.Highlighter.Startup.Configuration(IAppBuilder)", file="Startup.cs"];
+d3 -> d4  [key=0, style=solid, color=green];
+d3 -> d5  [key=2, style=dotted, color=green];
+d2 -> d3  [key=0, style=solid, color=green];
+d4 -> d2  [key=0, style=bold, color=blue];
+m0_0 -> m0_1  [key=0, style=solid];
+m0_1 -> m0_2  [key=0, style=solid];
+m0_1 -> m0_3  [key=2, style=dotted];
+m0_2 -> m0_0  [key=0, style=bold, color=blue];
+}

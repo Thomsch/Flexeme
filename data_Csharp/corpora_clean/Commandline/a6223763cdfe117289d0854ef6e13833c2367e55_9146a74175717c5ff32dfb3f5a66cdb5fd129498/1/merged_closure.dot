@@ -1,0 +1,33 @@
+digraph  {
+d1 [cluster="CommandLine.Tests.Unit.Attributes.ValueOptionAttributeFixture.Index_Implicit_By_Declaration_Order()", color=green, community=0, label="var options = new OptionsWithValueOptionImplicitIndex()", prediction=0, span="11-11"];
+d0 [cluster="CommandLine.Tests.Unit.Attributes.ValueOptionAttributeFixture.Index_Implicit_By_Declaration_Order()", label="Entry CommandLine.Tests.Unit.Attributes.ValueOptionAttributeFixture.Index_Implicit_By_Declaration_Order()", span="9-9"];
+d2 [cluster="CommandLine.Tests.Unit.Attributes.ValueOptionAttributeFixture.Index_Implicit_By_Declaration_Order()", color=green, community=0, label="string[] args = ''foo bar''.Split()", prediction=1, span="12-12"];
+d8 [cluster="CommandLine.Tests.Fakes.OptionsWithValueOptionImplicitIndex.OptionsWithValueOptionImplicitIndex()", label="Entry CommandLine.Tests.Fakes.OptionsWithValueOptionImplicitIndex.OptionsWithValueOptionImplicitIndex()", span="2-2"];
+d3 [cluster="CommandLine.Tests.Unit.Attributes.ValueOptionAttributeFixture.Index_Implicit_By_Declaration_Order()", color=green, community=0, label="Parser.Default.ParseArguments(args, options)", prediction=0, span="13-13"];
+d4 [cluster="CommandLine.Tests.Unit.Attributes.ValueOptionAttributeFixture.Index_Implicit_By_Declaration_Order()", color=green, community=0, label="options.A.ShouldBeEquivalentTo(''foo'')", prediction=0, span="14-14"];
+d5 [cluster="CommandLine.Tests.Unit.Attributes.ValueOptionAttributeFixture.Index_Implicit_By_Declaration_Order()", color=green, community=0, label="options.B.ShouldBeEquivalentTo(''bar'')", prediction=0, span="15-15"];
+d6 [cluster="CommandLine.Tests.Unit.Attributes.ValueOptionAttributeFixture.Index_Implicit_By_Declaration_Order()", color=green, community=0, label="options.C.Should().BeNull()", prediction=0, span="16-16"];
+d9 [cluster="string.Split(params char[])", label="Entry string.Split(params char[])", span="0-0"];
+d10 [cluster="CommandLine.IParser.ParseArguments(string[], object)", label="Entry CommandLine.IParser.ParseArguments(string[], object)", span="49-49"];
+d11 [cluster="Unk.ShouldBeEquivalentTo", label="Entry Unk.ShouldBeEquivalentTo", span=""];
+d7 [cluster="CommandLine.Tests.Unit.Attributes.ValueOptionAttributeFixture.Index_Implicit_By_Declaration_Order()", label="Exit CommandLine.Tests.Unit.Attributes.ValueOptionAttributeFixture.Index_Implicit_By_Declaration_Order()", span="9-9"];
+d12 [cluster="Unk.Should", label="Entry Unk.Should", span=""];
+d13 [cluster="Unk.BeNull", label="Entry Unk.BeNull", span=""];
+d15 [cluster="CommandLine.Tests.Unit.Attributes.ValueOptionAttributeFixture.Index_Explicitly_Set_On_Value_Option()", color=green, community=0, label="var options = new OptionsWithValueOptionExplicitIndex()", prediction=6, span="22-22"];
+d14 [cluster="CommandLine.Tests.Unit.Attributes.ValueOptionAttributeFixture.Index_Explicitly_Set_On_Value_Option()", label="Entry CommandLine.Tests.Unit.Attributes.ValueOptionAttributeFixture.Index_Explicitly_Set_On_Value_Option()", span="20-20"];
+d16 [cluster="CommandLine.Tests.Unit.Attributes.ValueOptionAttributeFixture.Index_Explicitly_Set_On_Value_Option()", color=green, community=0, label="string[] args = ''foo bar''.Split()", prediction=7, span="23-23"];
+d22 [cluster="CommandLine.Tests.Fakes.OptionsWithValueOptionExplicitIndex.OptionsWithValueOptionExplicitIndex()", label="Entry CommandLine.Tests.Fakes.OptionsWithValueOptionExplicitIndex.OptionsWithValueOptionExplicitIndex()", span="2-2"];
+d17 [cluster="CommandLine.Tests.Unit.Attributes.ValueOptionAttributeFixture.Index_Explicitly_Set_On_Value_Option()", color=green, community=0, label="Parser.Default.ParseArguments(args, options)", prediction=6, span="24-24"];
+d18 [cluster="CommandLine.Tests.Unit.Attributes.ValueOptionAttributeFixture.Index_Explicitly_Set_On_Value_Option()", color=green, community=0, label="options.A.Should().BeNull()", prediction=6, span="25-25"];
+d19 [cluster="CommandLine.Tests.Unit.Attributes.ValueOptionAttributeFixture.Index_Explicitly_Set_On_Value_Option()", color=green, community=0, label="options.B.ShouldBeEquivalentTo(''bar'')", prediction=6, span="26-26"];
+d20 [cluster="CommandLine.Tests.Unit.Attributes.ValueOptionAttributeFixture.Index_Explicitly_Set_On_Value_Option()", color=green, community=0, label="options.C.ShouldBeEquivalentTo(''foo'')", prediction=6, span="27-27"];
+d21 [cluster="CommandLine.Tests.Unit.Attributes.ValueOptionAttributeFixture.Index_Explicitly_Set_On_Value_Option()", label="Exit CommandLine.Tests.Unit.Attributes.ValueOptionAttributeFixture.Index_Explicitly_Set_On_Value_Option()", span="20-20"];
+d1 -> d3  [color=green, key=1, label=options, style=dashed];
+d1 -> d4  [color=green, key=1, label=options, style=dashed];
+d1 -> d5  [color=green, key=1, label=options, style=dashed];
+d1 -> d6  [color=green, key=1, label=options, style=dashed];
+d15 -> d17  [color=green, key=1, label=options, style=dashed];
+d15 -> d18  [color=green, key=1, label=options, style=dashed];
+d15 -> d19  [color=green, key=1, label=options, style=dashed];
+d15 -> d20  [color=green, key=1, label=options, style=dashed];
+}

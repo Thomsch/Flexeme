@@ -1,0 +1,18 @@
+digraph  {
+m1_5 [cluster="System.Runtime.Remoting.RemotingServices.IsTransparentProxy(object)", file="InstanceReference.cs", label="Entry System.Runtime.Remoting.RemotingServices.IsTransparentProxy(object)", span="0-0"];
+m1_9 [cluster="Ninject.Activation.InstanceReference.IfInstanceIs<T>(System.Action<T>)", file="InstanceReference.cs", label="Entry Ninject.Activation.InstanceReference.IfInstanceIs<T>(System.Action<T>)", span="58-58"];
+m1_13 [cluster="Ninject.Activation.InstanceReference.IfInstanceIs<T>(System.Action<T>)", file="InstanceReference.cs", label="action((T)Instance)", span="65-65"];
+m1_14 [cluster="Ninject.Activation.InstanceReference.IfInstanceIs<T>(System.Action<T>)", file="InstanceReference.cs", label="Exit Ninject.Activation.InstanceReference.IfInstanceIs<T>(System.Action<T>)", span="58-58"];
+m1_6 [cluster="Ninject.Activation.InstanceReference.As<T>()", file="InstanceReference.cs", label="Entry Ninject.Activation.InstanceReference.As<T>()", span="48-48"];
+m1_7 [cluster="Ninject.Activation.InstanceReference.As<T>()", file="InstanceReference.cs", label="return (T)Instance;", span="50-50"];
+m1_8 [cluster="Ninject.Activation.InstanceReference.As<T>()", file="InstanceReference.cs", label="Exit Ninject.Activation.InstanceReference.As<T>()", span="48-48"];
+m1_15 [cluster="System.Action<T>.Invoke(T)", file="InstanceReference.cs", label="Entry System.Action<T>.Invoke(T)", span="0-0"];
+m1_0 [cluster="Ninject.Activation.InstanceReference.Is<T>()", file="InstanceReference.cs", label="Entry Ninject.Activation.InstanceReference.Is<T>()", span="34-34"];
+m1_3 [cluster="Ninject.Activation.InstanceReference.Is<T>()", file="InstanceReference.cs", label="return Instance is T;", span="40-40"];
+m1_4 [cluster="Ninject.Activation.InstanceReference.Is<T>()", file="InstanceReference.cs", label="Exit Ninject.Activation.InstanceReference.Is<T>()", span="34-34"];
+m1_16 [file="InstanceReference.cs", label="Ninject.Activation.InstanceReference", span=""];
+m1_9 -> m1_13  [color=darkseagreen4, key=1, label="System.Action<T>", style=dashed];
+m1_16 -> m1_3  [color=darkseagreen4, key=1, label="Ninject.Activation.InstanceReference", style=dashed];
+m1_16 -> m1_7  [color=darkseagreen4, key=1, label="Ninject.Activation.InstanceReference", style=dashed];
+m1_16 -> m1_13  [color=darkseagreen4, key=1, label="Ninject.Activation.InstanceReference", style=dashed];
+}

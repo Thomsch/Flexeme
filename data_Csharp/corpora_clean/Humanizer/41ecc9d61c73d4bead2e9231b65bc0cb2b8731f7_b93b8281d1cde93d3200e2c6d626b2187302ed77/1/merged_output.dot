@@ -1,0 +1,36 @@
+digraph  {
+n0 [cluster="Humanizer.FixedLengthTruncator.Truncate(string, int, string)", label="Entry Humanizer.FixedLengthTruncator.Truncate(string, int, string)", span="7-7"];
+n1 [cluster="Humanizer.FixedLengthTruncator.Truncate(string, int, string)", label="value == null", span="9-9"];
+n3 [cluster="Humanizer.FixedLengthTruncator.Truncate(string, int, string)", label="value.Length == 0", span="12-12"];
+n4 [cluster="Humanizer.FixedLengthTruncator.Truncate(string, int, string)", label="return value;", span="13-13"];
+n5 [cluster="Humanizer.FixedLengthTruncator.Truncate(string, int, string)", label="truncationString == null || truncationString.Length > length", span="15-15"];
+n6 [cluster="Humanizer.FixedLengthTruncator.Truncate(string, int, string)", label="return value.Substring(0, length);", span="16-16"];
+n7 [cluster="Humanizer.FixedLengthTruncator.Truncate(string, int, string)", label="return value.Length > length ? value.Substring(0, length - truncationString.Length) + truncationString : value;", span="18-18"];
+n2 [cluster="Humanizer.FixedLengthTruncator.Truncate(string, int, string)", label="return null;", span="10-10"];
+n8 [cluster="Humanizer.FixedLengthTruncator.Truncate(string, int, string)", label="Exit Humanizer.FixedLengthTruncator.Truncate(string, int, string)", span="7-7"];
+n9 [cluster="string.Substring(int, int)", label="Entry string.Substring(int, int)", span="0-0"];
+d7 [cluster="Humanizer.FixedLengthTruncator.Truncate(string, int, string)", color=green, community=0, label="1: return value.Length > length ? value.Substring(0, length - truncationString.Length) + truncationString : value;", span="18-18"];
+n0 -> n1  [key=0, style=solid];
+n0 -> n3  [color=darkseagreen4, key=1, label=string, style=dashed];
+n0 -> n4  [color=darkseagreen4, key=1, label=string, style=dashed];
+n0 -> n5  [color=darkseagreen4, key=1, label=int, style=dashed];
+n0 -> n6  [color=darkseagreen4, key=1, label=string, style=dashed];
+n0 -> n7  [color=darkseagreen4, key=1, label=string, style=dashed];
+n0 -> d7  [color=green, key=1, label=string, style=dashed];
+n1 -> n2  [key=0, style=solid];
+n1 -> n3  [key=0, style=solid];
+n3 -> n4  [key=0, style=solid];
+n3 -> n5  [key=0, style=solid];
+n4 -> n8  [key=0, style=solid];
+n5 -> n6  [key=0, style=solid];
+n5 -> n7  [key=0, style=solid];
+n5 -> d7  [color=green, key=0, style=solid];
+n6 -> n8  [key=0, style=solid];
+n6 -> n9  [key=2, style=dotted];
+n7 -> n8  [key=0, style=solid];
+n7 -> n9  [key=2, style=dotted];
+n2 -> n8  [key=0, style=solid];
+n8 -> n0  [color=blue, key=0, style=bold];
+d7 -> n8  [color=green, key=0, style=solid];
+d7 -> n9  [color=green, key=2, style=dotted];
+}

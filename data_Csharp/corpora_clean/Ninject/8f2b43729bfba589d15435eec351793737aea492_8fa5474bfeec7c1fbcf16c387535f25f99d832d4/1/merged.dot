@@ -1,0 +1,19 @@
+digraph  {
+m2_6 [label="Entry RemotingServer.MyService.Dispose()", span="16-16", cluster="RemotingServer.MyService.Dispose()", file="MyService.cs"];
+m2_7 [label="Console.WriteLine(''Disposing instance on '' + Process.GetCurrentProcess().ProcessName)", span="18-18", cluster="RemotingServer.MyService.Dispose()", color=green, community=0, file="MyService.cs"];
+m2_8 [label="Exit RemotingServer.MyService.Dispose()", span="16-16", cluster="RemotingServer.MyService.Dispose()", file="MyService.cs"];
+m2_5 [label="Entry System.Diagnostics.Process.GetCurrentProcess()", span="0-0", cluster="System.Diagnostics.Process.GetCurrentProcess()", file="MyService.cs"];
+m2_9 [label="Entry System.Console.WriteLine(string)", span="0-0", cluster="System.Console.WriteLine(string)", file="MyService.cs"];
+m2_2 [label="Entry RemotingServer.MyService.Func1()", span="11-11", cluster="RemotingServer.MyService.Func1()", file="MyService.cs"];
+m2_3 [label="return ''MyService.Func1() from '' + Process.GetCurrentProcess().ProcessName;", span="13-13", cluster="RemotingServer.MyService.Func1()", color=green, community=0, file="MyService.cs"];
+m2_4 [label="Exit RemotingServer.MyService.Func1()", span="11-11", cluster="RemotingServer.MyService.Func1()", file="MyService.cs"];
+m2_6 -> m2_7  [key=0, style=solid, color=green];
+m2_7 -> m2_8  [key=0, style=solid, color=green];
+m2_7 -> m2_5  [key=2, style=dotted, color=green];
+m2_7 -> m2_9  [key=2, style=dotted, color=green];
+m2_8 -> m2_6  [key=0, style=bold, color=blue];
+m2_2 -> m2_3  [key=0, style=solid, color=green];
+m2_3 -> m2_4  [key=0, style=solid, color=green];
+m2_3 -> m2_5  [key=2, style=dotted, color=green];
+m2_4 -> m2_2  [key=0, style=bold, color=blue];
+}

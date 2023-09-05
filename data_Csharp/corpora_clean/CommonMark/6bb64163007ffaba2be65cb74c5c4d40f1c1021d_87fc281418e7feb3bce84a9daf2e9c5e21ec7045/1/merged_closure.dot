@@ -1,0 +1,15 @@
+digraph  {
+m0_11 [cluster="CommonMark.Syntax.Block.CreateDocument()", file="Scanner.cs", label="Entry CommonMark.Syntax.Block.CreateDocument()", span="40-40"];
+m0_14 [cluster="CommonMark.Syntax.Block.CreateDocument()", file="Scanner.cs", label="e.Top = e", span="44-44"];
+m0_15 [cluster="CommonMark.Syntax.Block.CreateDocument()", file="Scanner.cs", label="return e;", span="45-45"];
+m0_16 [cluster="CommonMark.Syntax.Block.CreateDocument()", file="Scanner.cs", label="Exit CommonMark.Syntax.Block.CreateDocument()", span="40-40"];
+m0_10 [cluster="CommonMark.Syntax.Enumerable.Enumerable(CommonMark.Syntax.Block)", file="Scanner.cs", label="Entry CommonMark.Syntax.Enumerable.Enumerable(CommonMark.Syntax.Block)", span="9-9"];
+m0_17 [cluster="System.Collections.Generic.Dictionary<TKey, TValue>.Dictionary()", file="Scanner.cs", label="Entry System.Collections.Generic.Dictionary<TKey, TValue>.Dictionary()", span="0-0"];
+m0_7 [cluster="CommonMark.Syntax.Block.AsEnumerable()", file="Scanner.cs", label="Entry CommonMark.Syntax.Block.AsEnumerable()", span="32-32"];
+m0_9 [cluster="CommonMark.Syntax.Block.AsEnumerable()", file="Scanner.cs", label="Exit CommonMark.Syntax.Block.AsEnumerable()", span="32-32"];
+m0_0 [cluster="CommonMark.Syntax.Block.Block(CommonMark.Syntax.BlockTag, int, int)", file="Scanner.cs", label="Entry CommonMark.Syntax.Block.Block(CommonMark.Syntax.BlockTag, int, int)", span="18-18"];
+m0_1 [cluster="CommonMark.Syntax.Block.Block(CommonMark.Syntax.BlockTag, int, int)", file="Scanner.cs", label="this.Tag = tag", span="20-20"];
+m0_2 [cluster="CommonMark.Syntax.Block.Block(CommonMark.Syntax.BlockTag, int, int)", file="Scanner.cs", label="this.StartLine = startLine", span="21-21"];
+m0_6 [cluster="CommonMark.Syntax.Block.Block(CommonMark.Syntax.BlockTag, int, int)", file="Scanner.cs", label="Exit CommonMark.Syntax.Block.Block(CommonMark.Syntax.BlockTag, int, int)", span="18-18"];
+m0_18 [file="Scanner.cs", label="CommonMark.Syntax.Block", span=""];
+}

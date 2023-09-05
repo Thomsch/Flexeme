@@ -1,0 +1,33 @@
+digraph  {
+d1 [label="return errors.Any()\r\n                ? (ParserResult<T>)new NotParsed<T>(instance.GetType().ToTypeInfo(), errors)\r\n                : (ParserResult<T>)new Parsed<T>(instance);", span="12-14", cluster="CommandLine.ErrorExtensions.ToParserResult<T>(System.Collections.Generic.IEnumerable<CommandLine.Error>, T)", color=green, community=0];
+d0 [label="Entry CommandLine.ErrorExtensions.ToParserResult<T>(System.Collections.Generic.IEnumerable<CommandLine.Error>, T)", span="10-10", cluster="CommandLine.ErrorExtensions.ToParserResult<T>(System.Collections.Generic.IEnumerable<CommandLine.Error>, T)"];
+d2 [label="Exit CommandLine.ErrorExtensions.ToParserResult<T>(System.Collections.Generic.IEnumerable<CommandLine.Error>, T)", span="10-10", cluster="CommandLine.ErrorExtensions.ToParserResult<T>(System.Collections.Generic.IEnumerable<CommandLine.Error>, T)"];
+d3 [label="Entry System.Collections.Generic.IEnumerable<TSource>.Any<TSource>()", span="0-0", cluster="System.Collections.Generic.IEnumerable<TSource>.Any<TSource>()"];
+d4 [label="Entry CommandLine.NotParsed<T>.NotParsed(CommandLine.TypeInfo, System.Collections.Generic.IEnumerable<CommandLine.Error>)", span="163-163", cluster="CommandLine.NotParsed<T>.NotParsed(CommandLine.TypeInfo, System.Collections.Generic.IEnumerable<CommandLine.Error>)"];
+d5 [label="Entry object.GetType()", span="0-0", cluster="object.GetType()"];
+d6 [label="Entry System.Type.ToTypeInfo()", span="174-174", cluster="System.Type.ToTypeInfo()"];
+d7 [label="Entry CommandLine.Parsed<T>.Parsed(T)", span="100-100", cluster="CommandLine.Parsed<T>.Parsed(T)"];
+d9 [label="return errors.Where(e => !e.StopsProcessing);", span="19-19", cluster="CommandLine.ErrorExtensions.OnlyMeaningfulOnes(System.Collections.Generic.IEnumerable<CommandLine.Error>)", color=green, community=0];
+d8 [label="Entry CommandLine.ErrorExtensions.OnlyMeaningfulOnes(System.Collections.Generic.IEnumerable<CommandLine.Error>)", span="17-17", cluster="CommandLine.ErrorExtensions.OnlyMeaningfulOnes(System.Collections.Generic.IEnumerable<CommandLine.Error>)"];
+d10 [label="Exit CommandLine.ErrorExtensions.OnlyMeaningfulOnes(System.Collections.Generic.IEnumerable<CommandLine.Error>)", span="17-17", cluster="CommandLine.ErrorExtensions.OnlyMeaningfulOnes(System.Collections.Generic.IEnumerable<CommandLine.Error>)"];
+d11 [label="Entry Unk.Where", span="", cluster="Unk.Where"];
+d12 [label="Entry lambda expression", span="19-19", cluster="lambda expression"];
+d13 [label="!e.StopsProcessing", span="19-19", cluster="lambda expression", color=green, community=0];
+d14 [label="Exit lambda expression", span="19-19", cluster="lambda expression"];
+d1 -> d2  [key=0, style=solid, color=green];
+d1 -> d3  [key=2, style=dotted, color=green];
+d1 -> d4  [key=2, style=dotted, color=green];
+d1 -> d5  [key=2, style=dotted, color=green];
+d1 -> d6  [key=2, style=dotted, color=green];
+d1 -> d7  [key=2, style=dotted, color=green];
+d0 -> d1  [key=0, style=solid, color=green];
+d2 -> d0  [key=0, style=bold, color=blue];
+d9 -> d10  [key=0, style=solid, color=green];
+d9 -> d11  [key=2, style=dotted, color=green];
+d9 -> d12  [key=1, style=dashed, color=green, label="lambda expression"];
+d8 -> d9  [key=0, style=solid, color=green];
+d10 -> d8  [key=0, style=bold, color=blue];
+d12 -> d13  [key=0, style=solid, color=green];
+d13 -> d14  [key=0, style=solid, color=green];
+d14 -> d12  [key=0, style=bold, color=blue];
+}

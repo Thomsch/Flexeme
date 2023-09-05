@@ -1,0 +1,38 @@
+digraph  {
+n0 [cluster="Humanizer.Tests.Localisation.bnBD.NumberToWordsTests.NumberToWordsTests()", label="Entry Humanizer.Tests.Localisation.bnBD.NumberToWordsTests.NumberToWordsTests()", span="7-7"];
+n1 [cluster="Humanizer.Tests.Localisation.bnBD.NumberToWordsTests.NumberToWordsTests()", label="Exit Humanizer.Tests.Localisation.bnBD.NumberToWordsTests.NumberToWordsTests()", span="7-7"];
+n2 [cluster="Humanizer.Tests.Localisation.bnBD.NumberToWordsTests.ToWords(int, string)", label="Entry Humanizer.Tests.Localisation.bnBD.NumberToWordsTests.ToWords(int, string)", span="40-40"];
+n3 [cluster="Humanizer.Tests.Localisation.bnBD.NumberToWordsTests.ToWords(int, string)", color=red, community=0, label="3: Assert.Equal(expected, number.ToWords())", span="42-42"];
+n4 [cluster="Humanizer.Tests.Localisation.bnBD.NumberToWordsTests.ToWords(int, string)", label="Exit Humanizer.Tests.Localisation.bnBD.NumberToWordsTests.ToWords(int, string)", span="40-40"];
+n5 [cluster="int.ToWords(System.Globalization.CultureInfo)", label="Entry int.ToWords(System.Globalization.CultureInfo)", span="16-16"];
+n6 [cluster="Unk.Equal", label="Entry Unk.Equal", span=""];
+n7 [cluster="Humanizer.Tests.Localisation.bnBD.NumberToWordsTests.ToOrdinalWords(int, string)", label="Entry Humanizer.Tests.Localisation.bnBD.NumberToWordsTests.ToOrdinalWords(int, string)", span="82-82"];
+n8 [cluster="Humanizer.Tests.Localisation.bnBD.NumberToWordsTests.ToOrdinalWords(int, string)", color=red, community=0, label="7: Assert.Equal(words, number.ToOrdinalWords())", span="84-84"];
+n9 [cluster="Humanizer.Tests.Localisation.bnBD.NumberToWordsTests.ToOrdinalWords(int, string)", label="Exit Humanizer.Tests.Localisation.bnBD.NumberToWordsTests.ToOrdinalWords(int, string)", span="82-82"];
+n10 [cluster="int.ToOrdinalWords(System.Globalization.CultureInfo)", label="Entry int.ToOrdinalWords(System.Globalization.CultureInfo)", span="52-52"];
+n11 [cluster="<invalid-global-code>.NumberToWordsTests()", label="Entry <invalid-global-code>.NumberToWordsTests()", span="88-88"];
+n12 [cluster="<invalid-global-code>.NumberToWordsTests()", label="Exit <invalid-global-code>.NumberToWordsTests()", span="88-88"];
+n13 [cluster="<invalid-global-code>.ToWordsFarsi(int, string)", label="Entry <invalid-global-code>.ToWordsFarsi(int, string)", span="118-118"];
+n14 [cluster="<invalid-global-code>.ToWordsFarsi(int, string)", color=red, community=0, label="6: Assert.Equal(expected, number.ToWords())", span="120-120"];
+n15 [cluster="<invalid-global-code>.ToWordsFarsi(int, string)", label="Exit <invalid-global-code>.ToWordsFarsi(int, string)", span="118-118"];
+n16 [cluster="Unk.ToWords", label="Entry Unk.ToWords", span=""];
+n0 -> n1  [key=0, style=solid];
+n1 -> n0  [color=blue, key=0, style=bold];
+n2 -> n3  [color=red, key=0, style=solid];
+n3 -> n4  [color=red, key=0, style=solid];
+n3 -> n5  [color=red, key=2, style=dotted];
+n3 -> n6  [color=red, key=2, style=dotted];
+n4 -> n2  [color=blue, key=0, style=bold];
+n7 -> n8  [color=red, key=0, style=solid];
+n8 -> n9  [color=red, key=0, style=solid];
+n8 -> n10  [color=red, key=2, style=dotted];
+n8 -> n6  [color=red, key=2, style=dotted];
+n9 -> n7  [color=blue, key=0, style=bold];
+n11 -> n12  [key=0, style=solid];
+n12 -> n11  [color=blue, key=0, style=bold];
+n13 -> n14  [color=red, key=0, style=solid];
+n14 -> n15  [color=red, key=0, style=solid];
+n14 -> n16  [color=red, key=2, style=dotted];
+n14 -> n6  [color=red, key=2, style=dotted];
+n15 -> n13  [color=blue, key=0, style=bold];
+}

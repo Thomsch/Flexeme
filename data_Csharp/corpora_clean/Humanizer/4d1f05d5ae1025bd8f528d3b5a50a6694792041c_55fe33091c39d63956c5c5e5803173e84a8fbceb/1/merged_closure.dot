@@ -1,0 +1,35 @@
+digraph  {
+m1_0 [cluster="Humanizer.NumberToOrdinalWordsExtension.ToOrdinalWords(int)", file="NumberToOrdinalWordsExtension.cs", label="Entry Humanizer.NumberToOrdinalWordsExtension.ToOrdinalWords(int)", span="14-14"];
+m1_2 [cluster="Humanizer.NumberToOrdinalWordsExtension.ToOrdinalWords(int)", file="NumberToOrdinalWordsExtension.cs", label="Exit Humanizer.NumberToOrdinalWordsExtension.ToOrdinalWords(int)", span="14-14"];
+m1_3 [cluster="Humanizer.Localisation.NumberToWords.EnglishNumberToWordsConverter.EnglishNumberToWordsConverter()", file="NumberToOrdinalWordsExtension.cs", label="Entry Humanizer.Localisation.NumberToWords.EnglishNumberToWordsConverter.EnglishNumberToWordsConverter()", span="5-5"];
+m1_4 [cluster="Humanizer.Localisation.NumberToWords.EnglishNumberToWordsConverter.ConvertToOrdinal(int)", file="NumberToOrdinalWordsExtension.cs", label="Entry Humanizer.Localisation.NumberToWords.EnglishNumberToWordsConverter.ConvertToOrdinal(int)", span="76-76"];
+m2_4 [cluster="Unk.Equal", file="NumberToOrdinalWordsTests.cs", label="Entry Unk.Equal", span=""];
+m2_0 [cluster="Humanizer.Tests.NumberToOrdinalWordsTests.ToOrdinalWords(int, string)", file="NumberToOrdinalWordsTests.cs", label="Entry Humanizer.Tests.NumberToOrdinalWordsTests.ToOrdinalWords(int, string)", span="50-50"];
+m2_1 [cluster="Humanizer.Tests.NumberToOrdinalWordsTests.ToOrdinalWords(int, string)", file="NumberToOrdinalWordsTests.cs", label="Assert.Equal(words, number.ToOrdinalWords())", span="52-52"];
+m2_2 [cluster="Humanizer.Tests.NumberToOrdinalWordsTests.ToOrdinalWords(int, string)", file="NumberToOrdinalWordsTests.cs", label="Exit Humanizer.Tests.NumberToOrdinalWordsTests.ToOrdinalWords(int, string)", span="50-50"];
+m2_3 [cluster="int.ToOrdinalWords()", file="NumberToOrdinalWordsTests.cs", label="Entry int.ToOrdinalWords()", span="14-14"];
+m3_7 [cluster="Humanizer.Localisation.NumberToWords.ArabicNumberToWordsConverter.ArabicNumberToWordsConverter()", file="NumberToWordsExtension.cs", label="Entry Humanizer.Localisation.NumberToWords.ArabicNumberToWordsConverter.ArabicNumberToWordsConverter()", span="4-4"];
+m3_15 [cluster="Humanizer.Localisation.NumberToWords.SpanishNumberToWordsConverter.SpanishNumberToWordsConverter()", file="NumberToWordsExtension.cs", label="Entry Humanizer.Localisation.NumberToWords.SpanishNumberToWordsConverter.SpanishNumberToWordsConverter()", span="5-5"];
+m3_23 [cluster="Humanizer.Localisation.NumberToWords.INumberToWordsConverter.Convert(int)", file="NumberToWordsExtension.cs", label="Entry Humanizer.Localisation.NumberToWords.INumberToWordsConverter.Convert(int)", span="12-12"];
+m3_19 [cluster="Humanizer.Localisation.NumberToWords.PolishNumberToWordsConverter.PolishNumberToWordsConverter()", file="NumberToWordsExtension.cs", label="Entry Humanizer.Localisation.NumberToWords.PolishNumberToWordsConverter.PolishNumberToWordsConverter()", span="6-6"];
+m3_20 [cluster="Humanizer.NumberToWordsExtension.ToWords(int)", file="NumberToWordsExtension.cs", label="Entry Humanizer.NumberToWordsExtension.ToWords(int)", span="25-25"];
+m3_21 [cluster="Humanizer.NumberToWordsExtension.ToWords(int)", file="NumberToWordsExtension.cs", label="return Converter.Convert(number);", span="27-27"];
+m3_22 [cluster="Humanizer.NumberToWordsExtension.ToWords(int)", file="NumberToWordsExtension.cs", label="Exit Humanizer.NumberToWordsExtension.ToWords(int)", span="25-25"];
+m3_3 [cluster="Humanizer.Localisation.NumberToWords.EnglishNumberToWordsConverter.EnglishNumberToWordsConverter()", file="NumberToWordsExtension.cs", label="Entry Humanizer.Localisation.NumberToWords.EnglishNumberToWordsConverter.EnglishNumberToWordsConverter()", span="5-5"];
+m3_11 [cluster="Humanizer.Localisation.NumberToWords.FarsiNumberToWordsConverter.FarsiNumberToWordsConverter()", file="NumberToWordsExtension.cs", label="Entry Humanizer.Localisation.NumberToWords.FarsiNumberToWordsConverter.FarsiNumberToWordsConverter()", span="5-5"];
+m3_16 [cluster="lambda expression", file="NumberToWordsExtension.cs", label="Entry lambda expression", span="17-17"];
+m3_0 [cluster="lambda expression", file="NumberToWordsExtension.cs", label="Entry lambda expression", span="13-13"];
+m3_1 [cluster="lambda expression", file="NumberToWordsExtension.cs", label="new EnglishNumberToWordsConverter()", span="13-13"];
+m3_2 [cluster="lambda expression", file="NumberToWordsExtension.cs", label="Exit lambda expression", span="13-13"];
+m3_4 [cluster="lambda expression", file="NumberToWordsExtension.cs", label="Entry lambda expression", span="14-14"];
+m3_5 [cluster="lambda expression", file="NumberToWordsExtension.cs", label="new ArabicNumberToWordsConverter()", span="14-14"];
+m3_6 [cluster="lambda expression", file="NumberToWordsExtension.cs", label="Exit lambda expression", span="14-14"];
+m3_8 [cluster="lambda expression", file="NumberToWordsExtension.cs", label="Entry lambda expression", span="15-15"];
+m3_9 [cluster="lambda expression", file="NumberToWordsExtension.cs", label="new FarsiNumberToWordsConverter()", span="15-15"];
+m3_10 [cluster="lambda expression", file="NumberToWordsExtension.cs", label="Exit lambda expression", span="15-15"];
+m3_12 [cluster="lambda expression", file="NumberToWordsExtension.cs", label="Entry lambda expression", span="16-16"];
+m3_13 [cluster="lambda expression", file="NumberToWordsExtension.cs", label="new SpanishNumberToWordsConverter()", span="16-16"];
+m3_14 [cluster="lambda expression", file="NumberToWordsExtension.cs", label="Exit lambda expression", span="16-16"];
+m3_17 [cluster="lambda expression", file="NumberToWordsExtension.cs", label="new PolishNumberToWordsConverter()", span="17-17"];
+m3_18 [cluster="lambda expression", file="NumberToWordsExtension.cs", label="Exit lambda expression", span="17-17"];
+}

@@ -1,0 +1,16 @@
+digraph  {
+d1 [label="!validExceptions.Contains(exception.GetType())", span="13-13", cluster="CommandLine.Infrastructure.ExceptionExtensions.RethrowWhenAbsentIn(System.Exception, System.Collections.Generic.IEnumerable<System.Type>)", color=green, community=0];
+d0 [label="Entry CommandLine.Infrastructure.ExceptionExtensions.RethrowWhenAbsentIn(System.Exception, System.Collections.Generic.IEnumerable<System.Type>)", span="11-11", cluster="CommandLine.Infrastructure.ExceptionExtensions.RethrowWhenAbsentIn(System.Exception, System.Collections.Generic.IEnumerable<System.Type>)"];
+d2 [label="throw exception;", span="15-15", cluster="CommandLine.Infrastructure.ExceptionExtensions.RethrowWhenAbsentIn(System.Exception, System.Collections.Generic.IEnumerable<System.Type>)", color=green, community=0];
+d3 [label="Exit CommandLine.Infrastructure.ExceptionExtensions.RethrowWhenAbsentIn(System.Exception, System.Collections.Generic.IEnumerable<System.Type>)", span="11-11", cluster="CommandLine.Infrastructure.ExceptionExtensions.RethrowWhenAbsentIn(System.Exception, System.Collections.Generic.IEnumerable<System.Type>)"];
+d4 [label="Entry System.Exception.GetType()", span="0-0", cluster="System.Exception.GetType()"];
+d5 [label="Entry System.Collections.Generic.IEnumerable<TSource>.Contains<TSource>(TSource)", span="0-0", cluster="System.Collections.Generic.IEnumerable<TSource>.Contains<TSource>(TSource)"];
+d1 -> d2  [key=0, style=solid, color=green];
+d1 -> d3  [key=0, style=solid, color=green];
+d1 -> d4  [key=2, style=dotted, color=green];
+d1 -> d5  [key=2, style=dotted, color=green];
+d0 -> d1  [key=0, style=solid, color=green];
+d0 -> d2  [key=1, style=dashed, color=green, label="System.Exception"];
+d2 -> d3  [key=0, style=solid, color=green];
+d3 -> d0  [key=0, style=bold, color=blue];
+}

@@ -1,0 +1,20 @@
+digraph  {
+n11 [label="Humanizer.Tests.AmbientCulture", span=""];
+n0 [cluster="Humanizer.Tests.AmbientCulture.AmbientCulture(System.Globalization.CultureInfo)", label="Entry Humanizer.Tests.AmbientCulture.AmbientCulture(System.Globalization.CultureInfo)", span="12-12"];
+n4 [cluster="Humanizer.Tests.AmbientCulture.AmbientCulture(System.Globalization.CultureInfo)", label="Exit Humanizer.Tests.AmbientCulture.AmbientCulture(System.Globalization.CultureInfo)", span="12-12"];
+n5 [cluster="Humanizer.Tests.AmbientCulture.AmbientCulture(string)", label="Entry Humanizer.Tests.AmbientCulture.AmbientCulture(string)", span="19-19"];
+n6 [cluster="Humanizer.Tests.AmbientCulture.AmbientCulture(string)", label="Exit Humanizer.Tests.AmbientCulture.AmbientCulture(string)", span="19-19"];
+n7 [cluster="Humanizer.Tests.AmbientCulture.Dispose()", label="Entry Humanizer.Tests.AmbientCulture.Dispose()", span="26-26"];
+n10 [cluster="Humanizer.Tests.AmbientCulture.Dispose()", label="Exit Humanizer.Tests.AmbientCulture.Dispose()", span="26-26"];
+m0_2 [cluster="Humanizer.Tests.BitFieldEnumHumanizeTests.CanHumanizeSingleWordDescriptionAttribute()", file="BitFieldEnumHumanizeTests.cs", label="Entry Humanizer.Tests.BitFieldEnumHumanizeTests.CanHumanizeSingleWordDescriptionAttribute()", span="14-14"];
+m0_3 [cluster="Humanizer.Tests.BitFieldEnumHumanizeTests.CanHumanizeSingleWordDescriptionAttribute()", file="BitFieldEnumHumanizeTests.cs", label="Assert.Equal(BitFlagEnumTestsResources.MemberWithSingleWordDisplayAttribute, BitFieldEnumUnderTest.RED.Humanize())", span="16-16"];
+m0_4 [cluster="Humanizer.Tests.BitFieldEnumHumanizeTests.CanHumanizeSingleWordDescriptionAttribute()", file="BitFieldEnumHumanizeTests.cs", label="Exit Humanizer.Tests.BitFieldEnumHumanizeTests.CanHumanizeSingleWordDescriptionAttribute()", span="14-14"];
+m0_10 [cluster="Humanizer.Tests.BitFieldEnumHumanizeTests.CanHumanizeMultipleValueBitFieldEnum()", file="BitFieldEnumHumanizeTests.cs", label="Entry Humanizer.Tests.BitFieldEnumHumanizeTests.CanHumanizeMultipleValueBitFieldEnum()", span="26-26"];
+m0_11 [cluster="Humanizer.Tests.BitFieldEnumHumanizeTests.CanHumanizeMultipleValueBitFieldEnum()", file="BitFieldEnumHumanizeTests.cs", label="var xoredBitFlag = (BitFieldEnumUnderTest.RED | BitFieldEnumUnderTest.DARK_GRAY)", span="28-28"];
+m0_12 [cluster="Humanizer.Tests.BitFieldEnumHumanizeTests.CanHumanizeMultipleValueBitFieldEnum()", file="BitFieldEnumHumanizeTests.cs", label="Assert.Equal(BitFlagEnumTestsResources.ExpectedResultWhenBothValuesXored, xoredBitFlag.Humanize())", span="29-29"];
+m0_13 [cluster="Humanizer.Tests.BitFieldEnumHumanizeTests.CanHumanizeMultipleValueBitFieldEnum()", file="BitFieldEnumHumanizeTests.cs", label="Exit Humanizer.Tests.BitFieldEnumHumanizeTests.CanHumanizeMultipleValueBitFieldEnum()", span="26-26"];
+m0_0 [cluster="Humanizer.Tests.BitFieldEnumHumanizeTests.BitFieldEnumHumanizeTests()", file="BitFieldEnumHumanizeTests.cs", label="Entry Humanizer.Tests.BitFieldEnumHumanizeTests.BitFieldEnumHumanizeTests()", span="11-11"];
+m0_1 [cluster="Humanizer.Tests.BitFieldEnumHumanizeTests.BitFieldEnumHumanizeTests()", file="BitFieldEnumHumanizeTests.cs", label="Exit Humanizer.Tests.BitFieldEnumHumanizeTests.BitFieldEnumHumanizeTests()", span="11-11"];
+m0_6 [cluster="Unk.Equal", file="BitFieldEnumHumanizeTests.cs", label="Entry Unk.Equal", span=""];
+m0_5 [cluster="System.Enum.Humanize()", file="BitFieldEnumHumanizeTests.cs", label="Entry System.Enum.Humanize()", span="23-23"];
+}

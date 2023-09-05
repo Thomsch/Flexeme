@@ -1,0 +1,31 @@
+digraph  {
+n0 [cluster="Ninject.INinjectSettings.Get<T>(string, T)", label="Entry Ninject.INinjectSettings.Get<T>(string, T)", span="92-92"];
+n1 [cluster="Ninject.INinjectSettings.Get<T>(string, T)", label="Exit Ninject.INinjectSettings.Get<T>(string, T)", span="92-92"];
+n2 [cluster="Ninject.INinjectSettings.Set(string, object)", label="Entry Ninject.INinjectSettings.Set(string, object)", span="99-99"];
+n3 [cluster="Ninject.INinjectSettings.Set(string, object)", label="Exit Ninject.INinjectSettings.Set(string, object)", span="99-99"];
+m0_3 [cluster="System.Collections.Generic.Dictionary<TKey, TValue>.ContainsKey(TKey)", file="NinjectSettings.cs", label="Entry System.Collections.Generic.Dictionary<TKey, TValue>.ContainsKey(TKey)", span="0-0"];
+m0_0 [cluster="Ninject.NinjectSettings.Get<T>(string, T)", file="NinjectSettings.cs", label="Entry Ninject.NinjectSettings.Get<T>(string, T)", span="133-133"];
+m0_1 [cluster="Ninject.NinjectSettings.Get<T>(string, T)", color=green, community=0, file="NinjectSettings.cs", label="0: T value", span="135-135"];
+m0_2 [cluster="Ninject.NinjectSettings.Get<T>(string, T)", color=green, community=0, file="NinjectSettings.cs", label="0: Exit Ninject.NinjectSettings.Get<T>(string, T)", span="133-133"];
+m0_4 [cluster="Unk.TryGetValue", file="NinjectSettings.cs", label="Entry Unk.TryGetValue", span=""];
+m0_5 [cluster="Ninject.NinjectSettings.Set(string, object)", file="NinjectSettings.cs", label="_values[key] = value", span="145-145"];
+m0_6 [cluster="Ninject.NinjectSettings.Set(string, object)", file="NinjectSettings.cs", label="Exit Ninject.NinjectSettings.Set(string, object)", span="143-143"];
+m0_7 [file="NinjectSettings.cs", label="Ninject.NinjectSettings", span=""];
+n0 -> n1  [key=0, style=solid];
+n1 -> n0  [color=blue, key=0, style=bold];
+n2 -> n3  [key=0, style=solid];
+n3 -> n2  [color=blue, key=0, style=bold];
+m0_0 -> m0_1  [color=green, key=0, style=solid];
+m0_0 -> m0_2  [color=green, key=1, label=string, style=dashed];
+m0_1 -> m0_2  [color=green, key=0, style=solid];
+m0_1 -> m0_3  [color=red, key=2, style=dotted];
+m0_2 -> m0_2  [color=green, key=1, label=value, style=dashed];
+m0_2 -> m0_4  [color=green, key=2, style=dotted];
+m0_2 -> m0_0  [color=blue, key=0, style=bold];
+m0_4 -> m0_5  [key=0, style=solid];
+m0_5 -> m0_6  [key=0, style=solid];
+m0_6 -> m0_4  [color=blue, key=0, style=bold];
+m0_7 -> m0_1  [color=red, key=1, label="Ninject.NinjectSettings", style=dashed];
+m0_7 -> m0_5  [color=darkseagreen4, key=1, label="Ninject.NinjectSettings", style=dashed];
+m0_7 -> m0_2  [color=green, key=1, label="Ninject.NinjectSettings", style=dashed];
+}

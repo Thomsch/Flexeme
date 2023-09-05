@@ -1,0 +1,35 @@
+digraph  {
+n48 [label="Humanizer.DateTimeHumanizeStrategy.PrecisionDateTimeHumanizeStrategy", span=""];
+n0 [cluster="Humanizer.DateTimeHumanizeStrategy.PrecisionDateTimeHumanizeStrategy.PrecisionDateTimeHumanizeStrategy(double)", label="Entry Humanizer.DateTimeHumanizeStrategy.PrecisionDateTimeHumanizeStrategy.PrecisionDateTimeHumanizeStrategy(double)", span="17-17"];
+n1 [cluster="Humanizer.DateTimeHumanizeStrategy.PrecisionDateTimeHumanizeStrategy.PrecisionDateTimeHumanizeStrategy(double)", label="_precision = precision", span="19-19"];
+n2 [cluster="Humanizer.DateTimeHumanizeStrategy.PrecisionDateTimeHumanizeStrategy.PrecisionDateTimeHumanizeStrategy(double)", label="Exit Humanizer.DateTimeHumanizeStrategy.PrecisionDateTimeHumanizeStrategy.PrecisionDateTimeHumanizeStrategy(double)", span="17-17"];
+n3 [cluster="Humanizer.DateTimeHumanizeStrategy.PrecisionDateTimeHumanizeStrategy.Humanize(System.DateTime, System.DateTime)", label="Entry Humanizer.DateTimeHumanizeStrategy.PrecisionDateTimeHumanizeStrategy.Humanize(System.DateTime, System.DateTime)", span="28-28"];
+n4 [cluster="Humanizer.DateTimeHumanizeStrategy.PrecisionDateTimeHumanizeStrategy.Humanize(System.DateTime, System.DateTime)", label="var ts = new TimeSpan(Math.Abs(comparisonBase.Ticks - input.Ticks))", span="30-30"];
+n5 [cluster="Humanizer.DateTimeHumanizeStrategy.PrecisionDateTimeHumanizeStrategy.Humanize(System.DateTime, System.DateTime)", label="var tense = input > comparisonBase ? Tense.Future : Tense.Past", span="31-31"];
+n42 [cluster="System.TimeSpan.TimeSpan(long)", label="Entry System.TimeSpan.TimeSpan(long)", span="0-0"];
+n43 [cluster="System.Math.Abs(long)", label="Entry System.Math.Abs(long)", span="0-0"];
+n6 [cluster="Humanizer.DateTimeHumanizeStrategy.PrecisionDateTimeHumanizeStrategy.Humanize(System.DateTime, System.DateTime)", label="int seconds = ts.Seconds, minutes = ts.Minutes, hours = ts.Hours, days = ts.Days", span="33-33"];
+n29 [cluster="Humanizer.DateTimeHumanizeStrategy.PrecisionDateTimeHumanizeStrategy.Humanize(System.DateTime, System.DateTime)", label="return Configurator.Formatter.DateHumanize(TimeUnit.Year, tense, years);", span="61-61"];
+n31 [cluster="Humanizer.DateTimeHumanizeStrategy.PrecisionDateTimeHumanizeStrategy.Humanize(System.DateTime, System.DateTime)", label="return Configurator.Formatter.DateHumanize(TimeUnit.Month, tense, months);", span="62-62"];
+n33 [cluster="Humanizer.DateTimeHumanizeStrategy.PrecisionDateTimeHumanizeStrategy.Humanize(System.DateTime, System.DateTime)", label="return Configurator.Formatter.DateHumanize(TimeUnit.Day, tense, days);", span="63-63"];
+n35 [cluster="Humanizer.DateTimeHumanizeStrategy.PrecisionDateTimeHumanizeStrategy.Humanize(System.DateTime, System.DateTime)", label="return Configurator.Formatter.DateHumanize(TimeUnit.Hour, tense, hours);", span="64-64"];
+n37 [cluster="Humanizer.DateTimeHumanizeStrategy.PrecisionDateTimeHumanizeStrategy.Humanize(System.DateTime, System.DateTime)", label="return Configurator.Formatter.DateHumanize(TimeUnit.Minute, tense, minutes);", span="65-65"];
+n39 [cluster="Humanizer.DateTimeHumanizeStrategy.PrecisionDateTimeHumanizeStrategy.Humanize(System.DateTime, System.DateTime)", label="return Configurator.Formatter.DateHumanize(TimeUnit.Second, tense, seconds);", span="66-66"];
+n40 [cluster="Humanizer.DateTimeHumanizeStrategy.PrecisionDateTimeHumanizeStrategy.Humanize(System.DateTime, System.DateTime)", label="return Configurator.Formatter.DateHumanize(TimeUnit.Millisecond, tense, 0);", span="67-67"];
+n7 [cluster="Humanizer.DateTimeHumanizeStrategy.PrecisionDateTimeHumanizeStrategy.Humanize(System.DateTime, System.DateTime)", label="int years = 0, months = 0", span="34-34"];
+n8 [cluster="Humanizer.DateTimeHumanizeStrategy.PrecisionDateTimeHumanizeStrategy.Humanize(System.DateTime, System.DateTime)", label="ts.Milliseconds >= 999 * _precision", span="37-37"];
+n9 [cluster="Humanizer.DateTimeHumanizeStrategy.PrecisionDateTimeHumanizeStrategy.Humanize(System.DateTime, System.DateTime)", label="seconds += 1", span="37-37"];
+n10 [cluster="Humanizer.DateTimeHumanizeStrategy.PrecisionDateTimeHumanizeStrategy.Humanize(System.DateTime, System.DateTime)", label="seconds >= 59 * _precision", span="38-38"];
+n11 [cluster="Humanizer.DateTimeHumanizeStrategy.PrecisionDateTimeHumanizeStrategy.Humanize(System.DateTime, System.DateTime)", label="minutes += 1", span="38-38"];
+n12 [cluster="Humanizer.DateTimeHumanizeStrategy.PrecisionDateTimeHumanizeStrategy.Humanize(System.DateTime, System.DateTime)", label="minutes >= 59 * _precision", span="39-39"];
+n13 [cluster="Humanizer.DateTimeHumanizeStrategy.PrecisionDateTimeHumanizeStrategy.Humanize(System.DateTime, System.DateTime)", label="hours += 1", span="39-39"];
+n14 [cluster="Humanizer.DateTimeHumanizeStrategy.PrecisionDateTimeHumanizeStrategy.Humanize(System.DateTime, System.DateTime)", label="hours >= 23 * _precision", span="40-40"];
+n15 [cluster="Humanizer.DateTimeHumanizeStrategy.PrecisionDateTimeHumanizeStrategy.Humanize(System.DateTime, System.DateTime)", label="days += 1", span="40-40"];
+n16 [cluster="Humanizer.DateTimeHumanizeStrategy.PrecisionDateTimeHumanizeStrategy.Humanize(System.DateTime, System.DateTime)", label="days >= 30 * _precision & days <= 31", span="43-43"];
+n18 [cluster="Humanizer.DateTimeHumanizeStrategy.PrecisionDateTimeHumanizeStrategy.Humanize(System.DateTime, System.DateTime)", label="days > 31 && days < 365 * _precision", span="44-44"];
+n19 [cluster="Humanizer.DateTimeHumanizeStrategy.PrecisionDateTimeHumanizeStrategy.Humanize(System.DateTime, System.DateTime)", label="int factor = Convert.ToInt32(Math.Floor((double)days / 30))", span="46-46"];
+n20 [cluster="Humanizer.DateTimeHumanizeStrategy.PrecisionDateTimeHumanizeStrategy.Humanize(System.DateTime, System.DateTime)", label="int maxMonths = Convert.ToInt32(Math.Ceiling((double)days / 30))", span="47-47"];
+n21 [cluster="Humanizer.DateTimeHumanizeStrategy.PrecisionDateTimeHumanizeStrategy.Humanize(System.DateTime, System.DateTime)", color=red, community=0, label="-1: months = (days >= 30 * (factor + _precision)) ? maxMonths : maxMonths - 1", span="48-48"];
+n22 [cluster="Humanizer.DateTimeHumanizeStrategy.PrecisionDateTimeHumanizeStrategy.Humanize(System.DateTime, System.DateTime)", label="days >= 365 * _precision && days <= 366", span="52-52"];
+n24 [cluster="Humanizer.DateTimeHumanizeStrategy.PrecisionDateTimeHumanizeStrategy.Humanize(System.DateTime, System.DateTime)", label="days > 365", span="53-53"];
+}

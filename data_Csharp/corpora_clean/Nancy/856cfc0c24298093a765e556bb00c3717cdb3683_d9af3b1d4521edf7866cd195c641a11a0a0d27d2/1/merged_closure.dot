@@ -1,0 +1,17 @@
+digraph  {
+n0 [cluster="Nancy.Demo.Hosting.Self.Program.Main()", label="Entry Nancy.Demo.Hosting.Self.Program.Main()", span="9-9"];
+n2 [cluster="Nancy.Demo.Hosting.Self.Program.Main()", label="nancyHost.Start()", span="13-13"];
+n9 [cluster="Nancy.Hosting.Self.NancyHost.NancyHost(params System.Uri[])", label="Entry Nancy.Hosting.Self.NancyHost.NancyHost(params System.Uri[])", span="39-39"];
+n10 [cluster="System.Uri.Uri(string)", label="Entry System.Uri.Uri(string)", span="0-0"];
+n3 [cluster="Nancy.Demo.Hosting.Self.Program.Main()", label="Console.WriteLine(''Nancy now listening - navigating to http://localhost:8888/nancy/. Press enter to stop'')", span="15-15"];
+n11 [cluster="Nancy.Hosting.Self.NancyHost.Start()", label="Entry Nancy.Hosting.Self.NancyHost.Start()", span="119-119"];
+n4 [cluster="Nancy.Demo.Hosting.Self.Program.Main()", label="Process.Start(''http://localhost:8888/nancy/'')", span="18-18"];
+n12 [cluster="System.Console.WriteLine(string)", label="Entry System.Console.WriteLine(string)", span="0-0"];
+n5 [cluster="Nancy.Demo.Hosting.Self.Program.Main()", label=Exception, span="20-20"];
+n6 [cluster="Nancy.Demo.Hosting.Self.Program.Main()", label="Console.ReadKey()", span="23-23"];
+n13 [cluster="System.Diagnostics.Process.Start(string)", label="Entry System.Diagnostics.Process.Start(string)", span="0-0"];
+n7 [cluster="Nancy.Demo.Hosting.Self.Program.Main()", label="Console.WriteLine(''Stopped. Good bye!'')", span="26-26"];
+n14 [cluster="System.Console.ReadKey()", label="Entry System.Console.ReadKey()", span="0-0"];
+n8 [cluster="Nancy.Demo.Hosting.Self.Program.Main()", label="Exit Nancy.Demo.Hosting.Self.Program.Main()", span="9-9"];
+d1 [cluster="Nancy.Demo.Hosting.Self.Program.Main()", color=green, community=0, label="var nancyHost = new NancyHost(new Uri(''http://localhost:8888/nancy/''), new Uri(''http://127.0.0.1:8898/nancy/''), new Uri(''http://localhost:8889/nancytoo/''))", prediction=0, span="11-11"];
+}

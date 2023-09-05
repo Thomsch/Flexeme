@@ -1,0 +1,18 @@
+digraph  {
+d1 [cluster="Nancy.Demo.NDjango.MainModule.MainModule()", color=green, community=0, label="Get[''/''] = parameters => {\r\n                return ''<a href='/ndjango-simple'>Simple view</a><br><a href='/ndjango-extends'>View with master page</a>'';\r\n            }", prediction=0, span="6-8"];
+d15 [label="Nancy.Demo.NDjango.MainModule", span=""];
+d0 [cluster="Nancy.Demo.NDjango.MainModule.MainModule()", label="Entry Nancy.Demo.NDjango.MainModule.MainModule()", span="4-4"];
+d2 [cluster="Nancy.Demo.NDjango.MainModule.MainModule()", color=green, community=0, label="Get[''/ndjango-simple''] = x => {\r\n                return View[''ndjango'', new RatPack { FirstName = ''Michael'' }];\r\n            }", prediction=1, span="10-12"];
+d3 [cluster="Nancy.Demo.NDjango.MainModule.MainModule()", color=green, community=0, label="Get[''/ndjango-extends''] = x => {\r\n                return View[''with-master'', new RatPack { FirstName = ''Michael'' }];\r\n            }", prediction=2, span="14-16"];
+d4 [cluster="Nancy.Demo.NDjango.MainModule.MainModule()", label="Exit Nancy.Demo.NDjango.MainModule.MainModule()", span="4-4"];
+d6 [cluster="lambda expression", color=green, community=0, label="return ''<a href='/ndjango-simple'>Simple view</a><br><a href='/ndjango-extends'>View with master page</a>'';", prediction=3, span="7-7"];
+d5 [cluster="lambda expression", label="Entry lambda expression", span="6-8"];
+d7 [cluster="lambda expression", label="Exit lambda expression", span="6-8"];
+d9 [cluster="lambda expression", color=green, community=0, label="return View[''ndjango'', new RatPack { FirstName = ''Michael'' }];", prediction=4, span="11-11"];
+d8 [cluster="lambda expression", label="Entry lambda expression", span="10-12"];
+d10 [cluster="lambda expression", label="Exit lambda expression", span="10-12"];
+d11 [cluster="Nancy.Demo.NDjango.RatPack.RatPack()", label="Entry Nancy.Demo.NDjango.RatPack.RatPack()", span="20-20"];
+d13 [cluster="lambda expression", color=green, community=0, label="return View[''with-master'', new RatPack { FirstName = ''Michael'' }];", prediction=5, span="15-15"];
+d12 [cluster="lambda expression", label="Entry lambda expression", span="14-16"];
+d14 [cluster="lambda expression", label="Exit lambda expression", span="14-16"];
+}

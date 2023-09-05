@@ -1,0 +1,32 @@
+digraph  {
+n6 [label="Nancy.Demo.Validation.MainModule", span=""];
+n0 [cluster="Nancy.Demo.Validation.MainModule.MainModule()", label="Entry Nancy.Demo.Validation.MainModule.MainModule()", span="7-7"];
+n2 [cluster="Nancy.Demo.Validation.MainModule.MainModule()", label="Exit Nancy.Demo.Validation.MainModule.MainModule()", span="7-7"];
+n3 [cluster="lambda expression", label="Entry lambda expression", span="9-12"];
+n5 [cluster="lambda expression", label="Exit lambda expression", span="9-12"];
+m0_17 [cluster="Nancy.Tests.Functional.Tests.DefaultXmlSerializerTests.Can_serialize_type_starting_with_application_xml()", file="DefaultXmlSerializerTests.cs", label="Entry Nancy.Tests.Functional.Tests.DefaultXmlSerializerTests.Can_serialize_type_starting_with_application_xml()", span="32-32"];
+m0_19 [cluster="Nancy.Tests.Functional.Tests.DefaultXmlSerializerTests.Can_serialize_type_starting_with_application_xml()", file="DefaultXmlSerializerTests.cs", label="Exit Nancy.Tests.Functional.Tests.DefaultXmlSerializerTests.Can_serialize_type_starting_with_application_xml()", span="32-32"];
+m0_9 [cluster="Nancy.Configuration.INancyEnvironment.Xml(bool, System.Text.Encoding)", file="DefaultXmlSerializerTests.cs", label="Entry Nancy.Configuration.INancyEnvironment.Xml(bool, System.Text.Encoding)", span="16-16"];
+m0_20 [cluster="Nancy.Tests.Functional.Tests.DefaultXmlSerializerTests.Can_serialize_text_xml()", file="DefaultXmlSerializerTests.cs", label="Entry Nancy.Tests.Functional.Tests.DefaultXmlSerializerTests.Can_serialize_text_xml()", span="38-38"];
+m0_22 [cluster="Nancy.Tests.Functional.Tests.DefaultXmlSerializerTests.Can_serialize_text_xml()", file="DefaultXmlSerializerTests.cs", label="Exit Nancy.Tests.Functional.Tests.DefaultXmlSerializerTests.Can_serialize_text_xml()", span="38-38"];
+m0_0 [cluster="Nancy.Tests.Functional.Tests.DefaultXmlSerializerTests.DefaultXmlSerializerTests()", file="DefaultXmlSerializerTests.cs", label="Entry Nancy.Tests.Functional.Tests.DefaultXmlSerializerTests.DefaultXmlSerializerTests()", span="11-11"];
+m0_6 [cluster="Nancy.Tests.Functional.Tests.DefaultXmlSerializerTests.DefaultXmlSerializerTests()", file="DefaultXmlSerializerTests.cs", label="Exit Nancy.Tests.Functional.Tests.DefaultXmlSerializerTests.DefaultXmlSerializerTests()", span="11-11"];
+m0_23 [cluster="Nancy.Tests.Functional.Tests.DefaultXmlSerializerTests.Can_serialize_vendor_xml()", file="DefaultXmlSerializerTests.cs", label="Entry Nancy.Tests.Functional.Tests.DefaultXmlSerializerTests.Can_serialize_vendor_xml()", span="44-44"];
+m0_25 [cluster="Nancy.Tests.Functional.Tests.DefaultXmlSerializerTests.Can_serialize_vendor_xml()", file="DefaultXmlSerializerTests.cs", label="Exit Nancy.Tests.Functional.Tests.DefaultXmlSerializerTests.Can_serialize_vendor_xml()", span="44-44"];
+m0_16 [cluster="Unk.True", file="DefaultXmlSerializerTests.cs", label="Entry Unk.True", span=""];
+m0_32 [cluster="Unk.False", file="DefaultXmlSerializerTests.cs", label="Entry Unk.False", span=""];
+m0_33 [cluster="Nancy.Tests.Functional.Tests.DefaultXmlSerializerTests.Should_ignore_parameters()", file="DefaultXmlSerializerTests.cs", label="Entry Nancy.Tests.Functional.Tests.DefaultXmlSerializerTests.Should_ignore_parameters()", span="62-62"];
+m0_35 [cluster="Nancy.Tests.Functional.Tests.DefaultXmlSerializerTests.Should_ignore_parameters()", file="DefaultXmlSerializerTests.cs", label="Exit Nancy.Tests.Functional.Tests.DefaultXmlSerializerTests.Should_ignore_parameters()", span="62-62"];
+m0_29 [cluster="Nancy.Tests.Functional.Tests.DefaultXmlSerializerTests.Cannot_serialize_json()", file="DefaultXmlSerializerTests.cs", label="Entry Nancy.Tests.Functional.Tests.DefaultXmlSerializerTests.Cannot_serialize_json()", span="56-56"];
+m0_31 [cluster="Nancy.Tests.Functional.Tests.DefaultXmlSerializerTests.Cannot_serialize_json()", file="DefaultXmlSerializerTests.cs", label="Exit Nancy.Tests.Functional.Tests.DefaultXmlSerializerTests.Cannot_serialize_json()", span="56-56"];
+m0_15 [cluster="Nancy.Responses.DefaultXmlSerializer.CanSerialize(Nancy.Responses.Negotiation.MediaRange)", file="DefaultXmlSerializerTests.cs", label="Entry Nancy.Responses.DefaultXmlSerializer.CanSerialize(Nancy.Responses.Negotiation.MediaRange)", span="35-35"];
+m0_7 [cluster="Nancy.Configuration.DefaultNancyEnvironment.DefaultNancyEnvironment()", file="DefaultXmlSerializerTests.cs", label="Entry Nancy.Configuration.DefaultNancyEnvironment.DefaultNancyEnvironment()", span="9-9"];
+m0_26 [cluster="Nancy.Tests.Functional.Tests.DefaultXmlSerializerTests.Can_serialize_problem_xml()", file="DefaultXmlSerializerTests.cs", label="Entry Nancy.Tests.Functional.Tests.DefaultXmlSerializerTests.Can_serialize_problem_xml()", span="50-50"];
+m0_28 [cluster="Nancy.Tests.Functional.Tests.DefaultXmlSerializerTests.Can_serialize_problem_xml()", file="DefaultXmlSerializerTests.cs", label="Exit Nancy.Tests.Functional.Tests.DefaultXmlSerializerTests.Can_serialize_problem_xml()", span="50-50"];
+m0_12 [cluster="Nancy.Tests.Functional.Tests.DefaultXmlSerializerTests.Can_serialize_application_xml()", file="DefaultXmlSerializerTests.cs", label="Entry Nancy.Tests.Functional.Tests.DefaultXmlSerializerTests.Can_serialize_application_xml()", span="26-26"];
+m0_14 [cluster="Nancy.Tests.Functional.Tests.DefaultXmlSerializerTests.Can_serialize_application_xml()", file="DefaultXmlSerializerTests.cs", label="Exit Nancy.Tests.Functional.Tests.DefaultXmlSerializerTests.Can_serialize_application_xml()", span="26-26"];
+m0_11 [cluster="Nancy.Responses.DefaultXmlSerializer.DefaultXmlSerializer(Nancy.Configuration.INancyEnvironment)", file="DefaultXmlSerializerTests.cs", label="Entry Nancy.Responses.DefaultXmlSerializer.DefaultXmlSerializer(Nancy.Configuration.INancyEnvironment)", span="24-24"];
+m0_8 [cluster="Nancy.Configuration.INancyEnvironment.Tracing(bool, bool)", file="DefaultXmlSerializerTests.cs", label="Entry Nancy.Configuration.INancyEnvironment.Tracing(bool, bool)", span="15-15"];
+m0_10 [cluster="Nancy.Configuration.INancyEnvironment.Globalization(System.Collections.Generic.IEnumerable<string>, string, System.Globalization.DateTimeStyles?)", file="DefaultXmlSerializerTests.cs", label="Entry Nancy.Configuration.INancyEnvironment.Globalization(System.Collections.Generic.IEnumerable<string>, string, System.Globalization.DateTimeStyles?)", span="19-19"];
+m0_36 [file="DefaultXmlSerializerTests.cs", label="Nancy.Tests.Functional.Tests.DefaultXmlSerializerTests", span=""];
+}

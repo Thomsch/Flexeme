@@ -1,0 +1,16 @@
+digraph  {
+d146 [label="return\r\n                type.IsValueType ||\r\n                type.IsPrimitive ||\r\n                new [] { \r\n                    typeof(string),\r\n                    typeof(decimal),\r\n                    typeof(DateTime),\r\n                    typeof(DateTimeOffset),\r\n                    typeof(TimeSpan),\r\n                    typeof(Guid)\r\n                }.Contains(type) ||\r\n                Convert.GetTypeCode(type) != TypeCode.Object;", span="211-222", cluster="CommandLine.Core.ReflectionExtensions.IsPrimitiveEx(System.Type)", color=green, community=0];
+d145 [label="Entry CommandLine.Core.ReflectionExtensions.IsPrimitiveEx(System.Type)", span="209-209", cluster="CommandLine.Core.ReflectionExtensions.IsPrimitiveEx(System.Type)"];
+d147 [label="Exit CommandLine.Core.ReflectionExtensions.IsPrimitiveEx(System.Type)", span="209-209", cluster="CommandLine.Core.ReflectionExtensions.IsPrimitiveEx(System.Type)"];
+d148 [label="Entry System.Collections.Generic.IEnumerable<TSource>.Contains<TSource>(TSource)", span="0-0", cluster="System.Collections.Generic.IEnumerable<TSource>.Contains<TSource>(TSource)"];
+d149 [label="Entry System.Convert.GetTypeCode(object)", span="0-0", cluster="System.Convert.GetTypeCode(object)"];
+m0_0 [label="Entry CommandLine.NullInstance.NullInstance()", span="9-9", cluster="CommandLine.NullInstance.NullInstance()", file="TypeConverter.cs"];
+m0_1 [label="Exit CommandLine.NullInstance.NullInstance()", span="9-9", cluster="CommandLine.NullInstance.NullInstance()", file="TypeConverter.cs"];
+d146 -> d147  [key=0, style=solid, color=green];
+d146 -> d148  [key=2, style=dotted, color=green];
+d146 -> d149  [key=2, style=dotted, color=green];
+d145 -> d146  [key=0, style=solid, color=green];
+d147 -> d145  [key=0, style=bold, color=blue];
+m0_0 -> m0_1  [key=0, style=solid];
+m0_1 -> m0_0  [key=0, style=bold, color=blue];
+}

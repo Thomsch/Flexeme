@@ -1,0 +1,34 @@
+digraph  {
+n0 [cluster="lambda expression", label="Entry lambda expression", span="15-15"];
+n1 [cluster="lambda expression", label="new RomanianFormatter()", span="15-15"];
+n2 [cluster="lambda expression", label="Exit lambda expression", span="15-15"];
+n3 [cluster="Humanizer.Localisation.RomanianFormatter.RomanianFormatter()", label="Entry Humanizer.Localisation.RomanianFormatter.RomanianFormatter()", span="2-2"];
+n4 [cluster="lambda expression", label="Entry lambda expression", span="16-16"];
+n5 [cluster="lambda expression", label="new RussianFormatter()", span="16-16"];
+n6 [cluster="lambda expression", label="Exit lambda expression", span="16-16"];
+n7 [cluster="Humanizer.Localisation.RussianFormatter.RussianFormatter()", label="Entry Humanizer.Localisation.RussianFormatter.RussianFormatter()", span="2-2"];
+n8 [cluster="lambda expression", label="Entry lambda expression", span="17-17"];
+n9 [cluster="lambda expression", label="new ArabicFormatter()", span="17-17"];
+n10 [cluster="lambda expression", label="Exit lambda expression", span="17-17"];
+n11 [cluster="Humanizer.Localisation.ArabicFormatter.ArabicFormatter()", label="Entry Humanizer.Localisation.ArabicFormatter.ArabicFormatter()", span="2-2"];
+d13 [cluster="lambda expression", color=green, community=0, label="2: new SlovakFormatter()", span="18-18"];
+d12 [cluster="lambda expression", label="Entry lambda expression", span="18-18"];
+d14 [cluster="lambda expression", label="Exit lambda expression", span="18-18"];
+d15 [cluster="Humanizer.Localisation.SlovakFormatter.SlovakFormatter()", label="Entry Humanizer.Localisation.SlovakFormatter.SlovakFormatter()", span="2-2"];
+n0 -> n1  [key=0, style=solid];
+n1 -> n2  [key=0, style=solid];
+n1 -> n3  [key=2, style=dotted];
+n2 -> n0  [color=blue, key=0, style=bold];
+n4 -> n5  [key=0, style=solid];
+n5 -> n6  [key=0, style=solid];
+n5 -> n7  [key=2, style=dotted];
+n6 -> n4  [color=blue, key=0, style=bold];
+n8 -> n9  [key=0, style=solid];
+n9 -> n10  [key=0, style=solid];
+n9 -> n11  [key=2, style=dotted];
+n10 -> n8  [color=blue, key=0, style=bold];
+d13 -> d14  [color=green, key=0, style=solid];
+d13 -> d15  [color=green, key=2, style=dotted];
+d12 -> d13  [color=green, key=0, style=solid];
+d14 -> d12  [color=blue, key=0, style=bold];
+}

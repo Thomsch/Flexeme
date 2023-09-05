@@ -1,0 +1,25 @@
+digraph  {
+n0 [cluster="Newtonsoft.Json.Tests.Documentation.Samples.Schema.JsonSchemaParse.Example()", label="Entry Newtonsoft.Json.Tests.Documentation.Samples.Schema.JsonSchemaParse.Example()", span="36-36"];
+n1 [cluster="Newtonsoft.Json.Tests.Documentation.Samples.Schema.JsonSchemaParse.Example()", label="string schemaJson = @''{\r\n              'description': 'A person',\r\n              'type': 'object',\r\n              'properties': {\r\n                'name': {'type':'string'},\r\n                'hobbies': {\r\n                  'type': 'array',\r\n                  'items': {'type':'string'}\r\n                }\r\n              }\r\n            }''", span="39-49"];
+n2 [cluster="Newtonsoft.Json.Tests.Documentation.Samples.Schema.JsonSchemaParse.Example()", label="JsonSchema schema = JsonSchema.Parse(schemaJson)", span="51-51"];
+n3 [cluster="Newtonsoft.Json.Tests.Documentation.Samples.Schema.JsonSchemaParse.Example()", label="Console.WriteLine(schema.Type)", span="53-53"];
+n7 [cluster="Newtonsoft.Json.Schema.JsonSchema.Parse(string)", label="Entry Newtonsoft.Json.Schema.JsonSchema.Parse(string)", span="294-294"];
+n4 [cluster="Newtonsoft.Json.Tests.Documentation.Samples.Schema.JsonSchemaParse.Example()", label="schema.Properties", span="56-56"];
+n8 [cluster="System.Console.WriteLine(object)", label="Entry System.Console.WriteLine(object)", span="0-0"];
+n5 [cluster="Newtonsoft.Json.Tests.Documentation.Samples.Schema.JsonSchemaParse.Example()", label="Console.WriteLine(property.Key + '' - '' + property.Value.Type)", span="58-58"];
+n6 [cluster="Newtonsoft.Json.Tests.Documentation.Samples.Schema.JsonSchemaParse.Example()", label="Exit Newtonsoft.Json.Tests.Documentation.Samples.Schema.JsonSchemaParse.Example()", span="36-36"];
+n9 [cluster="System.Console.WriteLine(string)", label="Entry System.Console.WriteLine(string)", span="0-0"];
+d1 [cluster="Newtonsoft.Json.Tests.Documentation.Samples.Serializer.PropertyJsonIgnore.Example()", color=green, community=0, label="Account account = new Account\r\n            {\r\n                FullName = ''Joe User'',\r\n                EmailAddress = ''joe@example.com'',\r\n                PasswordHash = ''VHdlZXQgJ1F1aWNrc2lsdmVyJyB0byBASmFtZXNOSw==''\r\n            }", prediction=0, span="56-61"];
+d0 [cluster="Newtonsoft.Json.Tests.Documentation.Samples.Serializer.PropertyJsonIgnore.Example()", label="Entry Newtonsoft.Json.Tests.Documentation.Samples.Serializer.PropertyJsonIgnore.Example()", span="53-53"];
+d2 [cluster="Newtonsoft.Json.Tests.Documentation.Samples.Serializer.PropertyJsonIgnore.Example()", label="string json = JsonConvert.SerializeObject(account)", span="63-63"];
+d6 [cluster="Newtonsoft.Json.Tests.Documentation.Samples.Serializer.PropertyJsonIgnore.Account.Account()", label="Entry Newtonsoft.Json.Tests.Documentation.Samples.Serializer.PropertyJsonIgnore.Account.Account()", span="42-42"];
+d5 [cluster="Newtonsoft.Json.Tests.Documentation.Samples.Serializer.PropertyJsonIgnore.Example()", label="Exit Newtonsoft.Json.Tests.Documentation.Samples.Serializer.PropertyJsonIgnore.Example()", span="53-53"];
+d3 [cluster="Newtonsoft.Json.Tests.Documentation.Samples.Serializer.PropertyJsonIgnore.Example()", label="Console.WriteLine(json)", span="65-65"];
+d7 [cluster="Newtonsoft.Json.JsonConvert.SerializeObject(object)", label="Entry Newtonsoft.Json.JsonConvert.SerializeObject(object)", span="512-512"];
+d4 [cluster="Newtonsoft.Json.Tests.Documentation.Samples.Serializer.PropertyJsonIgnore.Example()", label="Assert.AreEqual(@''{''''FullName'''':''''Joe User'''',''''EmailAddress'''':''''joe@example.com''''}'', json)", span="69-69"];
+d8 [cluster="System.Console.WriteLine(string)", label="Entry System.Console.WriteLine(string)", span="0-0"];
+d9 [cluster="Unk.AreEqual", label="Entry Unk.AreEqual", span=""];
+n2 -> n4  [color=darkseagreen4, key=1, label=schema, style=dashed];
+n5 -> n5  [color=darkseagreen4, key=1, label=property, style=dashed];
+d2 -> d4  [color=darkseagreen4, key=1, label=json, style=dashed];
+}

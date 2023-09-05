@@ -59,7 +59,7 @@ def mark_originating_commit(dpdg, marked_diff, filename):
                             default=0)
 
             dpdg.node[node]['community'] = community
-
+    # marked_diff is the output of the mark_origin function
     return dpdg
 
 
@@ -150,6 +150,7 @@ def generate_pdg(revision, repository_path, id_, temp_loc, extractor_location, s
 
 
 def worker(work, subject_location, id_, temp_loc, extractor_location, layout: ProjectLayout):
+    # work is the set of chains to untangle
     logger = logging.getLogger("worker" + str(id_))
     logger.info("Starting worker" + str(id_))
     repository_name = os.path.basename(subject_location)
@@ -177,12 +178,12 @@ def worker(work, subject_location, id_, temp_loc, extractor_location, layout: Pr
                                          sourcepath=subject_location,
                                          classpath=subject_location
                                          )
-        for chain in work:
+        for chain in work: # chain is the tangled synthetic commit
             logger.info('Working on chain: %s' % str(chain))
-            from_ = chain[0]
+            from_ = chain[0] # the 1st single atomic SHA
             from git import Repo
             repo = Repo(v1)
-            commit = repo.commit(from_)
+            commit = repo.commit(from_)  # The main commit to work on: first SHA
 
             if len(commit.parents) == 0:
                 logger.warning(f'Ignoring {from_} because the commit has no parents')
@@ -190,7 +191,7 @@ def worker(work, subject_location, id_, temp_loc, extractor_location, layout: Pr
 
             gh.set_git_to_rev(from_ + '^', v1)
             gh.set_git_to_rev(from_, v2)
-            labeli_changes = dict()
+            labeli_changes = dict() # a dictionary that maps each commit to diff with its previous SHA
             labeli_changes[0] = gh.process_diff_between_commits(from_ + '^', from_, v2)
             previous_sha = from_
             i = 1
@@ -199,8 +200,8 @@ def worker(work, subject_location, id_, temp_loc, extractor_location, layout: Pr
                 for to_ in chain[1:]:
                     gh.cherry_pick_on_top(to_, v2)
 
-                    changes = gh.process_diff_between_commits(from_ + '^', to_, v2)
-                    labeli_changes[i] = gh.process_diff_between_commits(previous_sha, to_, v2)
+                    changes = gh.process_diff_between_commits(from_ + '^', to_, v2) # The diff contains original labels: diff between first commit and n-th commit in the chain
+                    labeli_changes[i] = gh.process_diff_between_commits(previous_sha, to_, v2) # The tangled diff: diff between previous tangled data point and the n-th commit in the chain
 
                     i += 1
                     previous_sha = to_
@@ -250,7 +251,7 @@ def worker(work, subject_location, id_, temp_loc, extractor_location, layout: Pr
                             validate([clean_path], 1, 1, repository_name)  # Flexeme's paper uses 1-hop clustering
                     except Exception as e:
                         logging.error("Error while processing synthetic commit %s_%s:" % (from_, to_))
-                        logging.error(e)
+                        logging.exception(e)
             except Exception as e:
                 logging.error("Error in chain %s:" % str(chain))
                 logging.error(e)
@@ -291,12 +292,13 @@ if __name__ == '__main__':
     logging.info(f"Found {len(list_to_tangle)} commit chains")
     chunck_size = int(len(list_to_tangle) / n_workers)
     list_to_tangle = [list_to_tangle[i:i + chunck_size] for i in range(0, len(list_to_tangle), chunck_size)]
-
+    # List[List[List[SHA]]] per worker
     repository_name_to_d4j_name = {
         'commons-math': 'Math',
         'commons-lang': 'Lang',
         'joda-time': 'Time',
-        'closure-compiler': 'Closure'
+        'closure-compiler': 'Closure',
+        'commons-csv': 'Csv'
     }
 
     project_name = repository_name_to_d4j_name[os.path.basename(subject_location)]
@@ -306,6 +308,7 @@ if __name__ == '__main__':
     layout = ProjectLayout(project_name, subject_location)
     threads = []
     for work in list_to_tangle:
+        # work = List[List[SHA]] - list of chains of synthetic commits
         t = Thread(target=worker, args=(work, subject_location, id_, temp_loc, extractor_location, layout))
         id_ += 1
         threads.append(t)
@@ -313,3 +316,4 @@ if __name__ == '__main__':
 
     for t in threads:
         t.join()
+    

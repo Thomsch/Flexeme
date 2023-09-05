@@ -1,0 +1,29 @@
+digraph  {
+n0 [cluster="Humanizer.To.Transform(string, params Humanizer.IStringTransformer[])", label="Entry Humanizer.To.Transform(string, params Humanizer.IStringTransformer[])", span="15-15"];
+n1 [cluster="Humanizer.To.Transform(string, params Humanizer.IStringTransformer[])", label="return transformers.Aggregate(input, (current, stringTransformer) => stringTransformer.Transform(current));", span="17-17"];
+n2 [cluster="Humanizer.To.Transform(string, params Humanizer.IStringTransformer[])", label="Exit Humanizer.To.Transform(string, params Humanizer.IStringTransformer[])", span="15-15"];
+n3 [cluster="Unk.Aggregate", label="Entry Unk.Aggregate", span=""];
+n4 [cluster="lambda expression", label="Entry lambda expression", span="17-17"];
+n5 [cluster="lambda expression", label="stringTransformer.Transform(current)", span="17-17"];
+n6 [cluster="lambda expression", label="Exit lambda expression", span="17-17"];
+n7 [cluster="Humanizer.IStringTransformer.Transform(string)", label="Entry Humanizer.IStringTransformer.Transform(string)", span="12-12"];
+m1_0 [cluster="Humanizer.Properties.Resources.Resources()", file="NumberToWordsExtension.cs", label="Entry Humanizer.Properties.Resources.Resources()", span="31-31"];
+m1_1 [cluster="Humanizer.Properties.Resources.Resources()", file="NumberToWordsExtension.cs", label="Exit Humanizer.Properties.Resources.Resources()", span="31-31"];
+m2_8 [cluster="Unk.Equal", file="NumberToWordsTests.cs", label="Entry Unk.Equal", span=""];
+m2_7 [cluster="int.ToWords()", file="NumberToWordsTests.cs", label="Entry int.ToWords()", span="14-14"];
+m2_0 [cluster="Humanizer.Tests.Extensions.NumberToWordsTests.ToWords()", file="NumberToWordsTests.cs", label="Entry Humanizer.Tests.Extensions.NumberToWordsTests.ToWords()", span="6-6"];
+m2_1 [cluster="Humanizer.Tests.Extensions.NumberToWordsTests.ToWords()", file="NumberToWordsTests.cs", label="Assert.Equal(''one'', 1.ToWords())", span="8-8"];
+m2_2 [cluster="Humanizer.Tests.Extensions.NumberToWordsTests.ToWords()", file="NumberToWordsTests.cs", label="Assert.Equal(''ten'', 10.ToWords())", span="9-9"];
+m2_3 [cluster="Humanizer.Tests.Extensions.NumberToWordsTests.ToWords()", file="NumberToWordsTests.cs", label="Assert.Equal(''eleven'', 11.ToWords())", span="10-10"];
+m2_4 [cluster="Humanizer.Tests.Extensions.NumberToWordsTests.ToWords()", file="NumberToWordsTests.cs", label="Assert.Equal(''one hundred and twenty-two'', 122.ToWords())", span="11-11"];
+m2_5 [cluster="Humanizer.Tests.Extensions.NumberToWordsTests.ToWords()", file="NumberToWordsTests.cs", label="Assert.Equal(''three thousand five hundred and one'', 3501.ToWords())", span="12-12"];
+m2_6 [cluster="Humanizer.Tests.Extensions.NumberToWordsTests.ToWords()", file="NumberToWordsTests.cs", label="Exit Humanizer.Tests.Extensions.NumberToWordsTests.ToWords()", span="6-6"];
+m2_9 [cluster="Humanizer.Tests.Extensions.NumberToWordsTests.RoundNumbersHaveNoSpaceAtTheEnd()", file="NumberToWordsTests.cs", label="Entry Humanizer.Tests.Extensions.NumberToWordsTests.RoundNumbersHaveNoSpaceAtTheEnd()", span="16-16"];
+m2_10 [cluster="Humanizer.Tests.Extensions.NumberToWordsTests.RoundNumbersHaveNoSpaceAtTheEnd()", color=green, community=0, file="NumberToWordsTests.cs", label="Assert.Equal(''one hundred'', 100.ToWords())", prediction=0, span="18-18"];
+m2_11 [cluster="Humanizer.Tests.Extensions.NumberToWordsTests.RoundNumbersHaveNoSpaceAtTheEnd()", color=green, community=0, file="NumberToWordsTests.cs", label="Assert.Equal(''one thousand'', 1000.ToWords())", prediction=1, span="19-19"];
+m2_12 [cluster="Humanizer.Tests.Extensions.NumberToWordsTests.RoundNumbersHaveNoSpaceAtTheEnd()", color=green, community=0, file="NumberToWordsTests.cs", label="Assert.Equal(''one million'', 1000000.ToWords())", prediction=2, span="20-20"];
+m2_13 [cluster="Humanizer.Tests.Extensions.NumberToWordsTests.RoundNumbersHaveNoSpaceAtTheEnd()", file="NumberToWordsTests.cs", label="Exit Humanizer.Tests.Extensions.NumberToWordsTests.RoundNumbersHaveNoSpaceAtTheEnd()", span="16-16"];
+m3_0 [cluster="Humanizer.Properties.Resources.Resources()", file="Resources.Designer.cs", label="Entry Humanizer.Properties.Resources.Resources()", span="31-31"];
+m3_1 [cluster="Humanizer.Properties.Resources.Resources()", file="Resources.Designer.cs", label="Exit Humanizer.Properties.Resources.Resources()", span="31-31"];
+n1 -> n4  [color=darkseagreen4, key=1, label="lambda expression", style=dashed];
+}

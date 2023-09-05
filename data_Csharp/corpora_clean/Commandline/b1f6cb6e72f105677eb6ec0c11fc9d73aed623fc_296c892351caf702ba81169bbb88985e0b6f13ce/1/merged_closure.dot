@@ -1,0 +1,7 @@
+digraph  {
+m1_145 [cluster="CommandLine.Core.ReflectionExtensions.IsPrimitiveEx(System.Type)", file="ReflectionExtensions.cs", label="Entry CommandLine.Core.ReflectionExtensions.IsPrimitiveEx(System.Type)", span="209-209"];
+m1_146 [cluster="CommandLine.Core.ReflectionExtensions.IsPrimitiveEx(System.Type)", color=green, community=0, file="ReflectionExtensions.cs", label="return\r\n                   (type.IsValueType && type != typeof(Guid))\r\n                || type.IsPrimitive\r\n                || new [] { \r\n                     typeof(string)\r\n                    ,typeof(decimal)\r\n                    ,typeof(DateTime)\r\n                    ,typeof(DateTimeOffset)\r\n                    ,typeof(TimeSpan)\r\n                   }.Contains(type)\r\n                || Convert.GetTypeCode(type) != TypeCode.Object;", prediction=0, span="211-221"];
+m1_147 [cluster="CommandLine.Core.ReflectionExtensions.IsPrimitiveEx(System.Type)", file="ReflectionExtensions.cs", label="Exit CommandLine.Core.ReflectionExtensions.IsPrimitiveEx(System.Type)", span="209-209"];
+m1_148 [cluster="System.Collections.Generic.IEnumerable<TSource>.Contains<TSource>(TSource)", file="ReflectionExtensions.cs", label="Entry System.Collections.Generic.IEnumerable<TSource>.Contains<TSource>(TSource)", span="0-0"];
+m1_149 [cluster="System.Convert.GetTypeCode(object)", file="ReflectionExtensions.cs", label="Entry System.Convert.GetTypeCode(object)", span="0-0"];
+}

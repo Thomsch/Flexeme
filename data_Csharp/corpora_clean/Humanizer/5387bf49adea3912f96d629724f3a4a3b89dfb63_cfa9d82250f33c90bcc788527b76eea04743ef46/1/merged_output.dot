@@ -1,0 +1,31 @@
+digraph  {
+d1 [cluster="Humanizer.NumberToTimeSpanExtensions.Days(int)", color=green, community=0, label="4: return new TimeSpan(input, 0, 0, 0);", span="12-12"];
+d0 [cluster="Humanizer.NumberToTimeSpanExtensions.Days(int)", label="Entry Humanizer.NumberToTimeSpanExtensions.Days(int)", span="10-10"];
+d2 [cluster="Humanizer.NumberToTimeSpanExtensions.Days(int)", label="Exit Humanizer.NumberToTimeSpanExtensions.Days(int)", span="10-10"];
+d3 [cluster="System.TimeSpan.TimeSpan(int, int, int, int)", label="Entry System.TimeSpan.TimeSpan(int, int, int, int)", span="0-0"];
+d5 [cluster="Humanizer.NumberToTimeSpanExtensions.Hours(int)", color=green, community=0, label="2: return new TimeSpan(0, input, 0, 0);", span="22-22"];
+d4 [cluster="Humanizer.NumberToTimeSpanExtensions.Hours(int)", label="Entry Humanizer.NumberToTimeSpanExtensions.Hours(int)", span="20-20"];
+d6 [cluster="Humanizer.NumberToTimeSpanExtensions.Hours(int)", label="Exit Humanizer.NumberToTimeSpanExtensions.Hours(int)", span="20-20"];
+d8 [cluster="Humanizer.NumberToTimeSpanExtensions.Minutes(int)", color=green, community=0, label="5: return new TimeSpan(0, 0, input, 0);", span="32-32"];
+d7 [cluster="Humanizer.NumberToTimeSpanExtensions.Minutes(int)", label="Entry Humanizer.NumberToTimeSpanExtensions.Minutes(int)", span="30-30"];
+d9 [cluster="Humanizer.NumberToTimeSpanExtensions.Minutes(int)", label="Exit Humanizer.NumberToTimeSpanExtensions.Minutes(int)", span="30-30"];
+d11 [cluster="Humanizer.NumberToTimeSpanExtensions.Seconds(int)", color=green, community=0, label="2: return new TimeSpan(0, 0, 0, input);", span="42-42"];
+d10 [cluster="Humanizer.NumberToTimeSpanExtensions.Seconds(int)", label="Entry Humanizer.NumberToTimeSpanExtensions.Seconds(int)", span="40-40"];
+d12 [cluster="Humanizer.NumberToTimeSpanExtensions.Seconds(int)", label="Exit Humanizer.NumberToTimeSpanExtensions.Seconds(int)", span="40-40"];
+d1 -> d2  [color=green, key=0, style=solid];
+d1 -> d3  [color=green, key=2, style=dotted];
+d0 -> d1  [color=green, key=0, style=solid];
+d2 -> d0  [color=blue, key=0, style=bold];
+d5 -> d6  [color=green, key=0, style=solid];
+d5 -> d3  [color=green, key=2, style=dotted];
+d4 -> d5  [color=green, key=0, style=solid];
+d6 -> d4  [color=blue, key=0, style=bold];
+d8 -> d9  [color=green, key=0, style=solid];
+d8 -> d3  [color=green, key=2, style=dotted];
+d7 -> d8  [color=green, key=0, style=solid];
+d9 -> d7  [color=blue, key=0, style=bold];
+d11 -> d12  [color=green, key=0, style=solid];
+d11 -> d3  [color=green, key=2, style=dotted];
+d10 -> d11  [color=green, key=0, style=solid];
+d12 -> d10  [color=blue, key=0, style=bold];
+}

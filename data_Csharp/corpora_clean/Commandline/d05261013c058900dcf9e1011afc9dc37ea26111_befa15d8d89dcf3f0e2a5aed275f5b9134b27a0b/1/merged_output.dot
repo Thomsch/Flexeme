@@ -1,0 +1,36 @@
+digraph  {
+d4 [cluster="CommandLine.Text.StringBuilderExtensions.AppendWhen(System.Text.StringBuilder, bool, params string[])", color=green, community=0, label="1: return builder;", span="18-18"];
+d0 [cluster="CommandLine.Text.StringBuilderExtensions.AppendWhen(System.Text.StringBuilder, bool, params string[])", label="Entry CommandLine.Text.StringBuilderExtensions.AppendWhen(System.Text.StringBuilder, bool, params string[])", span="9-9"];
+d1 [cluster="CommandLine.Text.StringBuilderExtensions.AppendWhen(System.Text.StringBuilder, bool, params string[])", label=condition, span="11-11"];
+d2 [cluster="CommandLine.Text.StringBuilderExtensions.AppendWhen(System.Text.StringBuilder, bool, params string[])", label=values, span="13-13"];
+d5 [cluster="CommandLine.Text.StringBuilderExtensions.AppendWhen(System.Text.StringBuilder, bool, params string[])", label="Exit CommandLine.Text.StringBuilderExtensions.AppendWhen(System.Text.StringBuilder, bool, params string[])", span="9-9"];
+d16 [cluster="CommandLine.Text.StringBuilderExtensions.AppendFormatWhen(System.Text.StringBuilder, bool, string, params object[])", color=green, community=0, label="1: builder.AppendFormat(format, args)", span="37-37"];
+d14 [cluster="CommandLine.Text.StringBuilderExtensions.AppendFormatWhen(System.Text.StringBuilder, bool, string, params object[])", label="Entry CommandLine.Text.StringBuilderExtensions.AppendFormatWhen(System.Text.StringBuilder, bool, string, params object[])", span="33-33"];
+d15 [cluster="CommandLine.Text.StringBuilderExtensions.AppendFormatWhen(System.Text.StringBuilder, bool, string, params object[])", label=condition, span="35-35"];
+d17 [cluster="CommandLine.Text.StringBuilderExtensions.AppendFormatWhen(System.Text.StringBuilder, bool, string, params object[])", color=green, community=0, label="0: return builder;", span="39-39"];
+d19 [cluster="System.Text.StringBuilder.AppendFormat(string, params object[])", label="Entry System.Text.StringBuilder.AppendFormat(string, params object[])", span="0-0"];
+d18 [cluster="CommandLine.Text.StringBuilderExtensions.AppendFormatWhen(System.Text.StringBuilder, bool, string, params object[])", label="Exit CommandLine.Text.StringBuilderExtensions.AppendFormatWhen(System.Text.StringBuilder, bool, string, params object[])", span="33-33"];
+d3 [cluster="CommandLine.Text.StringBuilderExtensions.AppendWhen(System.Text.StringBuilder, bool, params string[])", label="builder.Append(value)", span="15-15"];
+d6 [cluster="System.Text.StringBuilder.Append(string)", label="Entry System.Text.StringBuilder.Append(string)", span="0-0"];
+d4 -> d5  [color=green, key=0, style=solid];
+d0 -> d4  [color=green, key=1, label="System.Text.StringBuilder", style=dashed];
+d0 -> d1  [key=0, style=solid];
+d0 -> d2  [color=darkseagreen4, key=1, label="params string[]", style=dashed];
+d0 -> d3  [color=darkseagreen4, key=1, label="System.Text.StringBuilder", style=dashed];
+d1 -> d4  [color=green, key=0, style=solid];
+d1 -> d2  [key=0, style=solid];
+d2 -> d4  [color=green, key=0, style=solid];
+d2 -> d3  [key=0, style=solid];
+d5 -> d0  [color=blue, key=0, style=bold];
+d16 -> d17  [color=green, key=0, style=solid];
+d16 -> d19  [color=green, key=2, style=dotted];
+d14 -> d16  [color=green, key=1, label="System.Text.StringBuilder", style=dashed];
+d14 -> d17  [color=green, key=1, label="System.Text.StringBuilder", style=dashed];
+d14 -> d15  [key=0, style=solid];
+d15 -> d16  [color=green, key=0, style=solid];
+d15 -> d17  [color=green, key=0, style=solid];
+d17 -> d18  [color=green, key=0, style=solid];
+d18 -> d14  [color=blue, key=0, style=bold];
+d3 -> d2  [key=0, style=solid];
+d3 -> d6  [key=2, style=dotted];
+}

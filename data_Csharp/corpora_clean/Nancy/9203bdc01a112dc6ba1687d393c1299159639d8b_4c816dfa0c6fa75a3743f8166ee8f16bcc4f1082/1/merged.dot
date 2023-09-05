@@ -1,0 +1,24 @@
+digraph  {
+n0 [label="Entry Nancy.ViewEngines.DotLiquid.Tests.Functional.RootPathProvider.GetRootPath()", span="10-10", cluster="Nancy.ViewEngines.DotLiquid.Tests.Functional.RootPathProvider.GetRootPath()"];
+n1 [label="var assemblyPath =\r\n                System.IO.Path.GetDirectoryName(typeof(RootPathProvider).Assembly.CodeBase).Replace(@''file:\'', string.Empty)", span="12-13", cluster="Nancy.ViewEngines.DotLiquid.Tests.Functional.RootPathProvider.GetRootPath()", color=red, community=0];
+n2 [label="return PathHelper.GetParent(assemblyPath, 2);", span="15-15", cluster="Nancy.ViewEngines.DotLiquid.Tests.Functional.RootPathProvider.GetRootPath()"];
+n4 [label="Entry System.IO.Path.GetDirectoryName(string)", span="0-0", cluster="System.IO.Path.GetDirectoryName(string)"];
+n5 [label="Entry string.Replace(string, string)", span="0-0", cluster="string.Replace(string, string)"];
+n3 [label="Exit Nancy.ViewEngines.DotLiquid.Tests.Functional.RootPathProvider.GetRootPath()", span="10-10", cluster="Nancy.ViewEngines.DotLiquid.Tests.Functional.RootPathProvider.GetRootPath()"];
+n6 [label="Entry Nancy.Testing.PathHelper.GetParent(string, int)", span="14-14", cluster="Nancy.Testing.PathHelper.GetParent(string, int)"];
+d1 [label="var assemblyFilePath =\r\n                new Uri(typeof (RootPathProvider).Assembly.CodeBase).LocalPath", span="13-14", cluster="Nancy.ViewEngines.DotLiquid.Tests.Functional.RootPathProvider.GetRootPath()", color=green, community=0];
+d2 [label="var assemblyPath =\r\n                System.IO.Path.GetDirectoryName(assemblyFilePath)", span="16-17", cluster="Nancy.ViewEngines.DotLiquid.Tests.Functional.RootPathProvider.GetRootPath()", color=green, community=0];
+d5 [label="Entry System.Uri.Uri(string)", span="0-0", cluster="System.Uri.Uri(string)"];
+n0 -> n1  [key=0, style=solid, color=red];
+n0 -> d1  [key=0, style=solid, color=green];
+n1 -> n2  [key=0, style=solid, color=red];
+n1 -> n4  [key=2, style=dotted, color=red];
+n1 -> n5  [key=2, style=dotted, color=red];
+n2 -> n3  [key=0, style=solid];
+n2 -> n6  [key=2, style=dotted];
+n3 -> n0  [key=0, style=bold, color=blue];
+d1 -> d2  [key=0, style=solid, color=green];
+d1 -> d5  [key=2, style=dotted, color=green];
+d2 -> n2  [key=0, style=solid, color=green];
+d2 -> n4  [key=2, style=dotted, color=green];
+}

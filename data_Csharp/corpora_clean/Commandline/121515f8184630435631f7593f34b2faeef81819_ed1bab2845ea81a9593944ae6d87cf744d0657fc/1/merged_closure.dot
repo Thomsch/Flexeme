@@ -1,0 +1,19 @@
+digraph  {
+m0_11 [cluster="CommandLine.Text.StringBuilderExtensions.SafeLength(System.Text.StringBuilder)", file="StringBuilderExtensions.cs", label="Entry CommandLine.Text.StringBuilderExtensions.SafeLength(System.Text.StringBuilder)", span="26-26"];
+m0_12 [cluster="CommandLine.Text.StringBuilderExtensions.SafeLength(System.Text.StringBuilder)", file="StringBuilderExtensions.cs", label="return builder == null ? 0 : builder.Length;", span="28-28"];
+m0_13 [cluster="CommandLine.Text.StringBuilderExtensions.SafeLength(System.Text.StringBuilder)", file="StringBuilderExtensions.cs", label="Exit CommandLine.Text.StringBuilderExtensions.SafeLength(System.Text.StringBuilder)", span="26-26"];
+m0_0 [cluster="CommandLine.Text.StringBuilderExtensions.AppendWhen(System.Text.StringBuilder, bool, params string[])", file="StringBuilderExtensions.cs", label="Entry CommandLine.Text.StringBuilderExtensions.AppendWhen(System.Text.StringBuilder, bool, params string[])", span="9-9"];
+m0_1 [cluster="CommandLine.Text.StringBuilderExtensions.AppendWhen(System.Text.StringBuilder, bool, params string[])", color=green, community=0, file="StringBuilderExtensions.cs", label=condition, prediction=0, span="11-11"];
+m0_2 [cluster="CommandLine.Text.StringBuilderExtensions.AppendWhen(System.Text.StringBuilder, bool, params string[])", color=green, community=0, file="StringBuilderExtensions.cs", label=values, prediction=1, span="13-13"];
+m0_3 [cluster="CommandLine.Text.StringBuilderExtensions.AppendWhen(System.Text.StringBuilder, bool, params string[])", color=green, community=0, file="StringBuilderExtensions.cs", label="builder.Append(value)", prediction=1, span="15-15"];
+m0_4 [cluster="CommandLine.Text.StringBuilderExtensions.AppendWhen(System.Text.StringBuilder, bool, params string[])", color=green, community=0, file="StringBuilderExtensions.cs", label="return builder;", prediction=1, span="18-18"];
+m0_5 [cluster="CommandLine.Text.StringBuilderExtensions.AppendWhen(System.Text.StringBuilder, bool, params string[])", file="StringBuilderExtensions.cs", label="Exit CommandLine.Text.StringBuilderExtensions.AppendWhen(System.Text.StringBuilder, bool, params string[])", span="9-9"];
+m0_10 [cluster="System.Text.StringBuilder.ToString()", file="StringBuilderExtensions.cs", label="Entry System.Text.StringBuilder.ToString()", span="0-0"];
+m0_6 [cluster="System.Text.StringBuilder.Append(string)", file="StringBuilderExtensions.cs", label="Entry System.Text.StringBuilder.Append(string)", span="0-0"];
+m0_7 [cluster="CommandLine.Text.StringBuilderExtensions.SafeToString(System.Text.StringBuilder)", file="StringBuilderExtensions.cs", label="Entry CommandLine.Text.StringBuilderExtensions.SafeToString(System.Text.StringBuilder)", span="21-21"];
+m0_8 [cluster="CommandLine.Text.StringBuilderExtensions.SafeToString(System.Text.StringBuilder)", file="StringBuilderExtensions.cs", label="return builder == null ? string.Empty : builder.ToString();", span="23-23"];
+m0_9 [cluster="CommandLine.Text.StringBuilderExtensions.SafeToString(System.Text.StringBuilder)", file="StringBuilderExtensions.cs", label="Exit CommandLine.Text.StringBuilderExtensions.SafeToString(System.Text.StringBuilder)", span="21-21"];
+m0_0 -> m0_2  [color=green, key=1, label="params string[]", style=dashed];
+m0_0 -> m0_3  [color=green, key=1, label="System.Text.StringBuilder", style=dashed];
+m0_0 -> m0_4  [color=green, key=1, label="System.Text.StringBuilder", style=dashed];
+}

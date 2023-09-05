@@ -1,0 +1,12 @@
+digraph  {
+n0 [cluster="Humanizer.ToQuantityExtensions.ToQuantity(string, int)", label="Entry Humanizer.ToQuantityExtensions.ToQuantity(string, int)", span="17-17"];
+n2 [cluster="Humanizer.ToQuantityExtensions.ToQuantity(string, int)", label="Exit Humanizer.ToQuantityExtensions.ToQuantity(string, int)", span="17-17"];
+n3 [cluster="string.Singularize(Humanizer.Plurality)", label="Entry string.Singularize(Humanizer.Plurality)", span="171-171"];
+n4 [cluster="string.Pluralize(Humanizer.Plurality)", label="Entry string.Pluralize(Humanizer.Plurality)", span="147-147"];
+n5 [cluster="string.Format(string, object, object)", label="Entry string.Format(string, object, object)", span="0-0"];
+m0_4 [cluster="Unk.Equal", file="ToQuantityTests.cs", label="Entry Unk.Equal", span=""];
+m0_3 [cluster="string.ToQuantity(int)", file="ToQuantityTests.cs", label="Entry string.ToQuantity(int)", span="17-17"];
+m0_0 [cluster="Humanizer.Tests.ToQuantityTests.ToQuantity(string, int, string)", file="ToQuantityTests.cs", label="Entry Humanizer.Tests.ToQuantityTests.ToQuantity(string, int, string)", span="19-19"];
+m0_1 [cluster="Humanizer.Tests.ToQuantityTests.ToQuantity(string, int, string)", file="ToQuantityTests.cs", label="Assert.Equal(expected, word.ToQuantity(quatity))", span="21-21"];
+m0_2 [cluster="Humanizer.Tests.ToQuantityTests.ToQuantity(string, int, string)", file="ToQuantityTests.cs", label="Exit Humanizer.Tests.ToQuantityTests.ToQuantity(string, int, string)", span="19-19"];
+}

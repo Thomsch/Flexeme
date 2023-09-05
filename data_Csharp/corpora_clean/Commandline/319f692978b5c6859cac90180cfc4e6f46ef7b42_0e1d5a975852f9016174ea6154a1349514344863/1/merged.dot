@@ -1,0 +1,10 @@
+digraph  {
+m2_205 [label="Entry CommandLine.Tests.Unit.Text.HelpTextTests.RenderUsageText_returns_properly_formatted_text()", span="367-367", cluster="CommandLine.Tests.Unit.Text.HelpTextTests.RenderUsageText_returns_properly_formatted_text()", file="HelpTextTests.cs"];
+m2_206 [label="var lines = text.ToNotEmptyLines()", span="373-373", cluster="CommandLine.Tests.Unit.Text.HelpTextTests.RenderUsageText_returns_properly_formatted_text()", color=green, community=0, file="HelpTextTests.cs"];
+m2_207 [label="Exit CommandLine.Tests.Unit.Text.HelpTextTests.RenderUsageText_returns_properly_formatted_text()", span="367-367", cluster="CommandLine.Tests.Unit.Text.HelpTextTests.RenderUsageText_returns_properly_formatted_text()", file="HelpTextTests.cs"];
+m2_208 [label="Entry Unk.ToNotEmptyLines", span="", cluster="Unk.ToNotEmptyLines", file="HelpTextTests.cs"];
+m2_205 -> m2_206  [key=0, style=solid, color=green];
+m2_206 -> m2_207  [key=0, style=solid, color=green];
+m2_206 -> m2_208  [key=2, style=dotted, color=green];
+m2_207 -> m2_205  [key=0, style=bold, color=blue];
+}

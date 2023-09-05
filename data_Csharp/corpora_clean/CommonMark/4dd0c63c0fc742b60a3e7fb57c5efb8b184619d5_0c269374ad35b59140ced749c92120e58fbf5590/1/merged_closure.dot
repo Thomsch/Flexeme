@@ -1,0 +1,15 @@
+digraph  {
+m0_0 [cluster="CommonMark.Syntax.Block.Block(CommonMark.Syntax.BlockTag, int, int)", file="EmphasisTests.cs", label="Entry CommonMark.Syntax.Block.Block(CommonMark.Syntax.BlockTag, int, int)", span="9-9"];
+m0_1 [cluster="CommonMark.Syntax.Block.Block(CommonMark.Syntax.BlockTag, int, int)", color=green, community=0, file="EmphasisTests.cs", label="this.Tag = tag", prediction=0, span="11-11"];
+m0_2 [cluster="CommonMark.Syntax.Block.Block(CommonMark.Syntax.BlockTag, int, int)", color=green, community=0, file="EmphasisTests.cs", label="this.StartLine = startLine", prediction=1, span="12-12"];
+m0_3 [cluster="CommonMark.Syntax.Block.Block(CommonMark.Syntax.BlockTag, int, int)", color=green, community=0, file="EmphasisTests.cs", label="this.EndLine = startLine", prediction=2, span="13-13"];
+m0_4 [cluster="CommonMark.Syntax.Block.Block(CommonMark.Syntax.BlockTag, int, int)", color=green, community=0, file="EmphasisTests.cs", label="this.StartColumn = startColumn", prediction=3, span="14-14"];
+m0_5 [cluster="CommonMark.Syntax.Block.Block(CommonMark.Syntax.BlockTag, int, int)", color=green, community=0, file="EmphasisTests.cs", label="this.IsOpen = true", prediction=4, span="15-15"];
+m0_6 [cluster="CommonMark.Syntax.Block.Block(CommonMark.Syntax.BlockTag, int, int)", file="EmphasisTests.cs", label="Exit CommonMark.Syntax.Block.Block(CommonMark.Syntax.BlockTag, int, int)", span="9-9"];
+m0_7 [file="EmphasisTests.cs", label="CommonMark.Syntax.Block", span=""];
+m2_0 [cluster="CommonMark.Syntax.EmphasisData.EmphasisData(char)", file="Utilities.cs", label="Entry CommonMark.Syntax.EmphasisData.EmphasisData(char)", span="11-11"];
+m2_1 [cluster="CommonMark.Syntax.EmphasisData.EmphasisData(char)", file="Utilities.cs", label="DelimiterCharacter = delimiterCharacter", span="13-13"];
+m2_2 [cluster="CommonMark.Syntax.EmphasisData.EmphasisData(char)", file="Utilities.cs", label="Exit CommonMark.Syntax.EmphasisData.EmphasisData(char)", span="11-11"];
+m2_3 [file="Utilities.cs", label="out CommonMark.Syntax.EmphasisData", span=""];
+m2_1 -> m2_3  [color=darkseagreen4, key=1, label="CommonMark.Syntax.EmphasisData", style=dashed];
+}

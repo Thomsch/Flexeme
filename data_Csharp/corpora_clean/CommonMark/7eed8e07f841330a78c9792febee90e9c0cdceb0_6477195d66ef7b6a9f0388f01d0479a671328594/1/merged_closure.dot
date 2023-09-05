@@ -1,0 +1,11 @@
+digraph  {
+d1 [cluster="CommonMark.Syntax.Block.Block(CommonMark.Syntax.BlockTag, int, int)", color=green, community=0, label="this.Tag = tag", prediction=0, span="11-11"];
+d8 [label="CommonMark.Syntax.Block", span=""];
+d0 [cluster="CommonMark.Syntax.Block.Block(CommonMark.Syntax.BlockTag, int, int)", label="Entry CommonMark.Syntax.Block.Block(CommonMark.Syntax.BlockTag, int, int)", span="9-9"];
+d2 [cluster="CommonMark.Syntax.Block.Block(CommonMark.Syntax.BlockTag, int, int)", color=green, community=0, label="this.StartLine = startLine", prediction=1, span="12-12"];
+d3 [cluster="CommonMark.Syntax.Block.Block(CommonMark.Syntax.BlockTag, int, int)", color=green, community=0, label="this.EndLine = startLine", prediction=2, span="13-13"];
+d4 [cluster="CommonMark.Syntax.Block.Block(CommonMark.Syntax.BlockTag, int, int)", color=green, community=0, label="this.StartColumn = startColumn", prediction=3, span="14-14"];
+d5 [cluster="CommonMark.Syntax.Block.Block(CommonMark.Syntax.BlockTag, int, int)", color=green, community=0, label="this.StringContent = string.Empty", prediction=4, span="15-15"];
+d6 [cluster="CommonMark.Syntax.Block.Block(CommonMark.Syntax.BlockTag, int, int)", color=green, community=0, label="this.IsOpen = true", prediction=5, span="16-16"];
+d7 [cluster="CommonMark.Syntax.Block.Block(CommonMark.Syntax.BlockTag, int, int)", label="Exit CommonMark.Syntax.Block.Block(CommonMark.Syntax.BlockTag, int, int)", span="9-9"];
+}

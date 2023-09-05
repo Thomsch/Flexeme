@@ -1,0 +1,22 @@
+digraph  {
+n10 [label="CommandLine.Core.TypeDescriptor", span=""];
+n0 [cluster="CommandLine.Core.TypeDescriptor.TypeDescriptor(CommandLine.Core.TargetType, CommandLine.Infrastructure.Maybe<int>)", label="Entry CommandLine.Core.TypeDescriptor.TypeDescriptor(CommandLine.Core.TargetType, CommandLine.Infrastructure.Maybe<int>)", span="13-13"];
+n2 [cluster="CommandLine.Core.TypeDescriptor.TypeDescriptor(CommandLine.Core.TargetType, CommandLine.Infrastructure.Maybe<int>)", label="this.maxItems = maxItems", span="16-16"];
+n3 [cluster="CommandLine.Core.TypeDescriptor.TypeDescriptor(CommandLine.Core.TargetType, CommandLine.Infrastructure.Maybe<int>)", label="Exit CommandLine.Core.TypeDescriptor.TypeDescriptor(CommandLine.Core.TargetType, CommandLine.Infrastructure.Maybe<int>)", span="13-13"];
+n4 [cluster="CommandLine.Core.TypeDescriptor.Create(CommandLine.Core.TargetType, CommandLine.Infrastructure.Maybe<int>)", label="Entry CommandLine.Core.TypeDescriptor.Create(CommandLine.Core.TargetType, CommandLine.Infrastructure.Maybe<int>)", span="29-29"];
+n5 [cluster="CommandLine.Core.TypeDescriptor.Create(CommandLine.Core.TargetType, CommandLine.Infrastructure.Maybe<int>)", label="maximumItems == null", span="31-31"];
+n6 [cluster="CommandLine.Core.TypeDescriptor.Create(CommandLine.Core.TargetType, CommandLine.Infrastructure.Maybe<int>)", label="throw new ArgumentNullException(''maximumItems'');", span="31-31"];
+n8 [cluster="CommandLine.Core.TypeDescriptor.Create(CommandLine.Core.TargetType, CommandLine.Infrastructure.Maybe<int>)", label="Exit CommandLine.Core.TypeDescriptor.Create(CommandLine.Core.TargetType, CommandLine.Infrastructure.Maybe<int>)", span="29-29"];
+n9 [cluster="System.ArgumentNullException.ArgumentNullException(string)", label="Entry System.ArgumentNullException.ArgumentNullException(string)", span="0-0"];
+m0_0 [cluster="Humanizer.Localisation.Ordinalizers.SpanishOrdinalizer.Convert(int, string)", file="Tokenizer.cs", label="Entry Humanizer.Localisation.Ordinalizers.SpanishOrdinalizer.Convert(int, string)", span="4-4"];
+m0_1 [cluster="Humanizer.Localisation.Ordinalizers.SpanishOrdinalizer.Convert(int, string)", file="Tokenizer.cs", label="return Convert(number, numberString, GrammaticalGender.Masculine);", span="6-6"];
+m0_2 [cluster="Humanizer.Localisation.Ordinalizers.SpanishOrdinalizer.Convert(int, string)", file="Tokenizer.cs", label="Exit Humanizer.Localisation.Ordinalizers.SpanishOrdinalizer.Convert(int, string)", span="4-4"];
+m0_3 [cluster="Humanizer.Localisation.Ordinalizers.SpanishOrdinalizer.Convert(int, string, Humanizer.GrammaticalGender)", file="Tokenizer.cs", label="Entry Humanizer.Localisation.Ordinalizers.SpanishOrdinalizer.Convert(int, string, Humanizer.GrammaticalGender)", span="9-9"];
+m0_4 [cluster="Humanizer.Localisation.Ordinalizers.SpanishOrdinalizer.Convert(int, string, Humanizer.GrammaticalGender)", file="Tokenizer.cs", label="number == 0", span="12-12"];
+m0_6 [cluster="Humanizer.Localisation.Ordinalizers.SpanishOrdinalizer.Convert(int, string, Humanizer.GrammaticalGender)", file="Tokenizer.cs", label="gender == GrammaticalGender.Feminine", span="15-15"];
+m0_5 [cluster="Humanizer.Localisation.Ordinalizers.SpanishOrdinalizer.Convert(int, string, Humanizer.GrammaticalGender)", file="Tokenizer.cs", label="return ''0'';", span="13-13"];
+m0_9 [cluster="Humanizer.Localisation.Ordinalizers.SpanishOrdinalizer.Convert(int, string, Humanizer.GrammaticalGender)", file="Tokenizer.cs", label="Exit Humanizer.Localisation.Ordinalizers.SpanishOrdinalizer.Convert(int, string, Humanizer.GrammaticalGender)", span="9-9"];
+m0_10 [file="Tokenizer.cs", label="Humanizer.Localisation.Ordinalizers.SpanishOrdinalizer", span=""];
+m0_3 -> m0_6  [color=darkseagreen4, key=1, label="Humanizer.GrammaticalGender", style=dashed];
+m0_10 -> m0_1  [color=darkseagreen4, key=1, label="Humanizer.Localisation.Ordinalizers.SpanishOrdinalizer", style=dashed];
+}

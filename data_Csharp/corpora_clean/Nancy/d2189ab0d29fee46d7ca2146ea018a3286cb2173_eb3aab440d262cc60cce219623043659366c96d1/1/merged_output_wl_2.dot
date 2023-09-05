@@ -1,0 +1,12 @@
+digraph  {
+d1 [cluster="Nancy.ViewEngines.DotLiquid.DotLiquidApplicationRegistrations.DotLiquidApplicationRegistrations()", color=green, community=0, label="0: this.RegisterWithDefault<INamingConvention>(typeof(RubyNamingConvention))", span="9-9"];
+d4 [label="Nancy.ViewEngines.DotLiquid.DotLiquidApplicationRegistrations", span=""];
+d0 [cluster="Nancy.ViewEngines.DotLiquid.DotLiquidApplicationRegistrations.DotLiquidApplicationRegistrations()", label="Entry Nancy.ViewEngines.DotLiquid.DotLiquidApplicationRegistrations.DotLiquidApplicationRegistrations()", span="7-7"];
+d2 [cluster="Nancy.ViewEngines.DotLiquid.DotLiquidApplicationRegistrations.DotLiquidApplicationRegistrations()", label="Exit Nancy.ViewEngines.DotLiquid.DotLiquidApplicationRegistrations.DotLiquidApplicationRegistrations()", span="7-7"];
+d3 [cluster="Nancy.Bootstrapper.ApplicationRegistrations.RegisterWithDefault<TRegistration>(System.Type)", label="Entry Nancy.Bootstrapper.ApplicationRegistrations.RegisterWithDefault<TRegistration>(System.Type)", span="94-94"];
+d1 -> d2  [color=green, key=0, style=solid];
+d1 -> d3  [color=green, key=2, style=dotted];
+d4 -> d1  [color=green, key=1, label="Nancy.ViewEngines.DotLiquid.DotLiquidApplicationRegistrations", style=dashed];
+d0 -> d1  [color=green, key=0, style=solid];
+d2 -> d0  [color=blue, key=0, style=bold];
+}

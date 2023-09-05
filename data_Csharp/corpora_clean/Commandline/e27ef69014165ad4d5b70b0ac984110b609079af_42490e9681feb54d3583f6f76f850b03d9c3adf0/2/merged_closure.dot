@@ -1,0 +1,19 @@
+digraph  {
+n0 [cluster="Ninject.INinjectSettings.Get<T>(string, T)", label="Entry Ninject.INinjectSettings.Get<T>(string, T)", span="76-76"];
+n1 [cluster="Ninject.INinjectSettings.Get<T>(string, T)", label="Exit Ninject.INinjectSettings.Get<T>(string, T)", span="76-76"];
+n2 [cluster="Ninject.INinjectSettings.Set(string, object)", label="Entry Ninject.INinjectSettings.Set(string, object)", span="83-83"];
+n3 [cluster="Ninject.INinjectSettings.Set(string, object)", label="Exit Ninject.INinjectSettings.Set(string, object)", span="83-83"];
+d1 [cluster="CommandLine.Tests.Properties.ParserProperties.Parsing_a_string_returns_original_string()", color=green, community=1, label="Prop.ForAll<string>(\r\n                x =>\r\n                {\r\n                    var result = Sut.ParseArguments<Scalar_String_Mutable>(new[] { ''--stringvalue'', x });\r\n                    ((Parsed<Scalar_String_Mutable>)result).Value.StringValue.ShouldBeEquivalentTo(x);\r\n                }).QuickCheckThrowOnFailure()", prediction=0, span="19-24"];
+d0 [cluster="CommandLine.Tests.Properties.ParserProperties.Parsing_a_string_returns_original_string()", label="Entry CommandLine.Tests.Properties.ParserProperties.Parsing_a_string_returns_original_string()", span="17-17"];
+d2 [cluster="CommandLine.Tests.Properties.ParserProperties.Parsing_a_string_returns_original_string()", label="Exit CommandLine.Tests.Properties.ParserProperties.Parsing_a_string_returns_original_string()", span="17-17"];
+d3 [cluster="Unk.>", label="Entry Unk.>", span=""];
+d4 [cluster="Unk.QuickCheckThrowOnFailure", label="Entry Unk.QuickCheckThrowOnFailure", span=""];
+d5 [cluster="lambda expression", label="Entry lambda expression", span="20-24"];
+d6 [cluster="lambda expression", color=green, community=0, label="var result = Sut.ParseArguments<Scalar_String_Mutable>(new[] { ''--stringvalue'', x })", prediction=1, span="22-22"];
+d7 [cluster="lambda expression", color=green, community=0, label="((Parsed<Scalar_String_Mutable>)result).Value.StringValue.ShouldBeEquivalentTo(x)", prediction=2, span="23-23"];
+d9 [cluster="CommandLine.Parser.ParseArguments<T>(System.Collections.Generic.IEnumerable<string>)", label="Entry CommandLine.Parser.ParseArguments<T>(System.Collections.Generic.IEnumerable<string>)", span="85-85"];
+d8 [cluster="lambda expression", label="Exit lambda expression", span="20-24"];
+d10 [cluster="Unk.ShouldBeEquivalentTo", label="Entry Unk.ShouldBeEquivalentTo", span=""];
+d1 -> d5  [color=green, key=1, label="lambda expression", style=dashed];
+d5 -> d7  [color=green, key=1, label=string, style=dashed];
+}

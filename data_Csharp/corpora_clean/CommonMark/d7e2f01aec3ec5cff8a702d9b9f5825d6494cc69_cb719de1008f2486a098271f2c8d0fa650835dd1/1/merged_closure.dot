@@ -1,0 +1,8 @@
+digraph  {
+m0_2 [cluster="CommonMark.Syntax.Reference.Reference(string, string, string)", file="Reference.cs", label="Entry CommonMark.Syntax.Reference.Reference(string, string, string)", span="21-21"];
+m0_3 [cluster="CommonMark.Syntax.Reference.Reference(string, string, string)", color=green, community=0, file="Reference.cs", label="this.Label = label", prediction=0, span="23-23"];
+m0_4 [cluster="CommonMark.Syntax.Reference.Reference(string, string, string)", color=green, community=0, file="Reference.cs", label="this.Url = url", prediction=1, span="24-24"];
+m0_5 [cluster="CommonMark.Syntax.Reference.Reference(string, string, string)", color=green, community=0, file="Reference.cs", label="this.Title = title", prediction=2, span="25-25"];
+m0_6 [cluster="CommonMark.Syntax.Reference.Reference(string, string, string)", file="Reference.cs", label="Exit CommonMark.Syntax.Reference.Reference(string, string, string)", span="21-21"];
+m0_7 [file="Reference.cs", label="CommonMark.Syntax.Reference", span=""];
+}

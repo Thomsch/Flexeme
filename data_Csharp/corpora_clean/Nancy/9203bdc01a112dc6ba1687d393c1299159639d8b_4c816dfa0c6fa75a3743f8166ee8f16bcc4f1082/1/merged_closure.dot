@@ -1,0 +1,11 @@
+digraph  {
+n0 [cluster="Nancy.ViewEngines.DotLiquid.Tests.Functional.RootPathProvider.GetRootPath()", label="Entry Nancy.ViewEngines.DotLiquid.Tests.Functional.RootPathProvider.GetRootPath()", span="10-10"];
+n2 [cluster="Nancy.ViewEngines.DotLiquid.Tests.Functional.RootPathProvider.GetRootPath()", label="return PathHelper.GetParent(assemblyPath, 2);", span="15-15"];
+n4 [cluster="System.IO.Path.GetDirectoryName(string)", label="Entry System.IO.Path.GetDirectoryName(string)", span="0-0"];
+n5 [cluster="string.Replace(string, string)", label="Entry string.Replace(string, string)", span="0-0"];
+n3 [cluster="Nancy.ViewEngines.DotLiquid.Tests.Functional.RootPathProvider.GetRootPath()", label="Exit Nancy.ViewEngines.DotLiquid.Tests.Functional.RootPathProvider.GetRootPath()", span="10-10"];
+n6 [cluster="Nancy.Testing.PathHelper.GetParent(string, int)", label="Entry Nancy.Testing.PathHelper.GetParent(string, int)", span="14-14"];
+d1 [cluster="Nancy.ViewEngines.DotLiquid.Tests.Functional.RootPathProvider.GetRootPath()", color=green, community=0, label="var assemblyFilePath =\r\n                new Uri(typeof (RootPathProvider).Assembly.CodeBase).LocalPath", prediction=0, span="13-14"];
+d2 [cluster="Nancy.ViewEngines.DotLiquid.Tests.Functional.RootPathProvider.GetRootPath()", color=green, community=0, label="var assemblyPath =\r\n                System.IO.Path.GetDirectoryName(assemblyFilePath)", prediction=1, span="16-17"];
+d5 [cluster="System.Uri.Uri(string)", label="Entry System.Uri.Uri(string)", span="0-0"];
+}

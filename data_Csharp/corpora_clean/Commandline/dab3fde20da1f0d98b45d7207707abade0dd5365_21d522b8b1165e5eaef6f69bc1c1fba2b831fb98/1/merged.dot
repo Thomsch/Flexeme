@@ -1,0 +1,31 @@
+digraph  {
+m0_9 [label="Entry CommandLine.Parser.ParseArguments<T>(System.Collections.Generic.IEnumerable<string>)", span="85-85", cluster="CommandLine.Parser.ParseArguments<T>(System.Collections.Generic.IEnumerable<string>)", file="ParserProperties.cs"];
+m0_5 [label="Entry lambda expression", span="20-24", cluster="lambda expression", file="ParserProperties.cs"];
+m0_6 [label="var value = x.As<string>()", span="22-22", cluster="lambda expression", color=green, community=0, file="ParserProperties.cs"];
+m0_7 [label="var result = Sut.ParseArguments<Scalar_String_Mutable>(new[] { ''--stringvalue'', value })", span="23-23", cluster="lambda expression", color=green, community=0, file="ParserProperties.cs"];
+m0_8 [label="Exit lambda expression", span="20-24", cluster="lambda expression", color=green, community=0, file="ParserProperties.cs"];
+m0_3 [label="Entry Unk.>", span="", cluster="Unk.>", file="ParserProperties.cs"];
+m0_4 [label="Entry Unk.QuickCheckThrowOnFailure", span="", cluster="Unk.QuickCheckThrowOnFailure", file="ParserProperties.cs"];
+m0_10 [label="Entry Unk.ShouldBeEquivalentTo", span="", cluster="Unk.ShouldBeEquivalentTo", file="ParserProperties.cs"];
+m0_0 [label="Entry CommandLine.Tests.Properties.ParserProperties.Parsing_a_string_returns_original_string()", span="17-17", cluster="CommandLine.Tests.Properties.ParserProperties.Parsing_a_string_returns_original_string()", file="ParserProperties.cs"];
+m0_1 [label="Prop.ForAll<string>(\r\n                x =>\r\n                {\r\n                    var value = x.As<string>();\r\n                    var result = Sut.ParseArguments<Scalar_String_Mutable>(new[] { ''--stringvalue'', value });\r\n                    ((Parsed<Scalar_String_Mutable>)result).Value.StringValue.ShouldBeEquivalentTo(value);\r\n                }).QuickCheckThrowOnFailure()", span="19-25", cluster="CommandLine.Tests.Properties.ParserProperties.Parsing_a_string_returns_original_string()", color=green, community=0, file="ParserProperties.cs"];
+m0_2 [label="Exit CommandLine.Tests.Properties.ParserProperties.Parsing_a_string_returns_original_string()", span="17-17", cluster="CommandLine.Tests.Properties.ParserProperties.Parsing_a_string_returns_original_string()", file="ParserProperties.cs"];
+m0_5 -> m0_6  [key=0, style=solid, color=green];
+m0_5 -> m0_7  [key=1, style=dashed, color=red, label=string];
+m0_6 -> m0_7  [key=0, style=solid, color=green];
+m0_6 -> m0_9  [key=2, style=dotted, color=red];
+m0_6 -> m0_3  [key=2, style=dotted, color=green];
+m0_6 -> m0_8  [key=1, style=dashed, color=green, label=value];
+m0_7 -> m0_8  [key=0, style=solid, color=green];
+m0_7 -> m0_10  [key=2, style=dotted, color=red];
+m0_7 -> m0_3  [key=2, style=dotted, color=green];
+m0_8 -> m0_8  [key=0, style=solid, color=green];
+m0_8 -> m0_10  [key=2, style=dotted, color=green];
+m0_8 -> m0_5  [key=0, style=bold, color=blue];
+m0_0 -> m0_1  [key=0, style=solid, color=green];
+m0_1 -> m0_2  [key=0, style=solid, color=green];
+m0_1 -> m0_3  [key=2, style=dotted, color=green];
+m0_1 -> m0_4  [key=2, style=dotted, color=green];
+m0_1 -> m0_5  [key=1, style=dashed, color=green, label="lambda expression"];
+m0_2 -> m0_0  [key=0, style=bold, color=blue];
+}

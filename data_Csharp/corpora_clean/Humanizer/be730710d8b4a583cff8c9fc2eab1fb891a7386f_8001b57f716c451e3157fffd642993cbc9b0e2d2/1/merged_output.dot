@@ -1,0 +1,30 @@
+digraph  {
+m0_0 [cluster="Humanizer.Tests.Localisation.ResourcesTests.CanGetCultureSpecificTranslationsWithImplicitCulture()", file="ResourcesTests.cs", label="Entry Humanizer.Tests.Localisation.ResourcesTests.CanGetCultureSpecificTranslationsWithImplicitCulture()", span="9-9"];
+m0_2 [cluster="Humanizer.Tests.Localisation.ResourcesTests.CanGetCultureSpecificTranslationsWithImplicitCulture()", file="ResourcesTests.cs", label="var format = Resources.GetResource(''DateHumanize_MultipleYearsAgo_Above20'')", span="13-13"];
+m0_3 [cluster="Humanizer.Tests.Localisation.ResourcesTests.CanGetCultureSpecificTranslationsWithImplicitCulture()", file="ResourcesTests.cs", label="Assert.Equal(''acum {0} de ani'', format)", span="14-14"];
+m0_1 [cluster="Humanizer.Tests.Localisation.ResourcesTests.CanGetCultureSpecificTranslationsWithImplicitCulture()", file="ResourcesTests.cs", label="new AmbientCulture(''ro'')", span="11-11"];
+m0_4 [cluster="Humanizer.Tests.Localisation.ResourcesTests.CanGetCultureSpecificTranslationsWithImplicitCulture()", file="ResourcesTests.cs", label="Exit Humanizer.Tests.Localisation.ResourcesTests.CanGetCultureSpecificTranslationsWithImplicitCulture()", span="9-9"];
+m0_8 [cluster="Humanizer.Tests.Localisation.ResourcesTests.CanGetCultureSpecificTranslationsWithExplicitCulture()", file="ResourcesTests.cs", label="Entry Humanizer.Tests.Localisation.ResourcesTests.CanGetCultureSpecificTranslationsWithExplicitCulture()", span="19-19"];
+m0_9 [cluster="Humanizer.Tests.Localisation.ResourcesTests.CanGetCultureSpecificTranslationsWithExplicitCulture()", color=green, community=0, file="ResourcesTests.cs", label="1: var format = Resources.GetResource(''DateHumanize_MultipleYearsAgo_Above20'', new CultureInfo(''ro''))", span="21-21"];
+m0_10 [cluster="Humanizer.Tests.Localisation.ResourcesTests.CanGetCultureSpecificTranslationsWithExplicitCulture()", color=green, community=0, file="ResourcesTests.cs", label="4: Assert.Equal(''acum {0} de ani'', format)", span="22-22"];
+m0_11 [cluster="Humanizer.Tests.Localisation.ResourcesTests.CanGetCultureSpecificTranslationsWithExplicitCulture()", file="ResourcesTests.cs", label="Exit Humanizer.Tests.Localisation.ResourcesTests.CanGetCultureSpecificTranslationsWithExplicitCulture()", span="19-19"];
+m0_7 [cluster="Unk.Equal", file="ResourcesTests.cs", label="Entry Unk.Equal", span=""];
+m0_5 [cluster="Humanizer.Tests.AmbientCulture.AmbientCulture(string)", file="ResourcesTests.cs", label="Entry Humanizer.Tests.AmbientCulture.AmbientCulture(string)", span="19-19"];
+m0_6 [cluster="Humanizer.Localisation.Resources.GetResource(string, System.Globalization.CultureInfo)", file="ResourcesTests.cs", label="Entry Humanizer.Localisation.Resources.GetResource(string, System.Globalization.CultureInfo)", span="18-18"];
+m0_12 [cluster="System.Globalization.CultureInfo.CultureInfo(string)", file="ResourcesTests.cs", label="Entry System.Globalization.CultureInfo.CultureInfo(string)", span="0-0"];
+m0_0 -> m0_1  [key=0, style=solid];
+m0_2 -> m0_6  [key=2, style=dotted];
+m0_2 -> m0_3  [key=0, style=solid];
+m0_3 -> m0_7  [key=2, style=dotted];
+m0_3 -> m0_4  [key=0, style=solid];
+m0_1 -> m0_2  [key=0, style=solid];
+m0_1 -> m0_5  [key=2, style=dotted];
+m0_4 -> m0_0  [color=blue, key=0, style=bold];
+m0_8 -> m0_9  [color=green, key=0, style=solid];
+m0_9 -> m0_10  [color=green, key=0, style=solid];
+m0_9 -> m0_12  [color=green, key=2, style=dotted];
+m0_9 -> m0_6  [color=green, key=2, style=dotted];
+m0_10 -> m0_11  [color=green, key=0, style=solid];
+m0_10 -> m0_7  [color=green, key=2, style=dotted];
+m0_11 -> m0_8  [color=blue, key=0, style=bold];
+}

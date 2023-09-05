@@ -1,0 +1,36 @@
+digraph  {
+n20 [label="Nancy.Testing.BrowserResponseBodyWrapper", span=""];
+n0 [cluster="Nancy.Testing.BrowserResponseBodyWrapper.BrowserResponseBodyWrapper(Nancy.Response)", label="Entry Nancy.Testing.BrowserResponseBodyWrapper.BrowserResponseBodyWrapper(Nancy.Response)", span="14-14"];
+n2 [cluster="Nancy.Testing.BrowserResponseBodyWrapper.BrowserResponseBodyWrapper(Nancy.Response)", label="this.responseBytes = contentStream.ToArray()", span="19-19"];
+n4 [cluster="Nancy.Testing.BrowserResponseBodyWrapper.GetContentStream(Nancy.Response)", label="Entry Nancy.Testing.BrowserResponseBodyWrapper.GetContentStream(Nancy.Response)", span="22-22"];
+n3 [cluster="Nancy.Testing.BrowserResponseBodyWrapper.BrowserResponseBodyWrapper(Nancy.Response)", label="Exit Nancy.Testing.BrowserResponseBodyWrapper.BrowserResponseBodyWrapper(Nancy.Response)", span="14-14"];
+n5 [cluster="System.IO.MemoryStream.ToArray()", label="Entry System.IO.MemoryStream.ToArray()", span="0-0"];
+n6 [cluster="Nancy.Testing.BrowserResponseBodyWrapper.GetContentStream(Nancy.Response)", label="var contentsStream = new MemoryStream()", span="24-24"];
+n7 [cluster="Nancy.Testing.BrowserResponseBodyWrapper.GetContentStream(Nancy.Response)", label="response.Contents.Invoke(contentsStream)", span="25-25"];
+n11 [cluster="System.IO.MemoryStream.MemoryStream()", label="Entry System.IO.MemoryStream.MemoryStream()", span="0-0"];
+n8 [cluster="Nancy.Testing.BrowserResponseBodyWrapper.GetContentStream(Nancy.Response)", label="contentsStream.Position = 0", span="26-26"];
+n9 [cluster="Nancy.Testing.BrowserResponseBodyWrapper.GetContentStream(Nancy.Response)", label="return contentsStream;", span="27-27"];
+n12 [cluster="System.Action<T>.Invoke(T)", label="Entry System.Action<T>.Invoke(T)", span="0-0"];
+n10 [cluster="Nancy.Testing.BrowserResponseBodyWrapper.GetContentStream(Nancy.Response)", label="Exit Nancy.Testing.BrowserResponseBodyWrapper.GetContentStream(Nancy.Response)", span="22-22"];
+n13 [cluster="Nancy.Testing.BrowserResponseBodyWrapper.GetEnumerator()", label="Entry Nancy.Testing.BrowserResponseBodyWrapper.GetEnumerator()", span="52-52"];
+n14 [cluster="Nancy.Testing.BrowserResponseBodyWrapper.GetEnumerator()", label="return this.responseBytes.GetEnumerator();", span="54-54"];
+n15 [cluster="Nancy.Testing.BrowserResponseBodyWrapper.GetEnumerator()", label="Exit Nancy.Testing.BrowserResponseBodyWrapper.GetEnumerator()", span="52-52"];
+n16 [cluster="System.Collections.Generic.IEnumerable<T>.GetEnumerator()", label="Entry System.Collections.Generic.IEnumerable<T>.GetEnumerator()", span="0-0"];
+n17 [cluster="Nancy.Testing.BrowserResponseBodyWrapper.System.Collections.IEnumerable.GetEnumerator()", label="Entry Nancy.Testing.BrowserResponseBodyWrapper.System.Collections.IEnumerable.GetEnumerator()", span="61-61"];
+n18 [cluster="Nancy.Testing.BrowserResponseBodyWrapper.System.Collections.IEnumerable.GetEnumerator()", label="return this.GetEnumerator();", span="63-63"];
+n19 [cluster="Nancy.Testing.BrowserResponseBodyWrapper.System.Collections.IEnumerable.GetEnumerator()", label="Exit Nancy.Testing.BrowserResponseBodyWrapper.System.Collections.IEnumerable.GetEnumerator()", span="61-61"];
+m0_0 [cluster="Nancy.Tests.Fakes.FakeRouteResolver.GetRoute(Nancy.IRequest, System.Collections.Generic.IEnumerable<Nancy.Routing.RouteDescription>)", file="BrowserResponseBodyWrapperExtensions.cs", label="Entry Nancy.Tests.Fakes.FakeRouteResolver.GetRoute(Nancy.IRequest, System.Collections.Generic.IEnumerable<Nancy.Routing.RouteDescription>)", span="9-9"];
+m0_1 [cluster="Nancy.Tests.Fakes.FakeRouteResolver.GetRoute(Nancy.IRequest, System.Collections.Generic.IEnumerable<Nancy.Routing.RouteDescription>)", file="BrowserResponseBodyWrapperExtensions.cs", label="var description = descriptions.First()", span="11-11"];
+m0_2 [cluster="Nancy.Tests.Fakes.FakeRouteResolver.GetRoute(Nancy.IRequest, System.Collections.Generic.IEnumerable<Nancy.Routing.RouteDescription>)", file="BrowserResponseBodyWrapperExtensions.cs", label="this.Action = description.Action", span="13-13"];
+m0_3 [cluster="Nancy.Tests.Fakes.FakeRouteResolver.GetRoute(Nancy.IRequest, System.Collections.Generic.IEnumerable<Nancy.Routing.RouteDescription>)", file="BrowserResponseBodyWrapperExtensions.cs", label="this.ModulePath = description.ModulePath", span="14-14"];
+m0_4 [cluster="Nancy.Tests.Fakes.FakeRouteResolver.GetRoute(Nancy.IRequest, System.Collections.Generic.IEnumerable<Nancy.Routing.RouteDescription>)", file="BrowserResponseBodyWrapperExtensions.cs", label="this.Path = description.Path", span="15-15"];
+m0_5 [cluster="Nancy.Tests.Fakes.FakeRouteResolver.GetRoute(Nancy.IRequest, System.Collections.Generic.IEnumerable<Nancy.Routing.RouteDescription>)", file="BrowserResponseBodyWrapperExtensions.cs", label="return new FakeRoute();", span="17-17"];
+m0_6 [cluster="Nancy.Tests.Fakes.FakeRouteResolver.GetRoute(Nancy.IRequest, System.Collections.Generic.IEnumerable<Nancy.Routing.RouteDescription>)", file="BrowserResponseBodyWrapperExtensions.cs", label="Exit Nancy.Tests.Fakes.FakeRouteResolver.GetRoute(Nancy.IRequest, System.Collections.Generic.IEnumerable<Nancy.Routing.RouteDescription>)", span="9-9"];
+m0_8 [cluster="Nancy.Tests.Fakes.FakeRoute.FakeRoute()", file="BrowserResponseBodyWrapperExtensions.cs", label="Entry Nancy.Tests.Fakes.FakeRoute.FakeRoute()", span="8-8"];
+m0_7 [cluster="System.Collections.Generic.IEnumerable<TSource>.First<TSource>()", file="BrowserResponseBodyWrapperExtensions.cs", label="Entry System.Collections.Generic.IEnumerable<TSource>.First<TSource>()", span="0-0"];
+m0_9 [file="BrowserResponseBodyWrapperExtensions.cs", label="Nancy.Tests.Fakes.FakeRouteResolver", span=""];
+n20 -> n14  [color=darkseagreen4, key=1, label="Nancy.Testing.BrowserResponseBodyWrapper", style=dashed];
+n20 -> n18  [color=darkseagreen4, key=1, label="Nancy.Testing.BrowserResponseBodyWrapper", style=dashed];
+n4 -> n7  [color=darkseagreen4, key=1, label="Nancy.Response", style=dashed];
+n6 -> n9  [color=darkseagreen4, key=1, label=contentsStream, style=dashed];
+}

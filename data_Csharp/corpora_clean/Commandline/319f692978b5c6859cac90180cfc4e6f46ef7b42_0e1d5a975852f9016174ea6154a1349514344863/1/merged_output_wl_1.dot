@@ -1,0 +1,6 @@
+digraph  {
+m2_205 [cluster="CommandLine.Tests.Unit.Text.HelpTextTests.RenderUsageText_returns_properly_formatted_text()", file="HelpTextTests.cs", label="Entry CommandLine.Tests.Unit.Text.HelpTextTests.RenderUsageText_returns_properly_formatted_text()", span="367-367"];
+m2_206 [cluster="CommandLine.Tests.Unit.Text.HelpTextTests.RenderUsageText_returns_properly_formatted_text()", color=green, community=0, file="HelpTextTests.cs", label="0: var lines = text.ToNotEmptyLines()", span="373-373"];
+m2_207 [cluster="CommandLine.Tests.Unit.Text.HelpTextTests.RenderUsageText_returns_properly_formatted_text()", file="HelpTextTests.cs", label="Exit CommandLine.Tests.Unit.Text.HelpTextTests.RenderUsageText_returns_properly_formatted_text()", span="367-367"];
+m2_208 [cluster="Unk.ToNotEmptyLines", file="HelpTextTests.cs", label="Entry Unk.ToNotEmptyLines", span=""];
+}

@@ -1,0 +1,23 @@
+digraph  {
+n0 [cluster="HangFire.Factory.CreateClient()", label="Entry HangFire.Factory.CreateClient()", span="7-7"];
+n2 [cluster="HangFire.Factory.CreateClient()", label="Exit HangFire.Factory.CreateClient()", span="7-7"];
+n3 [cluster="HangFire.Client.Client(IRedisClient)", label="Entry HangFire.Client.Client(IRedisClient)", span="9-9"];
+n4 [cluster="HangFire.Factory.CreateRedisClient()", label="Entry HangFire.Factory.CreateRedisClient()", span="15-15"];
+n6 [cluster="HangFire.Factory.CreateRedisClient()", label="Exit HangFire.Factory.CreateRedisClient()", span="15-15"];
+n7 [cluster="Unk.GetClient", label="Entry Unk.GetClient", span=""];
+n8 [cluster="HangFire.Factory.CreateWorker(System.Type)", label="Entry HangFire.Factory.CreateWorker(System.Type)", span="20-20"];
+n9 [cluster="HangFire.Factory.CreateWorker(System.Type)", label="return (Worker)Activator.CreateInstance(workerType);", span="22-22"];
+n10 [cluster="HangFire.Factory.CreateWorker(System.Type)", label="Exit HangFire.Factory.CreateWorker(System.Type)", span="20-20"];
+n11 [cluster="System.Activator.CreateInstance(System.Type)", label="Entry System.Activator.CreateInstance(System.Type)", span="0-0"];
+m0_7 [cluster="Unk.RegisterAllAreas", file="Global.asax.cs", label="Entry Unk.RegisterAllAreas", span=""];
+m0_8 [cluster="Unk.Register", file="Global.asax.cs", label="Entry Unk.Register", span=""];
+m0_9 [cluster="Unk.RegisterGlobalFilters", file="Global.asax.cs", label="Entry Unk.RegisterGlobalFilters", span=""];
+m0_11 [cluster="Unk.RegisterBundles", file="Global.asax.cs", label="Entry Unk.RegisterBundles", span=""];
+m0_0 [cluster="HangFire.Sample.MvcApplication.Application_Start()", file="Global.asax.cs", label="Entry HangFire.Sample.MvcApplication.Application_Start()", span="16-16"];
+m0_6 [cluster="HangFire.Sample.MvcApplication.Application_Start()", file="Global.asax.cs", label="Exit HangFire.Sample.MvcApplication.Application_Start()", span="16-16"];
+m0_10 [cluster="Unk.RegisterRoutes", file="Global.asax.cs", label="Entry Unk.RegisterRoutes", span=""];
+m1_5 [cluster="Unk.MapRoute", file="RouteConfig.cs", label="Entry Unk.MapRoute", span=""];
+m1_4 [cluster="Unk.IgnoreRoute", file="RouteConfig.cs", label="Entry Unk.IgnoreRoute", span=""];
+m1_0 [cluster="HangFire.Sample.RouteConfig.RegisterRoutes(RouteCollection)", file="RouteConfig.cs", label="Entry HangFire.Sample.RouteConfig.RegisterRoutes(RouteCollection)", span="11-11"];
+m1_3 [cluster="HangFire.Sample.RouteConfig.RegisterRoutes(RouteCollection)", file="RouteConfig.cs", label="Exit HangFire.Sample.RouteConfig.RegisterRoutes(RouteCollection)", span="11-11"];
+}

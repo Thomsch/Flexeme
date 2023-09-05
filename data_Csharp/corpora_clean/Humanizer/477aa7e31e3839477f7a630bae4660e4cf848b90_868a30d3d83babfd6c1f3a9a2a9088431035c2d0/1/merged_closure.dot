@@ -1,0 +1,12 @@
+digraph  {
+m0_0 [cluster="Humanizer.Tests.NumberToWordsTests.ToWords()", file="NumberToWordsTests.cs", label="Entry Humanizer.Tests.NumberToWordsTests.ToWords()", span="7-7"];
+m0_6 [cluster="Humanizer.Localisation.NumberToWords.RomanianNumberToWordsConverter.ConvertToOrdinal(int, Humanizer.GrammaticalGender)", file="NumberToWordsTests.cs", label="Entry Humanizer.Localisation.NumberToWords.RomanianNumberToWordsConverter.ConvertToOrdinal(int, Humanizer.GrammaticalGender)", span="13-13"];
+m0_8 [cluster="Humanizer.Localisation.NumberToWords.RomanianNumberToWordsConverter.ConvertToOrdinal(int, Humanizer.GrammaticalGender)", color=green, community=0, file="NumberToWordsTests.cs", label="return converter.Convert(number, gender);", prediction=0, span="16-16"];
+m0_9 [cluster="Humanizer.Localisation.NumberToWords.RomanianNumberToWordsConverter.ConvertToOrdinal(int, Humanizer.GrammaticalGender)", file="NumberToWordsTests.cs", label="Exit Humanizer.Localisation.NumberToWords.RomanianNumberToWordsConverter.ConvertToOrdinal(int, Humanizer.GrammaticalGender)", span="13-13"];
+m0_14 [cluster="Humanizer.Tests.NumberToWordsTests.RoundNumbersHaveNoSpaceAtTheEnd()", file="NumberToWordsTests.cs", label="Exit Humanizer.Tests.NumberToWordsTests.RoundNumbersHaveNoSpaceAtTheEnd()", span="17-17"];
+m0_7 [cluster="Humanizer.Localisation.NumberToWords.RomanianNumberToWordsConverter.ConvertToOrdinal(int, Humanizer.GrammaticalGender)", color=green, community=0, file="NumberToWordsTests.cs", label="var converter = new RomanianOrdinalNumberConverter()", prediction=1, span="15-15"];
+m1_0 [cluster="Humanizer.Localisation.Resources.GetResource(string)", file="Resources.cs", label="Entry Humanizer.Localisation.Resources.GetResource(string)", span="27-27"];
+m1_2 [cluster="Humanizer.Localisation.Resources.GetResource(string)", file="Resources.cs", label="Exit Humanizer.Localisation.Resources.GetResource(string)", span="27-27"];
+m1_3 [cluster="System.Resources.ResourceManager.GetString(string, System.Globalization.CultureInfo)", file="Resources.cs", label="Entry System.Resources.ResourceManager.GetString(string, System.Globalization.CultureInfo)", span="0-0"];
+m0_6 -> m0_8  [color=green, key=1, label=int, style=dashed];
+}

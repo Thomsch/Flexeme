@@ -1,0 +1,33 @@
+digraph  {
+m0_0 [cluster="CommonMark.Syntax.Block.Block(CommonMark.Syntax.BlockTag, int, int)", file="EmphasisTests.cs", label="Entry CommonMark.Syntax.Block.Block(CommonMark.Syntax.BlockTag, int, int)", span="9-9"];
+m0_1 [cluster="CommonMark.Syntax.Block.Block(CommonMark.Syntax.BlockTag, int, int)", color=green, community=0, file="EmphasisTests.cs", label="4: this.Tag = tag", span="11-11"];
+m0_2 [cluster="CommonMark.Syntax.Block.Block(CommonMark.Syntax.BlockTag, int, int)", color=green, community=0, file="EmphasisTests.cs", label="1: this.StartLine = startLine", span="12-12"];
+m0_3 [cluster="CommonMark.Syntax.Block.Block(CommonMark.Syntax.BlockTag, int, int)", color=green, community=0, file="EmphasisTests.cs", label="0: this.EndLine = startLine", span="13-13"];
+m0_4 [cluster="CommonMark.Syntax.Block.Block(CommonMark.Syntax.BlockTag, int, int)", color=green, community=0, file="EmphasisTests.cs", label="2: this.StartColumn = startColumn", span="14-14"];
+m0_5 [cluster="CommonMark.Syntax.Block.Block(CommonMark.Syntax.BlockTag, int, int)", color=green, community=0, file="EmphasisTests.cs", label="0: this.IsOpen = true", span="15-15"];
+m0_6 [cluster="CommonMark.Syntax.Block.Block(CommonMark.Syntax.BlockTag, int, int)", file="EmphasisTests.cs", label="Exit CommonMark.Syntax.Block.Block(CommonMark.Syntax.BlockTag, int, int)", span="9-9"];
+m0_7 [file="EmphasisTests.cs", label="CommonMark.Syntax.Block", span=""];
+m2_0 [cluster="CommonMark.Syntax.EmphasisData.EmphasisData(char)", file="Utilities.cs", label="Entry CommonMark.Syntax.EmphasisData.EmphasisData(char)", span="11-11"];
+m2_1 [cluster="CommonMark.Syntax.EmphasisData.EmphasisData(char)", file="Utilities.cs", label="DelimiterCharacter = delimiterCharacter", span="13-13"];
+m2_2 [cluster="CommonMark.Syntax.EmphasisData.EmphasisData(char)", file="Utilities.cs", label="Exit CommonMark.Syntax.EmphasisData.EmphasisData(char)", span="11-11"];
+m2_3 [file="Utilities.cs", label="out CommonMark.Syntax.EmphasisData", span=""];
+m0_0 -> m0_1  [color=green, key=0, style=solid];
+m0_0 -> m0_2  [color=green, key=1, label=int, style=dashed];
+m0_0 -> m0_3  [color=green, key=1, label=int, style=dashed];
+m0_0 -> m0_4  [color=green, key=1, label=int, style=dashed];
+m0_1 -> m0_2  [color=green, key=0, style=solid];
+m0_2 -> m0_3  [color=green, key=0, style=solid];
+m0_3 -> m0_4  [color=green, key=0, style=solid];
+m0_4 -> m0_5  [color=green, key=0, style=solid];
+m0_5 -> m0_6  [color=green, key=0, style=solid];
+m0_6 -> m0_0  [color=blue, key=0, style=bold];
+m0_7 -> m0_1  [color=green, key=1, label="CommonMark.Syntax.Block", style=dashed];
+m0_7 -> m0_2  [color=green, key=1, label="CommonMark.Syntax.Block", style=dashed];
+m0_7 -> m0_3  [color=green, key=1, label="CommonMark.Syntax.Block", style=dashed];
+m0_7 -> m0_4  [color=green, key=1, label="CommonMark.Syntax.Block", style=dashed];
+m0_7 -> m0_5  [color=green, key=1, label="CommonMark.Syntax.Block", style=dashed];
+m2_0 -> m2_1  [key=0, style=solid];
+m2_1 -> m2_2  [key=0, style=solid];
+m2_1 -> m2_3  [color=darkseagreen4, key=1, label="CommonMark.Syntax.EmphasisData", style=dashed];
+m2_2 -> m2_0  [color=blue, key=0, style=bold];
+}

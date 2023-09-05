@@ -1,0 +1,23 @@
+digraph  {
+d20 [cluster="QuantConnect.Tests.Brokerages.StopLimitOrderTestParameters.ModifyOrderToFill(QuantConnect.Interfaces.IBrokerage, QuantConnect.Orders.Order, decimal)", color=green, community=0, label="order.SecurityType == SecurityType.Forex || order.SecurityType == SecurityType.Crypto", prediction=0, span="65-65"];
+d12 [cluster="QuantConnect.Tests.Brokerages.StopLimitOrderTestParameters.ModifyOrderToFill(QuantConnect.Interfaces.IBrokerage, QuantConnect.Orders.Order, decimal)", label="Entry QuantConnect.Tests.Brokerages.StopLimitOrderTestParameters.ModifyOrderToFill(QuantConnect.Interfaces.IBrokerage, QuantConnect.Orders.Order, decimal)", span="43-43"];
+d19 [cluster="QuantConnect.Tests.Brokerages.StopLimitOrderTestParameters.ModifyOrderToFill(QuantConnect.Interfaces.IBrokerage, QuantConnect.Orders.Order, decimal)", label="stop.StopPrice = Math.Max(stop.StopPrice, Math.Min(stop.StopPrice * 2, Math.Round(lastMarketPrice, 2, MidpointRounding.AwayFromZero)))", span="61-61"];
+d21 [cluster="QuantConnect.Tests.Brokerages.StopLimitOrderTestParameters.ModifyOrderToFill(QuantConnect.Interfaces.IBrokerage, QuantConnect.Orders.Order, decimal)", color=green, community=0, label="stop.StopPrice = Math.Max(stop.StopPrice, Math.Min(stop.StopPrice * 2, Math.Round(lastMarketPrice, 4, MidpointRounding.AwayFromZero)))", prediction=1, span="67-67"];
+d22 [cluster="QuantConnect.Tests.Brokerages.StopLimitOrderTestParameters.ModifyOrderToFill(QuantConnect.Interfaces.IBrokerage, QuantConnect.Orders.Order, decimal)", color=green, community=0, label="stop.LimitPrice = stop.StopPrice", prediction=2, span="70-70"];
+d13 [cluster="QuantConnect.Tests.Brokerages.StopLimitOrderTestParameters.ModifyOrderToFill(QuantConnect.Interfaces.IBrokerage, QuantConnect.Orders.Order, decimal)", label="var stop = (StopLimitOrder) order", span="45-45"];
+d25 [cluster="System.Math.Round(decimal, int, System.MidpointRounding)", label="Entry System.Math.Round(decimal, int, System.MidpointRounding)", span="0-0"];
+d27 [cluster="System.Math.Min(decimal, decimal)", label="Entry System.Math.Min(decimal, decimal)", span="0-0"];
+d26 [cluster="System.Math.Max(decimal, decimal)", label="Entry System.Math.Max(decimal, decimal)", span="0-0"];
+d17 [cluster="QuantConnect.Tests.Brokerages.StopLimitOrderTestParameters.ModifyOrderToFill(QuantConnect.Interfaces.IBrokerage, QuantConnect.Orders.Order, decimal)", label="order.SecurityType == SecurityType.Forex || order.SecurityType == SecurityType.Crypto", span="53-53"];
+d18 [cluster="QuantConnect.Tests.Brokerages.StopLimitOrderTestParameters.ModifyOrderToFill(QuantConnect.Interfaces.IBrokerage, QuantConnect.Orders.Order, decimal)", label="stop.StopPrice = Math.Min(stop.StopPrice, Math.Max(stop.StopPrice / 2, Math.Round(lastMarketPrice, 4, MidpointRounding.AwayFromZero)))", span="55-55"];
+d23 [cluster="QuantConnect.Tests.Brokerages.StopLimitOrderTestParameters.ModifyOrderToFill(QuantConnect.Interfaces.IBrokerage, QuantConnect.Orders.Order, decimal)", color=green, community=0, label="return stop.StopPrice != previousStop;", prediction=3, span="71-71"];
+d14 [cluster="QuantConnect.Tests.Brokerages.StopLimitOrderTestParameters.ModifyOrderToFill(QuantConnect.Interfaces.IBrokerage, QuantConnect.Orders.Order, decimal)", label="var previousStop = stop.StopPrice", span="46-46"];
+d24 [cluster="QuantConnect.Tests.Brokerages.StopLimitOrderTestParameters.ModifyOrderToFill(QuantConnect.Interfaces.IBrokerage, QuantConnect.Orders.Order, decimal)", label="Exit QuantConnect.Tests.Brokerages.StopLimitOrderTestParameters.ModifyOrderToFill(QuantConnect.Interfaces.IBrokerage, QuantConnect.Orders.Order, decimal)", span="43-43"];
+d15 [cluster="QuantConnect.Tests.Brokerages.StopLimitOrderTestParameters.ModifyOrderToFill(QuantConnect.Interfaces.IBrokerage, QuantConnect.Orders.Order, decimal)", label="order.Quantity > 0", span="47-47"];
+d16 [cluster="QuantConnect.Tests.Brokerages.StopLimitOrderTestParameters.ModifyOrderToFill(QuantConnect.Interfaces.IBrokerage, QuantConnect.Orders.Order, decimal)", label="stop.StopPrice = Math.Min(stop.StopPrice, Math.Max(stop.StopPrice/2, Math.Round(lastMarketPrice, 2, MidpointRounding.AwayFromZero)))", span="50-50"];
+d12 -> d20  [color=green, key=1, label="QuantConnect.Orders.Order", style=dashed];
+d12 -> d15  [color=darkseagreen4, key=1, label="QuantConnect.Orders.Order", style=dashed];
+d12 -> d17  [color=darkseagreen4, key=1, label="QuantConnect.Orders.Order", style=dashed];
+d13 -> d23  [color=green, key=1, label=stop, style=dashed];
+d14 -> d23  [color=green, key=1, label=previousStop, style=dashed];
+}

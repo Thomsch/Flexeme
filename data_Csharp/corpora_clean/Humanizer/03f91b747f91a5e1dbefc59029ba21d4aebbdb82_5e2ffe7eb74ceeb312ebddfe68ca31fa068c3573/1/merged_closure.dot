@@ -1,0 +1,36 @@
+digraph  {
+m0_0 [cluster="Humanizer.Tests.Extensions.Localisation.CultureSpecificTestBase.CultureSpecificTestBase(System.Globalization.CultureInfo)", file="CultureSpecificTestBase.cs", label="Entry Humanizer.Tests.Extensions.Localisation.CultureSpecificTestBase.CultureSpecificTestBase(System.Globalization.CultureInfo)", span="10-10"];
+m0_1 [cluster="Humanizer.Tests.Extensions.Localisation.CultureSpecificTestBase.CultureSpecificTestBase(System.Globalization.CultureInfo)", color=green, community=0, file="CultureSpecificTestBase.cs", label="_culture = Thread.CurrentThread.CurrentUICulture", prediction=0, span="12-12"];
+m0_2 [cluster="Humanizer.Tests.Extensions.Localisation.CultureSpecificTestBase.CultureSpecificTestBase(System.Globalization.CultureInfo)", color=green, community=0, file="CultureSpecificTestBase.cs", label="Thread.CurrentThread.CurrentUICulture = culture", prediction=1, span="13-13"];
+m0_3 [cluster="Humanizer.Tests.Extensions.Localisation.CultureSpecificTestBase.CultureSpecificTestBase(System.Globalization.CultureInfo)", file="CultureSpecificTestBase.cs", label="Exit Humanizer.Tests.Extensions.Localisation.CultureSpecificTestBase.CultureSpecificTestBase(System.Globalization.CultureInfo)", span="10-10"];
+m0_6 [cluster="Humanizer.Tests.Extensions.Localisation.CultureSpecificTestBase.Dispose()", file="CultureSpecificTestBase.cs", label="Entry Humanizer.Tests.Extensions.Localisation.CultureSpecificTestBase.Dispose()", span="21-21"];
+m0_7 [cluster="Humanizer.Tests.Extensions.Localisation.CultureSpecificTestBase.Dispose()", color=green, community=0, file="CultureSpecificTestBase.cs", label="Thread.CurrentThread.CurrentUICulture = _culture", prediction=2, span="23-23"];
+m0_8 [cluster="Humanizer.Tests.Extensions.Localisation.CultureSpecificTestBase.Dispose()", file="CultureSpecificTestBase.cs", label="Exit Humanizer.Tests.Extensions.Localisation.CultureSpecificTestBase.Dispose()", span="21-21"];
+m0_9 [file="CultureSpecificTestBase.cs", label="Humanizer.Tests.Extensions.Localisation.CultureSpecificTestBase", span=""];
+m3_14 [cluster="Humanizer.Configuration.IFormatter.DateHumanize_an_hour_ago()", file="IFormatter.cs", label="Entry Humanizer.Configuration.IFormatter.DateHumanize_an_hour_ago()", span="16-16"];
+m3_15 [cluster="Humanizer.Configuration.IFormatter.DateHumanize_an_hour_ago()", file="IFormatter.cs", label="Exit Humanizer.Configuration.IFormatter.DateHumanize_an_hour_ago()", span="16-16"];
+m3_2 [cluster="Humanizer.Configuration.IFormatter.DateHumanize__hours_ago(object)", file="IFormatter.cs", label="Entry Humanizer.Configuration.IFormatter.DateHumanize__hours_ago(object)", span="10-10"];
+m3_3 [cluster="Humanizer.Configuration.IFormatter.DateHumanize__hours_ago(object)", file="IFormatter.cs", label="Exit Humanizer.Configuration.IFormatter.DateHumanize__hours_ago(object)", span="10-10"];
+m3_24 [cluster="Humanizer.Configuration.IFormatter.DateHumanize_yesterday()", file="IFormatter.cs", label="Entry Humanizer.Configuration.IFormatter.DateHumanize_yesterday()", span="21-21"];
+m3_25 [cluster="Humanizer.Configuration.IFormatter.DateHumanize_yesterday()", file="IFormatter.cs", label="Exit Humanizer.Configuration.IFormatter.DateHumanize_yesterday()", span="21-21"];
+m3_12 [cluster="Humanizer.Configuration.IFormatter.DateHumanize_a_minute_ago()", file="IFormatter.cs", label="Entry Humanizer.Configuration.IFormatter.DateHumanize_a_minute_ago()", span="15-15"];
+m3_13 [cluster="Humanizer.Configuration.IFormatter.DateHumanize_a_minute_ago()", file="IFormatter.cs", label="Exit Humanizer.Configuration.IFormatter.DateHumanize_a_minute_ago()", span="15-15"];
+m3_18 [cluster="Humanizer.Configuration.IFormatter.DateHumanize_one_month_ago()", file="IFormatter.cs", label="Entry Humanizer.Configuration.IFormatter.DateHumanize_one_month_ago()", span="18-18"];
+m3_19 [cluster="Humanizer.Configuration.IFormatter.DateHumanize_one_month_ago()", file="IFormatter.cs", label="Exit Humanizer.Configuration.IFormatter.DateHumanize_one_month_ago()", span="18-18"];
+m3_20 [cluster="Humanizer.Configuration.IFormatter.DateHumanize_one_second_ago()", file="IFormatter.cs", label="Entry Humanizer.Configuration.IFormatter.DateHumanize_one_second_ago()", span="19-19"];
+m3_21 [cluster="Humanizer.Configuration.IFormatter.DateHumanize_one_second_ago()", file="IFormatter.cs", label="Exit Humanizer.Configuration.IFormatter.DateHumanize_one_second_ago()", span="19-19"];
+m3_16 [cluster="Humanizer.Configuration.IFormatter.DateHumanize_not_yet()", file="IFormatter.cs", label="Entry Humanizer.Configuration.IFormatter.DateHumanize_not_yet()", span="17-17"];
+m3_17 [cluster="Humanizer.Configuration.IFormatter.DateHumanize_not_yet()", file="IFormatter.cs", label="Exit Humanizer.Configuration.IFormatter.DateHumanize_not_yet()", span="17-17"];
+m3_4 [cluster="Humanizer.Configuration.IFormatter.DateHumanize__minutes_ago(object)", file="IFormatter.cs", label="Entry Humanizer.Configuration.IFormatter.DateHumanize__minutes_ago(object)", span="11-11"];
+m3_5 [cluster="Humanizer.Configuration.IFormatter.DateHumanize__minutes_ago(object)", file="IFormatter.cs", label="Exit Humanizer.Configuration.IFormatter.DateHumanize__minutes_ago(object)", span="11-11"];
+m3_6 [cluster="Humanizer.Configuration.IFormatter.DateHumanize__months_ago(object)", file="IFormatter.cs", label="Entry Humanizer.Configuration.IFormatter.DateHumanize__months_ago(object)", span="12-12"];
+m3_7 [cluster="Humanizer.Configuration.IFormatter.DateHumanize__months_ago(object)", file="IFormatter.cs", label="Exit Humanizer.Configuration.IFormatter.DateHumanize__months_ago(object)", span="12-12"];
+m3_0 [cluster="Humanizer.Configuration.IFormatter.DateHumanize__days_ago(object)", file="IFormatter.cs", label="Entry Humanizer.Configuration.IFormatter.DateHumanize__days_ago(object)", span="9-9"];
+m3_1 [cluster="Humanizer.Configuration.IFormatter.DateHumanize__days_ago(object)", file="IFormatter.cs", label="Exit Humanizer.Configuration.IFormatter.DateHumanize__days_ago(object)", span="9-9"];
+m3_10 [cluster="Humanizer.Configuration.IFormatter.DateHumanize__years_ago(object)", file="IFormatter.cs", label="Entry Humanizer.Configuration.IFormatter.DateHumanize__years_ago(object)", span="14-14"];
+m3_11 [cluster="Humanizer.Configuration.IFormatter.DateHumanize__years_ago(object)", file="IFormatter.cs", label="Exit Humanizer.Configuration.IFormatter.DateHumanize__years_ago(object)", span="14-14"];
+m3_8 [cluster="Humanizer.Configuration.IFormatter.DateHumanize__seconds_ago(object)", file="IFormatter.cs", label="Entry Humanizer.Configuration.IFormatter.DateHumanize__seconds_ago(object)", span="13-13"];
+m3_9 [cluster="Humanizer.Configuration.IFormatter.DateHumanize__seconds_ago(object)", file="IFormatter.cs", label="Exit Humanizer.Configuration.IFormatter.DateHumanize__seconds_ago(object)", span="13-13"];
+m3_22 [cluster="Humanizer.Configuration.IFormatter.DateHumanize_one_year_ago()", file="IFormatter.cs", label="Entry Humanizer.Configuration.IFormatter.DateHumanize_one_year_ago()", span="20-20"];
+m3_23 [cluster="Humanizer.Configuration.IFormatter.DateHumanize_one_year_ago()", file="IFormatter.cs", label="Exit Humanizer.Configuration.IFormatter.DateHumanize_one_year_ago()", span="20-20"];
+}

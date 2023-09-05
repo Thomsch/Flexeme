@@ -1,0 +1,10 @@
+digraph  {
+m2_6 [cluster="RemotingServer.MyService.Dispose()", file="MyService.cs", label="Entry RemotingServer.MyService.Dispose()", span="16-16"];
+m2_7 [cluster="RemotingServer.MyService.Dispose()", color=green, community=0, file="MyService.cs", label="Console.WriteLine(''Disposing instance on '' + Process.GetCurrentProcess().ProcessName)", prediction=0, span="18-18"];
+m2_8 [cluster="RemotingServer.MyService.Dispose()", file="MyService.cs", label="Exit RemotingServer.MyService.Dispose()", span="16-16"];
+m2_5 [cluster="System.Diagnostics.Process.GetCurrentProcess()", file="MyService.cs", label="Entry System.Diagnostics.Process.GetCurrentProcess()", span="0-0"];
+m2_9 [cluster="System.Console.WriteLine(string)", file="MyService.cs", label="Entry System.Console.WriteLine(string)", span="0-0"];
+m2_2 [cluster="RemotingServer.MyService.Func1()", file="MyService.cs", label="Entry RemotingServer.MyService.Func1()", span="11-11"];
+m2_3 [cluster="RemotingServer.MyService.Func1()", color=green, community=0, file="MyService.cs", label="return ''MyService.Func1() from '' + Process.GetCurrentProcess().ProcessName;", prediction=1, span="13-13"];
+m2_4 [cluster="RemotingServer.MyService.Func1()", file="MyService.cs", label="Exit RemotingServer.MyService.Func1()", span="11-11"];
+}

@@ -1,0 +1,12 @@
+digraph  {
+m0_5 [cluster="Humanizer.Tests.AmbientCulture.AmbientCulture(string)", file="SpecificationPropertyRules.cs", label="Entry Humanizer.Tests.AmbientCulture.AmbientCulture(string)", span="17-17"];
+m0_6 [cluster="Humanizer.Tests.AmbientCulture.AmbientCulture(string)", file="SpecificationPropertyRules.cs", label="Exit Humanizer.Tests.AmbientCulture.AmbientCulture(string)", span="17-17"];
+m0_7 [cluster="Humanizer.Tests.AmbientCulture.Dispose()", file="SpecificationPropertyRules.cs", label="Entry Humanizer.Tests.AmbientCulture.Dispose()", span="22-22"];
+m0_9 [cluster="Humanizer.Tests.AmbientCulture.Dispose()", file="SpecificationPropertyRules.cs", label="Exit Humanizer.Tests.AmbientCulture.Dispose()", span="22-22"];
+m0_0 [cluster="Humanizer.Tests.AmbientCulture.AmbientCulture(System.Globalization.CultureInfo)", file="SpecificationPropertyRules.cs", label="Entry Humanizer.Tests.AmbientCulture.AmbientCulture(System.Globalization.CultureInfo)", span="10-10"];
+m0_1 [cluster="Humanizer.Tests.AmbientCulture.AmbientCulture(System.Globalization.CultureInfo)", file="SpecificationPropertyRules.cs", label="_culture = Thread.CurrentThread.CurrentUICulture", span="12-12"];
+m0_2 [cluster="Humanizer.Tests.AmbientCulture.AmbientCulture(System.Globalization.CultureInfo)", file="SpecificationPropertyRules.cs", label="Thread.CurrentThread.CurrentCulture = culture", span="13-13"];
+m0_3 [cluster="Humanizer.Tests.AmbientCulture.AmbientCulture(System.Globalization.CultureInfo)", file="SpecificationPropertyRules.cs", label="Thread.CurrentThread.CurrentUICulture = culture", span="14-14"];
+m0_4 [cluster="Humanizer.Tests.AmbientCulture.AmbientCulture(System.Globalization.CultureInfo)", file="SpecificationPropertyRules.cs", label="Exit Humanizer.Tests.AmbientCulture.AmbientCulture(System.Globalization.CultureInfo)", span="10-10"];
+m0_10 [file="SpecificationPropertyRules.cs", label="Humanizer.Tests.AmbientCulture", span=""];
+}

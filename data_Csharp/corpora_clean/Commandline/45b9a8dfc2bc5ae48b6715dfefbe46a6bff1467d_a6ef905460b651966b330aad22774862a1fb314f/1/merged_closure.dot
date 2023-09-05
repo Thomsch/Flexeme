@@ -1,0 +1,24 @@
+digraph  {
+m0_36 [cluster="CommandLine.Infrastructure.StringBuilderExtensions.SafeToString(System.Text.StringBuilder)", file="StringBuilderExtensions.cs", label="Entry CommandLine.Infrastructure.StringBuilderExtensions.SafeToString(System.Text.StringBuilder)", span="71-71"];
+m0_37 [cluster="CommandLine.Infrastructure.StringBuilderExtensions.SafeToString(System.Text.StringBuilder)", color=green, community=0, file="StringBuilderExtensions.cs", label="return builder == null ? string.Empty : builder.ToString();", prediction=0, span="73-73"];
+m0_38 [cluster="CommandLine.Infrastructure.StringBuilderExtensions.SafeToString(System.Text.StringBuilder)", file="StringBuilderExtensions.cs", label="Exit CommandLine.Infrastructure.StringBuilderExtensions.SafeToString(System.Text.StringBuilder)", span="71-71"];
+m0_39 [cluster="System.Text.StringBuilder.ToString()", file="StringBuilderExtensions.cs", label="Entry System.Text.StringBuilder.ToString()", span="0-0"];
+m1_15 [cluster="CommandLine.Infrastructure.StringExtensions.Spaces(int)", file="UnParserExtensionsTests.cs", label="Entry CommandLine.Infrastructure.StringExtensions.Spaces(int)", span="29-29"];
+m1_16 [cluster="CommandLine.Infrastructure.StringExtensions.Spaces(int)", file="UnParserExtensionsTests.cs", label="return new string(' ', value);", span="31-31"];
+m1_17 [cluster="CommandLine.Infrastructure.StringExtensions.Spaces(int)", file="UnParserExtensionsTests.cs", label="Exit CommandLine.Infrastructure.StringExtensions.Spaces(int)", span="29-29"];
+m1_12 [cluster="CommandLine.Infrastructure.StringExtensions.FormatLocal(string, params object[])", file="UnParserExtensionsTests.cs", label="Entry CommandLine.Infrastructure.StringExtensions.FormatLocal(string, params object[])", span="24-24"];
+m1_13 [cluster="CommandLine.Infrastructure.StringExtensions.FormatLocal(string, params object[])", color=green, community=0, file="UnParserExtensionsTests.cs", label="return string.Format(CultureInfo.CurrentCulture, value, arguments);", prediction=1, span="26-26"];
+m1_14 [cluster="CommandLine.Infrastructure.StringExtensions.FormatLocal(string, params object[])", file="UnParserExtensionsTests.cs", label="Exit CommandLine.Infrastructure.StringExtensions.FormatLocal(string, params object[])", span="24-24"];
+m1_3 [cluster="string.String(char, int)", file="UnParserExtensionsTests.cs", label="Entry string.String(char, int)", span="0-0"];
+m1_7 [cluster="System.Convert.ToString(object, System.IFormatProvider)", file="UnParserExtensionsTests.cs", label="Entry System.Convert.ToString(object, System.IFormatProvider)", span="0-0"];
+m1_8 [cluster="CommandLine.Infrastructure.StringExtensions.FormatInvariant(string, params object[])", file="UnParserExtensionsTests.cs", label="Entry CommandLine.Infrastructure.StringExtensions.FormatInvariant(string, params object[])", span="19-19"];
+m1_9 [cluster="CommandLine.Infrastructure.StringExtensions.FormatInvariant(string, params object[])", color=green, community=0, file="UnParserExtensionsTests.cs", label="return string.Format(CultureInfo.InvariantCulture, value, arguments);", prediction=2, span="21-21"];
+m1_10 [cluster="CommandLine.Infrastructure.StringExtensions.FormatInvariant(string, params object[])", file="UnParserExtensionsTests.cs", label="Exit CommandLine.Infrastructure.StringExtensions.FormatInvariant(string, params object[])", span="19-19"];
+m1_0 [cluster="CommandLine.Infrastructure.StringExtensions.ToOneCharString(char)", file="UnParserExtensionsTests.cs", label="Entry CommandLine.Infrastructure.StringExtensions.ToOneCharString(char)", span="9-9"];
+m1_1 [cluster="CommandLine.Infrastructure.StringExtensions.ToOneCharString(char)", color=green, community=0, file="UnParserExtensionsTests.cs", label="return new string(c, 1);", prediction=3, span="11-11"];
+m1_2 [cluster="CommandLine.Infrastructure.StringExtensions.ToOneCharString(char)", file="UnParserExtensionsTests.cs", label="Exit CommandLine.Infrastructure.StringExtensions.ToOneCharString(char)", span="9-9"];
+m1_4 [cluster="CommandLine.Infrastructure.StringExtensions.ToStringInvariant<T>(T)", file="UnParserExtensionsTests.cs", label="Entry CommandLine.Infrastructure.StringExtensions.ToStringInvariant<T>(T)", span="14-14"];
+m1_5 [cluster="CommandLine.Infrastructure.StringExtensions.ToStringInvariant<T>(T)", color=green, community=0, file="UnParserExtensionsTests.cs", label="return Convert.ToString(value, CultureInfo.InvariantCulture);", prediction=4, span="16-16"];
+m1_6 [cluster="CommandLine.Infrastructure.StringExtensions.ToStringInvariant<T>(T)", file="UnParserExtensionsTests.cs", label="Exit CommandLine.Infrastructure.StringExtensions.ToStringInvariant<T>(T)", span="14-14"];
+m1_11 [cluster="string.Format(System.IFormatProvider, string, params object[])", file="UnParserExtensionsTests.cs", label="Entry string.Format(System.IFormatProvider, string, params object[])", span="0-0"];
+}

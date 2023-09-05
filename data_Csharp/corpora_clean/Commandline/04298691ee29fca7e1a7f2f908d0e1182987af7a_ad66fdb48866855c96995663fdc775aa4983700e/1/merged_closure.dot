@@ -1,0 +1,30 @@
+digraph  {
+d1 [cluster="CommandLine.Core.TypeDescriptor.TypeDescriptor(CommandLine.Core.TargetType, Maybe<int>, Maybe<CommandLine.Core.TypeDescriptor>)", color=green, community=0, label="this.targetType = targetType", prediction=0, span="15-15"];
+d21 [label="CommandLine.Core.TypeDescriptor", span=""];
+d0 [cluster="CommandLine.Core.TypeDescriptor.TypeDescriptor(CommandLine.Core.TargetType, Maybe<int>, Maybe<CommandLine.Core.TypeDescriptor>)", label="Entry CommandLine.Core.TypeDescriptor.TypeDescriptor(CommandLine.Core.TargetType, Maybe<int>, Maybe<CommandLine.Core.TypeDescriptor>)", span="13-13"];
+d2 [cluster="CommandLine.Core.TypeDescriptor.TypeDescriptor(CommandLine.Core.TargetType, Maybe<int>, Maybe<CommandLine.Core.TypeDescriptor>)", color=green, community=0, label="this.maxItems = maxItems", prediction=1, span="16-16"];
+d3 [cluster="CommandLine.Core.TypeDescriptor.TypeDescriptor(CommandLine.Core.TargetType, Maybe<int>, Maybe<CommandLine.Core.TypeDescriptor>)", color=green, community=0, label="this.nextValue = nextValue", prediction=2, span="17-17"];
+d4 [cluster="CommandLine.Core.TypeDescriptor.TypeDescriptor(CommandLine.Core.TargetType, Maybe<int>, Maybe<CommandLine.Core.TypeDescriptor>)", label="Exit CommandLine.Core.TypeDescriptor.TypeDescriptor(CommandLine.Core.TargetType, Maybe<int>, Maybe<CommandLine.Core.TypeDescriptor>)", span="13-13"];
+d6 [cluster="CommandLine.Core.TypeDescriptor.Create(CommandLine.Core.TargetType, Maybe<int>, CommandLine.Core.TypeDescriptor)", color=green, community=0, label="maximumItems == null", prediction=3, span="37-37"];
+d5 [cluster="CommandLine.Core.TypeDescriptor.Create(CommandLine.Core.TargetType, Maybe<int>, CommandLine.Core.TypeDescriptor)", label="Entry CommandLine.Core.TypeDescriptor.Create(CommandLine.Core.TargetType, Maybe<int>, CommandLine.Core.TypeDescriptor)", span="35-35"];
+d7 [cluster="CommandLine.Core.TypeDescriptor.Create(CommandLine.Core.TargetType, Maybe<int>, CommandLine.Core.TypeDescriptor)", color=green, community=0, label="throw new ArgumentNullException(''maximumItems'');", prediction=4, span="37-37"];
+d8 [cluster="CommandLine.Core.TypeDescriptor.Create(CommandLine.Core.TargetType, Maybe<int>, CommandLine.Core.TypeDescriptor)", color=green, community=0, label="return new TypeDescriptor(tag, maximumItems, next.ToMaybe());", prediction=5, span="39-39"];
+d9 [cluster="CommandLine.Core.TypeDescriptor.Create(CommandLine.Core.TargetType, Maybe<int>, CommandLine.Core.TypeDescriptor)", label="Exit CommandLine.Core.TypeDescriptor.Create(CommandLine.Core.TargetType, Maybe<int>, CommandLine.Core.TypeDescriptor)", span="35-35"];
+d11 [cluster="TypeDescriptor.cstr", label="Entry TypeDescriptor.cstr", span=""];
+d12 [cluster="Unk.ToMaybe", label="Entry Unk.ToMaybe", span=""];
+d10 [cluster="System.ArgumentNullException.ArgumentNullException(string)", label="Entry System.ArgumentNullException.ArgumentNullException(string)", span="0-0"];
+d14 [cluster="CommandLine.Core.TypeDescriptorExtensions.WithNextValue(CommandLine.Core.TypeDescriptor, Maybe<CommandLine.Core.TypeDescriptor>)", color=green, community=0, label="return TypeDescriptor.Create(descriptor.TargetType, descriptor.MaxItems, nextValue.Return(n => n, null));", prediction=6, span="47-47"];
+d13 [cluster="CommandLine.Core.TypeDescriptorExtensions.WithNextValue(CommandLine.Core.TypeDescriptor, Maybe<CommandLine.Core.TypeDescriptor>)", label="Entry CommandLine.Core.TypeDescriptorExtensions.WithNextValue(CommandLine.Core.TypeDescriptor, Maybe<CommandLine.Core.TypeDescriptor>)", span="45-45"];
+d15 [cluster="CommandLine.Core.TypeDescriptorExtensions.WithNextValue(CommandLine.Core.TypeDescriptor, Maybe<CommandLine.Core.TypeDescriptor>)", label="Exit CommandLine.Core.TypeDescriptorExtensions.WithNextValue(CommandLine.Core.TypeDescriptor, Maybe<CommandLine.Core.TypeDescriptor>)", span="45-45"];
+d16 [cluster="Unk.Return", label="Entry Unk.Return", span=""];
+d17 [cluster="Unk.Create", label="Entry Unk.Create", span=""];
+d18 [cluster="lambda expression", label="Entry lambda expression", span="47-47"];
+d19 [cluster="lambda expression", color=green, community=0, label=n, prediction=7, span="47-47"];
+d20 [cluster="lambda expression", label="Exit lambda expression", span="47-47"];
+m0_0 [cluster="CommandLine.ValueAttribute.ValueAttribute(int)", file="ValueAttribute.cs", label="Entry CommandLine.ValueAttribute.ValueAttribute(int)", span="20-20"];
+m0_1 [cluster="CommandLine.ValueAttribute.ValueAttribute(int)", file="ValueAttribute.cs", label="this.index = index", span="22-22"];
+m0_4 [cluster="CommandLine.ValueAttribute.ValueAttribute(int)", file="ValueAttribute.cs", label="Exit CommandLine.ValueAttribute.ValueAttribute(int)", span="20-20"];
+m0_5 [file="ValueAttribute.cs", label="CommandLine.ValueAttribute", span=""];
+d5 -> d8  [color=green, key=1, label="CommandLine.Core.TargetType", style=dashed];
+d14 -> d18  [color=green, key=1, label="lambda expression", style=dashed];
+}

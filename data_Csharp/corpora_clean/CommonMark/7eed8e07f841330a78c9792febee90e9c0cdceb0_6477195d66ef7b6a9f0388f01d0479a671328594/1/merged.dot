@@ -1,0 +1,28 @@
+digraph  {
+d1 [label="this.Tag = tag", span="11-11", cluster="CommonMark.Syntax.Block.Block(CommonMark.Syntax.BlockTag, int, int)", color=green, community=0];
+d8 [label="CommonMark.Syntax.Block", span=""];
+d0 [label="Entry CommonMark.Syntax.Block.Block(CommonMark.Syntax.BlockTag, int, int)", span="9-9", cluster="CommonMark.Syntax.Block.Block(CommonMark.Syntax.BlockTag, int, int)"];
+d2 [label="this.StartLine = startLine", span="12-12", cluster="CommonMark.Syntax.Block.Block(CommonMark.Syntax.BlockTag, int, int)", color=green, community=0];
+d3 [label="this.EndLine = startLine", span="13-13", cluster="CommonMark.Syntax.Block.Block(CommonMark.Syntax.BlockTag, int, int)", color=green, community=0];
+d4 [label="this.StartColumn = startColumn", span="14-14", cluster="CommonMark.Syntax.Block.Block(CommonMark.Syntax.BlockTag, int, int)", color=green, community=0];
+d5 [label="this.StringContent = string.Empty", span="15-15", cluster="CommonMark.Syntax.Block.Block(CommonMark.Syntax.BlockTag, int, int)", color=green, community=0];
+d6 [label="this.IsOpen = true", span="16-16", cluster="CommonMark.Syntax.Block.Block(CommonMark.Syntax.BlockTag, int, int)", color=green, community=0];
+d7 [label="Exit CommonMark.Syntax.Block.Block(CommonMark.Syntax.BlockTag, int, int)", span="9-9", cluster="CommonMark.Syntax.Block.Block(CommonMark.Syntax.BlockTag, int, int)"];
+d1 -> d2  [key=0, style=solid, color=green];
+d8 -> d1  [key=1, style=dashed, color=green, label="CommonMark.Syntax.Block"];
+d8 -> d2  [key=1, style=dashed, color=green, label="CommonMark.Syntax.Block"];
+d8 -> d3  [key=1, style=dashed, color=green, label="CommonMark.Syntax.Block"];
+d8 -> d4  [key=1, style=dashed, color=green, label="CommonMark.Syntax.Block"];
+d8 -> d5  [key=1, style=dashed, color=green, label="CommonMark.Syntax.Block"];
+d8 -> d6  [key=1, style=dashed, color=green, label="CommonMark.Syntax.Block"];
+d0 -> d1  [key=0, style=solid, color=green];
+d0 -> d2  [key=1, style=dashed, color=green, label=int];
+d0 -> d3  [key=1, style=dashed, color=green, label=int];
+d0 -> d4  [key=1, style=dashed, color=green, label=int];
+d2 -> d3  [key=0, style=solid, color=green];
+d3 -> d4  [key=0, style=solid, color=green];
+d4 -> d5  [key=0, style=solid, color=green];
+d5 -> d6  [key=0, style=solid, color=green];
+d6 -> d7  [key=0, style=solid, color=green];
+d7 -> d0  [key=0, style=bold, color=blue];
+}

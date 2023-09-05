@@ -1,0 +1,12 @@
+digraph  {
+d1 [cluster="Humanizer.Tests.Uwp.Runner.App.OnInitializeRunner()", color=green, community=0, label="0: AddTestAssembly(typeof(App).GetTypeInfo().Assembly)", span="28-28"];
+d0 [cluster="Humanizer.Tests.Uwp.Runner.App.OnInitializeRunner()", label="Entry Humanizer.Tests.Uwp.Runner.App.OnInitializeRunner()", span="26-26"];
+d2 [cluster="Humanizer.Tests.Uwp.Runner.App.OnInitializeRunner()", label="Exit Humanizer.Tests.Uwp.Runner.App.OnInitializeRunner()", span="26-26"];
+d3 [cluster="System.Type.GetTypeInfo()", label="Entry System.Type.GetTypeInfo()", span="0-0"];
+d4 [cluster="Unk.AddTestAssembly", label="Entry Unk.AddTestAssembly", span=""];
+d1 -> d2  [color=green, key=0, style=solid];
+d1 -> d3  [color=green, key=2, style=dotted];
+d1 -> d4  [color=green, key=2, style=dotted];
+d0 -> d1  [color=green, key=0, style=solid];
+d2 -> d0  [color=blue, key=0, style=bold];
+}

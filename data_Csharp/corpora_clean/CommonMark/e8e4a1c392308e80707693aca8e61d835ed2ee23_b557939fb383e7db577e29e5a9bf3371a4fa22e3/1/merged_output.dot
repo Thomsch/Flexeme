@@ -1,0 +1,8 @@
+digraph  {
+m0_10 [cluster="CommonMark.Utilities.IsAsciiLetterOrDigit(char)", file="Scanner.cs", label="Entry CommonMark.Utilities.IsAsciiLetterOrDigit(char)", span="37-37"];
+m0_11 [cluster="CommonMark.Utilities.IsAsciiLetterOrDigit(char)", color=green, community=0, file="Scanner.cs", label="1: return (c >= 'a' && c <= 'z') || (c >= '0' && c <= '9') || (c >= 'A' && c <= 'Z');", span="40-40"];
+m0_12 [cluster="CommonMark.Utilities.IsAsciiLetterOrDigit(char)", file="Scanner.cs", label="Exit CommonMark.Utilities.IsAsciiLetterOrDigit(char)", span="37-37"];
+m0_10 -> m0_11  [color=green, key=0, style=solid];
+m0_11 -> m0_12  [color=green, key=0, style=solid];
+m0_12 -> m0_10  [color=blue, key=0, style=bold];
+}

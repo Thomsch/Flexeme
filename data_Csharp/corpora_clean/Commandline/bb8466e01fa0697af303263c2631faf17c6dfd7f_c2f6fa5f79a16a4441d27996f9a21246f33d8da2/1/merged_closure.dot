@@ -1,0 +1,13 @@
+digraph  {
+d1 [cluster="CommandLine.Infrastructure.EnumerableExtensions.Pairwise<TSource, TResult>(System.Collections.Generic.IEnumerable<TSource>, System.Func<TSource, TSource, TResult>)", color=green, community=0, label="source == null", prediction=0, span="26-26"];
+d0 [cluster="CommandLine.Infrastructure.EnumerableExtensions.Pairwise<TSource, TResult>(System.Collections.Generic.IEnumerable<TSource>, System.Func<TSource, TSource, TResult>)", label="Entry CommandLine.Infrastructure.EnumerableExtensions.Pairwise<TSource, TResult>(System.Collections.Generic.IEnumerable<TSource>, System.Func<TSource, TSource, TResult>)", span="24-24"];
+d2 [cluster="CommandLine.Infrastructure.EnumerableExtensions.Pairwise<TSource, TResult>(System.Collections.Generic.IEnumerable<TSource>, System.Func<TSource, TSource, TResult>)", color=green, community=0, label="throw new ArgumentNullException(''source'');", prediction=1, span="26-26"];
+d3 [cluster="CommandLine.Infrastructure.EnumerableExtensions.Pairwise<TSource, TResult>(System.Collections.Generic.IEnumerable<TSource>, System.Func<TSource, TSource, TResult>)", label="selector == null", span="27-27"];
+d6 [cluster="CommandLine.Infrastructure.EnumerableExtensions.Pairwise<TSource, TResult>(System.Collections.Generic.IEnumerable<TSource>, System.Func<TSource, TSource, TResult>)", label="Exit CommandLine.Infrastructure.EnumerableExtensions.Pairwise<TSource, TResult>(System.Collections.Generic.IEnumerable<TSource>, System.Func<TSource, TSource, TResult>)", span="24-24"];
+d7 [cluster="System.ArgumentNullException.ArgumentNullException(string)", label="Entry System.ArgumentNullException.ArgumentNullException(string)", span="0-0"];
+d5 [cluster="CommandLine.Infrastructure.EnumerableExtensions.Pairwise<TSource, TResult>(System.Collections.Generic.IEnumerable<TSource>, System.Func<TSource, TSource, TResult>)", label="return source.PairwiseImpl(selector);", span="29-29"];
+d4 [cluster="CommandLine.Infrastructure.EnumerableExtensions.Pairwise<TSource, TResult>(System.Collections.Generic.IEnumerable<TSource>, System.Func<TSource, TSource, TResult>)", label="throw new ArgumentNullException(''selector'');", span="27-27"];
+d8 [cluster="System.Collections.Generic.IEnumerable<TSource>.PairwiseImpl<TSource, TResult>(System.Func<TSource, TSource, TResult>)", label="Entry System.Collections.Generic.IEnumerable<TSource>.PairwiseImpl<TSource, TResult>(System.Func<TSource, TSource, TResult>)", span="32-32"];
+d0 -> d3  [color=darkseagreen4, key=1, label="System.Func<TSource, TSource, TResult>", style=dashed];
+d0 -> d5  [color=darkseagreen4, key=1, label="System.Collections.Generic.IEnumerable<TSource>", style=dashed];
+}
