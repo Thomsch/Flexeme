@@ -142,11 +142,11 @@ def validate(files: List[str], times, k_hop, repository_name, edges_kept="all",
                         i = seeds.index(node) if node in seeds else -1
 
                         if labels is not None and i != -1:
-                            data['label'] = '%d: ' % labels[i] + data['label']
+                            data['label'] = '"%d: %s"' % (labels[i], data['label'])
                             label.append(labels[i])
                             graph.add_node(node, **data)
                         else:
-                            data['label'] = '-1: ' + data['label']
+                            data['label'] = '"-1: %s"' % data['label']
                             label.append(-1)
                             graph.add_node(node, **data)
 
