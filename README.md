@@ -47,14 +47,12 @@ Steps:
 
 ### Running the benchmark
 
-```
-mkdir -p /tmp/${USER}
-git clone $D4J_HOME/project_repos/commons-lang.git /tmp/${USER}/commons-lang
-python flexeme/tangle_concerns/tangle_by_file.py /tmp/${USER}/commons-lang /tmp/${USER} .
-python flexeme/tangle_concerns/generate_corpus.py out/storm/storm_history_filtered_flat.json /tmp/${USER}/commons-lang .tmp/storm
-```
-
-Results are saved in `out/commons-lang/`.
+1. Checkout Defects4J repository `git clone $D4J_HOME/project_repos/commons-lang.git 
+   /private/tmp/commons-lang`.
+2. Creating synthetic commits `python3 flexeme/tangle_concerns/tangle_by_file.py /private/tmp/commons-lang 
+   /private/tmp/ .`.
+3. Generate ∂PDGs and evaluate: `python3  flexeme/tangle_concerns/generate_corpus.py ./commons-lan_history_filtered_flat.json /private/tmp/commons-lang /private/tmp/commons-lang-work/`.
+4. Results are saved in `out/commons-lang/`. 
 
 ### Layout changes
 The file `defects4j/layout_changes.json` contains the changes in repository layouts for sourcepath for Defects4J 
