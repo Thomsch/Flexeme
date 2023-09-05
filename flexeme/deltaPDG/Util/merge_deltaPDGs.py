@@ -4,6 +4,7 @@ import os
 
 import networkx as nx
 
+from flexeme.deltaPDG.deltaPDG import quote_label
 from flexeme.Util.general_util import get_pattern_paths
 from flexeme.deltaPDG.Util.pygraph_util import read_graph_from_dot, obj_dict_to_networkx, get_context_from_nxgraph
 
@@ -18,7 +19,12 @@ def merge_files_pdg(path_to_commit):
 
     merged = merge_deltas_for_a_commit(paths)
     merged_path = os.path.join(path_to_commit, 'merged.dot')
-    nx.drawing.nx_pydot.write_dot(merged, merged_path)
+    try:
+        nx.drawing.nx_pydot.write_dot(quote_label(merged), merged_path)
+    except Exception as e:
+        print('Could not write merged dot file')
+        print(merged.nodes.data())
+        raise e
     return merged_path
 
 

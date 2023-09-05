@@ -5,6 +5,7 @@ from threading import Thread
 
 import networkx as nx
 
+from flexeme.deltaPDG.deltaPDG import quote_label
 from flexeme.Util.general_util import get_pattern_paths
 from flexeme.deltaPDG.Util.pygraph_util import read_graph_from_dot, obj_dict_to_networkx
 
@@ -39,7 +40,7 @@ def clean_graph(graph_location, corpus_name):
         output_path = os.path.join('.', 'data', 'corpora_clean',
                                    corpus_name, data_point_name, nr_concepts, 'merged.dot')
         os.makedirs(os.path.dirname(output_path), exist_ok=True)
-        nx.drawing.nx_pydot.write_dot(graph, output_path)
+        nx.drawing.nx_pydot.write_dot(quote_label(graph), output_path)
         return output_path
     else:
         logging.warning(f"No communities detected for {graph_location}")
