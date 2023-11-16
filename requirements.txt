@@ -6,7 +6,7 @@ numpy>=1.17.3
 rapidfuzz>=0.9.1
 pygraphviz>=1.6
 pydot>=1.4.1
-grakel>=0.1a6
+grakel~=0.1.9
 nltk>=3.4.4
 
 # Data analysis
