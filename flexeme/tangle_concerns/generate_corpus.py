@@ -144,7 +144,7 @@ def generate_pdg(revision, repository_path, id_, temp_loc, extractor_location, s
                 delta_pdg = mark_originating_commit(delta_pdg, mark_origin(changes, labeli_changes), filename)
                 os.makedirs(os.path.dirname(output_path), exist_ok=True)
                 nx.set_node_attributes(delta_pdg, local_filename, "filepath")
-                nx.drawing.nx_pydot.write_dot(delta_pdg, output_path)
+                nx.drawing.nx_pydot.write_dot(quote_label(delta_pdg), output_path)
             except Exception as e:
                 raise e
 
