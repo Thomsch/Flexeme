@@ -75,6 +75,17 @@ def mark_origin(tangled_diff, atomic_diffs):
             output.append((change_type, file, after_coord, before_coord, line, label))
     return output
 
+def is_test_file(filename):
+    """
+    Returns True if the filename is a filename for tests.
+    """
+    return (
+        "/test/" in filename
+        or "/tests/" in filename
+        or filename.startswith("test/")
+        or filename.startswith("tests/")
+        or filename.endswith("Test.java")
+    )
 
 def generate_pdg(revision, repository_path, id_, temp_loc, extractor_location, sourcepath, classpath):
     logging.info(f"Flexeme generate PDG for {revision} in {repository_path}")
@@ -121,7 +132,8 @@ def generate_pdg(revision, repository_path, id_, temp_loc, extractor_location, s
         labeli_changes[0] = gh.process_diff_between_commits(from_, to_, v2)
         changes = gh.process_diff_between_commits(from_, to_, v2)
         files_touched = {filename for _, filename, _, _, _ in changes if
-                         os.path.basename(filename).split('.')[-1] == 'java'}  # and not filename.endswith("Tests.java")
+                         os.path.basename(filename).split('.')[-1] == 'java'
+                         and not is_test_file(filename)}
 
         for filename in sorted(files_touched):
             local_filename = os.path.normpath(filename.lstrip('/'))  # filename is local to the repository. It
