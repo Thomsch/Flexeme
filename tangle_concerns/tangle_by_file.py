@@ -126,6 +126,6 @@ def tangle_by_file(subject, temp_loc):
 
 if __name__ == '__main__':
     repository_name = sys.argv[1]
-    history_flat = tangle_by_file('./subjects/%s' % repository_name, 'D:\\Temp')
+    history_flat = tangle_by_file('./subjects/%s' % repository_name, '.tmp')
     with open('out/%s/%s_history_filtered_flat.json' % (repository_name, repository_name), 'w') as f:
         f.write(json.dumps(history_flat))
