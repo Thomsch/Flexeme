@@ -24,10 +24,10 @@ class PDG_Generator(object):
         from sys import platform
         if platform == "darwin":
             # OS X
-            generate_a_pdg = subprocess.Popen(["mono", self.location, '.', '.' + filename.replace('/', '\\')],
+            generate_a_pdg = subprocess.Popen(["mono", self.location, '.', '.' + filename],
                                               bufsize=1, cwd=self.repository_location)
             generate_a_pdg.wait()
-        if platform == "linux" or platform == "linux2":
+        elif platform == "linux" or platform == "linux2":
             # linux
             generate_a_pdg = subprocess.Popen([self.location, '.', '.' + filename.replace('/', '\\')],
                                               bufsize=1, cwd=self.repository_location)
