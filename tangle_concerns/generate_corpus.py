@@ -1,16 +1,24 @@
 import json
 import os
+import logging
 import sys
 from threading import Thread
 
 import jsonpickle
 import networkx as nx
 
+from git import Repo
 from deltaPDG.Util.generate_pdg import PDG_Generator
 from deltaPDG.Util.git_util import Git_Util
 from deltaPDG.deltaPDG import deltaPDG
 from tangle_concerns.tangle_by_file import tangle_by_file
 
+logging.basicConfig(level=logging.DEBUG,
+                    format='[%(asctime)s] %(levelname)s: %(message)s',
+                    datefmt='%Y-%m-%d %H:%M:%S',
+                    handlers=[logging.StreamHandler()])
+
+logging.getLogger("git.cmd").setLevel(logging.INFO)
 
 def mark_originating_commit(dpdg, marked_diff, filename):
     dpdg = dpdg.copy()
@@ -81,6 +89,14 @@ def worker(work, subject_location, id_, temp_loc, extractor_location):
         for chain in work:
             print('Working on chain: %s' % str(chain))
             from_ = chain[0]
+
+            repo = Repo(v1)
+            commit = repo.commit(from_)
+
+            if len(commit.parents) == 0:
+                logging.warning(f'Ignoring {from_} because the commit has no parents')
+                continue
+
             gh.set_git_to_rev(from_ + '^', v1)
             gh.set_git_to_rev(from_, v2)
 
@@ -108,7 +124,9 @@ def worker(work, subject_location, id_, temp_loc, extractor_location):
                                 print('Skipping %s as it exits' % output_path)
                                 f.read()
                         except FileNotFoundError:
+                            # logging.info(f"Untangling {filename}@{from_}^ (previous)")
                             v1_pdg_generator(filename)
+                            # logging.info(f"Untangling {filename}@{from_} (current)")
                             v2_pdg_generator(filename)
                             delta_gen = deltaPDG('./temp/%d/before_pdg.dot' % id_, m_fuzziness=method_fuzziness,
                                                  n_fuzziness=node_fuzziness)
@@ -119,7 +137,7 @@ def worker(work, subject_location, id_, temp_loc, extractor_location):
                             nx.drawing.nx_pydot.write_dot(delta_pdg, output_path)
                     except Exception:
                         pass
-
+            # break
 
 if __name__ == '__main__':
     if len(sys.argv) != 7:
@@ -143,6 +161,7 @@ if __name__ == '__main__':
 
     chunck_size = int(len(list_to_tangle) / n_workers)
     list_to_tangle = [list_to_tangle[i:i + chunck_size] for i in range(0, len(list_to_tangle), chunck_size)]
+
 
     threads = []
     id_ = int(sys.argv[4])
