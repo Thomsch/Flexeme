@@ -135,7 +135,8 @@ def worker(work, subject_location, id_, temp_loc, extractor_location):
                             delta_pdg = mark_originating_commit(delta_pdg, mark_origin(changes, labeli_changes), filename)
                             os.makedirs(os.path.dirname(output_path), exist_ok=True)
                             nx.drawing.nx_pydot.write_dot(delta_pdg, output_path)
-                    except Exception:
+                    except Exception as e:
+                        logging.error(e)
                         pass
             # break
 
