@@ -110,8 +110,10 @@ def worker(work, subject_location, id_, temp_loc, extractor_location):
             for to_ in chain[1:]:
                 gh.cherry_pick_on_top(to_, v2)
 
+                # All changes since the start of the chain to the latest current commit.
                 changes = gh.process_diff_between_commits(from_ + '^', to_, v2)
 
+                # Changes for this commit in the chain. i.e., all 'atomic' changes for the i-th commit in the chain.
                 labeli_changes[i] = gh.process_diff_between_commits(previous_sha, to_, v2)
                 i += 1
                 previous_sha = to_
