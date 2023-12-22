@@ -3,6 +3,8 @@ import os
 import shutil
 import subprocess
 
+from sys import platform
+
 import networkx as nx
 
 from deltaPDG.Util.merge_nameflow import add_nameflow_edges
@@ -21,7 +23,6 @@ class PDG_Generator(object):
         self.target_location = target_location
 
     def __call__(self, filename):
-        from sys import platform
         if platform == "darwin":
             # OS X
             generate_a_pdg = subprocess.Popen(["mono", self.location, '.', '.' + filename],
