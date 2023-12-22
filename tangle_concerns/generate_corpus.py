@@ -20,6 +20,9 @@ logging.basicConfig(level=logging.DEBUG,
 
 logging.getLogger("git.cmd").setLevel(logging.INFO)
 
+METHOD_FUZINESS = 100
+NODE_FUZZINESS = 100
+
 def mark_originating_commit(dpdg, marked_diff, filename):
     dpdg = dpdg.copy()
 
@@ -70,8 +73,8 @@ def mark_origin(tangled_diff, atomic_diffs):
 
 def worker(work, subject_location, id_, temp_loc, extractor_location):
     repository_name = os.path.basename(subject_location)
-    method_fuzziness = 100
-    node_fuzziness = 100
+    method_fuzziness = METHOD_FUZINESS
+    node_fuzziness = NODE_FUZZINESS
 
     git_handler = Git_Util(temp_dir=temp_loc)
     with git_handler as gh:
