@@ -22,6 +22,9 @@ class PDG_Generator(object):
         self.target_filename = target_filename
         self.target_location = target_location
 
+    def set_output_dir(self, dir:str):
+        self.target_location = dir
+
     def __call__(self, filename):
         if platform == "darwin":
             # OS X

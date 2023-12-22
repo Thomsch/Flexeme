@@ -121,6 +121,10 @@ def worker(work, subject_location, id_, temp_loc, extractor_location):
                                  os.path.basename(filename).split('.')[-1] == 'cs'}
 
                 for filename in files_touched:
+                    output_dir = './data/corpora_raw/%s/%s_%s/%d/%s' % (repository_name, from_, to_, i, os.path.basename(filename).split('.')[0])
+                    v1_pdg_generator.set_output_dir(output_dir)
+                    v2_pdg_generator.set_output_dir(output_dir)
+                    os.makedirs(output_dir, exist_ok=True)
                     try:
                         output_path = './data/corpora_raw/%s/%s_%s/%d/%s.dot' % (
                             repository_name, from_, to_, i, os.path.basename(filename))
@@ -129,13 +133,11 @@ def worker(work, subject_location, id_, temp_loc, extractor_location):
                                 print('Skipping %s as it exits' % output_path)
                                 f.read()
                         except FileNotFoundError:
-                            # logging.info(f"Untangling {filename}@{from_}^ (previous)")
                             v1_pdg_generator(filename)
-                            # logging.info(f"Untangling {filename}@{from_} (current)")
                             v2_pdg_generator(filename)
-                            delta_gen = deltaPDG('./temp/%d/before_pdg.dot' % id_, m_fuzziness=method_fuzziness,
+                            delta_gen = deltaPDG(os.path.join(output_dir, 'before_pdg.dot'), m_fuzziness=method_fuzziness,
                                                  n_fuzziness=node_fuzziness)
-                            delta_pdg = delta_gen('./temp/%d/after_pdg.dot' % id_,
+                            delta_pdg = delta_gen(os.path.join(output_dir, 'after_pdg.dot'),
                                                   [ch for ch in changes if ch[1] == filename])
                             delta_pdg = mark_originating_commit(delta_pdg, mark_origin(changes, labeli_changes), filename)
                             os.makedirs(os.path.dirname(output_path), exist_ok=True)
