@@ -1,0 +1,14 @@
+digraph  {
+n5 [label="CommandLine.Text.UsageAttribute", span=""];
+n0 [cluster="CommandLine.Text.UsageAttribute.UsageAttribute(System.Collections.Generic.IDictionary<string, string>)", label=Entry, span="12-12"];
+n1 [cluster="CommandLine.Text.UsageAttribute.UsageAttribute(System.Collections.Generic.IDictionary<string, string>)", label="this.groups = groups", span="14-14"];
+n2 [cluster="CommandLine.Text.UsageAttribute.UsageAttribute(System.Collections.Generic.IDictionary<string, string>)", label=Exit, span="12-12"];
+n3 [cluster="CommandLine.Text.UsageAttribute.UsageAttribute()", label=Entry, span="17-17"];
+n4 [cluster="CommandLine.Text.UsageAttribute.UsageAttribute()", label=Exit, span="17-17"];
+n5 -> n1  [color=darkseagreen4, key=1, label="CommandLine.Text.UsageAttribute", style=dashed];
+n0 -> n1  [key=0, style=solid];
+n1 -> n2  [key=0, style=solid];
+n2 -> n0  [color=blue, key=0, style=bold];
+n3 -> n4  [key=0, style=solid];
+n4 -> n3  [color=blue, key=0, style=bold];
+}

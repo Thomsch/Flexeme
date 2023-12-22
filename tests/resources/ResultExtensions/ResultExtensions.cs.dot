@@ -1,0 +1,35 @@
+digraph  {
+n0 [cluster="CommandLine.Infrastructure.ResultExtensions.Messages<TSuccess, TMessage>(Result<TSuccess, TMessage>)", label="Entry CommandLine.Infrastructure.ResultExtensions.Messages<TSuccess, TMessage>(Result<TSuccess, TMessage>)", span="10-10"];
+n1 [cluster="CommandLine.Infrastructure.ResultExtensions.Messages<TSuccess, TMessage>(Result<TSuccess, TMessage>)", label="result.Tag == ResultType.Ok", span="12-12"];
+n2 [cluster="CommandLine.Infrastructure.ResultExtensions.Messages<TSuccess, TMessage>(Result<TSuccess, TMessage>)", label="var ok = (Ok<TSuccess, TMessage>)result", span="14-14"];
+n4 [cluster="CommandLine.Infrastructure.ResultExtensions.Messages<TSuccess, TMessage>(Result<TSuccess, TMessage>)", color=red, community=0, label="var bad = (Bad<TSuccess, TMessage>)result", span="17-17"];
+n3 [cluster="CommandLine.Infrastructure.ResultExtensions.Messages<TSuccess, TMessage>(Result<TSuccess, TMessage>)", label="return ok.Value.Messages;", span="15-15"];
+n5 [cluster="CommandLine.Infrastructure.ResultExtensions.Messages<TSuccess, TMessage>(Result<TSuccess, TMessage>)", color=red, community=0, label="return bad.Messages;", span="18-18"];
+n6 [cluster="CommandLine.Infrastructure.ResultExtensions.Messages<TSuccess, TMessage>(Result<TSuccess, TMessage>)", label="Exit CommandLine.Infrastructure.ResultExtensions.Messages<TSuccess, TMessage>(Result<TSuccess, TMessage>)", span="10-10"];
+d4 [cluster="CommandLine.Infrastructure.ResultExtensions.SuccessfulMessages<TSuccess, TMessage>(Result<TSuccess, TMessage>)", color=green, community=0, label="return Enumerable.Empty<TMessage>();", span="19-19"];
+d1 [cluster="CommandLine.Infrastructure.ResultExtensions.SuccessfulMessages<TSuccess, TMessage>(Result<TSuccess, TMessage>)", label="result.Tag == ResultType.Ok", span="14-14"];
+d5 [cluster="CommandLine.Infrastructure.ResultExtensions.SuccessfulMessages<TSuccess, TMessage>(Result<TSuccess, TMessage>)", label="Exit CommandLine.Infrastructure.ResultExtensions.SuccessfulMessages<TSuccess, TMessage>(Result<TSuccess, TMessage>)", span="12-12"];
+d6 [cluster="System.Linq.Enumerable.Empty<TResult>()", label="Entry System.Linq.Enumerable.Empty<TResult>()", span="0-0"];
+d0 [cluster="CommandLine.Infrastructure.ResultExtensions.SuccessfulMessages<TSuccess, TMessage>(Result<TSuccess, TMessage>)", label="Entry CommandLine.Infrastructure.ResultExtensions.SuccessfulMessages<TSuccess, TMessage>(Result<TSuccess, TMessage>)", span="12-12"];
+d2 [cluster="CommandLine.Infrastructure.ResultExtensions.SuccessfulMessages<TSuccess, TMessage>(Result<TSuccess, TMessage>)", label="var ok = (Ok<TSuccess, TMessage>)result", span="16-16"];
+d3 [cluster="CommandLine.Infrastructure.ResultExtensions.SuccessfulMessages<TSuccess, TMessage>(Result<TSuccess, TMessage>)", label="return ok.Value.Messages;", span="17-17"];
+n0 -> n1  [key=0, style=solid];
+n0 -> n2  [color=darkseagreen4, key=1, label="Result<TSuccess, TMessage>", style=dashed];
+n0 -> n4  [color=red, key=1, label="Result<TSuccess, TMessage>", style=dashed];
+n1 -> n2  [key=0, style=solid];
+n1 -> n4  [color=red, key=0, style=solid];
+n2 -> n3  [key=0, style=solid];
+n4 -> n5  [color=red, key=0, style=solid];
+n3 -> n6  [key=0, style=solid];
+n5 -> n6  [color=red, key=0, style=solid];
+n6 -> n0  [color=blue, key=0, style=bold];
+d4 -> d5  [color=green, key=0, style=solid];
+d4 -> d6  [color=green, key=2, style=dotted];
+d1 -> d4  [color=green, key=0, style=solid];
+d1 -> d2  [key=0, style=solid];
+d5 -> d0  [color=blue, key=0, style=bold];
+d0 -> d1  [key=0, style=solid];
+d0 -> d2  [color=darkseagreen4, key=1, label="Result<TSuccess, TMessage>", style=dashed];
+d2 -> d3  [key=0, style=solid];
+d3 -> d5  [key=0, style=solid];
+}
