@@ -117,7 +117,7 @@ def worker(work, subject_location, id_, temp_loc, extractor_location):
                 labeli_changes[ith_commit_in_chain] = gh.process_diff_between_commits(previous_sha, to_, v2)
                 ith_commit_in_chain += 1
                 previous_sha = to_
-                files_touched = {filepath for _, filepath, _, _, _ in changes if
+                modified_sourcecode_files = {filepath for _, filepath, _, _, _ in changes if
                                  os.path.basename(filepath).split('.')[-1] == 'cs'}
 
 
@@ -128,7 +128,7 @@ def worker(work, subject_location, id_, temp_loc, extractor_location):
 
                 # The diff in labeli_changes[i] contains only the changes between previous_sha (not included!!!!) and the next commit in the chain. i.e., all changes up to the next commits.
 
-                for filepath in files_touched:
+                for filepath in modified_sourcecode_files:
                     filename = os.path.basename(filepath) # e.g., Foo.cs
                     output_dir = f"./data/corpora_raw/{repository_name}/{from_}_{to_}/{ith_commit_in_chain:d}/{filename.split('.')[0]}"
                     v1_pdg_generator.set_output_dir(output_dir)
