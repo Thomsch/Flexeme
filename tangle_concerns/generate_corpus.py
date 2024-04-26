@@ -58,14 +58,14 @@ def mark_originating_commit(dpdg, marked_diff, filename):
     return dpdg
 
 
-def mark_origin(tangled_diff, atomic_diffs):
+def mark_origin(tangled_diff, atomic_diffs): # here atomic diffs contains more changes than just ith changes if the chain ommits commits.
     output = list()
     for change_type, file, after_coord, before_coord, line in tangled_diff:
         if change_type != ' ':
             relevant = {i: [(ct, f, ac, bc, ln) for ct, f, ac, bc, ln in diff
-                            if file == f and line.strip() == ln.strip()]
+                            if file == f and line.strip() == ln.strip()] # a relevant line is a line that is changed only in the ith commit and not other commit.
                         for i, diff in atomic_diffs.items()}
-            relevant = [i for i, diff in relevant.items() if len(diff) > 0]
+            relevant = [i for i, diff in relevant.items() if len(diff) > 0] # filters out ith changes with tangled changes from the process.
             label = max(relevant, default=0)
             output.append((change_type, file, after_coord, before_coord, line, label))
     return output
@@ -106,7 +106,7 @@ def worker(work, subject_location, id_, temp_loc, extractor_location):
             labeli_changes = dict()
             labeli_changes[0] = gh.process_diff_between_commits(from_ + '^', from_, v2)
             previous_sha = from_
-            i = 1
+            ith_commit_in_chain = 1
             for to_ in chain[1:]:
                 gh.cherry_pick_on_top(to_, v2)
 
@@ -114,32 +114,40 @@ def worker(work, subject_location, id_, temp_loc, extractor_location):
                 changes = gh.process_diff_between_commits(from_ + '^', to_, v2)
 
                 # Changes for this commit in the chain. i.e., all 'atomic' changes for the i-th commit in the chain.
-                labeli_changes[i] = gh.process_diff_between_commits(previous_sha, to_, v2)
-                i += 1
+                labeli_changes[ith_commit_in_chain] = gh.process_diff_between_commits(previous_sha, to_, v2)
+                ith_commit_in_chain += 1
                 previous_sha = to_
-                files_touched = {filename for _, filename, _, _, _ in changes if
-                                 os.path.basename(filename).split('.')[-1] == 'cs'}
+                files_touched = {filepath for _, filepath, _, _, _ in changes if
+                                 os.path.basename(filepath).split('.')[-1] == 'cs'}
 
-                for filename in files_touched:
-                    output_dir = './data/corpora_raw/%s/%s_%s/%d/%s' % (repository_name, from_, to_, i, os.path.basename(filename).split('.')[0])
+
+                # The diff in `changes` contains ALL CHANGES between from_ and to_. Including the changes that have been skipped outside the chain.
+                # The changes in PDG after represent the state after cherry-picking the next commit in the chain.
+                #   The repo might not compile in this altered version because it's missing changes in the chain.
+                #   The diff will have changed lines that are not in the repo (due to missing the commit in the chain).
+
+                # The diff in labeli_changes[i] contains only the changes between previous_sha (not included!!!!) and the next commit in the chain. i.e., all changes up to the next commits.
+
+                for filepath in files_touched:
+                    filename = os.path.basename(filepath) # e.g., Foo.cs
+                    output_dir = f"./data/corpora_raw/{repository_name}/{from_}_{to_}/{ith_commit_in_chain:d}/{filename.split('.')[0]}"
                     v1_pdg_generator.set_output_dir(output_dir)
                     v2_pdg_generator.set_output_dir(output_dir)
                     os.makedirs(output_dir, exist_ok=True)
                     try:
-                        output_path = './data/corpora_raw/%s/%s_%s/%d/%s.dot' % (
-                            repository_name, from_, to_, i, os.path.basename(filename))
+                        output_path = f'./data/corpora_raw/{repository_name}/{from_}_{to_}/{ith_commit_in_chain:d}/{filename}.dot'
                         try:
                             with open(output_path) as f:
                                 print('Skipping %s as it exits' % output_path)
                                 f.read()
                         except FileNotFoundError:
-                            v1_pdg_generator(filename)
-                            v2_pdg_generator(filename)
+                            v1_pdg_generator(filepath)
+                            v2_pdg_generator(filepath)
                             delta_gen = deltaPDG(os.path.join(output_dir, 'before_pdg.dot'), m_fuzziness=method_fuzziness,
                                                  n_fuzziness=node_fuzziness)
                             delta_pdg = delta_gen(os.path.join(output_dir, 'after_pdg.dot'),
-                                                  [ch for ch in changes if ch[1] == filename])
-                            delta_pdg = mark_originating_commit(delta_pdg, mark_origin(changes, labeli_changes), filename)
+                                                  [ch for ch in changes if ch[1] == filepath]) # give all the changes for that file.
+                            delta_pdg = mark_originating_commit(delta_pdg, mark_origin(changes, labeli_changes), filepath)
                             os.makedirs(os.path.dirname(output_path), exist_ok=True)
                             nx.drawing.nx_pydot.write_dot(delta_pdg, output_path)
                     except Exception as e:
